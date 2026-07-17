@@ -481,6 +481,52 @@ Axtell–Epstein–Young 'emergent classes' game).  Full definitions in
 
 ### Live LLM tier (claude-haiku-4.5)
 {tier("live")}
+
+### Reading (mechanisms verified in transcripts)
+
+**The naming-game result does not automatically generalize: at this
+scale, none of the four live environments produced a history-dependent
+side-product convention — while the substrate tier shows the dynamics
+readily produce them for policies that benefit from familiarity.**
+
+- *E1:* live populations solve the task (~94% success) by transcribing —
+  92% of notes preserve the randomized INPUT order, and zero-shot probes
+  copy the input order in 81–100% of cases — so no endogenous ordering
+  ever forms (modal share ≈ the shuffle-control baseline; inter-agent
+  agreement 2–3%). The responder parses any format, so format alignment
+  has no payoff. In the substrate — where parsing success was coupled to
+  format familiarity — 95–98% of populations conventionalized, with 42–43
+  distinct formats across 60 populations.
+- *E2:* live pairs never discover complementary partitions (69/72
+  episodes 'mixed'; success flat at ~0.36–0.47), so there is no strategy
+  for a convention to stabilize; the substrate's reinforcement learners
+  at least trend toward partitions.
+- *E3:* the live tier's near-perfect within-population concentration
+  (0.99) is exhaustive description — the model lists all 3 traits of the
+  target every time, identical to its zero-shot prior (prior-match 1.0).
+  The prior-correction arm of the battery correctly reclassifies this as
+  shared model bias, not convention. (Design caveat: items are generated
+  per population, so E3's cross-population diversity comparison is not
+  informative as built; a shared-item-set variant is the fix.)
+- *E4:* live populations reach no norm at all — demands split roughly
+  uniformly across 30/50/70 with ~65% compatibility ('fractious' in all
+  6 populations), where the substrate settles into egalitarian (28/60) or
+  Axtell–Epstein–Young class (9/60) conventions.
+
+**Synthesis.** Combining with the naming-game tier: haiku-scale LLM
+populations form conventions readily when payoff directly rewards
+alignment (consensus at the criterion floor), but did NOT accrete
+arbitrary conventions as a side product of ordinary competent joint work
+here. The mechanism is visible in transcripts: competence substitutes
+for convention. Flexible parsing (E1) and exhaustive description (E3)
+remove the benefit that alignment would otherwise carry; where a
+convention would genuinely have paid (E2 partitions, E4 bargaining
+norms), this model failed to discover the underlying strategy within the
+interaction budget. Convention formation tracked the payoff-coupling of
+alignment — not mere co-presence. Limitations: 4–6 live populations per
+cell, short in-context histories (3–8 events), one small model, and
+budgets sized to a ~$25 projection; the infrastructure (journaled,
+resumable, capped) supports scaling all four dimensions.
 """
 
 

@@ -39,6 +39,11 @@ python -m namegame expb --mode live --spend-cap-usd 250                 # run
 
 # Analysis + figures (consumes transcripts only)
 python -m namegame analyze --results results --figdir figures
+
+# E1-E4 'conventions as side products of joint work' environments
+python -m namegame envs --mode mock                      # substrate tier
+python -m namegame envs --mode live --spend-cap-usd 100  # LLM tier
+python -c "from namegame.envs.analysis import main_envs_analysis; main_envs_analysis()"
 ```
 
 Every run records its seed, resolved configuration, and code version.
