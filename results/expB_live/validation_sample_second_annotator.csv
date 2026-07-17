@@ -1,0 +1,152 @@
+id,text,judge_label,hand_label(FILL IN),second_annotator_label
+0,"Let's both pick ""budze"" next round to earn 100 points each!",directive,,directive
+1,I've picked gavi for 4 rounds successfully. Let's coordinate on gavi for mutual gains!,descriptive,,directive
+2,"I'll switch to ""beba"" - let's match and both earn 100 points instead of losing 50.",directive,,directive
+3,"I've been picking ""muse"" most rounds. Let's coordinate on that for mutual gain!",descriptive,,directive
+4,I've been picking puve successfully most rounds. Let's coordinate on puve for mutual benefit!,descriptive,,directive
+5,I've been picking rurzo consistently and it works well. Let's both pick rurzo next time for mutual gain!,normative,,directive
+6,"I'll be picking ""rizbi"" next round. Hope we can match!",descriptive,,descriptive
+7,I've picked gavi in 4 of my last 5 rounds successfully. Let's coordinate on gavi for mutual gain.,descriptive,,directive
+8,Let's keep picking rurzo together! We've matched 5 times in a row for 500 points.,descriptive,,directive
+9,I'll pick dabti next cycle. Please pick dabti to both earn 100 points instead of losing 50.,directive,,directive
+10,"Let's keep picking ""rebi"" - we both won 500 points together!",normative,,directive
+11,"I've picked ""pati"" every round. Let's keep matching for 100 points each!",descriptive,,directive
+12,Let's keep picking rurzo together! We've matched 5 times for 500 points.,descriptive,,directive
+13,pati,other,,other
+14,Let's keep picking giga - we've had great success with it!,normative,,directive
+15,Let's both pick giga - we've matched twice in a row and both gained 100 points!,descriptive,,directive
+16,"Let's both pick ""dabti"" next time for mutual 100 points. It's better for both of us.",directive,,directive
+17,"I've picked ""pati"" every round. Let's keep matching for mutual gain!",descriptive,,directive
+18,"Let's stick with ""dabti"" - we were matching perfectly before!",normative,,directive
+19,I've been picking kavo successfully. Let's both pick kavo next turn for mutual gain!,normative,,directive
+20,"I pick ""pati"" every round. Please pick ""pati"" to both earn 100 points!",normative,,directive
+21,I've been picking pati consistently and it worked 4 out of 5 times. Let's coordinate on pati.,descriptive,,directive
+22,"I've been picking ""giga"" consistently and it worked great! Let's both pick ""giga"" next time.",normative,,directive
+23,Let's keep picking guma together! We've both won 500 points doing this.,descriptive,,directive
+24,"Let's keep playing ""dabti"" - we've both won 500 points matching on it!",descriptive,,directive
+25,Let's coordinate on votsi - we matched before and both gained 100 points!,descriptive,,directive
+26,"I've been picking ""gavi"" most rounds. Let's coordinate on ""gavi"" next time for mutual gain!",normative,,directive
+27,Let's both pick puve next round - we'll both earn 100 points!,directive,,directive
+28,"I've picked ""muse"" every round. Let's both pick ""muse"" to both earn 100 points!",normative,,directive
+29,"Let's return to ""rebi"" - we were both successful with it for 5 straight cycles.",descriptive,,directive
+30,Let's both pick kavo to both earn 100 points. It's the best outcome for us both.,normative,,directive
+31,I've been picking rurzo consistently. Let's both pick rurzo next turn for mutual points!,directive,,directive
+32,"Let's keep choosing ""sileb"" - we've both earned 500 points doing this!",normative,,directive
+33,"I'll pick ""muse"" again next round. It's worked well for us before!",descriptive,,descriptive
+34,"I've been playing ""rebi"" consistently. Let's both choose ""rebi"" next cycle for mutual gain.",directive,,directive
+35,Let's coordinate on konti - we both won 4 times with it. Please pick konti next turn!,directive,,directive
+36,"Let's coordinate - I'll pick ""mipul"" next turn if you do too. We both win!",directive,,directive
+37,I've been picking rurzo consistently. Let's match on rurzo for mutual 100 points!,directive,,directive
+38,Let's keep picking kavo together - we've both gained 500 points!,descriptive,,directive
+39,I'll keep picking rurzo. It's worked well before. Please pick rurzo to both gain 100 points!,normative,,directive
+40,"Let's both pick ""giga"" again - we were both earning 100 points every turn!",directive,,directive
+41,"Let's both stick with ""rebi"" - we matched 4 times in a row. It works!",normative,,directive
+42,"Let's both pick ""pati"" next round - we matched twice before!",directive,,directive
+43,Let's both pick pati to keep earning 100 points each round!,directive,,directive
+44,Let's both pick kavo next time - we were winning together!,normative,,directive
+45,"I've been picking ""konti"" every turn. Let's keep matching on ""konti"" for mutual points!",directive,,directive
+46,I've been picking kavo consistently. Let's both pick kavo next time for mutual points!,directive,,directive
+47,I've been picking gavi consistently. It's a reliable choice that's worked well before.,descriptive,,descriptive
+48,"I've been picking ""sileb"" successfully. Let's coordinate on that for mutual gains of 100 points.",descriptive,,directive
+49,"I've been picking ""muse"" successfully. Let's coordinate on that for mutual gains!",descriptive,,directive
+50,Let's go back to sileb - we had 5 perfect matches!,descriptive,,directive
+51,"Let's coordinate on ""sileb"" - we've matched 3 of last 5 times. Both gain 100 points!",normative,,directive
+52,"Let's both pick ""sesig"" next round to both earn 100 points!",directive,,directive
+53,I've been picking puve consistently. It worked great for 4 rounds. Let's stick with puve!,descriptive,,directive
+54,I picked delfo last time. Let's coordinate on delfo - it's worked 4 times in a row.,normative,,directive
+55,"Let's keep picking ""delfo"" - we've both gained 500 points doing this. It works!",normative,,directive
+56,I'll stick with gavi - it's working well for both of us!,descriptive,,descriptive
+57,"Let's both pick ""muse"" - we matched 4 times in a row. It works!",normative,,directive
+58,"Let's keep picking ""rebi"" - we both got 500 points matching!",normative,,directive
+59,Let's stick with konti - we matched 4 out of 5 times!,descriptive,,directive
+60,"I've had success picking ""nofi"" recently. Let's coordinate on that?",descriptive,,directive
+61,Let's both pick tokba next round to both earn points!,directive,,directive
+62,"Let's coordinate on ""luke"" - we've matched successfully 2 of last 3 times with it.",descriptive,,directive
+63,"I've picked ""rebi"" consistently. Let's coordinate on ""rebi"" for mutual 100 points each round.",normative,,directive
+64,Let's keep picking konti together! We've matched 5 times in a row for 500 points.,descriptive,,directive
+65,I've been picking puve successfully. Let's both pick puve next round for mutual gain!,normative,,directive
+66,"I was picking ""giga"" consistently. Let's both choose ""giga"" next turn for mutual points!",directive,,directive
+67,"Let's stick with ""sileb"" - we've matched 5 times in a row for 500 points!",normative,,directive
+68,I've been picking puve successfully. Let's coordinate on puve next round for mutual gain!,descriptive,,directive
+69,I've been picking kavo successfully most turns. Let's coordinate on kavo for mutual benefit!,descriptive,,directive
+70,"Let's both pick ""puve"" next round for mutual gain. We've matched successfully before!",directive,,directive
+71,"""pati"" has worked perfectly for us - let's keep picking it together!",normative,,directive
+72,"Let's coordinate! I'll pick ""mipul"" next turn. Please pick ""mipul"" too for 100 points each.",directive,,directive
+73,I've been picking giga successfully! Let's coordinate on giga for mutual gains.,descriptive,,directive
+74,"Let's both pick ""sileb"" next cycle for mutual 100 points. I'll stick with it.",directive,,directive
+75,Let's keep picking giga together - we've matched 5 times and both gain 100 points!,normative,,directive
+76,I've been picking guma successfully. Let's coordinate on guma again for mutual gain!,descriptive,,directive
+77,"Let's keep picking ""dabti"" for mutual benefit. Matching gives us both 100 points each cycle.",normative,,directive
+78,"Let's coordinate on ""tokba"" - we both benefit from matching picks!",directive,,directive
+79,Let's both pick nekmu next turn - we matched before and both gained 100 points!,directive,,directive
+80,"I'll stick with ""sileb"". It matched 3 of last 5 times. Let's coordinate on it.",descriptive,,directive
+81,I've been picking rurzo successfully. Let's coordinate on rurzo for mutual gains!,normative,,directive
+82,Let's keep picking giga - we've been winning 100 points each turn!,normative,,directive
+83,"Let's both pick ""gavi"" next round to earn 100 points each!",directive,,directive
+84,"Let's both pick ""bizi"" next round to both earn 100 points. I'll do it if you will.",directive,,directive
+85,I've been picking muse consistently. It worked well before. Let's both pick muse next round!,normative,,directive
+86,I've picked rurzo 5 times in a row. Let's keep matching on rurzo for mutual benefit!,directive,,directive
+87,"Let's keep picking ""konti"" together for 100 points each turn. It's the best outcome for both of us!",normative,,directive
+88,Let's keep picking puve! We've both scored 500 points together.,descriptive,,directive
+89,Let's both pick rurzo next turn for guaranteed 100 points each!,directive,,directive
+90,I keep picking nofi. It worked 3 of 5 times. Let's coordinate on nofi next round?,descriptive,,directive
+91,Let's keep picking konti together! We've matched 5 times in a row for 500 points.,descriptive,,directive
+92,Let's keep picking puve together! It's working well for both of us.,normative,,directive
+93,"Let's both pick ""rebi"" next cycle for 100 points each. I'll stick with it.",directive,,directive
+94,"Let's both pick ""budze"" next round to earn 100 points each. Fair deal?",directive,,directive
+95,Let's keep picking rurzo together! We've both gained 500 points. It's working perfectly.,descriptive,,directive
+96,Let's keep picking konti together - we've both been winning 100 points each turn!,descriptive,,directive
+97,"I've been picking ""delfo"" consistently. Let's coordinate on it for mutual benefit.",directive,,directive
+98,Let's both pick kavo - we've matched 5 times and earned 500 points together!,normative,,directive
+99,Let's both pick nofi next turn to earn 100 points each. It works!,directive,,directive
+100,"I've been picking ""pati"" every round. Let's keep matching on it for mutual benefit!",descriptive,,directive
+101,"I've been picking ""muse"" consistently. Let's both pick it next round for mutual gain!",directive,,directive
+102,"Let's both pick ""nazuz"" next round to earn 100 points each. I'll do it.",directive,,directive
+103,Let's try a different strategy. I'll pick mipul next turn - meet me there?,directive,,directive
+104,"Let's keep picking ""nofi"" together - we've both earned 500 points that way!",normative,,directive
+105,"Let's both pick ""nofi"" next turn - we matched twice before and both gained 100 points!",directive,,directive
+106,I've been picking pati consistently. Let's both pick pati next round for mutual gain!,directive,,directive
+107,"Let's coordinate on ""nofi"" - we matched twice in a row for 200 points!",normative,,directive
+108,"Let's coordinate on ""sileb"" - we matched 4 of 5 times. High mutual payoff.",normative,,directive
+109,Let's both pick mipul next time for 100 points each!,directive,,directive
+110,"Let's coordinate on ""konti"" - we've matched successfully before. It's our best strategy for mutual gain.",normative,,directive
+111,I've been picking kavo successfully. Let's coordinate on kavo next time for mutual gain!,descriptive,,directive
+112,"I've matched ""dabti"" successfully 5 times. Let's continue with ""dabti"" for mutual 100 points.",descriptive,,directive
+113,"Let's both pick ""votsi"" next time - we matched once and both gained 100 points!",normative,,directive
+114,"Let's coordinate - I'll pick ""panno"" next cycle if you do. Better for both of us.",directive,,directive
+115,Let's both pick konti next time. We've matched 4 out of 5 times - it works!,normative,,directive
+116,"Let's both pick ""sipe"" next round to both gain 100 points!",directive,,directive
+117,"Let's both pick ""sesig"" next round to earn 100 points each!",directive,,directive
+118,"Let's both pick ""tazur"" next cycle to get 100 points each. I'll start with it.",directive,,directive
+119,Let's keep picking rurzo together! We've matched 5 times and earned 500 points. Stay with rurzo!,normative,,directive
+120,Let's both pick nekmu next turn - we matched before and both won!,normative,,directive
+121,I've been picking puve consistently. It works well when we match!,descriptive,,descriptive
+122,I've been picking kavo successfully most turns. Let's coordinate on kavo for mutual benefit!,descriptive,,directive
+123,"Let's both pick ""mipul"" next time to both gain 100 points instead of losing 50.",directive,,directive
+124,"I've been picking ""pati"" every round and it matched 5 times. Let's both pick ""pati"" next round!",normative,,directive
+125,"Let's both pick ""gabo"" - we got 100 points each last time. Easy profit for both!",normative,,directive
+126,"Let's try ""daref"" next round - it's a reliable choice!",directive,,directive
+127,I've been picking pati successfully most rounds. Let's coordinate on pati for mutual 100 points!,descriptive,,directive
+128,Let's coordinate! I'll pick mipul next turn if you do too. We both gain 100 points instead of losing 50.,directive,,directive
+129,I've been picking pati successfully in 4 of my last 5 rounds. Let's coordinate on pati next time!,descriptive,,directive
+130,I've been picking pati consistently. It works well when we match. Let's both pick pati next round!,normative,,directive
+131,"I've been picking ""muse"" consistently. Let's coordinate on ""muse"" for mutual gain!",normative,,directive
+132,I picked disne last cycle and we matched! Let's both pick disne again for 100 points each.,directive,,directive
+133,"Let's coordinate on ""pike"" next round for mutual gain. I'll pick it.",directive,,directive
+134,"Let's stick with ""rebi"" - we've had great success matching on it!",normative,,directive
+135,Let's go back to sileb - we matched perfectly 4 times in a row for 100 points each!,descriptive,,directive
+136,"I pick ""muse"" every round. Match with me for 100 points!",descriptive,,directive
+137,"I've picked ""pati"" every round. Let's keep matching for mutual benefit!",descriptive,,directive
+138,I've been picking muse consistently. Let's coordinate on muse for mutual gains!,directive,,directive
+139,"Let's keep picking ""pati"" - we've both been winning 100 points every round!",normative,,directive
+140,Let's both pick giga next time for guaranteed 100 points each!,directive,,directive
+141,"Let's both pick ""levim"" next round for mutual gain. It worked once!",directive,,directive
+142,Let's keep picking pati - we've matched 5 times in a row for 500 points!,normative,,directive
+143,I've been picking giga successfully. Let's coordinate on giga for mutual 100 points!,descriptive,,directive
+144,I've been picking konti consistently. Let's both pick konti next time for mutual 100 points!,normative,,directive
+145,"Let's keep picking ""pati"" together! We've both earned 500 points doing this.",normative,,directive
+146,Let's keep picking konti together! We've matched 5 times in a row for 500 points.,descriptive,,directive
+147,Let's both pick giga next turn to get 100 points each. It benefits us both!,directive,,directive
+148,Let's both pick giga next time to earn 100 points each. It's the best outcome for us both!,normative,,directive
+149,Let's keep picking rurzo together! We've had great success with it.,normative,,directive
+150,I've been picking puve successfully most rounds. Let's coordinate on puve for mutual points!,descriptive,,directive

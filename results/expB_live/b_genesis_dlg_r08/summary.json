@@ -1,0 +1,47 @@
+{
+  "config": {
+    "cell": "b_genesis_dlg",
+    "run_index": 8,
+    "seed": 2424633100,
+    "phase": "genesis",
+    "dialogue": true,
+    "framing": "market",
+    "model": "claude-haiku-4-5",
+    "n_agents": 24,
+    "n_names": 10,
+    "memory_size": 5,
+    "pre_transmission": false
+  },
+  "comprehension_passed": true,
+  "priors": {
+    "desog": 0,
+    "kenul": 0,
+    "feblu": 0,
+    "basaz": 0,
+    "gonob": 0,
+    "litte": 0,
+    "nutbe": 0,
+    "pogge": 0,
+    "pike": 20,
+    "liso": 0
+  },
+  "priors_malformed": 0,
+  "genesis": {
+    "converged": true,
+    "winner": "desog",
+    "consensus_time": 123
+  },
+  "final": {
+    "t": 223,
+    "fallback_choices": 0,
+    "unparseable_first_replies": 4,
+    "total_choices": 450,
+    "malformed_rate": 0.008888888888888889,
+    "consensus": "desog",
+    "dominant": [
+      "desog",
+      1.0
+    ],
+    "success_rate_window": 1.0
+  }
+}

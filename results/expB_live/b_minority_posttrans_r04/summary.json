@@ -1,0 +1,61 @@
+{
+  "config": {
+    "cell": "b_minority_posttrans",
+    "run_index": 4,
+    "seed": 1129020987,
+    "phase": "minority",
+    "dialogue": true,
+    "framing": "study",
+    "model": "claude-haiku-4-5",
+    "n_agents": 24,
+    "n_names": 10,
+    "memory_size": 5,
+    "pre_transmission": true
+  },
+  "comprehension_passed": true,
+  "priors": {
+    "nofi": 0,
+    "lupog": 0,
+    "lira": 11,
+    "memva": 0,
+    "teba": 0,
+    "finan": 4,
+    "fepof": 0,
+    "pofu": 0,
+    "giga": 5,
+    "zilzo": 0
+  },
+  "priors_malformed": 0,
+  "genesis": {
+    "converged": true,
+    "winner": "giga",
+    "consensus_time": 343
+  },
+  "pre_transmission": {
+    "original": "giga",
+    "final": "giga",
+    "survived": true,
+    "n_replacements": 24
+  },
+  "minority": {
+    "usable": true,
+    "original": "giga",
+    "alt": "memva",
+    "n_committed": 6,
+    "flipped": false,
+    "interactions_used": 1335
+  },
+  "final": {
+    "t": 1335,
+    "fallback_choices": 0,
+    "unparseable_first_replies": 0,
+    "total_choices": 2670,
+    "malformed_rate": 0.0,
+    "consensus": null,
+    "dominant": [
+      "giga",
+      0.7239583333333334
+    ],
+    "success_rate_window": 0.59375
+  }
+}

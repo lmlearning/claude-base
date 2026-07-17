@@ -1,0 +1,53 @@
+{
+  "config": {
+    "cell": "b_trans_dlg",
+    "run_index": 3,
+    "seed": 2627787388,
+    "phase": "transmission",
+    "dialogue": true,
+    "framing": "rounds",
+    "model": "claude-haiku-4-5",
+    "n_agents": 24,
+    "n_names": 10,
+    "memory_size": 5,
+    "pre_transmission": false
+  },
+  "comprehension_passed": true,
+  "priors": {
+    "sipe": 0,
+    "suddu": 0,
+    "tokba": 8,
+    "luto": 0,
+    "mota": 8,
+    "tuzo": 3,
+    "burir": 0,
+    "subub": 0,
+    "tugo": 0,
+    "kirur": 1
+  },
+  "priors_malformed": 0,
+  "genesis": {
+    "converged": true,
+    "winner": "sipe",
+    "consensus_time": 149
+  },
+  "transmission": {
+    "original": "sipe",
+    "final": "sipe",
+    "survived": true,
+    "n_replacements": 24
+  },
+  "final": {
+    "t": 541,
+    "fallback_choices": 0,
+    "unparseable_first_replies": 1,
+    "total_choices": 1083,
+    "malformed_rate": 0.0009233610341643582,
+    "consensus": "sipe",
+    "dominant": [
+      "sipe",
+      0.9947916666666666
+    ],
+    "success_rate_window": 0.9895833333333334
+  }
+}

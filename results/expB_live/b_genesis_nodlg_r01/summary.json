@@ -1,0 +1,47 @@
+{
+  "config": {
+    "cell": "b_genesis_nodlg",
+    "run_index": 1,
+    "seed": 1147074054,
+    "phase": "genesis",
+    "dialogue": false,
+    "framing": "study",
+    "model": "claude-haiku-4-5",
+    "n_agents": 24,
+    "n_names": 10,
+    "memory_size": 5,
+    "pre_transmission": false
+  },
+  "comprehension_passed": true,
+  "priors": {
+    "sigza": 1,
+    "mello": 13,
+    "mokur": 2,
+    "sisim": 1,
+    "datad": 0,
+    "kuku": 0,
+    "bavug": 0,
+    "simu": 3,
+    "dunbo": 0,
+    "rera": 0
+  },
+  "priors_malformed": 0,
+  "genesis": {
+    "converged": true,
+    "winner": "sigza",
+    "consensus_time": 96
+  },
+  "final": {
+    "t": 196,
+    "fallback_choices": 0,
+    "unparseable_first_replies": 0,
+    "total_choices": 392,
+    "malformed_rate": 0.0,
+    "consensus": "sigza",
+    "dominant": [
+      "sigza",
+      1.0
+    ],
+    "success_rate_window": 1.0
+  }
+}

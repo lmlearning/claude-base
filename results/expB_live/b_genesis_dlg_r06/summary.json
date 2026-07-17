@@ -1,0 +1,47 @@
+{
+  "config": {
+    "cell": "b_genesis_dlg",
+    "run_index": 6,
+    "seed": 2301573786,
+    "phase": "genesis",
+    "dialogue": true,
+    "framing": "rounds",
+    "model": "claude-haiku-4-5",
+    "n_agents": 24,
+    "n_names": 10,
+    "memory_size": 5,
+    "pre_transmission": false
+  },
+  "comprehension_passed": true,
+  "priors": {
+    "muke": 5,
+    "nidpe": 0,
+    "figa": 7,
+    "vomu": 0,
+    "rapuv": 4,
+    "nufe": 0,
+    "posid": 0,
+    "labe": 0,
+    "lesok": 3,
+    "faga": 1
+  },
+  "priors_malformed": 0,
+  "genesis": {
+    "converged": true,
+    "winner": "muke",
+    "consensus_time": 96
+  },
+  "final": {
+    "t": 196,
+    "fallback_choices": 0,
+    "unparseable_first_replies": 0,
+    "total_choices": 392,
+    "malformed_rate": 0.0,
+    "consensus": "muke",
+    "dominant": [
+      "muke",
+      1.0
+    ],
+    "success_rate_window": 1.0
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "config": {
+    "cell": "b_minority_posttrans",
+    "run_index": 3,
+    "seed": 27778351,
+    "phase": "minority",
+    "dialogue": true,
+    "framing": "rounds",
+    "model": "claude-haiku-4-5",
+    "n_agents": 24,
+    "n_names": 10,
+    "memory_size": 5,
+    "pre_transmission": true
+  },
+  "comprehension_passed": true,
+  "priors": {
+    "puve": 0,
+    "tobu": 4,
+    "sokur": 2,
+    "kofav": 0,
+    "peke": 2,
+    "katma": 4,
+    "guto": 0,
+    "tikzo": 8,
+    "bovol": 0,
+    "keboz": 0
+  },
+  "priors_malformed": 0,
+  "genesis": {
+    "converged": true,
+    "winner": "puve",
+    "consensus_time": 96
+  },
+  "pre_transmission": {
+    "original": "puve",
+    "final": "puve",
+    "survived": true,
+    "n_replacements": 24
+  },
+  "minority": {
+    "usable": true,
+    "original": "puve",
+    "alt": "tikzo",
+    "n_committed": 6,
+    "flipped": false,
+    "interactions_used": 1088
+  },
+  "final": {
+    "t": 1088,
+    "fallback_choices": 0,
+    "unparseable_first_replies": 0,
+    "total_choices": 2176,
+    "malformed_rate": 0.0,
+    "consensus": null,
+    "dominant": [
+      "puve",
+      0.6979166666666666
+    ],
+    "success_rate_window": 0.5625
+  }
+}

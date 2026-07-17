@@ -1037,7 +1037,7 @@
         "minority_rows": [
           {
             "n_committed": 1,
-            "f": 0.041666666666666664,
+            "f": 0.08333333333333333,
             "flip": {
               "n": 200,
               "k": 13,
@@ -1048,28 +1048,6 @@
           },
           {
             "n_committed": 2,
-            "f": 0.08333333333333333,
-            "flip": {
-              "n": 200,
-              "k": 200,
-              "p": 1.0,
-              "lo": 0.9811546736227335,
-              "hi": 1.0
-            }
-          },
-          {
-            "n_committed": 3,
-            "f": 0.125,
-            "flip": {
-              "n": 200,
-              "k": 200,
-              "p": 1.0,
-              "lo": 0.9811546736227335,
-              "hi": 1.0
-            }
-          },
-          {
-            "n_committed": 4,
             "f": 0.16666666666666666,
             "flip": {
               "n": 200,
@@ -1080,8 +1058,30 @@
             }
           },
           {
-            "n_committed": 6,
+            "n_committed": 3,
             "f": 0.25,
+            "flip": {
+              "n": 200,
+              "k": 200,
+              "p": 1.0,
+              "lo": 0.9811546736227335,
+              "hi": 1.0
+            }
+          },
+          {
+            "n_committed": 4,
+            "f": 0.3333333333333333,
+            "flip": {
+              "n": 200,
+              "k": 200,
+              "p": 1.0,
+              "lo": 0.9811546736227335,
+              "hi": 1.0
+            }
+          },
+          {
+            "n_committed": 6,
+            "f": 0.5,
             "flip": {
               "n": 200,
               "k": 200,
@@ -1092,9 +1092,9 @@
           }
         ],
         "f50": {
-          "x50": 0.04483625651625522,
-          "lo": 0.044434612606578446,
-          "hi": 0.045783377984688366,
+          "x50": 0.0900780149424114,
+          "lo": 0.08882040769458598,
+          "hi": 0.09114921319262712,
           "n_runs": 1000,
           "n_boot_kept": 2000
         },
@@ -1163,7 +1163,7 @@
         "minority_rows": [
           {
             "n_committed": 2,
-            "f": 0.08333333333333333,
+            "f": 0.041666666666666664,
             "flip": {
               "n": 200,
               "k": 0,
@@ -1174,7 +1174,7 @@
           },
           {
             "n_committed": 4,
-            "f": 0.16666666666666666,
+            "f": 0.08333333333333333,
             "flip": {
               "n": 200,
               "k": 0,
@@ -1185,7 +1185,7 @@
           },
           {
             "n_committed": 6,
-            "f": 0.25,
+            "f": 0.125,
             "flip": {
               "n": 200,
               "k": 1,
@@ -1196,7 +1196,7 @@
           },
           {
             "n_committed": 8,
-            "f": 0.3333333333333333,
+            "f": 0.16666666666666666,
             "flip": {
               "n": 200,
               "k": 200,
@@ -1207,7 +1207,7 @@
           },
           {
             "n_committed": 12,
-            "f": 0.5,
+            "f": 0.25,
             "flip": {
               "n": 200,
               "k": 200,
@@ -1218,7 +1218,7 @@
           },
           {
             "n_committed": 16,
-            "f": 0.6666666666666666,
+            "f": 0.3333333333333333,
             "flip": {
               "n": 200,
               "k": 200,
@@ -1229,7 +1229,7 @@
           },
           {
             "n_committed": 24,
-            "f": 1.0,
+            "f": 0.5,
             "flip": {
               "n": 200,
               "k": 200,
@@ -1240,9 +1240,9 @@
           }
         ],
         "f50": {
-          "x50": 0.2621612646485845,
-          "lo": 0.26009980994761916,
-          "hi": 0.29297308151690094,
+          "x50": 0.1308769225199144,
+          "lo": 0.1297296852414104,
+          "hi": 0.1520862203210109,
           "n_runs": 1400,
           "n_boot_kept": 2000
         },
@@ -1302,6 +1302,22 @@
       "estimate": 0.09179487179487181,
       "lo": 0.07641025641025644,
       "hi": 0.10717948717948719
+    },
+    "token_audit": {
+      "pool_tokens": 420,
+      "real_word_tokens": 26,
+      "real_word_share": 0.06190476190476191,
+      "runs_with_real_word_winner": [
+        "b_genesis_dlg_r01",
+        "b_genesis_dlg_r05",
+        "b_minority_founder_r00"
+      ],
+      "winner_prior_mean_excluding_flagged": {
+        "n": 36,
+        "estimate": 0.09333333333333334,
+        "lo": 0.07777777777777778,
+        "hi": 0.11000000000000003
+      }
     },
     "winner_prior_note": "mean measured zero-shot prior of the eventual winner; 0.1 = winner independent of prior (W=10)",
     "framing_consensus_times": {
@@ -1484,118 +1500,213 @@
     "mode": "live",
     "note": "live",
     "comprehension_pass_rate": {
-      "n": 10,
-      "k": 10,
+      "n": 42,
+      "k": 42,
       "p": 1.0,
-      "lo": 0.7224672001371107,
+      "lo": 0.916201209134296,
       "hi": 0.9999999999999999
     },
     "malformed_rate": {
-      "n": 10,
-      "estimate": 0.0011433418150975402,
-      "lo": 0.0,
-      "hi": 0.002921119592875318
+      "n": 42,
+      "estimate": 0.001573604508405572,
+      "lo": 0.00029166224246757194,
+      "hi": 0.0036934791056674843
     },
     "winner_prior_mean": {
-      "n": 10,
-      "estimate": 0.10400000000000001,
-      "lo": 0.04000000000000001,
-      "hi": 0.184
+      "n": 39,
+      "estimate": 0.12666666666666662,
+      "lo": 0.08051282051282052,
+      "hi": 0.182051282051282
+    },
+    "token_audit": {
+      "pool_tokens": 420,
+      "real_word_tokens": 26,
+      "real_word_share": 0.06190476190476191,
+      "runs_with_real_word_winner": [
+        "b_minority_founder_r00",
+        "b_trans_dlg_r03",
+        "b_trans_dlg_r04",
+        "b_trans_nodlg_r03"
+      ],
+      "winner_prior_mean_excluding_flagged": {
+        "n": 35,
+        "estimate": 0.11828571428571426,
+        "lo": 0.07485714285714287,
+        "hi": 0.16974285714285672
+      }
     },
     "winner_prior_note": "mean measured zero-shot prior of the eventual winner; 0.1 = winner independent of prior (W=10)",
     "framing_consensus_times": {
       "rounds": {
-        "n": 2,
-        "estimate": 101.0,
-        "lo": 96.0,
-        "hi": 106.0
-      },
-      "study": {
-        "n": 4,
-        "estimate": 96.5,
-        "lo": 96.0,
-        "hi": 118.0
-      },
-      "market": {
-        "n": 4,
+        "n": 13,
         "estimate": 96.0,
         "lo": 96.0,
-        "hi": 123.0
+        "hi": 136.0
+      },
+      "study": {
+        "n": 13,
+        "estimate": 96.0,
+        "lo": 96.0,
+        "hi": 97.0
+      },
+      "market": {
+        "n": 13,
+        "estimate": 96.0,
+        "lo": 96.0,
+        "hi": 96.0
       }
     },
     "framing_invariance_kw": {
-      "stat": 0.12980769230769149,
-      "p": 0.9371575703501097
+      "stat": 3.4329776825234224,
+      "p": 0.17969598265929113
     },
     "genesis": {
-      "n_runs": 10,
+      "n_runs": 15,
       "convergence_rate": {
-        "n": 10,
-        "k": 10,
+        "n": 15,
+        "k": 15,
         "p": 1.0,
-        "lo": 0.7224672001371107,
-        "hi": 0.9999999999999999
+        "lo": 0.7961166989641515,
+        "hi": 1.0
       },
       "consensus_time": {
-        "n": 10,
+        "n": 15,
         "estimate": 96.0,
         "lo": 96.0,
-        "hi": 107.5
+        "hi": 106.0
       }
     },
+    "socialisation_ablation_mannwhitney_p": 0.15647152840408748,
     "socialisation": {
       "dialogue_on": {
-        "n_runs": 0,
+        "n_runs": 6,
         "survived": {
-          "n": 0,
-          "p": null,
-          "lo": null,
-          "hi": null
+          "n": 6,
+          "k": 6,
+          "p": 1.0,
+          "lo": 0.6096657120978346,
+          "hi": 1.0
         },
         "newcomer_conformity": {
-          "n": 0,
-          "estimate": null,
-          "lo": null,
-          "hi": null
+          "n": 126,
+          "estimate": 1.0,
+          "lo": 1.0,
+          "hi": 1.0
         },
-        "newcomer_censored": 0,
+        "newcomer_censored": 18,
         "founder_conformity": {
-          "n": 0,
-          "estimate": null,
-          "lo": null,
-          "hi": null
+          "n": 144,
+          "estimate": 1.0,
+          "lo": 1.0,
+          "hi": 1.0
         }
       },
       "dialogue_off": {
-        "n_runs": 0,
+        "n_runs": 6,
         "survived": {
-          "n": 0,
-          "p": null,
-          "lo": null,
-          "hi": null
+          "n": 6,
+          "k": 6,
+          "p": 1.0,
+          "lo": 0.6096657120978346,
+          "hi": 1.0
         },
         "newcomer_conformity": {
-          "n": 0,
-          "estimate": null,
-          "lo": null,
-          "hi": null
+          "n": 127,
+          "estimate": 1.0,
+          "lo": 1.0,
+          "hi": 1.0
         },
-        "newcomer_censored": 0,
+        "newcomer_censored": 17,
         "founder_conformity": {
-          "n": 0,
-          "estimate": null,
-          "lo": null,
-          "hi": null
+          "n": 144,
+          "estimate": 1.0,
+          "lo": 1.0,
+          "hi": 1.0
         }
       }
     },
+    "judge_label_counts": {
+      "directive": 3543,
+      "normative": 861,
+      "descriptive": 102,
+      "other": 1
+    },
     "enforcement": {
       "gated": true,
-      "gate_note": "enforcement results are reportable only after judge validation (kappa >= 0.6 on the hand-labelled sample)"
+      "gate_note": "VALIDATION FAILED (second-annotator kappa = 0.06 < 0.6): the numbers in this block are UNVALIDATED judge outputs and are not reportable as enforcement results",
+      "normative_share_by_age": {
+        "pre-consensus": {
+          "n": 13,
+          "estimate": 0.10858267458840559,
+          "lo": 0.06277876763869972,
+          "hi": 0.15487771595713962
+        },
+        "100-250": {
+          "n": 11,
+          "estimate": 0.34961303971869684,
+          "lo": 0.22833205711507495,
+          "hi": 0.5048197966055108
+        },
+        "250-500": {
+          "n": 15,
+          "estimate": 0.31054419900914365,
+          "lo": 0.2306994470745365,
+          "hi": 0.426819221012616
+        },
+        "500+": {
+          "n": 12,
+          "estimate": 0.20857839725915653,
+          "lo": 0.1825326001655416,
+          "hi": 0.23693806251894184
+        }
+      },
+      "age_trend_cluster_bootstrap": {
+        "slope": -0.00019803423396517052,
+        "lo": -0.00028448829795953124,
+        "hi": -0.00011590316066307344,
+        "p_two_sided": 0.0,
+        "n_runs": 15
+      },
+      "asymmetry": {
+        "incumbent_messages": 67,
+        "incumbent_normative_share": {
+          "n": 67,
+          "k": 8,
+          "p": 0.11940298507462686,
+          "lo": 0.061762325335044804,
+          "hi": 0.2183202583807222
+        },
+        "newcomer_messages": 20,
+        "newcomer_normative_share": {
+          "n": 20,
+          "k": 7,
+          "p": 0.35,
+          "lo": 0.18119182410108206,
+          "hi": 0.5671457233147638
+        }
+      },
+      "solitary_control": {
+        "n_messages": 813,
+        "normative_share": {
+          "n": 813,
+          "k": 46,
+          "p": 0.056580565805658053,
+          "lo": 0.042685230992216265,
+          "hi": 0.07464654469784748
+        }
+      }
     },
     "judge_validation": {
       "n": 0,
-      "note": "validation sample not found"
+      "kappa": null,
+      "note": "no hand labels found",
+      "second_annotator": {
+        "n": 151,
+        "observed_agreement": 0.3708609271523179,
+        "kappa": 0.06241830065359475,
+        "gate_passed": false,
+        "annotator": "independent second-annotator (Claude Fable 5, this session), strict rubric; author hand-labels still pending"
+      }
     }
   }
 }

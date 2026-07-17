@@ -602,6 +602,17 @@ def analyze_b(bdir: str, figdir: str, mode: str) -> dict:
     agree = compute_agreement(val_csv) if os.path.exists(val_csv) else \
         {"n": 0, "note": "validation sample not found"}
     out["judge_validation"] = agree
+    second = os.path.join(bdir, "judge_agreement_second_annotator.json")
+    if os.path.exists(second):
+        with open(second) as f:
+            out["judge_validation"]["second_annotator"] = json.load(f)
+        if not out["judge_validation"]["second_annotator"]["gate_passed"]:
+            out["enforcement"]["gated"] = True
+            out["enforcement"]["gate_note"] = (
+                "VALIDATION FAILED (second-annotator kappa = "
+                f"{out['judge_validation']['second_annotator']['kappa']:.2f}"
+                " < 0.6): the numbers in this block are UNVALIDATED judge "
+                "outputs and are not reportable as enforcement results")
     if mode == "mock":
         out["judge_validation"]["mock_pipeline_check"] = \
             _mock_judge_check(labels)
@@ -724,7 +735,10 @@ def _figures_b(figdir, runs, out, soc, enforcement):
     trend = enforcement.get("age_trend_cluster_bootstrap") or {}
     sub = (f"slope={trend.get('slope'):.2e}, p={trend.get('p_two_sided'):.3f} "
            "(run-clustered)") if trend.get("slope") is not None else ""
-    ax.set_title("Normative utterances vs convention age  " + sub, fontsize=9)
+    gate_failed = bool((enforcement.get("gate_note") or "").startswith("VALIDATION FAILED"))
+    ax.set_title(("UNVALIDATED judge labels — " if gate_failed else "")
+                 + "Normative utterances vs convention age  " + sub,
+                 fontsize=8.5)
     ax.legend(fontsize=8)
     _save(fig, figdir, "fig5_enforcement.png")
 

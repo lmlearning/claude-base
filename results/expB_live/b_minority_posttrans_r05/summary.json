@@ -1,0 +1,61 @@
+{
+  "config": {
+    "cell": "b_minority_posttrans",
+    "run_index": 5,
+    "seed": 1230622032,
+    "phase": "minority",
+    "dialogue": true,
+    "framing": "market",
+    "model": "claude-haiku-4-5",
+    "n_agents": 24,
+    "n_names": 10,
+    "memory_size": 5,
+    "pre_transmission": true
+  },
+  "comprehension_passed": true,
+  "priors": {
+    "dabti": 0,
+    "zisiv": 0,
+    "tuli": 2,
+    "biki": 0,
+    "gabo": 0,
+    "gosag": 0,
+    "torin": 18,
+    "gigav": 0,
+    "telo": 0,
+    "zemas": 0
+  },
+  "priors_malformed": 0,
+  "genesis": {
+    "converged": true,
+    "winner": "dabti",
+    "consensus_time": 96
+  },
+  "pre_transmission": {
+    "original": "dabti",
+    "final": "dabti",
+    "survived": true,
+    "n_replacements": 24
+  },
+  "minority": {
+    "usable": true,
+    "original": "dabti",
+    "alt": "gabo",
+    "n_committed": 6,
+    "flipped": false,
+    "interactions_used": 1088
+  },
+  "final": {
+    "t": 1088,
+    "fallback_choices": 0,
+    "unparseable_first_replies": 0,
+    "total_choices": 2176,
+    "malformed_rate": 0.0,
+    "consensus": null,
+    "dominant": [
+      "dabti",
+      0.6614583333333334
+    ],
+    "success_rate_window": 0.5729166666666666
+  }
+}

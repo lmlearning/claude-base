@@ -1,0 +1,46 @@
+{
+  "config": {
+    "cell": "b_solitary",
+    "run_index": 2,
+    "seed": 2246231176,
+    "phase": "solitary",
+    "dialogue": true,
+    "framing": "market",
+    "model": "claude-haiku-4-5",
+    "n_agents": 24,
+    "n_names": 10,
+    "memory_size": 5,
+    "pre_transmission": false
+  },
+  "comprehension_passed": true,
+  "priors": {
+    "lafti": 3,
+    "lumed": 2,
+    "beba": 1,
+    "favo": 3,
+    "vapma": 1,
+    "panno": 0,
+    "fokag": 2,
+    "tazur": 5,
+    "gazot": 2,
+    "gomsi": 1
+  },
+  "priors_malformed": 0,
+  "solitary": {
+    "rounds": 300,
+    "messages_sent": 269
+  },
+  "final": {
+    "t": 300,
+    "fallback_choices": 0,
+    "unparseable_first_replies": 12,
+    "total_choices": 312,
+    "malformed_rate": 0.038461538461538464,
+    "consensus": null,
+    "dominant": [
+      -1,
+      0.0
+    ],
+    "success_rate_window": 0.0
+  }
+}

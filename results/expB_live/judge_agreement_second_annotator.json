@@ -1,0 +1,7 @@
+{
+  "n": 151,
+  "observed_agreement": 0.3708609271523179,
+  "kappa": 0.06241830065359475,
+  "gate_passed": false,
+  "annotator": "independent second-annotator (Claude Fable 5, this session), strict rubric; author hand-labels still pending"
+}

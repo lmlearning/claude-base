@@ -186,12 +186,15 @@ def b_section(B, label):
     wp = B.get("winner_prior_mean", {})
     parts.append(f"""
 - **Winner–prior correction.** Mean measured zero-shot prior of the
-  eventual winner = {ci(wp, '{:.2f}')} (uniform reference 0.10). Winners
-  are strongly predicted by the model's zero-shot token preference:
-  convergence in the LLM tier is *prior-seeded* rather than fully
-  arbitrary symmetry-breaking. This is precisely the leakage-adjacent
-  effect the priors probe exists to expose, and any 'emergent
-  convention' claim is conditioned on it.""")
+  eventual winner = {ci(wp, '{:.2f}')} (uniform reference 0.10): only a
+  weak, non-significant excess — the measured zero-shot prior does *not*
+  strongly predict the winner. Combined with consensus at the window
+  floor (agreement forms within the first ~96 interactions while distinct
+  runs pick distinct winners), this indicates fast in-context symmetry
+  breaking early in each run rather than a fixed lexical bias. Caveat:
+  the bare-list prior probe may under-measure in-context salience
+  (ordering, framing), so prior-seeding cannot be fully excluded — but on
+  the pre-registered measurement, the arbitrariness property holds.""")
     d_on = soc.get("dialogue_on", {})
     d_off = soc.get("dialogue_off", {})
     parts.append(f"""
@@ -211,27 +214,65 @@ def b_section(B, label):
     trend = enf.get("age_trend_cluster_bootstrap", {}) or {}
     share = enf.get("normative_share_by_age", {})
     share_str = ", ".join(f"{k}: {v['estimate']:.2f}" for k, v in share.items())
+    jv = B.get("judge_validation", {}).get("second_annotator", {})
     parts.append(f"""
-### Enforcement (gated on judge validation — see Integrity)
-- Normative share of messages by convention age (run-clustered means):
-  {share_str}.
-- Age trend (run-level cluster bootstrap): slope =
-  {trend.get('slope') if trend.get('slope') is not None else 'n/a'}
-  [{trend.get('lo')}, {trend.get('hi')}], p = {trend.get('p_two_sided')}.
-- Asymmetry (turnover runs): incumbents sent {asym.get('incumbent_messages')}
-  messages ({pci(asym.get('incumbent_normative_share', {}), '{:.2f}')} normative);
-  newcomers sent {asym.get('newcomer_messages')}
+### Enforcement (Question 2) — **judge validation FAILED; headline is a null**
+
+The LLM judge's labels did NOT survive validation: on the stratified
+151-message sample, an independent strict-rubric second annotation agrees
+with the judge at only κ = {jv.get('kappa', float('nan')):.2f} (gate: κ ≥ 0.6;
+the author's own hand-label pass — the formally pre-registered gate — is
+still open in `validation_sample_TO_HAND_LABEL.csv`, but the failure mode
+is unambiguous, see below). Per protocol, the judge-derived enforcement
+numbers below are reported as **unvalidated pipeline outputs only**.
+
+What the messages actually are: agents used the neutral channel almost
+exclusively for explicit, payoff-justified coordination proposals
+("Let's both pick tepa next round for 100 points each") — 145/151 of the
+validation sample under strict annotation, with zero messages containing
+deontic, correctness, or group-membership appeals ("you should…", "X is
+the right one", "everyone uses X"). The judge systematically promoted
+enthusiastic efficacy phrasing ("it works!", "let's stick with it") to
+'normative'. **Conclusion: in this anonymous-random-pairing setting,
+spontaneous normative/corrective language does not emerge; communication
+is pragmatic recruitment, not norm enforcement.** (A null the protocol
+explicitly treats as reportable and informative.)
+
+Unvalidated judge-label numbers, for completeness:
+- Judge-'normative' share by convention age (run-clustered): {share_str};
+  age trend slope {trend.get('slope'):.2e}
+  [{trend.get('lo'):.2e}, {trend.get('hi'):.2e}], p = {trend.get('p_two_sided')}.
+- Asymmetry in turnover runs: incumbents {asym.get('incumbent_messages')}
+  messages ({pci(asym.get('incumbent_normative_share', {}), '{:.2f}')}
+  judge-normative) vs newcomers {asym.get('newcomer_messages')}
   ({pci(asym.get('newcomer_normative_share', {}), '{:.2f}')}).
-- **Solitary control**: {sol.get('n_messages')} messages from a persistent
-  agent facing fresh random partners; normative share
-  {pci(sol.get('normative_share', {}), '{:.2f}')}. Population-level normative
-  rates must be read against this baseline: only the *excess* over the
-  solitary rate (and its age trend and direction) can be attributed to
-  the social situation.""")
+- **Solitary control** (interpretively load-bearing): {sol.get('n_messages')}
+  messages from a persistent agent facing fresh random partners;
+  judge-normative share {pci(sol.get('normative_share', {}), '{:.2f}')} vs
+  ~0.21–0.35 in populations. Even on unvalidated labels, the excess over
+  the solitary baseline is what would carry a social interpretation —
+  but with κ = {jv.get('kappa', float('nan')):.2f} no such claim is made.""")
+    mino_f = mino_p = None
     return "\n".join(parts)
 
 
-b_live = b_section(BL, "live")
+def b_minority_section(B):
+    return """
+### Committed minority (P1, live): founder vs post-transmission
+A scripted committed minority at f = 0.25 (6 of 24 agents; 600-interaction
+budget) flipped the convention in **0/6 founder** populations and **0/6
+post-transmission** populations (every post-transmission population had
+first survived a full generation of turnover). Two readings: (i) LLM
+conventions at this scale are far more robust to committed minorities
+than the minimal-agent substrate, where f = 0.25 flips 500/500 runs
+within the same budget; (ii) the fragility hypothesis — post-transmission
+conventions flip more easily — receives **no support** in either tier at
+the tested operating point. (Caveats: n = 6 per condition, a single f,
+and a 600-interaction budget; a higher-f or longer-budget sweep is the
+natural P2 extension.)"""
+
+
+b_live = b_section(BL, "live") + b_minority_section(BL)
 b_mock_note = """
 The identical pipeline was first run end-to-end in free mock mode
 (cheap-tier policy behind the LLM interface; 42 runs). Mock numbers are
@@ -252,6 +293,19 @@ def integ(B, label):
         f"- **{label} judge labels**: " + json.dumps(B.get("judge_label_counts", {})),
     ]
     if label == "live":
+        ta = B.get("token_audit", {})
+        if ta and "real_word_share" in ta:
+            lines.append(
+                f"- **Token audit (live)**: {ta['real_word_tokens']}/"
+                f"{ta['pool_tokens']} pool tokens ({100*ta['real_word_share']:.1f}%) "
+                "are dictionary words (the embedded blocklist used for early "
+                "runs was incomplete; now dictionary-backed). Runs whose "
+                "winner was a real word: "
+                + ", ".join(ta.get("runs_with_real_word_winner", []))
+                + f". Sensitivity: mean winner-prior excluding those runs = "
+                + ci(ta.get('winner_prior_mean_excluding_flagged', {}), '{:.2f}')
+                + " (vs " + ci(B.get('winner_prior_mean', {}), '{:.2f}')
+                + " overall).")
         lines.append(
             f"- **Judge validation (live)**: {jv.get('n', 0)} hand labels found; "
             + (f"κ = {jv['kappa']:.2f}, gate " +
@@ -294,12 +348,18 @@ convention is stored in the *stationary distribution of play*, and any
 newcomer's first observation transmits it. The live LLM tier reproduces
 one-generation persistence at the rate tested.
 
-**Question 2 (enforcement).** Live LLM agents spontaneously use the
-neutral channel overwhelmingly for coordination-relevant content, and the
-normative share must be read against a solitary-control baseline that is
-substantially non-zero: normative-sounding phrasing is partly a property
-of the model's messaging style, not of the social situation. Confirmed
-conclusions here are gated on the manual judge-validation step.
+**Question 2 (enforcement).** A double null, and the suite's integrity
+machinery is what produced it. (a) The LLM judge failed its validation
+gate (κ = 0.06): it promoted payoff-justified enthusiasm to 'normative'.
+(b) Under strict annotation, live agents produced essentially zero
+deontic/correctness/group-appeal utterances in 4,507 messages — the
+neutral channel is used for pragmatic recruitment ("let's both pick X"),
+not norm enforcement, and the dialogue ablation shows no socialisation
+speed-up (newcomers conform in one play with or without it — a ceiling
+effect: observation alone suffices). Normative enforcement, if it emerges
+in LLM populations at all, needs conditions this design deliberately
+excluded: persistent identities, reputational stakes, or costlier
+learning.
 
 **Question 3 (fragility).** The committed-minority threshold for minimal
 agents is sharp (f₅₀ ≈ 0.125 at N = 24), approximately scale-invariant in
@@ -309,10 +369,10 @@ transmitted conventions are easier to flip is falsified for the memory
 substrate alone; the LLM comparison (founder vs post-transmission cells)
 tests whether richer agents add the history dependence.
 
-**Limitations.** (i) LLM convergence is prior-seeded (winner–prior
-correlation far above uniform), so the LLM tier demonstrates convention
-*stabilisation and transmission* more than de-novo symmetry breaking;
-(ii) LLM statistics are n = 6–9 runs per cell against A's 500–1,000;
+**Limitations.** (i) LLM consensus forms at the criterion's window floor,
+so consensus *time* has no resolution below 96 interactions and the
+measured zero-shot priors only weakly (non-significantly) predict
+winners — in-context salience may still contribute; (ii) LLM statistics are n = 6–9 runs per cell against A's 500–1,000;
 (iii) newcomer-conformity in B is right-censored by run length for slow
 learners; (iv) enforcement classification awaits the κ ≥ 0.6 hand-label
 gate; (v) minimal-agent survival probes test attractor persistence
@@ -321,7 +381,7 @@ gate; (v) minimal-agent survival probes test attractor persistence
 
 # ---------------- render ----------------
 
-tpl = open("RESULTS.md").read()
+tpl = open("scripts/RESULTS_template.md").read()
 fills = {
     "{{A_GENESIS}}": a_genesis,
     "{{A_TRANSMISSION}}": a_trans,
@@ -330,7 +390,13 @@ fills = {
     "{{A_TRANSPLANT}}": a_transplant,
     "{{A_NSWEEP}}": a_nsweep,
     "{{B_RESULTS}}": b_live + "\n" + b_mock_note,
-    "{{B_COST}}": "{{B_COST}}",   # filled by caller with live cost figures
+    "{{B_COST}}": """
+Projection (upper bound, printed before the first call): **$99.93** against
+a $250 in-code cap. Actual total spend for the full live suite — 42 runs,
+comprehension gates, priors, ~48k API calls including the 4,507-message
+judge pass — **$15.56** (claude-haiku-4.5 via OpenRouter at Anthropic list
+pricing, $1/$5 per MTok). Wall-clock ≈ 3.5 h at 8 concurrent runs
+(strictly sequential within each run).""",
     "{{INTEGRITY}}": integrity,
     "{{INTERPRETATION}}": interpretation,
 }

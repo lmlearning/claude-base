@@ -1,0 +1,61 @@
+{
+  "config": {
+    "cell": "b_minority_posttrans",
+    "run_index": 0,
+    "seed": 2517286534,
+    "phase": "minority",
+    "dialogue": true,
+    "framing": "rounds",
+    "model": "claude-haiku-4-5",
+    "n_agents": 24,
+    "n_names": 10,
+    "memory_size": 5,
+    "pre_transmission": true
+  },
+  "comprehension_passed": true,
+  "priors": {
+    "gavi": 14,
+    "gammi": 1,
+    "totad": 0,
+    "zare": 3,
+    "gopa": 1,
+    "vofiv": 0,
+    "sotfa": 0,
+    "voku": 1,
+    "legu": 0,
+    "fumke": 0
+  },
+  "priors_malformed": 0,
+  "genesis": {
+    "converged": true,
+    "winner": "gavi",
+    "consensus_time": 96
+  },
+  "pre_transmission": {
+    "original": "gavi",
+    "final": "gavi",
+    "survived": true,
+    "n_replacements": 24
+  },
+  "minority": {
+    "usable": true,
+    "original": "gavi",
+    "alt": "totad",
+    "n_committed": 6,
+    "flipped": false,
+    "interactions_used": 1088
+  },
+  "final": {
+    "t": 1088,
+    "fallback_choices": 0,
+    "unparseable_first_replies": 0,
+    "total_choices": 2176,
+    "malformed_rate": 0.0,
+    "consensus": null,
+    "dominant": [
+      "gavi",
+      0.75
+    ],
+    "success_rate_window": 0.625
+  }
+}

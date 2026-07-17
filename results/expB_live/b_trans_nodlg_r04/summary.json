@@ -1,0 +1,53 @@
+{
+  "config": {
+    "cell": "b_trans_nodlg",
+    "run_index": 4,
+    "seed": 3848259510,
+    "phase": "transmission",
+    "dialogue": false,
+    "framing": "study",
+    "model": "claude-haiku-4-5",
+    "n_agents": 24,
+    "n_names": 10,
+    "memory_size": 5,
+    "pre_transmission": false
+  },
+  "comprehension_passed": true,
+  "priors": {
+    "rimep": 1,
+    "dube": 0,
+    "fegdu": 0,
+    "simug": 2,
+    "fiku": 0,
+    "fari": 2,
+    "regu": 3,
+    "purda": 0,
+    "mosel": 12,
+    "vudti": 0
+  },
+  "priors_malformed": 0,
+  "genesis": {
+    "converged": true,
+    "winner": "rimep",
+    "consensus_time": 96
+  },
+  "transmission": {
+    "original": "rimep",
+    "final": "rimep",
+    "survived": true,
+    "n_replacements": 24
+  },
+  "final": {
+    "t": 488,
+    "fallback_choices": 0,
+    "unparseable_first_replies": 0,
+    "total_choices": 976,
+    "malformed_rate": 0.0,
+    "consensus": "rimep",
+    "dominant": [
+      "rimep",
+      1.0
+    ],
+    "success_rate_window": 1.0
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "config": {
+    "cell": "b_trans_dlg",
+    "run_index": 4,
+    "seed": 3601483329,
+    "phase": "transmission",
+    "dialogue": true,
+    "framing": "study",
+    "model": "claude-haiku-4-5",
+    "n_agents": 24,
+    "n_names": 10,
+    "memory_size": 5,
+    "pre_transmission": false
+  },
+  "comprehension_passed": true,
+  "priors": {
+    "lari": 1,
+    "ronsi": 0,
+    "zivga": 0,
+    "zalur": 4,
+    "rezi": 2,
+    "gosu": 5,
+    "ruful": 0,
+    "fefu": 5,
+    "mofe": 3,
+    "pemti": 0
+  },
+  "priors_malformed": 0,
+  "genesis": {
+    "converged": true,
+    "winner": "lari",
+    "consensus_time": 96
+  },
+  "transmission": {
+    "original": "lari",
+    "final": "lari",
+    "survived": true,
+    "n_replacements": 24
+  },
+  "final": {
+    "t": 488,
+    "fallback_choices": 0,
+    "unparseable_first_replies": 0,
+    "total_choices": 976,
+    "malformed_rate": 0.0,
+    "consensus": "lari",
+    "dominant": [
+      "lari",
+      1.0
+    ],
+    "success_rate_window": 1.0
+  }
+}

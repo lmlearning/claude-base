@@ -1,0 +1,47 @@
+{
+  "config": {
+    "cell": "b_genesis_nodlg",
+    "run_index": 4,
+    "seed": 3445028660,
+    "phase": "genesis",
+    "dialogue": false,
+    "framing": "study",
+    "model": "claude-haiku-4-5",
+    "n_agents": 24,
+    "n_names": 10,
+    "memory_size": 5,
+    "pre_transmission": false
+  },
+  "comprehension_passed": true,
+  "priors": {
+    "pesi": 1,
+    "dafa": 2,
+    "gudba": 2,
+    "dikem": 2,
+    "ludpu": 0,
+    "fumep": 0,
+    "vosug": 2,
+    "kefak": 5,
+    "libe": 3,
+    "ratpa": 3
+  },
+  "priors_malformed": 0,
+  "genesis": {
+    "converged": true,
+    "winner": "pesi",
+    "consensus_time": 96
+  },
+  "final": {
+    "t": 196,
+    "fallback_choices": 0,
+    "unparseable_first_replies": 0,
+    "total_choices": 392,
+    "malformed_rate": 0.0,
+    "consensus": "pesi",
+    "dominant": [
+      "pesi",
+      1.0
+    ],
+    "success_rate_window": 1.0
+  }
+}

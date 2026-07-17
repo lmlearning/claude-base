@@ -1,0 +1,53 @@
+{
+  "config": {
+    "cell": "b_trans_nodlg",
+    "run_index": 2,
+    "seed": 3453105278,
+    "phase": "transmission",
+    "dialogue": false,
+    "framing": "market",
+    "model": "claude-haiku-4-5",
+    "n_agents": 24,
+    "n_names": 10,
+    "memory_size": 5,
+    "pre_transmission": false
+  },
+  "comprehension_passed": true,
+  "priors": {
+    "badim": 1,
+    "dukig": 0,
+    "bokgi": 1,
+    "depve": 0,
+    "navbu": 1,
+    "sefu": 3,
+    "mafam": 0,
+    "rande": 6,
+    "tasa": 3,
+    "genag": 5
+  },
+  "priors_malformed": 0,
+  "genesis": {
+    "converged": true,
+    "winner": "badim",
+    "consensus_time": 96
+  },
+  "transmission": {
+    "original": "badim",
+    "final": "badim",
+    "survived": true,
+    "n_replacements": 24
+  },
+  "final": {
+    "t": 488,
+    "fallback_choices": 0,
+    "unparseable_first_replies": 0,
+    "total_choices": 976,
+    "malformed_rate": 0.0,
+    "consensus": "badim",
+    "dominant": [
+      "badim",
+      1.0
+    ],
+    "success_rate_window": 1.0
+  }
+}

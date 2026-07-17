@@ -3,11 +3,4 @@ __pycache__/
 .pytest_cache/
 nohup.out
 
-# live run in progress; force-added when complete
-results/expB_live/
-results/expB_live_run.log
-results/expB_live_pilot.log
-results/expA_fast.log
-results/expA_run.log
-results/expB_mock_run.log
-results/expB_live_judge.log
+# run logs (retained in repo for provenance)
