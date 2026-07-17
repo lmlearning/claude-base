@@ -29,3 +29,4 @@ done e3 p1: {'done': True, 't': 492}
 done e3 p3: {'done': True, 't': 492}
 done e3 p4: {'done': True, 't': 492}
 done e3 p5: {'done': True, 't': 492}
+done e2 p5: {'done': True, 'episodes': 72}
