@@ -19,3 +19,4 @@ done e1_tight p2: {'done': True, 't': 692}
 done e2 p0: {'done': True, 'episodes': 72}
 done e1_tight p1: {'done': True, 't': 692}
 done e1_loose p3: {'done': True, 't': 692}
+done e1_tight p0: {'done': True, 't': 692}
