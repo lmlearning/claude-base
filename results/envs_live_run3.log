@@ -1,0 +1,13 @@
+=== E1-E4 cost projection (upper bound, live pricing) ===
+{
+  "per_pop_usd": {
+    "e1_tight": 1.06,
+    "e1_loose": 1.06,
+    "e1_stranger": 0.22,
+    "e2": 1.25,
+    "e3": 0.75,
+    "e4": 0.75
+  },
+  "total_upper_bound_usd": 25.46
+}
+live backend ready; spend so far $7.47 of $100.00
