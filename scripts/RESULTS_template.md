@@ -145,3 +145,7 @@ mock mode.
 ## 6. Interpretation and limitations
 
 {{INTERPRETATION}}
+
+## 7. E1–E4: conventions as side products of ordinary joint work
+
+{{ENVS}}

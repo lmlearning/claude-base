@@ -379,6 +379,111 @@ gate; (v) minimal-agent survival probes test attractor persistence
 (clone + settle), not instantaneous window statistics.
 """
 
+# ---------------- E1-E4 side-product environments ----------------
+
+def render_envs():
+    try:
+        E = json.load(open("results/envs_summary.json"))
+    except FileNotFoundError:
+        return "*(environment suite not yet run)*"
+
+    def tier(mode):
+        d = E.get(mode)
+        if not d:
+            return f"*(no {mode} tier)*"
+        parts = []
+        for cell in ("e1_tight", "e1_loose"):
+            c = d.get(cell)
+            if not c:
+                continue
+            budget = "12-word" if "tight" in cell else "25-word"
+            parts.append(
+                f"- **E1 ({budget} notes)**: {pci(c['conventionalized'])} of "
+                f"populations conventionalized on a note ordering (modal "
+                f"share {ci(c['modal_share'], '{:.2f}')}); "
+                f"**{c['distinct_modal_variants']} distinct modal orderings** "
+                f"across {c['n_pops']} populations (Simpson diversity "
+                f"{c['simpson_diversity']:.2f}); inter-agent agreement "
+                f"{ci(c.get('inter_agent_agreement', {}), '{:.2f}')}; task "
+                f"success (tail) high; newcomer first-3-notes adoption of "
+                f"the incumbent ordering {ci(c['newcomer_adopt'], '{:.2f}')} vs "
+                f"founders' first-3 {ci(c['founder_early'], '{:.2f}')}; scripted "
+                f"minority (f=0.25, fixed alternative ordering) flipped "
+                f"{pci(c['minority_flip'], '{:.2f}')}."
+                + (f" Shuffle control modal share "
+                   f"{c['shuffle_control_modal_share']['mean']:.2f} "
+                   f"(97.5th pct {c['shuffle_control_modal_share']['p97.5']:.2f})."
+                   if c.get("shuffle_control_modal_share") else ""))
+        st = d.get("e1_stranger")
+        if st:
+            parts.append(
+                f"- **E1 stranger-pool control**: tracked informers facing "
+                f"fresh memoryless responders self-lock (self-consistency "
+                f"{ci(st['self_consistency_modal_share'], '{:.2f}')}) but agree "
+                f"with EACH OTHER at only "
+                f"{st.get('between_informer_agreement', float('nan')):.2f} — "
+                f"individual habit forms alone; population-wide agreement "
+                f"is the social part.")
+        c = d.get("e2")
+        if c:
+            parts.append(
+                f"- **E2 (grid assembly)**: {pci(c['conventionalized'])} of "
+                f"populations conventionalized a badge→region mapping "
+                f"(mapping share {ci(c['mapping_share'], '{:.2f}')}); episode "
+                f"success first-12 {ci(c['success_first12'], '{:.2f}')} → "
+                f"last-12 {ci(c['success_last12'], '{:.2f}')}; "
+                f"{c['distinct_modal_mappings']} distinct modal mappings: "
+                f"{c['modal_mapping_counts']}.")
+        c = d.get("e3")
+        if c:
+            parts.append(
+                f"- **E3 (open-lexicon reference)**: "
+                f"{ci(c['items_conventionalized_of6'], '{:.1f}')} of 6 items per "
+                f"population settled on one description "
+                f"(mean per-item modal share "
+                f"{ci(c['mean_item_share'], '{:.2f}')}); "
+                f"**{c['distinct_schemes']} distinct population-level "
+                f"description schemes** across {c['n_pops']} populations; "
+                f"note length {ci(c['note_len_first_third'], '{:.1f}')} words "
+                f"(first third) → {ci(c['note_len_last_third'], '{:.1f}')} "
+                f"(last third); modal description matches a zero-shot prior "
+                f"probe in {ci(c.get('modal_matches_prior', {}), '{:.2f}')} of "
+                f"items; coined non-word labels: {c['coinage_total']}.")
+        c = d.get("e4")
+        if c:
+            parts.append(
+                f"- **E4 (tagged bargaining)**: equilibrium types across "
+                f"{c['n_pops']} populations: {c['equilibrium_counts']}; "
+                f"class (badge-conditioned 70/30) share "
+                f"{pci(c['class_share'], '{:.2f}')}; egalitarian share "
+                f"{pci(c['egalitarian_share'], '{:.2f}')}; tail compatibility "
+                f"{ci(c['compat_tail'], '{:.2f}')}.")
+        return "\n".join(parts)
+
+    return f"""
+Design: four task environments in which the reward fixes WHAT must be
+accomplished while leaving HOW reward-equivalent (by construction — input
+orders randomized, task symmetries, payoff-symmetric badges), so any
+population-level regularity in the "how" is an arbitrary convention.
+Battery per environment: within-population concentration, ACROSS-population
+diversity (the signature separating convention from shared model bias),
+zero-shot prior probes, stranger-pool / shuffle controls, generational
+turnover adoption, and (E1) a scripted committed minority.  Environments:
+E1 relay-QA (wire-format conventions under a word budget), E2 simultaneous
+grid co-assembly (badge→region division-of-labour conventions), E3
+open-lexicon reference (per-item description conventions, no label pool),
+E4 tagged bargaining (badge-conditioned demand conventions; the
+Axtell–Epstein–Young 'emergent classes' game).  Full definitions in
+`namegame/envs/`; numbers in `results/envs_summary.json`.
+
+### Substrate tier (minimal policies; the control)
+{tier("mock")}
+
+### Live LLM tier (claude-haiku-4.5)
+{tier("live")}
+"""
+
+
 # ---------------- render ----------------
 
 tpl = open("scripts/RESULTS_template.md").read()
@@ -399,6 +504,7 @@ pricing, $1/$5 per MTok). Wall-clock ≈ 3.5 h at 8 concurrent runs
 (strictly sequential within each run).""",
     "{{INTEGRITY}}": integrity,
     "{{INTERPRETATION}}": interpretation,
+    "{{ENVS}}": render_envs(),
 }
 for k, v in fills.items():
     tpl = tpl.replace(k, v)
