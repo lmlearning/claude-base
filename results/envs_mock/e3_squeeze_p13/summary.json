@@ -1,0 +1,20 @@
+{
+  "config": {
+    "env": "e3",
+    "n_agents": 12,
+    "note_words": 3,
+    "hard_distractors": true,
+    "shared_items": true,
+    "formation_interactions": 360,
+    "interactions_per_replacement": 6,
+    "settle_interactions": 60,
+    "cell": "e3_squeeze",
+    "pop_index": 13,
+    "seed": 1174628251,
+    "framing": "warehouse"
+  },
+  "result": {
+    "done": true,
+    "t": 492
+  }
+}

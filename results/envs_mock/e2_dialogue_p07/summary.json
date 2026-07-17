@@ -1,0 +1,18 @@
+{
+  "config": {
+    "env": "e2",
+    "n_agents": 8,
+    "dialogue": true,
+    "formation_episodes": 48,
+    "episodes_per_replacement": 2,
+    "settle_episodes": 8,
+    "cell": "e2_dialogue",
+    "pop_index": 7,
+    "seed": 1748185731,
+    "framing": "workshop"
+  },
+  "result": {
+    "done": true,
+    "episodes": 72
+  }
+}

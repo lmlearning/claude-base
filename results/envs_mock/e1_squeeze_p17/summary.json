@@ -1,0 +1,18 @@
+{
+  "config": {
+    "env": "e1",
+    "n_agents": 12,
+    "formation_interactions": 360,
+    "interactions_per_replacement": 6,
+    "settle_interactions": 60,
+    "budget_words": 6,
+    "cell": "e1_squeeze",
+    "pop_index": 17,
+    "seed": 981507005,
+    "framing": "office"
+  },
+  "result": {
+    "done": true,
+    "t": 492
+  }
+}

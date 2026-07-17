@@ -1,0 +1,18 @@
+{
+  "config": {
+    "env": "e4",
+    "n_agents": 12,
+    "think": true,
+    "formation_interactions": 500,
+    "interactions_per_replacement": 6,
+    "settle_interactions": 60,
+    "cell": "e4_think",
+    "pop_index": 5,
+    "seed": 3222458050,
+    "framing": "market"
+  },
+  "result": {
+    "done": true,
+    "t": 632
+  }
+}
