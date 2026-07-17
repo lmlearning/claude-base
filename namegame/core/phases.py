@@ -122,18 +122,21 @@ def transmission(game: GameConfig, gen: GenesisConfig, trans: TransmissionConfig
     probes = []
     replacements_done = 0
 
+    r = trans.replacements_per_event
     for generation in range(trans.generations):
-        order = rng.permutation(game.n_agents)
-        for slot in order:
+        order = list(rng.permutation(game.n_agents))
+        while order:
             for _ in range(k):
                 pop.step()
-            agent = _fresh_agent(game, rng, agent_kind, next_id)
-            agent.born_at = pop.t
-            pop.agents[int(slot)] = agent
-            newcomers.append({"agent": agent, "generation": generation,
-                              "slot": int(slot), "born_at": pop.t})
-            next_id += 1
-            replacements_done += 1
+            for slot in order[:r]:
+                agent = _fresh_agent(game, rng, agent_kind, next_id)
+                agent.born_at = pop.t
+                pop.agents[int(slot)] = agent
+                newcomers.append({"agent": agent, "generation": generation,
+                                  "slot": int(slot), "born_at": pop.t})
+                next_id += 1
+                replacements_done += 1
+            order = order[r:]
         probes.append(_survival_probe(pop, original, trans.settle_interactions))
 
     for _ in range(trans.post_interactions):
@@ -160,6 +163,8 @@ def transmission(game: GameConfig, gen: GenesisConfig, trans: TransmissionConfig
         "original_winner": original,
         "genesis_time": g["consensus_time"],
         "interactions_per_replacement": k,
+        "replacements_per_event": r,
+        "turnover_rate": r / k,
         "generations": trans.generations,
         "probes": probes,
         "survived_gen1": probes[0]["survived"] if probes else None,

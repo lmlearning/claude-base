@@ -1,0 +1,61 @@
+{
+  "config": {
+    "cell": "b_minority_posttrans",
+    "run_index": 4,
+    "seed": 1129020987,
+    "phase": "minority",
+    "dialogue": true,
+    "framing": "study",
+    "model": "claude-haiku-4-5",
+    "n_agents": 24,
+    "n_names": 10,
+    "memory_size": 5,
+    "pre_transmission": true
+  },
+  "comprehension_passed": true,
+  "priors": {
+    "nofi": 0,
+    "lupog": 1,
+    "lira": 3,
+    "memva": 1,
+    "teba": 3,
+    "finan": 2,
+    "fepof": 1,
+    "pofu": 4,
+    "giga": 2,
+    "zilzo": 3
+  },
+  "priors_malformed": 0,
+  "genesis": {
+    "converged": true,
+    "winner": "teba",
+    "consensus_time": 230
+  },
+  "pre_transmission": {
+    "original": "teba",
+    "final": "teba",
+    "survived": true,
+    "n_replacements": 24
+  },
+  "minority": {
+    "usable": true,
+    "original": "teba",
+    "alt": "memva",
+    "n_committed": 6,
+    "flipped": true,
+    "interactions_used": 895
+  },
+  "final": {
+    "t": 895,
+    "fallback_choices": 1,
+    "unparseable_first_replies": 13,
+    "total_choices": 1803,
+    "malformed_rate": 0.00776483638380477,
+    "consensus": null,
+    "dominant": [
+      "memva",
+      0.9010416666666666
+    ],
+    "success_rate_window": 0.8229166666666666
+  }
+}

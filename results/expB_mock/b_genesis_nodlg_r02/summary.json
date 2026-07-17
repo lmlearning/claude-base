@@ -1,0 +1,47 @@
+{
+  "config": {
+    "cell": "b_genesis_nodlg",
+    "run_index": 2,
+    "seed": 2584935997,
+    "phase": "genesis",
+    "dialogue": false,
+    "framing": "market",
+    "model": "claude-haiku-4-5",
+    "n_agents": 24,
+    "n_names": 10,
+    "memory_size": 5,
+    "pre_transmission": false
+  },
+  "comprehension_passed": true,
+  "priors": {
+    "duva": 1,
+    "midze": 2,
+    "petod": 2,
+    "fila": 3,
+    "tasti": 0,
+    "zupe": 4,
+    "sada": 1,
+    "notof": 1,
+    "milad": 4,
+    "debvu": 2
+  },
+  "priors_malformed": 0,
+  "genesis": {
+    "converged": true,
+    "winner": "milad",
+    "consensus_time": 256
+  },
+  "final": {
+    "t": 356,
+    "fallback_choices": 0,
+    "unparseable_first_replies": 12,
+    "total_choices": 724,
+    "malformed_rate": 0.016574585635359115,
+    "consensus": "milad",
+    "dominant": [
+      "milad",
+      1.0
+    ],
+    "success_rate_window": 1.0
+  }
+}

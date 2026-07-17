@@ -100,43 +100,45 @@ def analyze_a(adir: str, figdir: str) -> dict:
     }
 
     # --- Transmission: survival vs rate -----------------------------------
-    trans_cells = load.cells_matching(adir, "transmission_core_k")
+    # unify the 1/k sweep and the super-fast r-per-interaction sweep on a
+    # single axis: k_eff = interactions per replacement (k, or 1/r)
+    trans_cells: dict[float, list[dict]] = {}
+    for cell, runs in load.cells_matching(adir, "transmission_core_k").items():
+        trans_cells[float(cell.split("_k")[1])] = runs
+    for cell, runs in load.cells_matching(adir, "transmission_fast_r").items():
+        trans_cells[1.0 / int(cell.split("_r")[1])] = runs
     surv_rows = []
-    for cell, runs in trans_cells.items():
-        k = int(cell.split("_k")[1])
+    for k_eff, runs in sorted(trans_cells.items()):
         usable = [r for r in runs if r.get("converged_genesis")]
         g1 = sum(bool(r["survived_gen1"]) for r in usable)
         g2 = sum(bool(r["survived_gen2"]) for r in usable)
         surv_rows.append({
-            "k": k, "rate": 1.0 / k, "n": len(usable),
+            "k": k_eff, "rate": 1.0 / k_eff, "n": len(usable),
             "gen1": binomial_ci(g1, len(usable)),
             "gen2": binomial_ci(g2, len(usable)),
         })
-    surv_rows.sort(key=lambda r: r["k"])
     out["survival_vs_rate"] = surv_rows
 
-    # phase boundary: critical k where 2-generation survival crosses 50%
-    xs, ys = [], []
-    for cell, runs in trans_cells.items():
-        k = int(cell.split("_k")[1])
-        for r in runs:
-            if r.get("converged_genesis"):
-                xs.append(k)
-                ys.append(int(bool(r["survived_gen2"])))
-    out["critical_k_gen2"] = logistic_threshold(xs, ys, log_x=True)
-    xs1 = [x for x in xs]
-    ys1 = []
-    for cell, runs in trans_cells.items():
-        for r in runs:
-            if r.get("converged_genesis"):
-                ys1.append(int(bool(r["survived_gen1"])))
-    out["critical_k_gen1"] = logistic_threshold(xs1, ys1, log_x=True)
+    # phase boundary: critical k_eff where survival crosses 50%
+    for gen_key, out_key in (("survived_gen1", "critical_k_gen1"),
+                             ("survived_gen2", "critical_k_gen2")):
+        xs, ys = [], []
+        for k_eff, runs in trans_cells.items():
+            for r in runs:
+                if r.get("converged_genesis"):
+                    xs.append(k_eff)
+                    ys.append(int(bool(r[gen_key])))
+        if len(set(ys)) > 1:
+            out[out_key] = logistic_threshold(xs, ys, log_x=True)
+        else:
+            out[out_key] = {"x50": None,
+                            "note": "no variation: survival saturated"}
 
     # discrete-generation survival analysis (life table over generations,
     # per rate; probes exist at generation boundaries)
     km = {}
     for row in surv_rows:
-        cell_runs = trans_cells[f"transmission_core_k{row['k']}"]
+        cell_runs = trans_cells[row["k"]]
         durations, events = [], []
         for r in cell_runs:
             if not r.get("converged_genesis"):
@@ -153,8 +155,7 @@ def analyze_a(adir: str, figdir: str) -> dict:
     # newcomer vs founder conformity (core condition)
     newcomer_by_k, founder_all = {}, []
     newcomer_censored = {}
-    for cell, runs in trans_cells.items():
-        k = int(cell.split("_k")[1])
+    for k, runs in trans_cells.items():
         ct, cens = [], 0
         for r in runs:
             if not r.get("converged_genesis"):
@@ -170,8 +171,8 @@ def analyze_a(adir: str, figdir: str) -> dict:
         newcomer_censored[k] = cens
     out["founder_conformity"] = bootstrap_ci(founder_all, np.median)
     out["newcomer_conformity_by_k"] = {
-        k: {"median_ci": bootstrap_ci(v, np.median),
-            "censored": newcomer_censored[k]}
+        str(k): {"median_ci": bootstrap_ci(v, np.median),
+                 "censored": newcomer_censored[k]}
         for k, v in sorted(newcomer_by_k.items())}
 
     # --- Committed minority: founder vs post-transmission ------------------
@@ -286,20 +287,21 @@ def _figures_a(adir, figdir, gen, gen_rl, out, trans_cells,
     for gen_key, color, thr_key in (("gen1", C[0], "critical_k_gen1"),
                                     ("gen2", C[1], "critical_k_gen2")):
         xs, ys = [], []
-        for cell, runs in trans_cells.items():
-            k = int(cell.split("_k")[1])
+        for k, runs in trans_cells.items():
             for r in runs:
                 if r.get("converged_genesis"):
                     xs.append(np.log(k))
                     ys.append(int(bool(r[f"survived_{gen_key}"])))
+        if len(set(ys)) < 2:
+            continue
         fit = _fit_logistic(np.array(xs), np.array(ys))
         if fit:
             a, b = fit
             kk = np.geomspace(min(ks), max(ks), 200)
             ax.plot(kk, 1 / (1 + np.exp(-(a + b * np.log(kk)))),
                     color=color, lw=1.6, alpha=0.75)
-        thr = out[thr_key]
-        if thr and thr["x50"]:
+        thr = out.get(thr_key) or {}
+        if thr.get("x50"):
             ax.axvline(thr["x50"], color=color, lw=1.0, ls=":", alpha=0.8)
     ax.set_xscale("log")
     ax.set_xticks(ks)
@@ -309,8 +311,8 @@ def _figures_a(adir, figdir, gen, gen_rl, out, trans_cells,
     ax.set_ylabel("P(original name survives)")
     ax.set_ylim(-0.03, 1.05)
     ax.legend(loc="lower right", fontsize=8)
-    thr2 = out["critical_k_gen2"]
-    if thr2 and thr2["x50"]:
+    thr2 = out.get("critical_k_gen2") or {}
+    if thr2.get("x50"):
         ax.set_title(f"Turnover phase boundary: k₅₀ = {thr2['x50']:.1f} "
                      f"[{thr2['lo']:.1f}, {thr2['hi']:.1f}] (2 gen)",
                      fontsize=9)
@@ -322,11 +324,12 @@ def _figures_a(adir, figdir, gen, gen_rl, out, trans_cells,
     if len(xs):
         ax.plot(xs, np.arange(1, len(xs) + 1) / len(xs), color=GRAY, lw=1.8,
                 label=f"founders (n={len(xs)})")
-    for ki, k in enumerate([2, 16, 128]):
+    for ki, k in enumerate([0.25, 2.0, 128.0]):
         v = np.sort(np.asarray(newcomer_by_k.get(k, []), dtype=float))
         if len(v):
+            klab = f"1/{int(round(1/k))}" if k < 1 else f"{int(k)}"
             ax.plot(v, np.arange(1, len(v) + 1) / len(v), color=C[ki],
-                    lw=1.6, label=f"newcomers, k={k} (n={len(v)})")
+                    lw=1.6, label=f"newcomers, k={klab} (n={len(v)})")
     ax.set_xscale("log")
     ax.set_xlabel("own plays until conformity (10-play block, ≥9 matches)")
     ax.set_ylabel("cumulative fraction")

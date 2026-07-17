@@ -1,0 +1,65 @@
+=== Cost projection (upper bound), live pricing for claude-haiku-4-5 ===
+{
+  "per_run_usd": {
+    "b_genesis_dlg": 2.33,
+    "b_genesis_nodlg": 1.46,
+    "b_trans_dlg": 2.75,
+    "b_trans_nodlg": 1.73,
+    "b_solitary": 0.23,
+    "b_minority_founder": 3.2,
+    "b_minority_posttrans": 3.62
+  },
+  "runs_total_usd": 98.23,
+  "judge_usd": 1.7,
+  "grand_total_upper_bound_usd": 99.93
+}
+done b_genesis_dlg r0: {"converged": true, "winner": "laki", "consensus_time": 278}
+done b_genesis_dlg r1: {"converged": true, "winner": "mela", "consensus_time": 329}
+done b_genesis_dlg r2: {"converged": true, "winner": "gopog", "consensus_time": 212}
+done b_genesis_dlg r3: {"converged": true, "winner": "daref", "consensus_time": 308}
+done b_genesis_dlg r4: {"converged": true, "winner": "govu", "consensus_time": 221}
+done b_genesis_dlg r5: {"converged": true, "winner": "tuno", "consensus_time": 245}
+done b_genesis_dlg r6: {"converged": true, "winner": "nufe", "consensus_time": 242}
+done b_genesis_dlg r7: {"converged": true, "winner": "zesnu", "consensus_time": 193}
+done b_genesis_dlg r8: {"converged": true, "winner": "desog", "consensus_time": 308}
+done b_genesis_nodlg r0: {"converged": true, "winner": "paliv", "consensus_time": 222}
+done b_genesis_nodlg r1: {"converged": true, "winner": "sigza", "consensus_time": 219}
+done b_genesis_nodlg r2: {"converged": true, "winner": "milad", "consensus_time": 256}
+done b_genesis_nodlg r3: {"converged": true, "winner": "tobeg", "consensus_time": 234}
+done b_genesis_nodlg r4: {"converged": true, "winner": "ludpu", "consensus_time": 225}
+done b_genesis_nodlg r5: {"converged": true, "winner": "gufap", "consensus_time": 290}
+done b_trans_dlg r0: {"converged": true, "winner": "bula", "consensus_time": 198}
+done b_trans_dlg r1: {"converged": true, "winner": "fevim", "consensus_time": 275}
+done b_trans_dlg r2: {"converged": true, "winner": "sefam", "consensus_time": 305}
+done b_trans_dlg r3: {"converged": true, "winner": "suddu", "consensus_time": 232}
+done b_trans_dlg r4: {"converged": true, "winner": "zivga", "consensus_time": 180}
+done b_trans_dlg r5: {"converged": true, "winner": "takut", "consensus_time": 250}
+done b_trans_nodlg r0: {"converged": true, "winner": "bigma", "consensus_time": 187}
+done b_trans_nodlg r1: {"converged": true, "winner": "gasal", "consensus_time": 210}
+done b_trans_nodlg r2: {"converged": true, "winner": "genag", "consensus_time": 272}
+done b_trans_nodlg r3: {"converged": true, "winner": "kekve", "consensus_time": 206}
+done b_trans_nodlg r4: {"converged": true, "winner": "fegdu", "consensus_time": 178}
+done b_trans_nodlg r5: {"converged": true, "winner": "lafu", "consensus_time": 199}
+done b_solitary r0: {"rounds": 300, "messages_sent": 154}
+done b_solitary r1: {"rounds": 300, "messages_sent": 158}
+done b_solitary r2: {"rounds": 300, "messages_sent": 174}
+done b_minority_founder r0: {"converged": true, "winner": "muse", "consensus_time": 179}
+done b_minority_founder r1: {"converged": true, "winner": "kavo", "consensus_time": 229}
+done b_minority_founder r2: {"converged": true, "winner": "kamet", "consensus_time": 223}
+done b_minority_founder r3: {"converged": true, "winner": "vipif", "consensus_time": 351}
+done b_minority_founder r4: {"converged": true, "winner": "fuku", "consensus_time": 207}
+done b_minority_founder r5: {"converged": true, "winner": "zamem", "consensus_time": 197}
+done b_minority_posttrans r0: {"converged": true, "winner": "vofiv", "consensus_time": 206}
+done b_minority_posttrans r1: {"converged": true, "winner": "kudso", "consensus_time": 278}
+done b_minority_posttrans r2: {"converged": true, "winner": "fivra", "consensus_time": 228}
+done b_minority_posttrans r3: {"converged": true, "winner": "guto", "consensus_time": 340}
+done b_minority_posttrans r4: {"converged": true, "winner": "teba", "consensus_time": 230}
+done b_minority_posttrans r5: {"converged": true, "winner": "tuli", "consensus_time": 173}
+judge labelled 5234 messages -> results/expB_mock/judge_labels.jsonl
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!! MANUAL STEP REQUIRED: 200 messages exported to
+!!   results/expB_mock/validation_sample_TO_HAND_LABEL.csv
+!! Hand-label the last column, then run analysis; enforcement
+!! results are gated on Cohen's kappa >= 0.6.
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

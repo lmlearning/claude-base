@@ -1,0 +1,55 @@
+{
+  "config": {
+    "cell": "b_minority_founder",
+    "run_index": 0,
+    "seed": 3730159864,
+    "phase": "minority",
+    "dialogue": true,
+    "framing": "rounds",
+    "model": "claude-haiku-4-5",
+    "n_agents": 24,
+    "n_names": 10,
+    "memory_size": 5,
+    "pre_transmission": false
+  },
+  "comprehension_passed": true,
+  "priors": {
+    "tiram": 6,
+    "muse": 2,
+    "sogbo": 1,
+    "sudu": 1,
+    "pesi": 2,
+    "mivza": 3,
+    "neva": 0,
+    "nubpe": 2,
+    "fevam": 2,
+    "duko": 1
+  },
+  "priors_malformed": 0,
+  "genesis": {
+    "converged": true,
+    "winner": "muse",
+    "consensus_time": 179
+  },
+  "minority": {
+    "usable": true,
+    "original": "muse",
+    "alt": "pesi",
+    "n_committed": 6,
+    "flipped": true,
+    "interactions_used": 646
+  },
+  "final": {
+    "t": 646,
+    "fallback_choices": 0,
+    "unparseable_first_replies": 7,
+    "total_choices": 1299,
+    "malformed_rate": 0.005388760585065435,
+    "consensus": null,
+    "dominant": [
+      "pesi",
+      0.90625
+    ],
+    "success_rate_window": 0.875
+  }
+}

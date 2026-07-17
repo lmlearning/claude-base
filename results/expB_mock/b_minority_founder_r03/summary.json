@@ -1,0 +1,55 @@
+{
+  "config": {
+    "cell": "b_minority_founder",
+    "run_index": 3,
+    "seed": 2975820207,
+    "phase": "minority",
+    "dialogue": true,
+    "framing": "rounds",
+    "model": "claude-haiku-4-5",
+    "n_agents": 24,
+    "n_names": 10,
+    "memory_size": 5,
+    "pre_transmission": false
+  },
+  "comprehension_passed": true,
+  "priors": {
+    "ruzme": 2,
+    "vipif": 1,
+    "fotaz": 3,
+    "fevik": 1,
+    "sumok": 2,
+    "peztu": 5,
+    "tafut": 4,
+    "pati": 2,
+    "fekmo": 0,
+    "sodfi": 0
+  },
+  "priors_malformed": 0,
+  "genesis": {
+    "converged": true,
+    "winner": "vipif",
+    "consensus_time": 351
+  },
+  "minority": {
+    "usable": true,
+    "original": "vipif",
+    "alt": "sodfi",
+    "n_committed": 6,
+    "flipped": true,
+    "interactions_used": 763
+  },
+  "final": {
+    "t": 763,
+    "fallback_choices": 1,
+    "unparseable_first_replies": 11,
+    "total_choices": 1537,
+    "malformed_rate": 0.007807417046193884,
+    "consensus": null,
+    "dominant": [
+      "sodfi",
+      0.9010416666666666
+    ],
+    "success_rate_window": 0.8645833333333334
+  }
+}

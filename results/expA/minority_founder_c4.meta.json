@@ -1,0 +1,32 @@
+{
+  "cell": "minority_founder_c4",
+  "master_seed": 20260717,
+  "git_rev": "d465c55",
+  "n_runs": 500,
+  "elapsed_s": 3.0,
+  "config": {
+    "phase": "minority",
+    "mino": {
+      "n_committed": 4,
+      "budget_interactions": 15000
+    },
+    "agent_kind": "minimal",
+    "n_runs": 500
+  },
+  "GameConfig": {
+    "n_agents": 24,
+    "n_names": 10,
+    "memory_size": 5,
+    "reward": 100.0,
+    "penalty": -50.0,
+    "consensus_window_factor": 4,
+    "consensus_success_threshold": 0.95,
+    "consensus_dominance_threshold": 0.95,
+    "conformity_block": 10,
+    "conformity_min_matches": 9
+  },
+  "GenesisConfig": {
+    "max_interactions": 30000,
+    "post_consensus_interactions": 1000
+  }
+}

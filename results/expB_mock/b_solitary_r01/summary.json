@@ -1,0 +1,46 @@
+{
+  "config": {
+    "cell": "b_solitary",
+    "run_index": 1,
+    "seed": 819546271,
+    "phase": "solitary",
+    "dialogue": true,
+    "framing": "study",
+    "model": "claude-haiku-4-5",
+    "n_agents": 24,
+    "n_names": 10,
+    "memory_size": 5,
+    "pre_transmission": false
+  },
+  "comprehension_passed": true,
+  "priors": {
+    "mipul": 2,
+    "pokne": 3,
+    "puvza": 2,
+    "kigu": 2,
+    "bini": 4,
+    "vovru": 1,
+    "gekog": 1,
+    "veplu": 2,
+    "fabud": 1,
+    "nekmu": 2
+  },
+  "priors_malformed": 0,
+  "solitary": {
+    "rounds": 300,
+    "messages_sent": 158
+  },
+  "final": {
+    "t": 300,
+    "fallback_choices": 0,
+    "unparseable_first_replies": 5,
+    "total_choices": 305,
+    "malformed_rate": 0.01639344262295082,
+    "consensus": null,
+    "dominant": [
+      -1,
+      0.0
+    ],
+    "success_rate_window": 0.0
+  }
+}

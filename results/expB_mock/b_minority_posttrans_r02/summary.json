@@ -1,0 +1,61 @@
+{
+  "config": {
+    "cell": "b_minority_posttrans",
+    "run_index": 2,
+    "seed": 3641338383,
+    "phase": "minority",
+    "dialogue": true,
+    "framing": "market",
+    "model": "claude-haiku-4-5",
+    "n_agents": 24,
+    "n_names": 10,
+    "memory_size": 5,
+    "pre_transmission": true
+  },
+  "comprehension_passed": true,
+  "priors": {
+    "sileb": 3,
+    "nafi": 2,
+    "suze": 2,
+    "tofa": 2,
+    "mubuk": 1,
+    "luke": 2,
+    "fivra": 1,
+    "pegki": 5,
+    "ripa": 1,
+    "rolka": 1
+  },
+  "priors_malformed": 0,
+  "genesis": {
+    "converged": true,
+    "winner": "fivra",
+    "consensus_time": 228
+  },
+  "pre_transmission": {
+    "original": "fivra",
+    "final": "fivra",
+    "survived": true,
+    "n_replacements": 24
+  },
+  "minority": {
+    "usable": true,
+    "original": "fivra",
+    "alt": "mubuk",
+    "n_committed": 6,
+    "flipped": true,
+    "interactions_used": 851
+  },
+  "final": {
+    "t": 851,
+    "fallback_choices": 0,
+    "unparseable_first_replies": 9,
+    "total_choices": 1711,
+    "malformed_rate": 0.005260081823495032,
+    "consensus": null,
+    "dominant": [
+      "mubuk",
+      0.9010416666666666
+    ],
+    "success_rate_window": 0.8229166666666666
+  }
+}

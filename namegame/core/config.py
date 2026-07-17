@@ -80,7 +80,8 @@ class TransmissionConfig:
     replaced one by one, so N replacements turn over 100% of the
     population exactly once.  Two generations = 2N replacements."""
 
-    interactions_per_replacement: int = 24   # k; rate = 1/k
+    interactions_per_replacement: int = 24   # k
+    replacements_per_event: int = 1          # r; rate = r/k per interaction
     generations: int = 2
     settle_interactions: int = 2_000         # survival-probe settle length
     post_interactions: int = 0               # extra main-line interactions after last replacement

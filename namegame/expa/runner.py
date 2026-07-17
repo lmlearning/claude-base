@@ -58,10 +58,18 @@ def define_cells() -> dict[str, dict]:
                                            scheduler="round", keep_traj_first=50)
 
     # --- Transmission: turnover-rate sweep --------------------------------
-    for k in [2, 4, 8, 16, 32, 64, 128, 256]:
+    for k in [1, 2, 4, 8, 16, 32, 64, 128, 256]:
         cells[f"transmission_core_k{k}"] = dict(
             phase="transmission", game=core, gen=gen,
             trans=TransmissionConfig(interactions_per_replacement=k),
+            agent_kind="minimal", n_runs=500)
+    # super-fast turnover (r replacements per single interaction) to locate
+    # the phase boundary, which lies above 1 replacement / 2 interactions
+    for r in [2, 3, 4, 6, 8, 12]:
+        cells[f"transmission_fast_r{r}"] = dict(
+            phase="transmission", game=core, gen=gen,
+            trans=TransmissionConfig(interactions_per_replacement=1,
+                                     replacements_per_event=r),
             agent_kind="minimal", n_runs=500)
     for k in [4, 16, 64]:
         cells[f"transmission_rl_k{k}"] = dict(

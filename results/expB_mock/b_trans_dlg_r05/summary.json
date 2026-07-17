@@ -1,0 +1,53 @@
+{
+  "config": {
+    "cell": "b_trans_dlg",
+    "run_index": 5,
+    "seed": 3226325838,
+    "phase": "transmission",
+    "dialogue": true,
+    "framing": "market",
+    "model": "claude-haiku-4-5",
+    "n_agents": 24,
+    "n_names": 10,
+    "memory_size": 5,
+    "pre_transmission": false
+  },
+  "comprehension_passed": true,
+  "priors": {
+    "nido": 1,
+    "bufof": 0,
+    "mero": 1,
+    "pomna": 4,
+    "zabbi": 2,
+    "zema": 3,
+    "gismu": 3,
+    "lero": 3,
+    "pefti": 2,
+    "takut": 1
+  },
+  "priors_malformed": 0,
+  "genesis": {
+    "converged": true,
+    "winner": "takut",
+    "consensus_time": 250
+  },
+  "transmission": {
+    "original": "takut",
+    "final": "takut",
+    "survived": true,
+    "n_replacements": 24
+  },
+  "final": {
+    "t": 642,
+    "fallback_choices": 0,
+    "unparseable_first_replies": 17,
+    "total_choices": 1301,
+    "malformed_rate": 0.013066871637202153,
+    "consensus": "takut",
+    "dominant": [
+      "takut",
+      1.0
+    ],
+    "success_rate_window": 1.0
+  }
+}

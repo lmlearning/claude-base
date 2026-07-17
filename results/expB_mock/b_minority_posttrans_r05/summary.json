@@ -1,0 +1,61 @@
+{
+  "config": {
+    "cell": "b_minority_posttrans",
+    "run_index": 5,
+    "seed": 1230622032,
+    "phase": "minority",
+    "dialogue": true,
+    "framing": "market",
+    "model": "claude-haiku-4-5",
+    "n_agents": 24,
+    "n_names": 10,
+    "memory_size": 5,
+    "pre_transmission": true
+  },
+  "comprehension_passed": true,
+  "priors": {
+    "dabti": 5,
+    "zisiv": 1,
+    "tuli": 0,
+    "biki": 4,
+    "gabo": 1,
+    "gosag": 1,
+    "torin": 0,
+    "gigav": 4,
+    "telo": 1,
+    "zemas": 3
+  },
+  "priors_malformed": 0,
+  "genesis": {
+    "converged": true,
+    "winner": "tuli",
+    "consensus_time": 173
+  },
+  "pre_transmission": {
+    "original": "tuli",
+    "final": "tuli",
+    "survived": true,
+    "n_replacements": 24
+  },
+  "minority": {
+    "usable": true,
+    "original": "tuli",
+    "alt": "gabo",
+    "n_committed": 6,
+    "flipped": true,
+    "interactions_used": 892
+  },
+  "final": {
+    "t": 892,
+    "fallback_choices": 0,
+    "unparseable_first_replies": 10,
+    "total_choices": 1794,
+    "malformed_rate": 0.005574136008918618,
+    "consensus": null,
+    "dominant": [
+      "gabo",
+      0.9010416666666666
+    ],
+    "success_rate_window": 0.8229166666666666
+  }
+}
