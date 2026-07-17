@@ -1,0 +1,17 @@
+{
+  "config": {
+    "env": "e2",
+    "n_agents": 8,
+    "formation_episodes": 48,
+    "episodes_per_replacement": 2,
+    "settle_episodes": 8,
+    "cell": "e2",
+    "pop_index": 32,
+    "seed": 592576466,
+    "framing": "site"
+  },
+  "result": {
+    "done": true,
+    "episodes": 72
+  }
+}

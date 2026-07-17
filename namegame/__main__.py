@@ -32,6 +32,14 @@ def main() -> None:
     pb.add_argument("--project-cost", action="store_true",
                     help="print cost projection and exit")
 
+    pe = sub.add_parser("envs", help="run E1-E4 side-product convention envs")
+    pe.add_argument("--mode", choices=["mock", "live"], default="mock")
+    pe.add_argument("--outdir", default=None)
+    pe.add_argument("--only", nargs="*", default=None)
+    pe.add_argument("--workers", type=int, default=None)
+    pe.add_argument("--spend-cap-usd", type=float, default=100.0)
+    pe.add_argument("--project-cost", action="store_true")
+
     pan = sub.add_parser("analyze", help="run analysis and figures")
     pan.add_argument("--results", default="results")
     pan.add_argument("--figdir", default="figures")
@@ -48,6 +56,9 @@ def main() -> None:
     elif args.cmd == "expb":
         from .expb.runner import main_expb
         main_expb(args)
+    elif args.cmd == "envs":
+        from .envs.runner import main_envs
+        main_envs(args)
     elif args.cmd == "analyze":
         from .analysis.report import main_analysis
         main_analysis(args.results, args.figdir)

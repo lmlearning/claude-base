@@ -1,0 +1,17 @@
+{
+  "config": {
+    "env": "e3",
+    "n_agents": 12,
+    "formation_interactions": 360,
+    "interactions_per_replacement": 6,
+    "settle_interactions": 60,
+    "cell": "e3",
+    "pop_index": 11,
+    "seed": 2096099791,
+    "framing": "warehouse"
+  },
+  "result": {
+    "done": true,
+    "t": 492
+  }
+}

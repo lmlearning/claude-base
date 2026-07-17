@@ -4,3 +4,6 @@ __pycache__/
 nohup.out
 
 # run logs (retained in repo for provenance)
+results/envs_mock_run.log
+results/envs_live_run.log
+results/envs_live/

@@ -1,0 +1,20 @@
+{
+  "config": {
+    "env": "e1",
+    "n_agents": 4,
+    "budget_words": 12,
+    "stranger_pool": true,
+    "formation_interactions": 120,
+    "interactions_per_replacement": 0,
+    "settle_interactions": 0,
+    "cell": "e1_stranger",
+    "pop_index": 7,
+    "seed": 3997063358,
+    "framing": "activity"
+  },
+  "result": {
+    "done": true,
+    "mode": "stranger",
+    "t": 120
+  }
+}
