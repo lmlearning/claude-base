@@ -28,3 +28,4 @@ done b_genesis_nodlg r0: {"converged": true, "winner": "nobme", "consensus_time"
 done b_genesis_dlg r3: {"converged": true, "winner": "daref", "consensus_time": 237}
 done b_genesis_nodlg r4: {"converged": true, "winner": "pesi", "consensus_time": 96}
 done b_genesis_nodlg r5: {"converged": true, "winner": "vovbi", "consensus_time": 96}
+done b_genesis_nodlg r3: {"converged": true, "winner": "zinor", "consensus_time": 225}
