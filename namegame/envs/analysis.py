@@ -35,8 +35,26 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 
+import re
+
 from ..analysis.stats import binomial_ci, bootstrap_ci
 from .e2_grid import REGIONS
+
+
+def e1_order_of(rec) -> tuple | None:
+    """Variable-length ordering variable recomputed from the raw note:
+    field indices ranked by first occurrence of their VALUE token; defined
+    when >= 3 of the 5 values are located (tight budgets often force
+    dropping fields, which the strict full-perm variable cannot see)."""
+    note = rec["note"].lower()
+    pos = []
+    for i, v in enumerate(rec["values"]):
+        m = re.search(r"\b" + re.escape(v.lower()) + r"\b", note)
+        if m:
+            pos.append((m.start(), i))
+    if len(pos) < 3:
+        return None
+    return tuple(i for _start, i in sorted(pos))
 
 C = ["#2a78d6", "#008300", "#e87ba4", "#eda100", "#1baf7a", "#eb6834"]
 GRAY = "#52514e"
@@ -89,9 +107,14 @@ def _modal(seq):
 # ===========================================================================
 
 def _e1_perm_stream(recs, phases=("formation",)):
-    return [(r["t"], tuple(r["perm"])) for r in recs
-            if r["type"] == "interaction" and r["phase"] in phases
-            and r.get("perm") and not r.get("committed")]
+    out = []
+    for r in recs:
+        if (r["type"] == "interaction" and r["phase"] in phases
+                and not r.get("committed")):
+            o = e1_order_of(r)
+            if o is not None:
+                out.append((r["t"], o))
+    return out
 
 
 def analyze_e1(outdir: str, cell: str) -> dict:
@@ -106,9 +129,11 @@ def analyze_e1(outdir: str, cell: str) -> dict:
         newcomer_first, founder_first = [], []
         by_agent = {}
         for r in p["recs"]:
-            if r["type"] == "interaction" and r.get("perm"):
-                by_agent.setdefault(r["sender_id"], []).append(
-                    (r["t"], tuple(r["perm"]), r["phase"]))
+            if r["type"] == "interaction" and not r.get("committed"):
+                o = e1_order_of(r)
+                if o is not None:
+                    by_agent.setdefault(r["sender_id"], []).append(
+                        (r["t"], o, r["phase"]))
         n_agents = p["config"].get("n_agents", 12)
         for aid, sends in by_agent.items():
             first3 = [s[1] for s in sends[:3]]
@@ -125,11 +150,7 @@ def analyze_e1(outdir: str, cell: str) -> dict:
         flip = None
         if mino:
             alt = tuple(mino[0]["alt_perm"])
-            after = [(t, pm) for t, pm in
-                     [(r["t"], tuple(r["perm"])) for r in p["recs"]
-                      if r["type"] == "interaction"
-                      and r["phase"] == "minority" and r.get("perm")
-                      and not r.get("committed")]]
+            after = _e1_perm_stream(p["recs"], phases=("minority",))
             tail_m = [pm for _, pm in after[-40:]]
             m2, s2 = _modal(tail_m)
             flip = bool(tail_m and m2 == alt and s2 >= 0.5)
@@ -153,6 +174,8 @@ def analyze_e1(outdir: str, cell: str) -> dict:
             "success_tail": float(np.mean(
                 [r["correct"] for r in wf[-60:]])) if wf else None,
             "wellformed_share": float(np.mean(
+                [e1_order_of(r) is not None for r in wf])) if wf else None,
+            "fullperm_share": float(np.mean(
                 [r.get("perm") is not None for r in wf])) if wf else None,
             "newcomer_adopt": (float(np.mean(newcomer_first))
                                if newcomer_first else None),
@@ -210,9 +233,9 @@ def analyze_e1_stranger(outdir: str) -> dict:
     pops = load_pops(outdir, "e1_stranger_p")
     shares = []
     for p in pops:
-        stream = [(r["t"], tuple(r["perm"]), r["sender_id"])
+        stream = [(r["t"], e1_order_of(r), r["sender_id"])
                   for r in p["recs"] if r["type"] == "interaction"
-                  and r.get("perm")]
+                  and e1_order_of(r) is not None]
         by_sender = {}
         for t, pm, sid in stream:
             by_sender.setdefault(sid, []).append(pm)
