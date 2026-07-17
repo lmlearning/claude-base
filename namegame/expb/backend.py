@@ -24,6 +24,9 @@ import numpy as np
 PRICES = {
     "claude-haiku-4-5": (1.0e-6, 5.0e-6),
     "claude-sonnet-4-5": (3.0e-6, 15.0e-6),
+    # OpenRouter route to the same model, same list pricing (verified
+    # against /api/v1/models at run time)
+    "anthropic/claude-haiku-4.5": (1.0e-6, 5.0e-6),
 }
 
 
@@ -101,6 +104,61 @@ class AnthropicBackend(Backend):
         self.cost.add(self.model, resp.usage.input_tokens,
                       resp.usage.output_tokens)
         return "".join(b.text for b in resp.content if b.type == "text")
+
+
+class OpenRouterBackend(Backend):
+    """Same Claude model routed via OpenRouter's chat-completions API
+    (used when the operator supplies an OpenRouter key instead of a
+    first-party Anthropic key).  Identical prompts; usage priced from the
+    PRICES table and enforced by the same CostTracker."""
+
+    URL = "https://openrouter.ai/api/v1/chat/completions"
+
+    def __init__(self, model: str, cost: CostTracker, api_key: str | None = None):
+        import requests
+        self.session = requests.Session()
+        self.model = model
+        self.cost = cost
+        key = api_key or os.environ["OPENROUTER_API_KEY"]
+        self.headers = {"Authorization": f"Bearer {key}",
+                        "Content-Type": "application/json"}
+
+    def complete(self, system: str, user: str, max_tokens: int,
+                 context: dict | None = None) -> str:
+        import time
+        messages = []
+        if system:
+            messages.append({"role": "system", "content": system})
+        messages.append({"role": "user", "content": user})
+        body = {"model": self.model, "max_tokens": max_tokens,
+                "messages": messages}
+        if context and context.get("kind") == "judge":
+            body["temperature"] = 0  # deterministic-ish classification
+        last_err = None
+        for attempt in range(6):
+            try:
+                r = self.session.post(self.URL, json=body,
+                                      headers=self.headers, timeout=120)
+                if r.status_code in (429, 500, 502, 503, 529):
+                    last_err = f"HTTP {r.status_code}"
+                    time.sleep(min(2 ** attempt, 30))
+                    continue
+                r.raise_for_status()
+                d = r.json()
+                if "error" in d:
+                    last_err = str(d["error"])[:200]
+                    time.sleep(min(2 ** attempt, 30))
+                    continue
+                usage = d.get("usage", {})
+                self.cost.add(self.model, int(usage.get("prompt_tokens", 0)),
+                              int(usage.get("completion_tokens", 0)))
+                return d["choices"][0]["message"]["content"] or ""
+            except SpendCapExceeded:
+                raise
+            except Exception as e:  # noqa: BLE001 - network layer retry
+                last_err = repr(e)[:200]
+                time.sleep(min(2 ** attempt, 30))
+        raise RuntimeError(f"OpenRouter call failed after retries: {last_err}")
 
 
 # --------------------------------------------------------------------------

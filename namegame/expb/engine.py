@@ -172,14 +172,14 @@ class BRun:
         user = "\n\n".join(parts)
         ctx = {"kind": "choice", "memory": list(agent.memory),
                "pool": self.pool}
-        reply = self.backend.complete(self.system_prompt, user, 24, ctx)
+        reply = self.backend.complete(self.system_prompt, user, 60, ctx)
         name = parse_name(reply, self.pool)
         retries = 0
         if name is None:
             retries = 1
             reply2 = self.backend.complete(
                 self.system_prompt, user + "\n\n" + prompts.CHOICE_RETRY,
-                24, ctx)
+                60, ctx)
             name = parse_name(reply2, self.pool)
         if name is None:
             rng = np.random.default_rng([self.seed, 7, t, agent.agent_id])
@@ -213,7 +213,7 @@ class BRun:
         for rep in range(reps):
             for qi, (q, grade) in enumerate(prompts.COMPREHENSION_QUESTIONS):
                 ctx = {"kind": "comprehension", "true_answer": true_answers[qi]}
-                ans = self.backend.complete(self.system_prompt, q, 24, ctx)
+                ans = self.backend.complete(self.system_prompt, q, 60, ctx)
                 results.append({"rep": rep, "q": qi, "answer": ans,
                                 "pass": bool(grade(ans, cfg))})
         rec = {"type": "comprehension", "results": results,
@@ -231,7 +231,7 @@ class BRun:
             rng = np.random.default_rng([self.seed, 11, s])
             order = [self.pool[k] for k in rng.permutation(len(self.pool))]
             probe = prompts.PRIOR_PROBE.format(pool=", ".join(order))
-            reply = self.backend.complete("", probe, 24,
+            reply = self.backend.complete("", probe, 60,
                                           {"kind": "prior", "pool": order})
             name = parse_name(reply, self.pool)
             if name is None:

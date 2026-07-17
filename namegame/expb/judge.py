@@ -69,7 +69,8 @@ class Judge:
     def classify(self, text: str) -> str:
         if self.backend is None or self.backend.is_mock:
             return classify_rule_based(text)
-        reply = self.backend.complete(JUDGE_SYSTEM, f"Message: \"{text}\"", 8)
+        reply = self.backend.complete(JUDGE_SYSTEM, f"Message: \"{text}\"", 8,
+                                      {"kind": "judge"})
         word = reply.strip().lower().split()
         if word and word[0].strip(".,") in CATEGORIES:
             return word[0].strip(".,")

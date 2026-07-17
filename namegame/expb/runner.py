@@ -29,11 +29,24 @@ from concurrent.futures import ThreadPoolExecutor
 import numpy as np
 
 from . import prompts
-from .backend import AnthropicBackend, CostTracker, MockBackend, SpendCapExceeded
+from .backend import (AnthropicBackend, CostTracker, MockBackend,
+                      OpenRouterBackend, SpendCapExceeded)
 from .engine import BRun
 from .judge import Judge, export_validation_sample, label_all
 
 MODEL = "claude-haiku-4-5"
+MODEL_OPENROUTER = "anthropic/claude-haiku-4.5"
+
+
+def _live_backend_factory(outdir: str, cap_usd: float):
+    """One shared CostTracker; OpenRouter key takes precedence when the
+    operator supplied one, else first-party Anthropic."""
+    cost = CostTracker(cap_usd, os.path.join(outdir, "cost_state.json"))
+    if os.environ.get("OPENROUTER_API_KEY"):
+        return cost, (lambda: OpenRouterBackend(MODEL_OPENROUTER, cost))
+    if os.environ.get("ANTHROPIC_API_KEY"):
+        return cost, (lambda: AnthropicBackend(MODEL, cost))
+    raise SystemExit("no OPENROUTER_API_KEY or ANTHROPIC_API_KEY set")
 MASTER_SEED_B = 20260718
 FRAMING_CYCLE = ["rounds", "study", "market"]
 
@@ -250,11 +263,10 @@ def main_expb(args) -> None:
                 f"projection ${proj['grand_total_upper_bound_usd']} exceeds "
                 f"spend cap ${args.spend_cap_usd}; refusing to start "
                 "(protocol: stop and flag, do not trim silently)")
-        if not os.environ.get("ANTHROPIC_API_KEY"):
-            raise SystemExit("ANTHROPIC_API_KEY not set; cannot run live")
-        cost = CostTracker(args.spend_cap_usd,
-                           os.path.join(outdir, "cost_state.json"))
-        make_backend = lambda seed: AnthropicBackend(MODEL, cost)
+        cost, factory = _live_backend_factory(outdir, args.spend_cap_usd)
+        make_backend = lambda seed: factory()
+        print(f"live backend ready; spend so far ${cost.cost_usd:.2f} of "
+              f"${args.spend_cap_usd:.2f} cap")
     else:
         make_backend = lambda seed: MockBackend(seed=seed)
 
@@ -286,9 +298,8 @@ def main_expb(args) -> None:
 
     # Post-hoc: label every message, then surface the manual validation step.
     labels_path = os.path.join(outdir, "judge_labels.jsonl")
-    jbackend = None if args.mode == "mock" else AnthropicBackend(
-        MODEL, CostTracker(args.spend_cap_usd,
-                           os.path.join(outdir, "cost_state.json")))
+    jbackend = None if args.mode == "mock" else \
+        _live_backend_factory(outdir, args.spend_cap_usd)[1]()
     n = label_all(outdir, Judge(jbackend), labels_path)
     print(f"judge labelled {n} messages -> {labels_path}")
     if n:

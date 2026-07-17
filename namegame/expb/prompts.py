@@ -65,13 +65,13 @@ FRAMINGS = {
 }
 
 CHOICE_INSTRUCTION = (
-    "It is time for your next pick. Reply with a single line in exactly "
-    "this format:\nNAME: <one name from the list>"
+    "It is time for your next pick. Reply with one single line and "
+    "nothing else, in exactly this format:\nNAME: <one name from the list>"
 )
 
 CHOICE_RETRY = (
-    "Your reply could not be read. Reply with one line only, in exactly "
-    "this format, using one name from the list:\nNAME: <name>"
+    "Your reply could not be read. Reply with one single line and nothing "
+    "else, in exactly this format, using one name from the list:\nNAME: <name>"
 )
 
 HISTORY_HEADER = "Your recent outcomes, oldest first:"
@@ -89,7 +89,7 @@ MESSAGE_INVITATION = (
     "may send a short message (at most 20 words) to that participant, who "
     "will see it before their next pick. You may also send nothing. Reply "
     "with a single line in exactly one of these formats:\n"
-    "MESSAGE: <your message>\nPASS"
+    "MESSAGE: <your message>\nPASS\nReply with that single line and nothing else."
 )
 
 # --- Comprehension check (asked in the run's framing, before any play) ----
