@@ -285,7 +285,13 @@ def analyze_e2(outdir: str, cell: str = "e2") -> dict:
                  if tail and modal else 0.0)
         succ_first = float(np.mean([e["success"] for e in eps[:12]]))
         succ_last = float(np.mean([e["success"] for e in eps[-12:]]))
+        msgs = [m for e in eps for m in (e.get("msg_a"), e.get("msg_b"))
+                if m and m.strip().upper() != "NONE"]
         per_pop.append({
+            "msg_use_rate": (len(msgs) / (2 * len(eps))
+                             if eps and any("msg_a" in e for e in eps)
+                             else None),
+            "top_msgs": Counter(m.lower() for m in msgs).most_common(3),
             "pop": p["name"], "modal_mapping": modal,
             "mapping_share": share,
             "conventionalized": bool(modal and share >= 0.5),
@@ -293,10 +299,27 @@ def analyze_e2(outdir: str, cell: str = "e2") -> dict:
             "success_first12": succ_first, "success_last12": succ_last,
             "collisions_last12": float(np.mean(
                 [e["collisions"] for e in eps[-12:]])),
+            "malformed_per_call": (float(sum(e["malformed"] for e in eps))
+                                   / max(1, sum(2 * e["n_rounds"]
+                                                for e in eps))),
+            "parse_fail_per_call": (float(sum(e.get("parse_fail", 0)
+                                              for e in eps))
+                                    / max(1, sum(2 * e["n_rounds"]
+                                                 for e in eps))
+                                    if any("parse_fail" in e for e in eps)
+                                    else None),
         })
     modals = [p["modal_mapping"] for p in per_pop if p["conventionalized"]]
+    msg_rates = [p["msg_use_rate"] for p in per_pop
+                 if p["msg_use_rate"] is not None]
     return {
         "n_pops": len(per_pop),
+        "msg_use_rate": (bootstrap_ci(msg_rates) if msg_rates else None),
+        "malformed_per_call": bootstrap_ci(
+            [p["malformed_per_call"] for p in per_pop]),
+        "parse_fail_per_call": bootstrap_ci(
+            [p["parse_fail_per_call"] for p in per_pop
+             if p["parse_fail_per_call"] is not None]),
         "conventionalized": binomial_ci(
             sum(p["conventionalized"] for p in per_pop), len(per_pop)),
         "mapping_share": bootstrap_ci([p["mapping_share"] for p in per_pop]),
@@ -531,15 +554,20 @@ def _fig_e1_concentration(outdir, figdir, mode):
 
 def analyze_envs(outdir: str, figdir: str, mode: str) -> dict:
     summary = {}
-    for cell in ("e1_tight", "e1_loose"):
+    for cell in ("e1_tight", "e1_loose", "e1_squeeze", "e1_squeeze_mem",
+                 "e1_noisy"):
         if any(d.startswith(cell + "_p") for d in
                (os.listdir(outdir) if os.path.isdir(outdir) else [])):
             summary[cell] = analyze_e1(outdir, cell)
     if any(d.startswith("e1_stranger") for d in
            (os.listdir(outdir) if os.path.isdir(outdir) else [])):
         summary["e1_stranger"] = analyze_e1_stranger(outdir)
-    for cell, fn in (("e2", analyze_e2), ("e3", analyze_e3),
-                     ("e4", analyze_e4)):
+    for cell, fn in (("e2", analyze_e2), ("e2_dialogue", analyze_e2),
+                     ("e2_think", analyze_e2), ("e2_sonnet", analyze_e2),
+                     ("e3", analyze_e3), ("e3_squeeze", analyze_e3),
+                     ("e3_redo", analyze_e3),
+                     ("e4", analyze_e4), ("e4_think", analyze_e4),
+                     ("e4_sonnet", analyze_e4)):
         if any(d.startswith(cell + "_p") for d in
                (os.listdir(outdir) if os.path.isdir(outdir) else [])):
             summary[cell] = fn(outdir, cell)

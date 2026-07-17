@@ -15,7 +15,7 @@ from concurrent.futures import ThreadPoolExecutor
 
 import numpy as np
 
-from ..expb.backend import SpendCapExceeded
+from ..expb.backend import PRICES, OpenRouterBackend, SpendCapExceeded
 from ..expb.runner import _live_backend_factory
 from . import e1_relay, e2_grid, e3_ref, e4_bargain
 from .common import EnvMockBackend
@@ -54,6 +54,72 @@ def define_cells(mode: str) -> dict[str, dict]:
         env="e4", n_agents=12, formation_interactions=500,
         interactions_per_replacement=6, settle_interactions=60,
         n_pops=(60 if big else 6), framings=["bonus", "market"])
+
+    # --- convention-inducing variants: every lever is a payoff, capacity
+    # or structure change; no prompt ever mentions consistency ---
+    # E1: crush the word budget (5 labels + 5 entries cannot all be named
+    # in 6 words -> naming everything stops being free; position must
+    # carry meaning), optionally with doubled memory; and a lossy channel.
+    for tag, extra in (("squeeze", dict(budget_words=6)),
+                       ("squeeze_mem", dict(budget_words=6,
+                                            memory_events=12)),
+                       ("noisy", dict(budget_words=12, channel_noise=0.25))):
+        cells[f"e1_{tag}"] = dict(
+            env="e1", n_agents=12, formation_interactions=360,
+            interactions_per_replacement=6, settle_interactions=60,
+            n_pops=(40 if big else 4), framings=["activity", "office"],
+            **extra)
+    # E3: 3-word budget + hardest distractors + a SHARED item set across
+    # populations (makes the cross-population diversity test direct).
+    cells["e3_squeeze"] = dict(
+        env="e3", n_agents=12, note_words=3, hard_distractors=True,
+        shared_items=True, recv_tokens=24, formation_interactions=360,
+        interactions_per_replacement=6, settle_interactions=60,
+        n_pops=(40 if big else 4), framings=["picker", "warehouse"])
+    # E2: a neutral pre-episode message channel (does negotiated division
+    # of labour fossilize across partners and survive turnover?), and a
+    # one-line scratch turn (does explicit deliberation find the
+    # symmetry-breaking cue?).
+    # dialogue rides on the scratch-line turn format (live probes showed
+    # the plain 'reply with only CELL' instruction is near-universally
+    # ignored by the model once it has room to chat, so the think-format
+    # e2_think cell is the matched no-dialogue control)
+    cells["e2_dialogue"] = dict(
+        env="e2", n_agents=8, dialogue=True, think=True,
+        formation_episodes=48, episodes_per_replacement=2,
+        settle_episodes=8, n_pops=(20 if big else 4),
+        framings=["site", "workshop"])
+    cells["e2_think"] = dict(
+        env="e2", n_agents=8, think=True, formation_episodes=48,
+        episodes_per_replacement=2, settle_episodes=8,
+        n_pops=(20 if big else 4), framings=["site", "workshop"])
+    cells["e4_think"] = dict(
+        env="e4", n_agents=12, think=True, formation_interactions=500,
+        interactions_per_replacement=6, settle_interactions=60,
+        n_pops=(20 if big else 4), framings=["bonus", "market"])
+    if not big:
+        # repair cell: the original live e3 chooser was truncated at 8
+        # reply tokens (36% of picks fell to the random fallback); rerun
+        # with room to answer
+        cells["e3_redo"] = dict(
+            env="e3", n_agents=12, recv_tokens=24,
+            formation_interactions=360, interactions_per_replacement=6,
+            settle_interactions=60, n_pops=4,
+            framings=["picker", "warehouse"])
+    if not big:
+        # capability-threshold tier: the think-cell design on a stronger
+        # model (live only; a smoke probe showed sonnet reasons at length
+        # regardless, so the scratch-line design keeps replies parseable
+        # and the haiku-think cells are the matched comparison)
+        cells["e2_sonnet"] = dict(
+            env="e2", n_agents=8, model="anthropic/claude-sonnet-4.5",
+            think=True, formation_episodes=48, episodes_per_replacement=2,
+            settle_episodes=8, n_pops=3, framings=["site", "workshop"])
+        cells["e4_sonnet"] = dict(
+            env="e4", n_agents=12, model="anthropic/claude-sonnet-4.5",
+            think=True, formation_interactions=500,
+            interactions_per_replacement=6, settle_interactions=60,
+            n_pops=3, framings=["bonus", "market"])
     return cells
 
 
@@ -80,11 +146,16 @@ CALL_SHAPES = {   # env -> (calls per unit, in_tokens, out_tokens)
 
 
 def project_cost(cells: dict[str, dict]) -> dict:
-    pin, pout = 1e-6, 5e-6
     out, total = {}, 0.0
     for name, cell in cells.items():
         env = cell["env"]
         cpu, tin, tout = CALL_SHAPES[env]
+        pin, pout = PRICES[cell.get("model", "anthropic/claude-haiku-4.5")]
+        if cell.get("dialogue"):
+            cpu += 2           # one message call per agent per episode
+            tout += 60         # chatty turns get a larger reply cap
+        if cell.get("think"):
+            tout += 150        # scratch line + room to finish the reply
         if env == "e2":
             units = (cell["formation_episodes"]
                      + cell["n_agents"] * cell["episodes_per_replacement"]
@@ -140,7 +211,9 @@ def main_envs(args) -> None:
         cost, factory = _live_backend_factory(outdir, args.spend_cap_usd)
         print(f"live backend ready; spend so far ${cost.cost_usd:.2f} of "
               f"${args.spend_cap_usd:.2f}")
-        backend_factory = lambda cfg: factory()
+        backend_factory = lambda cfg: (
+            OpenRouterBackend(cfg["model"], cost) if cfg.get("model")
+            else factory())
     else:
         backend_factory = lambda cfg: EnvMockBackend(
             ENVS[cfg["env"]].mock_reply, seed=cfg["seed"] ^ 0x5EED)

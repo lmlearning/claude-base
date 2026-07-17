@@ -147,9 +147,9 @@ def mock_reply(context: dict, rng: np.random.Generator) -> str:
 # ---------------------------------------------------------------------------
 
 class E1Agent:
-    def __init__(self, agent_id: int):
+    def __init__(self, agent_id: int, h: int = H):
         self.agent_id = agent_id
-        self.memory: deque = deque(maxlen=H)   # event dicts
+        self.memory: deque = deque(maxlen=h)   # event dicts
         self.born_at = 0
         self.sends: list[dict] = []            # (t, perm) for analysis
 
@@ -208,10 +208,18 @@ def _one_interaction(t: int, phase: str, agents, cfg, backend, journal,
                                 "seen_perms": S.seen_perms()})
         note, clipped = common.word_count_clip(raw, cfg["budget_words"])
 
-    user_r = "\n\n".join([_hist(R), RECV_INSTR.format(note=note,
+    # optional noisy channel: each word of the note independently deleted
+    # with probability cfg["channel_noise"] before the responder sees it
+    note_recv = note
+    noise = cfg.get("channel_noise", 0.0)
+    if noise:
+        nr = rng_for(seed, 17, t)
+        kept = [w for w in note.split() if nr.random() >= noise]
+        note_recv = " ".join(kept) if kept else note.split()[0]
+    user_r = "\n\n".join([_hist(R), RECV_INSTR.format(note=note_recv,
                                                       field=fields[qi])])
     ans_raw = backend.complete(_system(cfg), user_r, 16,
-                               {"kind": "recv", "note": note,
+                               {"kind": "recv", "note": note_recv,
                                 "fields": fields, "values": values,
                                 "question_index": qi,
                                 "seen_perms": R.seen_perms()})
@@ -223,7 +231,8 @@ def _one_interaction(t: int, phase: str, agents, cfg, backend, journal,
            "sender_slot": sender_slot, "receiver_slot": receiver_slot,
            "sender_id": S.agent_id, "receiver_id": R.agent_id,
            "values": values, "presented": presented, "q": qi,
-           "note": note, "clipped": clipped, "answer": ans,
+           "note": note, "note_recv": note_recv,
+           "clipped": clipped, "answer": ans,
            "correct": correct, "perm": perm,
            "named": count_named(note, fields),
            "committed": sender_slot in committed_slots}
@@ -238,7 +247,8 @@ def _apply(agents, rec, fields):
     S.memory.append({"role": "send", "note": rec["note"],
                      "field": fields[rec["q"]], "correct": rec["correct"],
                      "perm": rec["perm"]})
-    R.memory.append({"role": "recv", "note": rec["note"],
+    R.memory.append({"role": "recv",
+                     "note": rec.get("note_recv", rec["note"]),
                      "field": fields[rec["q"]], "answer": rec["answer"],
                      "correct": rec["correct"], "perm": rec["perm"]})
     S.sends.append({"t": rec["t"], "perm": rec["perm"],
@@ -286,9 +296,10 @@ def run_population(cfg: dict, backend: Backend, run_dir: str) -> dict:
     seed = cfg["seed"]
     n = cfg["n_agents"]
 
+    h = cfg.get("memory_events", H)
     done = {"config": False, "comprehension": None, "n_inter": 0,
             "replacements": []}
-    agents = [E1Agent(i) for i in range(n)]
+    agents = [E1Agent(i, h) for i in range(n)]
     next_id = n
     for rec in journal.replay():
         if rec["type"] == "config":
@@ -301,7 +312,7 @@ def run_population(cfg: dict, backend: Backend, run_dir: str) -> dict:
             _apply(agents, rec, cfg["fields"])
             done["n_inter"] = rec["t"]
         elif rec["type"] == "replacement":
-            a = E1Agent(rec["agent_id"])
+            a = E1Agent(rec["agent_id"], h)
             a.born_at = rec["t"]
             agents[rec["slot"]] = a
             next_id = max(next_id, rec["agent_id"] + 1)
@@ -342,7 +353,7 @@ def run_population(cfg: dict, backend: Backend, run_dir: str) -> dict:
         while t < total:
             t += 1
             s = int(rng_for(seed, 3, t).integers(n - 1))
-            agents[blank_slot] = E1Agent(9000 + t)   # memoryless every round
+            agents[blank_slot] = E1Agent(9000 + t, h)  # memoryless every round
             _one_interaction(t, "stranger", agents, cfg, backend, journal,
                              s, blank_slot)
         return {"done": True, "mode": "stranger", "t": t}
@@ -367,7 +378,7 @@ def run_population(cfg: dict, backend: Backend, run_dir: str) -> dict:
             i, j = pair(t)
             _one_interaction(t, "turnover", agents, cfg, backend, journal,
                              i, j)
-        a = E1Agent(next_id)
+        a = E1Agent(next_id, h)
         a.born_at = t
         agents[slot] = a
         journal.append({"type": "replacement", "t": t, "slot": slot,

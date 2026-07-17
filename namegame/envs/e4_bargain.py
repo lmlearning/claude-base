@@ -60,6 +60,11 @@ FRAMINGS = {
 TURN_INSTR = ("This round: your badge is {own_badge}; your partner's badge "
               "is {partner_badge}. Request your share of the bonus. Reply "
               "with only one number: 30, 50 or 70.")
+TURN_INSTR_THINK = ("This round: your badge is {own_badge}; your partner's "
+                    "badge is {partner_badge}. Request your share of the "
+                    "bonus. First write one short line about your choice, "
+                    "then on a new line write only one number: 30, 50 "
+                    "or 70.")
 HIST_LINE = ("- you ({own_badge}) requested {own}; partner "
              "({partner_badge}) requested {partner}; you received "
              "{got} points")
@@ -70,7 +75,8 @@ PRIOR_PROBE = ("You and a partner split a bonus: each privately requests "
                "is {partner_badge}. Reply with only one number: 30, 50 "
                "or 70.")
 
-lint_env(list(FRAMINGS.values()) + [TURN_INSTR, HIST_LINE, PRIOR_PROBE])
+lint_env(list(FRAMINGS.values()) + [TURN_INSTR, TURN_INSTR_THINK, HIST_LINE,
+                                    PRIOR_PROBE])
 
 
 def mock_reply(context: dict, rng: np.random.Generator) -> str:
@@ -127,9 +133,13 @@ def _hist(agent: E4Agent) -> str:
     return "\n".join(lines)
 
 
-def _parse_demand(reply: str) -> int | None:
-    m = re.search(r"\b(30|50|70)\b", reply)
-    return int(m.group(1)) if m else None
+def _parse_demand(reply: str, last: bool = False) -> int | None:
+    # with a scratch line the final number is the request; otherwise the
+    # first number is (any trailing chatter refers to remembered rounds)
+    ms = re.findall(r"\b(30|50|70)\b", reply)
+    if not ms:
+        return None
+    return int(ms[-1] if last else ms[0])
 
 
 def _one_round(t, agents, cfg, backend, journal, phase, i, j):
@@ -137,14 +147,16 @@ def _one_round(t, agents, cfg, backend, journal, phase, i, j):
     A, B = agents[i], agents[j]
     demands = {}
     malformed = 0
+    think = bool(cfg.get("think"))
+    tpl = TURN_INSTR_THINK if think else TURN_INSTR
     for slot, me, other in ((i, A, B), (j, B, A)):
-        user = "\n\n".join([_hist(me), TURN_INSTR.format(
+        user = "\n\n".join([_hist(me), tpl.format(
             own_badge=me.badge, partner_badge=other.badge)])
         reply = backend.complete(
-            _system(cfg), user, 8,
+            _system(cfg), user, 200 if think else 8,
             {"kind": "turn",
              "partner_demands": list(me.partner_obs.get(other.badge, []))})
-        d = _parse_demand(reply)
+        d = _parse_demand(reply, last=think)
         if d is None:
             malformed += 1
             d = DEMANDS[int(rng_for(seed, 7, t, slot).integers(3))]

@@ -27,6 +27,7 @@ PRICES = {
     # OpenRouter route to the same model, same list pricing (verified
     # against /api/v1/models at run time)
     "anthropic/claude-haiku-4.5": (1.0e-6, 5.0e-6),
+    "anthropic/claude-sonnet-4.5": (3.0e-6, 15.0e-6),
 }
 
 

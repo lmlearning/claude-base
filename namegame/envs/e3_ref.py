@@ -154,8 +154,12 @@ class E3Agent:
             d.append(ts)
 
 
+def _nw(cfg):
+    return cfg.get("note_words", NOTE_WORDS)
+
+
 def _system(cfg):
-    return FRAMINGS[cfg["framing"]].format(note_words=NOTE_WORDS,
+    return FRAMINGS[cfg["framing"]].format(note_words=_nw(cfg),
                                            reward=100, penalty=50)
 
 
@@ -182,20 +186,29 @@ def _one_interaction(t, agents, cfg, backend, journal, phase, si, ri):
     r = rng_for(seed, 5, t)
     target = int(r.integers(N_ITEMS))
     others = [i for i in range(N_ITEMS) if i != target]
-    d1, d2 = (int(x) for x in r.choice(others, size=2, replace=False))
+    if cfg.get("hard_distractors"):
+        # the two candidates with the largest trait overlap with the target
+        # (ties broken at random) — discrimination stays genuinely hard
+        ranked = sorted(others,
+                        key=lambda o: (-len(set(items[target])
+                                            & set(items[o])), r.random()))
+        d1, d2 = ranked[0], ranked[1]
+    else:
+        d1, d2 = (int(x) for x in r.choice(others, size=2, replace=False))
     lineup = [target, d1, d2]
     order = [int(x) for x in r.permutation(3)]
     shown = [lineup[k] for k in order]      # item index per slot 1..3
     S, R = agents[si], agents[ri]
 
+    nw = _nw(cfg)
     user_s = "\n\n".join([_hist(S), SEND_INSTR.format(
         traits=", ".join(traits[i] for i in items[target]),
-        note_words=NOTE_WORDS)])
-    raw = backend.complete(_system(cfg), user_s, NOTE_WORDS * 3,
+        note_words=nw)])
+    raw = backend.complete(_system(cfg), user_s, max(24, nw * 3),
                            {"kind": "send", "traits": traits,
-                            "item": items[target],
+                            "item": items[target], "note_words": nw,
                             "seen_sets": list(S.item_sets.get(target, []))})
-    note, clipped = common.word_count_clip(raw, NOTE_WORDS)
+    note, clipped = common.word_count_clip(raw, nw)
     mentioned = extract_traitset(note, traits)
 
     cand_text = "\n".join(
@@ -203,7 +216,8 @@ def _one_interaction(t, agents, cfg, backend, journal, phase, si, ri):
         for k, it in enumerate(shown))
     user_r = "\n\n".join([_hist(R), RECV_INSTR.format(
         candidates=cand_text, note=note)])
-    reply = backend.complete(_system(cfg), user_r, 8,
+    reply = backend.complete(_system(cfg), user_r,
+                             cfg.get("recv_tokens", 8),
                              {"kind": "recv", "mentioned": mentioned,
                               "candidates": [items[it] for it in shown]})
     m = re.search(r"[123]", reply)
@@ -247,10 +261,11 @@ def measure_priors(cfg, backend, journal, reps=2) -> dict:
                 _system(cfg),
                 PRIOR_PROBE.format(traits=", ".join(traits[i]
                                                     for i in items[it]),
-                                   note_words=NOTE_WORDS),
-                NOTE_WORDS * 3,
-                {"kind": "prior", "traits": traits, "item": items[it]})
-            note, _ = common.word_count_clip(raw, NOTE_WORDS)
+                                   note_words=_nw(cfg)),
+                max(24, _nw(cfg) * 3),
+                {"kind": "prior", "traits": traits, "item": items[it],
+                 "note_words": _nw(cfg)})
+            note, _ = common.word_count_clip(raw, _nw(cfg))
             out.append({"item": it, "set": extract_traitset(note, traits)})
     rec = {"type": "priors", "probes": out}
     journal.append(rec)
@@ -292,7 +307,12 @@ def run_population(cfg: dict, backend: Backend, run_dir: str) -> dict:
             done["replacements"] += 1
 
     if not done["config"]:
-        traits, items = make_items(rng_for(seed, 1))
+        # shared_items: one fixed item/trait set for EVERY population in the
+        # cell, so cross-population diversity of settled descriptions is
+        # directly comparable (the per-population prior probe still measures
+        # any token-level bias on the shared traits).
+        item_seed = 777001 if cfg.get("shared_items") else seed
+        traits, items = make_items(rng_for(item_seed, 1))
         cfg = {**cfg, "traits": traits, "items": items}
         journal.append({"type": "config", **cfg, "env": "e3"})
     if done["comprehension"] is None:

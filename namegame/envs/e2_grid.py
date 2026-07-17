@@ -65,10 +65,30 @@ TURN_INSTR = ("Episode state - you are the {badge} participant. Grid "
               "{grid}\nRound {rnd} of {rounds}. Pick one empty cell. "
               "Reply with only: CELL: row,col  (rows and columns are "
               "numbered 1-{K}).")
+TURN_INSTR_THINK = ("Episode state - you are the {badge} participant. Grid "
+                    "(O = filled by you, P = filled by partner, . = empty):\n"
+                    "{grid}\nRound {rnd} of {rounds}. Pick one empty cell. "
+                    "First write one short line about your choice, then on "
+                    "a new line write: CELL: row,col  (rows and columns "
+                    "are numbered 1-{K}).")
 HIST_LINE = ("- episode as {badge} participant: you filled {cells}; "
              "outcome {outcome}")
+HIST_MSGS = (" ; you sent \"{msg}\", partner sent \"{pmsg}\"")
 
-lint_env(list(FRAMINGS.values()) + [TURN_INSTR, HIST_LINE])
+MSG_WORDS = 16
+DIALOGUE_SYS = (" Before each of these begins, you and your partner may "
+                "each send the other one short message (at most "
+                "{msg_words} words).")
+MSG_INSTR = ("A new episode is starting - you are the {badge} participant. "
+             "You may send your partner one message of at most {msg_words} "
+             "words before play begins. Reply with only the message itself "
+             "and nothing else, or the single word NONE.")
+MSG_BLOCK = ("Message you sent: \"{msg}\"\nMessage from your partner: "
+             "\"{pmsg}\"")
+
+lint_env(list(FRAMINGS.values()) + [TURN_INSTR, TURN_INSTR_THINK, HIST_LINE,
+                                    HIST_MSGS, DIALOGUE_SYS, MSG_INSTR,
+                                    MSG_BLOCK])
 
 
 # ---------------------------------------------------------------------------
@@ -104,6 +124,8 @@ def classify_cells(cells: list[tuple[int, int]]) -> str:
 def mock_reply(context: dict, rng: np.random.Generator) -> str:
     if context["kind"] == "comprehension":
         return context["true_answer"]
+    if context["kind"] == "msg":
+        return "NONE"        # the substrate policy has no language faculty
     # kind == "turn": epsilon-greedy region preference from memory
     empty = context["empty"]           # list of (r,c)
     badge = context["badge"]
@@ -133,9 +155,10 @@ class E2Agent:
         # substrate learning state (mock): badge -> region -> score
         self.region_prefs: dict = {}
 
-    def note_episode(self, badge, cells, success, episode_idx):
+    def note_episode(self, badge, cells, success, episode_idx,
+                     msg=None, pmsg=None):
         self.memory.append({"badge": badge, "cells": cells,
-                            "success": success})
+                            "success": success, "msg": msg, "pmsg": pmsg})
         cls = classify_cells(cells)
         if cls in REGIONS:
             d = self.region_prefs.setdefault(badge, {})
@@ -143,9 +166,12 @@ class E2Agent:
 
 
 def _system(cfg):
-    return FRAMINGS[cfg["framing"]].format(
+    s = FRAMINGS[cfg["framing"]].format(
         K=K, rounds=ROUNDS, reward=100, penalty=50,
         badge_a=cfg["badges"][0], badge_b=cfg["badges"][1])
+    if cfg.get("dialogue"):
+        s += DIALOGUE_SYS.format(msg_words=MSG_WORDS)
+    return s
 
 
 def _grid_text(mine, partner):
@@ -162,18 +188,28 @@ def _hist(agent: E2Agent, cfg) -> str:
         return "You have no previous episodes yet."
     lines = ["Your recent episodes, oldest first:"]
     for e in agent.memory:
-        lines.append(HIST_LINE.format(
+        line = HIST_LINE.format(
             badge=e["badge"],
             cells=" ".join(f"({r+1},{c+1})" for r, c in e["cells"]),
-            outcome="+100" if e["success"] else "-50"))
+            outcome="+100" if e["success"] else "-50")
+        if cfg.get("dialogue") and (e.get("msg") or e.get("pmsg")):
+            line += HIST_MSGS.format(msg=e.get("msg") or "NONE",
+                                     pmsg=e.get("pmsg") or "NONE")
+        lines.append(line)
     return "\n".join(lines)
 
 
 def _parse_cell(reply: str) -> tuple[int, int] | None:
-    m = re.search(r"(\d)\s*[,x/ ]\s*(\d)", reply)
-    if not m:
-        return None
-    r, c = int(m.group(1)) - 1, int(m.group(2)) - 1
+    ms = re.findall(r"CELL\s*[:\s]\s*(\d)\s*[,x/ ]\s*(\d)", reply,
+                    flags=re.IGNORECASE)
+    if ms:
+        g = ms[-1]        # last CELL:-anchored pair (after any scratch line)
+    else:
+        m = re.search(r"(\d)\s*[,x/ ]\s*(\d)", reply)
+        if not m:
+            return None
+        g = m.groups()
+    r, c = int(g[0]) - 1, int(g[1]) - 1
     if 0 <= r < K and 0 <= c < K:
         return (r, c)
     return None
@@ -187,6 +223,25 @@ def _play_episode(ep: int, agents, slot_a, slot_b, cfg, backend, journal):
     placed = {slot_a: [], slot_b: []}
     rounds = []
     malformed = 0
+    parse_fail = 0
+    occupied = 0
+
+    msgs = {slot_a: "", slot_b: ""}
+    if cfg.get("dialogue"):
+        for slot, me, badge in ((slot_a, A, cfg["badges"][0]),
+                                (slot_b, B, cfg["badges"][1])):
+            user = "\n\n".join([_hist(me, cfg), MSG_INSTR.format(
+                badge=badge, msg_words=MSG_WORDS)])
+            raw = backend.complete(_system(cfg), user, 100,
+                                   {"kind": "msg", "badge": badge})
+            msg, _ = common.word_count_clip(raw, MSG_WORDS)
+            msgs[slot] = msg
+
+    turn_tpl = TURN_INSTR_THINK if cfg.get("think") else TURN_INSTR
+    # chatty contexts (scratch line, message channel) need room to reach
+    # the CELL line; the parser takes the LAST CELL:-anchored pair
+    turn_max = (200 if cfg.get("think")
+                else 120 if cfg.get("dialogue") else 20)
     for rnd in range(ROUNDS):
         picks = {}
         for slot, me, other, badge in ((slot_a, A, B, cfg["badges"][0]),
@@ -198,16 +253,24 @@ def _play_episode(ep: int, agents, slot_a, slot_b, cfg, backend, journal):
             if not empty:
                 picks[slot] = None
                 continue
-            user = "\n\n".join([_hist(me, cfg), TURN_INSTR.format(
+            parts = [_hist(me, cfg)]
+            if cfg.get("dialogue"):
+                oslot = slot_b if slot == slot_a else slot_a
+                parts.append(MSG_BLOCK.format(msg=msgs[slot] or "NONE",
+                                              pmsg=msgs[oslot] or "NONE"))
+            parts.append(turn_tpl.format(
                 badge=badge, grid=_grid_text(mine, partner),
-                rnd=rnd + 1, rounds=ROUNDS, K=K)])
-            reply = backend.complete(_system(cfg), user, 20,
+                rnd=rnd + 1, rounds=ROUNDS, K=K))
+            user = "\n\n".join(parts)
+            reply = backend.complete(_system(cfg), user, turn_max,
                                      {"kind": "turn", "empty": empty,
                                       "badge": badge,
                                       "region_prefs": me.region_prefs})
             cell = _parse_cell(reply)
             if cell is None or cell not in empty:
                 malformed += 1
+                parse_fail += cell is None
+                occupied += cell is not None
                 cell = empty[int(rng_for(seed, 7, ep, rnd,
                                          slot).integers(len(empty)))]
             picks[slot] = cell
@@ -229,7 +292,9 @@ def _play_episode(ep: int, agents, slot_a, slot_b, cfg, backend, journal):
            "class_b": classify_cells(placed[slot_b]),
            "success": success, "n_rounds": len(rounds),
            "collisions": sum(r["collision"] for r in rounds),
-           "malformed": malformed}
+           "malformed": malformed, "parse_fail": parse_fail,
+           "occupied": occupied,
+           "msg_a": msgs[slot_a], "msg_b": msgs[slot_b]}
     _apply(agents, rec, cfg)
     journal.append(rec)
     return rec
@@ -239,10 +304,10 @@ def _apply(agents, rec, cfg):
     A, B = agents[rec["slot_a"]], agents[rec["slot_b"]]
     A.note_episode(cfg["badges"][0],
                    [tuple(c) for c in rec["cells_a"]], rec["success"],
-                   rec["ep"])
+                   rec["ep"], msg=rec.get("msg_a"), pmsg=rec.get("msg_b"))
     B.note_episode(cfg["badges"][1],
                    [tuple(c) for c in rec["cells_b"]], rec["success"],
-                   rec["ep"])
+                   rec["ep"], msg=rec.get("msg_b"), pmsg=rec.get("msg_a"))
 
 
 COMPREHENSION = [
