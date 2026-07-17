@@ -387,18 +387,42 @@ def render_envs():
     except FileNotFoundError:
         return "*(environment suite not yet run)*"
 
+    E1_LABELS = {
+        "e1_tight": "E1 (12-word notes)",
+        "e1_loose": "E1 (25-word notes)",
+        "e1_squeeze": "E1 squeeze (6-word notes)",
+        "e1_squeeze_mem": "E1 squeeze + 2× memory (6-word notes)",
+        "e1_noisy": "E1 noisy channel (12-word notes, 25% word deletion)",
+    }
+    E2_LABELS = {
+        "e2": "E2 (grid assembly) — **VOID live, see integrity note**",
+        "e2_think": "E2 + scratch line (corrected turn protocol)",
+        "e2_dialogue": "E2 + scratch line + pre-episode message channel",
+        "e2_sonnet": "E2 + scratch line, claude-sonnet-4.5",
+    }
+    E3_LABELS = {
+        "e3": "E3 (open-lexicon reference)",
+        "e3_redo": "E3 redo (chooser reply-token repair)",
+        "e3_squeeze": "E3 squeeze (3-word notes, hard distractors, "
+                      "shared items)",
+    }
+    E4_LABELS = {
+        "e4": "E4 (tagged bargaining) — **VOID live, see integrity note**",
+        "e4_think": "E4 + scratch line (corrected turn protocol)",
+        "e4_sonnet": "E4 + scratch line, claude-sonnet-4.5",
+    }
+
     def tier(mode):
         d = E.get(mode)
         if not d:
             return f"*(no {mode} tier)*"
         parts = []
-        for cell in ("e1_tight", "e1_loose"):
+        for cell, label in E1_LABELS.items():
             c = d.get(cell)
             if not c:
                 continue
-            budget = "12-word" if "tight" in cell else "25-word"
             parts.append(
-                f"- **E1 ({budget} notes)**: {pci(c['conventionalized'])} of "
+                f"- **{label}**: {pci(c['conventionalized'])} of "
                 f"populations conventionalized on a note ordering (modal "
                 f"share {ci(c['modal_share'], '{:.2f}')}); "
                 f"**{c['distinct_modal_variants']} distinct modal orderings** "
@@ -424,20 +448,36 @@ def render_envs():
                 f"{st.get('between_informer_agreement', float('nan')):.2f} — "
                 f"individual habit forms alone; population-wide agreement "
                 f"is the social part.")
-        c = d.get("e2")
-        if c:
+        for cell, label in E2_LABELS.items():
+            c = d.get(cell)
+            if not c:
+                continue
+            if mode == "mock":
+                label = label.split(" — ")[0]
+            extra = ""
+            if c.get("malformed_per_call", {}).get("estimate") is not None:
+                extra += (f"; malformed/call "
+                          f"{ci(c['malformed_per_call'], '{:.2f}')}")
+            if (c.get("parse_fail_per_call") or {}).get("estimate") is not None:
+                extra += (f" (parse failures "
+                          f"{ci(c['parse_fail_per_call'], '{:.2f}')})")
+            if (c.get("msg_use_rate") or {}).get("estimate") is not None:
+                extra += (f"; message-channel use "
+                          f"{ci(c['msg_use_rate'], '{:.2f}')}")
             parts.append(
-                f"- **E2 (grid assembly)**: {pci(c['conventionalized'])} of "
+                f"- **{label}**: {pci(c['conventionalized'])} of "
                 f"populations conventionalized a badge→region mapping "
                 f"(mapping share {ci(c['mapping_share'], '{:.2f}')}); episode "
                 f"success first-12 {ci(c['success_first12'], '{:.2f}')} → "
                 f"last-12 {ci(c['success_last12'], '{:.2f}')}; "
                 f"{c['distinct_modal_mappings']} distinct modal mappings: "
-                f"{c['modal_mapping_counts']}.")
-        c = d.get("e3")
-        if c:
+                f"{c['modal_mapping_counts']}{extra}.")
+        for cell, label in E3_LABELS.items():
+            c = d.get(cell)
+            if not c:
+                continue
             parts.append(
-                f"- **E3 (open-lexicon reference)**: "
+                f"- **{label}**: "
                 f"{ci(c['items_conventionalized_of6'], '{:.1f}')} of 6 items per "
                 f"population settled on one description "
                 f"(mean per-item modal share "
@@ -449,10 +489,14 @@ def render_envs():
                 f"(last third); modal description matches a zero-shot prior "
                 f"probe in {ci(c.get('modal_matches_prior', {}), '{:.2f}')} of "
                 f"items; coined non-word labels: {c['coinage_total']}.")
-        c = d.get("e4")
-        if c:
+        for cell, label in E4_LABELS.items():
+            c = d.get(cell)
+            if not c:
+                continue
+            if mode == "mock":
+                label = label.split(" — ")[0]
             parts.append(
-                f"- **E4 (tagged bargaining)**: equilibrium types across "
+                f"- **{label}**: equilibrium types across "
                 f"{c['n_pops']} populations: {c['equilibrium_counts']}; "
                 f"class (badge-conditioned 70/30) share "
                 f"{pci(c['class_share'], '{:.2f}')}; egalitarian share "
