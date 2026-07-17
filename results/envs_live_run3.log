@@ -11,3 +11,5 @@
   "total_upper_bound_usd": 25.46
 }
 live backend ready; spend so far $7.47 of $100.00
+done e2 p1: {'done': True, 'episodes': 72}
+done e1_loose p0: {'done': True, 't': 692}
