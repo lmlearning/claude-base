@@ -63,8 +63,16 @@ REAL_WORDS = {
 }
 
 
+try:  # comprehensive dictionary when available (english-words, web2 list)
+    from english_words import get_english_words_set
+    _DICT = get_english_words_set(["web2"], lower=True)
+except Exception:  # pragma: no cover - fallback to the embedded list
+    _DICT = set()
+
+
 def is_real_word(token: str) -> bool:
-    return token.lower() in REAL_WORDS
+    t = token.lower()
+    return t in REAL_WORDS or t in _DICT
 
 
 def _one_token(rng: np.random.Generator) -> str:

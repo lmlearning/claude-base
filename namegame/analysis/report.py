@@ -440,6 +440,35 @@ def analyze_b(bdir: str, figdir: str, mode: str) -> dict:
     # pooled uniformity across token *positions* is meaningless across runs
     # (pools differ); instead test each run's prior spread + winner-prior.
     out["winner_prior_mean"] = bootstrap_ci(winner_priors, np.mean)
+
+    # token audit: real-word incidence in pools (the embedded blocklist was
+    # imperfect for early live runs; fixed to a full dictionary after run
+    # start — report the incidence and a sensitivity split honestly)
+    try:
+        from english_words import get_english_words_set
+        D = get_english_words_set(["web2"], lower=True)
+        n_tok, real_toks, flagged_runs = 0, [], []
+        for r in runs:
+            pool = (r["config"] or {}).get("pool", [])
+            n_tok += len(pool)
+            real_toks.extend(t for t in pool if t.lower() in D)
+            g = r["summary"].get("genesis") or {}
+            if g.get("winner") and g["winner"].lower() in D:
+                flagged_runs.append(r["name"])
+        wp_clean = [wp for r, wp in zip(
+            [r for r in runs if r["summary"].get("genesis", {}).get("winner")],
+            winner_priors)
+            if r["name"] not in flagged_runs]
+        out["token_audit"] = {
+            "pool_tokens": n_tok,
+            "real_word_tokens": len(real_toks),
+            "real_word_share": len(real_toks) / max(1, n_tok),
+            "runs_with_real_word_winner": flagged_runs,
+            "winner_prior_mean_excluding_flagged":
+                bootstrap_ci(wp_clean, np.mean),
+        }
+    except Exception as e:  # pragma: no cover
+        out["token_audit"] = {"error": repr(e)}
     out["winner_prior_note"] = ("mean measured zero-shot prior of the "
                                 "eventual winner; 0.1 = winner independent "
                                 "of prior (W=10)")
