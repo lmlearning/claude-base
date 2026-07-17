@@ -176,7 +176,7 @@ def analyze_a(adir: str, figdir: str) -> dict:
         for k, v in sorted(newcomer_by_k.items())}
 
     # --- Committed minority: founder vs post-transmission ------------------
-    def minority_curve(prefix):
+    def minority_curve(prefix, n_agents=24):
         rows, xs, ys = [], [], []
         for cell, runs in load.cells_matching(adir, prefix).items():
             m = re.search(r"_c(\d+)$", cell)
@@ -185,9 +185,9 @@ def analyze_a(adir: str, figdir: str) -> dict:
             c = int(m.group(1))
             usable = [r for r in runs if r.get("usable")]
             flips = sum(bool(r["flipped"]) for r in usable)
-            rows.append({"n_committed": c, "f": c / 24.0,
+            rows.append({"n_committed": c, "f": c / n_agents,
                          "flip": binomial_ci(flips, len(usable))})
-            xs.extend([c / 24.0] * len(usable))
+            xs.extend([c / n_agents] * len(usable))
             ys.extend(int(bool(r["flipped"])) for r in usable)
         rows.sort(key=lambda r: r["n_committed"])
         thr = logistic_threshold(xs, ys) if xs else None
@@ -230,7 +230,8 @@ def analyze_a(adir: str, figdir: str) -> dict:
         entry = {"consensus_time": bootstrap_ci(
             [r["consensus_time"] for r in convn], np.median),
             "convergence_rate": binomial_ci(len(convn), len(runs))}
-        rows, thr = minority_curve(f"minority_N{n}_c") if n != 24 else (None, None)
+        rows, thr = (minority_curve(f"minority_N{n}_c", n_agents=n)
+                     if n != 24 else (None, None))
         if n != 24:
             entry["minority_rows"] = rows
             entry["f50"] = thr
@@ -279,8 +280,8 @@ def _figures_a(adir, figdir, gen, gen_rl, out, trans_cells,
             [("gen1", C[0], "after 1 generation"),
              ("gen2", C[1], "after 2 generations")]):
         p = [r[gen_key]["p"] for r in rows]
-        lo = [r[gen_key]["p"] - r[gen_key]["lo"] for r in rows]
-        hi = [r[gen_key]["hi"] - r[gen_key]["p"] for r in rows]
+        lo = [max(0.0, r[gen_key]["p"] - r[gen_key]["lo"]) for r in rows]
+        hi = [max(0.0, r[gen_key]["hi"] - r[gen_key]["p"]) for r in rows]
         ax.errorbar(ks, p, yerr=[lo, hi], fmt="o", ms=4.5, lw=1.4,
                     capsize=2.5, color=color, label=label)
     # logistic fit curves (on log k)
@@ -304,17 +305,22 @@ def _figures_a(adir, figdir, gen, gen_rl, out, trans_cells,
         if thr.get("x50"):
             ax.axvline(thr["x50"], color=color, lw=1.0, ls=":", alpha=0.8)
     ax.set_xscale("log")
-    ax.set_xticks(ks)
-    ax.set_xticklabels(ks)
+    tick_ks = [0.125, 0.25, 0.5, 1, 2, 8, 32, 128]
+    ax.set_xticks([t for t in tick_ks if min(ks) <= t <= max(ks)])
+    ax.set_xticklabels([("1/%d" % round(1 / t)) if t < 1 else str(int(t))
+                        for t in tick_ks if min(ks) <= t <= max(ks)])
     ax.minorticks_off()
+    ax.axhline(0.1, color=GRAY, lw=0.9, ls=":")
+    ax.annotate("chance re-convergence (1/W)", xy=(max(ks), 0.105),
+                ha="right", va="bottom", fontsize=7.5, color=GRAY)
     ax.set_xlabel("interactions per replacement, k  (slower turnover →)")
     ax.set_ylabel("P(original name survives)")
     ax.set_ylim(-0.03, 1.05)
-    ax.legend(loc="lower right", fontsize=8)
+    ax.legend(loc="center right", fontsize=8)
     thr2 = out.get("critical_k_gen2") or {}
     if thr2.get("x50"):
-        ax.set_title(f"Turnover phase boundary: k₅₀ = {thr2['x50']:.1f} "
-                     f"[{thr2['lo']:.1f}, {thr2['hi']:.1f}] (2 gen)",
+        ax.set_title(f"Turnover phase boundary: k₅₀ = {thr2['x50']:.2f} "
+                     f"[{thr2['lo']:.2f}, {thr2['hi']:.2f}] (2 gen)",
                      fontsize=9)
     _save(fig, figdir, "fig3_survival.png")
 
@@ -350,8 +356,8 @@ def _figures_a(adir, figdir, gen, gen_rl, out, trans_cells,
             continue
         f = [r["f"] for r in rows]
         p = [r["flip"]["p"] for r in rows]
-        lo = [r["flip"]["p"] - r["flip"]["lo"] for r in rows]
-        hi = [r["flip"]["hi"] - r["flip"]["p"] for r in rows]
+        lo = [max(0.0, r["flip"]["p"] - r["flip"]["lo"]) for r in rows]
+        hi = [max(0.0, r["flip"]["hi"] - r["flip"]["p"]) for r in rows]
         ax.errorbar(f, p, yerr=[lo, hi], fmt="o", ms=4, lw=1.2, capsize=2.2,
                     color=color, label=label,
                     alpha=0.95 if "RL" not in label else 0.7)
@@ -622,15 +628,14 @@ def _figures_b(figdir, runs, out, soc, enforcement):
               if r.get("success_traj_100")]
     if a_traj:
         L = min(len(tt) for tt in a_traj if len(tt)) if any(a_traj) else 0
-        M = np.vstack([np.repeat(tt[:L], 100)[:L * 100] for tt in a_traj
-                       if len(tt) >= L])
-        med = np.median(M, axis=0)
-        x = np.arange(M.shape[1])
-        ax.plot(x, med, color=GRAY, lw=1.8,
+        M = np.vstack([tt[:L] for tt in a_traj if len(tt) >= L])
+        x = np.arange(L) * 100 + 50   # bin centres of 100-interaction bins
+        ax.plot(x, np.median(M, axis=0), color=GRAY, lw=1.8,
                 label=f"minimal agents (n={len(M)})")
         ax.fill_between(x, np.percentile(M, 25, axis=0),
                         np.percentile(M, 75, axis=0), color=GRAY,
                         alpha=0.15, lw=0)
+        ax.set_xlim(0, 800)
     ax.set_xlabel("interaction")
     ax.set_ylabel("success rate (rolling)")
     ax.set_ylim(0, 1.02)
@@ -672,8 +677,8 @@ def _figures_b(figdir, runs, out, soc, enforcement):
     if share:
         names = list(share)
         est = [share[n]["estimate"] for n in names]
-        lo = [share[n]["estimate"] - share[n]["lo"] for n in names]
-        hi = [share[n]["hi"] - share[n]["estimate"] for n in names]
+        lo = [max(0.0, share[n]["estimate"] - share[n]["lo"]) for n in names]
+        hi = [max(0.0, share[n]["hi"] - share[n]["estimate"]) for n in names]
         ax.errorbar(range(len(names)), est, yerr=[lo, hi], fmt="o-",
                     color=C[0], lw=1.5, ms=5, capsize=3,
                     label="population runs")

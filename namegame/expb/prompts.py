@@ -105,9 +105,16 @@ COMPREHENSION_QUESTIONS = [
     ("How many names are on the list you pick from? Reply with just the "
      "number.",
      lambda ans, cfg: _first_int(ans) == int(cfg["W"])),
-    ("Can you see the outcomes of your recent rounds? Reply YES or NO.",
-     lambda ans, cfg: "yes" in ans.lower()),
+    ("During this activity, will you be able to see the outcomes of your "
+     "most recent rounds once you have played them? Reply YES or NO.",
+     lambda ans, cfg: _first_word_yes(ans)),
 ]
+
+
+def _first_word_yes(text: str) -> bool:
+    import re
+    m = re.search(r"[A-Za-z]+", text)
+    return bool(m) and m.group().lower() == "yes"
 
 
 def _first_int(text: str) -> int | None:

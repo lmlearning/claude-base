@@ -290,7 +290,7 @@ def main_expb(args) -> None:
             raise
 
     if args.mode == "live":
-        with ThreadPoolExecutor(max_workers=4) as ex:
+        with ThreadPoolExecutor(max_workers=8) as ex:
             list(ex.map(do, jobs))
     else:
         for j in jobs:
