@@ -552,6 +552,69 @@ def _fig_e1_concentration(outdir, figdir, mode):
     plt.close(fig)
 
 
+def _fig_variants(summaries: dict, figdir: str):
+    """summaries: {mode: summary}. Panel a: E1 inter-agent agreement by
+    cell and tier. Panel b: E4 equilibrium composition, substrate vs
+    corrected live cells."""
+    fig, axes = plt.subplots(1, 2, figsize=(8.8, 3.0))
+    ax = axes[0]
+    cells = ["e1_loose", "e1_tight", "e1_squeeze", "e1_squeeze_mem",
+             "e1_noisy"]
+    labels = ["25w", "12w", "6w", "6w+mem", "12w noisy"]
+    width = 0.38
+    for mi, mode in enumerate(("mock", "live")):
+        d = summaries.get(mode, {})
+        vals, errs = [], []
+        for c in cells:
+            ci_ = d.get(c, {}).get("inter_agent_agreement") or {}
+            vals.append(ci_.get("estimate") or 0.0)
+            errs.append([max(0.0, (ci_.get("estimate") or 0)
+                             - (ci_.get("lo") or 0)),
+                         max(0.0, (ci_.get("hi") or 0)
+                             - (ci_.get("estimate") or 0))])
+        x = np.arange(len(cells)) + (mi - 0.5) * width
+        ax.bar(x, vals, width=width * 0.92, color=C[mi],
+               label="substrate" if mode == "mock" else "live LLM")
+        ax.errorbar(x, vals, yerr=np.array(errs).T, fmt="none",
+                    ecolor=GRAY, lw=0.8, capsize=2)
+    ax.set_xticks(range(len(cells)))
+    ax.set_xticklabels(labels, fontsize=7.5)
+    ax.set_ylabel("inter-agent agreement")
+    ax.set_title("E1: agreement on a note ordering, by budget lever",
+                 fontsize=8.5)
+    ax.legend(fontsize=7.5)
+    ax.grid(axis="x", visible=False)
+
+    ax = axes[1]
+    groups = [("substrate\n(e4 mock)", ("mock", "e4")),
+              ("haiku+scratch\n(e4_think)", ("live", "e4_think")),
+              ("sonnet+scratch\n(e4_sonnet)", ("live", "e4_sonnet"))]
+    eq_keys = ["egalitarian", "other_stable_50_50", "class", "fractious"]
+    eq_labels = ["egalitarian 50/50", "other stable 50/50",
+                 "class (70/30 by badge)", "fractious"]
+    bottoms = np.zeros(len(groups))
+    for ki, (k, kl) in enumerate(zip(eq_keys, eq_labels)):
+        shares = []
+        for _, (mode, cell) in groups:
+            d = summaries.get(mode, {}).get(cell, {})
+            eqs = d.get("equilibrium_counts", {})
+            tot = sum(eqs.values()) or 1
+            shares.append(eqs.get(k, 0) / tot)
+        ax.bar(range(len(groups)), shares, bottom=bottoms,
+               color=C[ki % len(C)], width=0.55, label=kl)
+        bottoms += np.array(shares)
+    ax.set_xticks(range(len(groups)))
+    ax.set_xticklabels([g for g, _ in groups], fontsize=7)
+    ax.set_ylabel("share of populations")
+    ax.set_title("E4: equilibrium type (corrected cells)", fontsize=8.5)
+    ax.legend(fontsize=6.5, loc="center left", bbox_to_anchor=(1.01, 0.5))
+    ax.grid(axis="x", visible=False)
+    fig.tight_layout()
+    fig.savefig(os.path.join(figdir, "fig9_variant_levers.png"),
+                bbox_inches="tight")
+    plt.close(fig)
+
+
 def analyze_envs(outdir: str, figdir: str, mode: str) -> dict:
     summary = {}
     for cell in ("e1_tight", "e1_loose", "e1_squeeze", "e1_squeeze_mem",
@@ -589,6 +652,8 @@ def main_envs_analysis(results_dir: str = "results",
         if isinstance(o, dict):
             return {k: strip(v) for k, v in o.items() if k != "_per_pop"}
         return o
+    if out:
+        _fig_variants(out, figdir)
     path = os.path.join(results_dir, "envs_summary.json")
     with open(path, "w") as f:
         json.dump(strip(out), f, indent=2, default=str)

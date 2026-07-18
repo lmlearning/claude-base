@@ -158,6 +158,190 @@
         "p97.5": 0.11666666666666667
       }
     },
+    "e1_squeeze": {
+      "n_pops": 40,
+      "conventionalized": {
+        "n": 40,
+        "k": 0,
+        "p": 0.0,
+        "lo": 0.0,
+        "hi": 0.08762160119728664
+      },
+      "modal_share": {
+        "n": 40,
+        "estimate": 0.06583333333333333,
+        "lo": 0.06208333333333334,
+        "hi": 0.06999999999999999
+      },
+      "distinct_modal_variants": 0,
+      "modal_variant_counts": [],
+      "simpson_diversity": 0.0,
+      "newcomer_adopt": {
+        "n": 40,
+        "estimate": 0.0125,
+        "lo": 0.005555555555555555,
+        "hi": 0.020138888888888887
+      },
+      "founder_early": {
+        "n": 40,
+        "estimate": 0.010416666666666666,
+        "lo": 0.005555555555555555,
+        "hi": 0.015277777777777779
+      },
+      "minority_flip": {
+        "n": 0,
+        "p": null,
+        "lo": null,
+        "hi": null
+      },
+      "prior_copy_input_share": {
+        "n": 40,
+        "estimate": 0.0,
+        "lo": 0.0,
+        "hi": 0.0
+      },
+      "inter_agent_agreement": {
+        "n": 40,
+        "estimate": 0.01666666666666667,
+        "lo": 0.012490530303030305,
+        "hi": 0.021212121212121213
+      },
+      "shuffle_control_modal_share": {
+        "mean": 0.06523958333333334,
+        "p97.5": 0.1
+      }
+    },
+    "e1_squeeze_mem": {
+      "n_pops": 40,
+      "conventionalized": {
+        "n": 40,
+        "k": 0,
+        "p": 0.0,
+        "lo": 0.0,
+        "hi": 0.08762160119728664
+      },
+      "modal_share": {
+        "n": 40,
+        "estimate": 0.0625,
+        "lo": 0.059166666666666666,
+        "hi": 0.06583333333333333
+      },
+      "distinct_modal_variants": 0,
+      "modal_variant_counts": [],
+      "simpson_diversity": 0.0,
+      "newcomer_adopt": {
+        "n": 40,
+        "estimate": 0.01875,
+        "lo": 0.0125,
+        "hi": 0.025
+      },
+      "founder_early": {
+        "n": 40,
+        "estimate": 0.014583333333333332,
+        "lo": 0.00972222222222222,
+        "hi": 0.02013888888888889
+      },
+      "minority_flip": {
+        "n": 0,
+        "p": null,
+        "lo": null,
+        "hi": null
+      },
+      "prior_copy_input_share": {
+        "n": 40,
+        "estimate": 0.0,
+        "lo": 0.0,
+        "hi": 0.0
+      },
+      "inter_agent_agreement": {
+        "n": 40,
+        "estimate": 0.014015151515151513,
+        "lo": 0.00946969696969697,
+        "hi": 0.01893939393939394
+      },
+      "shuffle_control_modal_share": {
+        "mean": 0.06494375,
+        "p97.5": 0.1
+      }
+    },
+    "e1_noisy": {
+      "n_pops": 40,
+      "conventionalized": {
+        "n": 40,
+        "k": 39,
+        "p": 0.975,
+        "lo": 0.8711863103652591,
+        "hi": 0.9955731684973186
+      },
+      "modal_share": {
+        "n": 40,
+        "estimate": 0.8225,
+        "lo": 0.795,
+        "hi": 0.8445833333333332
+      },
+      "distinct_modal_variants": 34,
+      "modal_variant_counts": [
+        [
+          "[1, 2, 3, 4, 0]",
+          2
+        ],
+        [
+          "[3, 0, 2, 1, 4]",
+          2
+        ],
+        [
+          "[3, 1, 2, 4, 0]",
+          2
+        ],
+        [
+          "[0, 1, 3, 2, 4]",
+          2
+        ],
+        [
+          "[4, 0, 2, 3, 1]",
+          2
+        ],
+        [
+          "[0, 3, 1, 2, 4]",
+          1
+        ]
+      ],
+      "simpson_diversity": 0.9932523616734144,
+      "newcomer_adopt": {
+        "n": 40,
+        "estimate": 0.3663194444444445,
+        "lo": 0.31561631944444446,
+        "hi": 0.42256944444444444
+      },
+      "founder_early": {
+        "n": 40,
+        "estimate": 0.3131944444444444,
+        "lo": 0.2763888888888889,
+        "hi": 0.35138888888888886
+      },
+      "minority_flip": {
+        "n": 0,
+        "p": null,
+        "lo": null,
+        "hi": null
+      },
+      "prior_copy_input_share": {
+        "n": 40,
+        "estimate": 0.4729166666666666,
+        "lo": 0.42708333333333337,
+        "hi": 0.5208333333333334
+      },
+      "inter_agent_agreement": {
+        "n": 40,
+        "estimate": 0.9083333333333334,
+        "lo": 0.8462121212121211,
+        "hi": 0.9632670454545453
+      },
+      "shuffle_control_modal_share": {
+        "mean": 0.08351249999999999,
+        "p97.5": 0.11666666666666667
+      }
+    },
     "e1_stranger": {
       "n_tracked_informers": 60,
       "self_consistency_modal_share": {
@@ -170,6 +354,19 @@
     },
     "e2": {
       "n_pops": 40,
+      "msg_use_rate": null,
+      "malformed_per_call": {
+        "n": 40,
+        "estimate": 0.0,
+        "lo": 0.0,
+        "hi": 0.0
+      },
+      "parse_fail_per_call": {
+        "n": 0,
+        "estimate": null,
+        "lo": null,
+        "hi": null
+      },
       "conventionalized": {
         "n": 40,
         "k": 1,
@@ -202,6 +399,102 @@
           1
         ]
       ]
+    },
+    "e2_dialogue": {
+      "n_pops": 20,
+      "msg_use_rate": {
+        "n": 20,
+        "estimate": 0.0,
+        "lo": 0.0,
+        "hi": 0.0
+      },
+      "malformed_per_call": {
+        "n": 20,
+        "estimate": 0.0,
+        "lo": 0.0,
+        "hi": 0.0
+      },
+      "parse_fail_per_call": {
+        "n": 0,
+        "estimate": null,
+        "lo": null,
+        "hi": null
+      },
+      "conventionalized": {
+        "n": 20,
+        "k": 0,
+        "p": 0.0,
+        "lo": 0.0,
+        "hi": 0.16112515805281938
+      },
+      "mapping_share": {
+        "n": 20,
+        "estimate": 0.07916666666666665,
+        "lo": 0.041666666666666664,
+        "hi": 0.12499999999999997
+      },
+      "success_first12": {
+        "n": 20,
+        "estimate": 0.4458333333333333,
+        "lo": 0.375,
+        "hi": 0.5125
+      },
+      "success_last12": {
+        "n": 20,
+        "estimate": 0.4458333333333333,
+        "lo": 0.3916666666666666,
+        "hi": 0.5
+      },
+      "distinct_modal_mappings": 0,
+      "modal_mapping_counts": []
+    },
+    "e2_think": {
+      "n_pops": 20,
+      "msg_use_rate": {
+        "n": 20,
+        "estimate": 0.0,
+        "lo": 0.0,
+        "hi": 0.0
+      },
+      "malformed_per_call": {
+        "n": 20,
+        "estimate": 0.0,
+        "lo": 0.0,
+        "hi": 0.0
+      },
+      "parse_fail_per_call": {
+        "n": 0,
+        "estimate": null,
+        "lo": null,
+        "hi": null
+      },
+      "conventionalized": {
+        "n": 20,
+        "k": 0,
+        "p": 0.0,
+        "lo": 0.0,
+        "hi": 0.16112515805281938
+      },
+      "mapping_share": {
+        "n": 20,
+        "estimate": 0.10833333333333332,
+        "lo": 0.058333333333333334,
+        "hi": 0.1625
+      },
+      "success_first12": {
+        "n": 20,
+        "estimate": 0.425,
+        "lo": 0.375,
+        "hi": 0.47916666666666663
+      },
+      "success_last12": {
+        "n": 20,
+        "estimate": 0.475,
+        "lo": 0.4166666666666667,
+        "hi": 0.5333333333333333
+      },
+      "distinct_modal_mappings": 0,
+      "modal_mapping_counts": []
     },
     "e3": {
       "n_pops": 60,
@@ -252,6 +545,55 @@
         "hi": 0.4555555555555556
       }
     },
+    "e3_squeeze": {
+      "n_pops": 40,
+      "items_conventionalized_of6": {
+        "n": 40,
+        "estimate": 4.15,
+        "lo": 3.75,
+        "hi": 4.525
+      },
+      "mean_item_share": {
+        "n": 40,
+        "estimate": 0.5883333333333334,
+        "lo": 0.5666666666666667,
+        "hi": 0.6097222222222222
+      },
+      "distinct_schemes": 40,
+      "scheme_counts_top": [
+        [
+          "[[0, 2, 6], [3, 6], [1, 3], [0, 5, 7], [1, 2], [1, 4, 7]]",
+          1
+        ],
+        [
+          "[[0, 2, 6], [3, 4, 6], [1, 3, 4], [5, 7], [1, 5], [1, 4, 7]]",
+          1
+        ],
+        [
+          "[[0, 2, 6], [3, 4, 6], [1, 3, 4], [0, 7], [1, 2], [1, 4, 7]]",
+          1
+        ]
+      ],
+      "coinage_total": 0,
+      "note_len_first_third": {
+        "n": 40,
+        "estimate": 2.290625,
+        "lo": 2.262291666666667,
+        "hi": 2.3197916666666663
+      },
+      "note_len_last_third": {
+        "n": 40,
+        "estimate": 2.3114583333333334,
+        "lo": 2.27875,
+        "hi": 2.34375
+      },
+      "modal_matches_prior": {
+        "n": 40,
+        "estimate": 0.47916666666666663,
+        "lo": 0.425,
+        "hi": 0.5333333333333334
+      }
+    },
     "e4": {
       "n_pops": 60,
       "equilibrium_counts": {
@@ -279,6 +621,35 @@
         "estimate": 0.8581666666666667,
         "lo": 0.8486666666666666,
         "hi": 0.8671666666666666
+      }
+    },
+    "e4_think": {
+      "n_pops": 20,
+      "equilibrium_counts": {
+        "class": 3,
+        "egalitarian": 10,
+        "fractious": 1,
+        "other_stable_50_50": 6
+      },
+      "class_share": {
+        "n": 20,
+        "k": 3,
+        "p": 0.15,
+        "lo": 0.052368745896216595,
+        "hi": 0.36041886474075696
+      },
+      "egalitarian_share": {
+        "n": 20,
+        "k": 10,
+        "p": 0.5,
+        "lo": 0.2992980081982123,
+        "hi": 0.7007019918017877
+      },
+      "compat_tail": {
+        "n": 20,
+        "estimate": 0.8564999999999999,
+        "lo": 0.8400000000000001,
+        "hi": 0.8729999999999999
       }
     }
   },
@@ -391,6 +762,166 @@
         "p97.5": 0.06666666666666667
       }
     },
+    "e1_squeeze": {
+      "n_pops": 4,
+      "conventionalized": {
+        "n": 4,
+        "k": 1,
+        "p": 0.25,
+        "lo": 0.04558726080970055,
+        "hi": 0.6993581574175981
+      },
+      "modal_share": {
+        "n": 4,
+        "estimate": 0.27083333333333337,
+        "lo": 0.125,
+        "hi": 0.4708333333333333
+      },
+      "distinct_modal_variants": 1,
+      "modal_variant_counts": [
+        [
+          "[4, 3, 0]",
+          1
+        ]
+      ],
+      "simpson_diversity": 0.0,
+      "newcomer_adopt": {
+        "n": 4,
+        "estimate": 0.008333333333333333,
+        "lo": 0.0,
+        "hi": 0.025
+      },
+      "founder_early": {
+        "n": 4,
+        "estimate": 0.09027777777777776,
+        "lo": 0.013888888888888888,
+        "hi": 0.21527777777777773
+      },
+      "minority_flip": {
+        "n": 0,
+        "p": null,
+        "lo": null,
+        "hi": null
+      },
+      "prior_copy_input_share": {
+        "n": 4,
+        "estimate": 0.20833333333333334,
+        "lo": 0.041666666666666664,
+        "hi": 0.39583333333333337
+      },
+      "inter_agent_agreement": {
+        "n": 4,
+        "estimate": 0.25757575757575757,
+        "lo": 0.030303030303030304,
+        "hi": 0.6363636363636364
+      },
+      "shuffle_control_modal_share": {
+        "mean": 0.16316666666666663,
+        "p97.5": 0.25
+      }
+    },
+    "e1_squeeze_mem": {
+      "n_pops": 4,
+      "conventionalized": {
+        "n": 4,
+        "k": 0,
+        "p": 0.0,
+        "lo": 0.0,
+        "hi": 0.4898908364545973
+      },
+      "modal_share": {
+        "n": 4,
+        "estimate": 0.175,
+        "lo": 0.03333333333333333,
+        "hi": 0.35833333333333334
+      },
+      "distinct_modal_variants": 0,
+      "modal_variant_counts": [],
+      "simpson_diversity": 0.0,
+      "newcomer_adopt": {
+        "n": 3,
+        "estimate": 0.028619528619528618,
+        "lo": 0.027777777777777776,
+        "hi": 0.0303030303030303
+      },
+      "founder_early": {
+        "n": 3,
+        "estimate": 0.037037037037037035,
+        "lo": 0.0,
+        "hi": 0.1111111111111111
+      },
+      "minority_flip": {
+        "n": 0,
+        "p": null,
+        "lo": null,
+        "hi": null
+      },
+      "prior_copy_input_share": {
+        "n": 4,
+        "estimate": 0.2708333333333333,
+        "lo": 0.16666666666666666,
+        "hi": 0.4166666666666667
+      },
+      "inter_agent_agreement": {
+        "n": 3,
+        "estimate": 0.12626262626262627,
+        "lo": 0.015151515151515152,
+        "hi": 0.25757575757575757
+      }
+    },
+    "e1_noisy": {
+      "n_pops": 4,
+      "conventionalized": {
+        "n": 4,
+        "k": 0,
+        "p": 0.0,
+        "lo": 0.0,
+        "hi": 0.4898908364545973
+      },
+      "modal_share": {
+        "n": 4,
+        "estimate": 0.07916666666666666,
+        "lo": 0.058333333333333334,
+        "hi": 0.10416666666666669
+      },
+      "distinct_modal_variants": 0,
+      "modal_variant_counts": [],
+      "simpson_diversity": 0.0,
+      "newcomer_adopt": {
+        "n": 4,
+        "estimate": 0.007575757575757575,
+        "lo": 0.0,
+        "hi": 0.022727272727272724
+      },
+      "founder_early": {
+        "n": 4,
+        "estimate": 0.0,
+        "lo": 0.0,
+        "hi": 0.0
+      },
+      "minority_flip": {
+        "n": 0,
+        "p": null,
+        "lo": null,
+        "hi": null
+      },
+      "prior_copy_input_share": {
+        "n": 4,
+        "estimate": 0.875,
+        "lo": 0.7916666666666666,
+        "hi": 0.9583333333333334
+      },
+      "inter_agent_agreement": {
+        "n": 4,
+        "estimate": 0.022727272727272728,
+        "lo": 0.0,
+        "hi": 0.045454545454545456
+      },
+      "shuffle_control_modal_share": {
+        "mean": 0.06241666666666667,
+        "p97.5": 0.08374999999999962
+      }
+    },
     "e1_stranger": {
       "n_tracked_informers": 6,
       "self_consistency_modal_share": {
@@ -403,6 +934,19 @@
     },
     "e2": {
       "n_pops": 6,
+      "msg_use_rate": null,
+      "malformed_per_call": {
+        "n": 6,
+        "estimate": 0.9810377243123444,
+        "lo": 0.9762313992573757,
+        "hi": 0.9851896141302438
+      },
+      "parse_fail_per_call": {
+        "n": 0,
+        "estimate": null,
+        "lo": null,
+        "hi": null
+      },
       "conventionalized": {
         "n": 6,
         "k": 0,
@@ -427,6 +971,150 @@
         "estimate": 0.3611111111111111,
         "lo": 0.25000000000000006,
         "hi": 0.47222222222222215
+      },
+      "distinct_modal_mappings": 0,
+      "modal_mapping_counts": []
+    },
+    "e2_dialogue": {
+      "n_pops": 4,
+      "msg_use_rate": {
+        "n": 4,
+        "estimate": 1.0,
+        "lo": 1.0,
+        "hi": 1.0
+      },
+      "malformed_per_call": {
+        "n": 4,
+        "estimate": 0.42282380074292736,
+        "lo": 0.40162598699210406,
+        "hi": 0.45762383900928794
+      },
+      "parse_fail_per_call": {
+        "n": 4,
+        "estimate": 0.029197991416068672,
+        "lo": 0.02147125322997416,
+        "hi": 0.03632395940832474
+      },
+      "conventionalized": {
+        "n": 4,
+        "k": 0,
+        "p": 0.0,
+        "lo": 0.0,
+        "hi": 0.4898908364545973
+      },
+      "mapping_share": {
+        "n": 4,
+        "estimate": 0.020833333333333332,
+        "lo": 0.0,
+        "hi": 0.0625
+      },
+      "success_first12": {
+        "n": 4,
+        "estimate": 0.041666666666666664,
+        "lo": 0.0,
+        "hi": 0.08333333333333333
+      },
+      "success_last12": {
+        "n": 4,
+        "estimate": 0.14583333333333331,
+        "lo": 0.08333333333333333,
+        "hi": 0.20833333333333334
+      },
+      "distinct_modal_mappings": 0,
+      "modal_mapping_counts": []
+    },
+    "e2_think": {
+      "n_pops": 4,
+      "msg_use_rate": {
+        "n": 4,
+        "estimate": 0.0,
+        "lo": 0.0,
+        "hi": 0.0
+      },
+      "malformed_per_call": {
+        "n": 4,
+        "estimate": 0.44222446401177545,
+        "lo": 0.42266185759402813,
+        "hi": 0.4628464109845082
+      },
+      "parse_fail_per_call": {
+        "n": 4,
+        "estimate": 0.060451872996728204,
+        "lo": 0.04638960666092449,
+        "hi": 0.07451413933253191
+      },
+      "conventionalized": {
+        "n": 4,
+        "k": 0,
+        "p": 0.0,
+        "lo": 0.0,
+        "hi": 0.4898908364545973
+      },
+      "mapping_share": {
+        "n": 4,
+        "estimate": 0.0,
+        "lo": 0.0,
+        "hi": 0.0
+      },
+      "success_first12": {
+        "n": 4,
+        "estimate": 0.041666666666666664,
+        "lo": 0.0,
+        "hi": 0.08333333333333333
+      },
+      "success_last12": {
+        "n": 4,
+        "estimate": 0.041666666666666664,
+        "lo": 0.0,
+        "hi": 0.08333333333333333
+      },
+      "distinct_modal_mappings": 0,
+      "modal_mapping_counts": []
+    },
+    "e2_sonnet": {
+      "n_pops": 3,
+      "msg_use_rate": {
+        "n": 3,
+        "estimate": 0.0,
+        "lo": 0.0,
+        "hi": 0.0
+      },
+      "malformed_per_call": {
+        "n": 3,
+        "estimate": 0.02443415637860082,
+        "lo": 0.007716049382716049,
+        "hi": 0.04861111111111111
+      },
+      "parse_fail_per_call": {
+        "n": 3,
+        "estimate": 0.006172839506172839,
+        "lo": 0.0,
+        "hi": 0.018518518518518517
+      },
+      "conventionalized": {
+        "n": 3,
+        "k": 0,
+        "p": 0.0,
+        "lo": 5.551115123125783e-17,
+        "hi": 0.5614970317550454
+      },
+      "mapping_share": {
+        "n": 3,
+        "estimate": 0.0,
+        "lo": 0.0,
+        "hi": 0.0
+      },
+      "success_first12": {
+        "n": 3,
+        "estimate": 0.0,
+        "lo": 0.0,
+        "hi": 0.0
+      },
+      "success_last12": {
+        "n": 3,
+        "estimate": 0.0,
+        "lo": 0.0,
+        "hi": 0.0
       },
       "distinct_modal_mappings": 0,
       "modal_mapping_counts": []
@@ -480,6 +1168,96 @@
         "hi": 1.0
       }
     },
+    "e3_squeeze": {
+      "n_pops": 4,
+      "items_conventionalized_of6": {
+        "n": 4,
+        "estimate": 6.0,
+        "lo": 6.0,
+        "hi": 6.0
+      },
+      "mean_item_share": {
+        "n": 4,
+        "estimate": 0.9861111111111112,
+        "lo": 0.9777777777777779,
+        "hi": 0.9944444444444445
+      },
+      "distinct_schemes": 1,
+      "scheme_counts_top": [
+        [
+          "[[0, 2, 6], [3, 4, 6], [1, 3, 4], [0, 5, 7], [1, 2, 5], [1, 4, 7]]",
+          4
+        ]
+      ],
+      "coinage_total": 0,
+      "note_len_first_third": {
+        "n": 4,
+        "estimate": 2.9916666666666667,
+        "lo": 2.975,
+        "hi": 3.0
+      },
+      "note_len_last_third": {
+        "n": 4,
+        "estimate": 3.0,
+        "lo": 3.0,
+        "hi": 3.0
+      },
+      "modal_matches_prior": {
+        "n": 4,
+        "estimate": 1.0,
+        "lo": 1.0,
+        "hi": 1.0
+      }
+    },
+    "e3_redo": {
+      "n_pops": 4,
+      "items_conventionalized_of6": {
+        "n": 4,
+        "estimate": 6.0,
+        "lo": 6.0,
+        "hi": 6.0
+      },
+      "mean_item_share": {
+        "n": 4,
+        "estimate": 0.9916666666666667,
+        "lo": 0.9750000000000001,
+        "hi": 1.0
+      },
+      "distinct_schemes": 4,
+      "scheme_counts_top": [
+        [
+          "[[0, 5, 6], [5, 6, 7], [1, 3, 7], [0, 4, 6], [2, 3, 4], [1, 2, 7]]",
+          1
+        ],
+        [
+          "[[0, 1, 3], [0, 4, 6], [5, 6, 7], [1, 2, 3], [2, 4, 7], [1, 3, 5]]",
+          1
+        ],
+        [
+          "[[0, 3, 5], [1, 4, 5], [2, 4, 7], [2, 3, 6], [1, 2, 6], [0, 4, 7]]",
+          1
+        ]
+      ],
+      "coinage_total": 346,
+      "note_len_first_third": {
+        "n": 4,
+        "estimate": 5.289583333333334,
+        "lo": 4.991666666666667,
+        "hi": 5.5875
+      },
+      "note_len_last_third": {
+        "n": 4,
+        "estimate": 5.183333333333334,
+        "lo": 4.827083333333333,
+        "hi": 5.714583333333334
+      },
+      "modal_matches_prior": {
+        "n": 4,
+        "estimate": 1.0,
+        "lo": 1.0,
+        "hi": 1.0
+      }
+    },
     "e4": {
       "n_pops": 6,
       "equilibrium_counts": {
@@ -504,6 +1282,59 @@
         "estimate": 0.6483333333333333,
         "lo": 0.6033333333333332,
         "hi": 0.695
+      }
+    },
+    "e4_think": {
+      "n_pops": 4,
+      "equilibrium_counts": {
+        "egalitarian": 3,
+        "other_stable_50_50": 1
+      },
+      "class_share": {
+        "n": 4,
+        "k": 0,
+        "p": 0.0,
+        "lo": 0.0,
+        "hi": 0.4898908364545973
+      },
+      "egalitarian_share": {
+        "n": 4,
+        "k": 3,
+        "p": 0.75,
+        "lo": 0.30064184258240184,
+        "hi": 0.9544127391902995
+      },
+      "compat_tail": {
+        "n": 4,
+        "estimate": 0.9500000000000001,
+        "lo": 0.935,
+        "hi": 0.9649999999999999
+      }
+    },
+    "e4_sonnet": {
+      "n_pops": 3,
+      "equilibrium_counts": {
+        "egalitarian": 3
+      },
+      "class_share": {
+        "n": 3,
+        "k": 0,
+        "p": 0.0,
+        "lo": 5.551115123125783e-17,
+        "hi": 0.5614970317550454
+      },
+      "egalitarian_share": {
+        "n": 3,
+        "k": 3,
+        "p": 1.0,
+        "lo": 0.4385029682449546,
+        "hi": 1.0
+      },
+      "compat_tail": {
+        "n": 3,
+        "estimate": 1.0,
+        "lo": 1.0,
+        "hi": 1.0
       }
     }
   }

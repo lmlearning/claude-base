@@ -395,7 +395,7 @@ def render_envs():
         "e1_noisy": "E1 noisy channel (12-word notes, 25% word deletion)",
     }
     E2_LABELS = {
-        "e2": "E2 (grid assembly) — **VOID live, see integrity note**",
+        "e2": "E2 (grid assembly) — VOID live, see integrity note",
         "e2_think": "E2 + scratch line (corrected turn protocol)",
         "e2_dialogue": "E2 + scratch line + pre-episode message channel",
         "e2_sonnet": "E2 + scratch line, claude-sonnet-4.5",
@@ -407,7 +407,7 @@ def render_envs():
                       "shared items)",
     }
     E4_LABELS = {
-        "e4": "E4 (tagged bargaining) — **VOID live, see integrity note**",
+        "e4": "E4 (tagged bargaining) — VOID live, see integrity note",
         "e4_think": "E4 + scratch line (corrected turn protocol)",
         "e4_sonnet": "E4 + scratch line, claude-sonnet-4.5",
     }
@@ -526,51 +526,95 @@ Axtell–Epstein–Young 'emergent classes' game).  Full definitions in
 ### Live LLM tier (claude-haiku-4.5)
 {tier("live")}
 
-### Reading (mechanisms verified in transcripts)
+### Integrity correction — supersedes the first live E2/E4 reading
 
-**The naming-game result does not automatically generalize: at this
-scale, none of the four live environments produced a history-dependent
-side-product convention — while the substrate tier shows the dynamics
-readily produce them for policies that benefit from familiarity.**
+After the first live pass was written up, probes of raw replies showed
+the original live E2 and E4 cells were **invalid**: with their short
+reply caps (20 tokens per E2 turn, 8 per E4 demand, 8 per E3 pick) the
+model's free-text preamble was truncated before any parseable move, so
+**98.1% (E2) and 98.8% (E4) of live moves fell to the deterministic
+random fallback** (E3's chooser: 36.3%; E1 unaffected — answer accuracy
+0.74–0.99). Those cells measured the fallback distribution, not model
+behaviour; their rows above are marked VOID (journals retained), and
+plain-instruction re-probes at larger caps showed the model simply does
+not comply with "reply with only X" once it has room to chat (0/6
+parseable E2 replies at a 200-token cap). The corrected protocol asks
+for one scratch line then the move on its own line, gives it room, and
+parses the final anchored answer; parse failures are journaled
+separately from occupied-cell picks. The substrate tier is unaffected
+(mock replies are well-formed by construction).
 
-- *E1:* live populations solve the task (~94% success) by transcribing —
-  92% of notes preserve the randomized INPUT order, and zero-shot probes
-  copy the input order in 81–100% of cases — so no endogenous ordering
-  ever forms (modal share ≈ the shuffle-control baseline; inter-agent
-  agreement 2–3%). The responder parses any format, so format alignment
-  has no payoff. In the substrate — where parsing success was coupled to
-  format familiarity — 95–98% of populations conventionalized, with 42–43
-  distinct formats across 60 populations.
-- *E2:* live pairs never discover complementary partitions (69/72
-  episodes 'mixed'; success flat at ~0.36–0.47), so there is no strategy
-  for a convention to stabilize; the substrate's reinforcement learners
-  at least trend toward partitions.
-- *E3:* the live tier's near-perfect within-population concentration
-  (0.99) is exhaustive description — the model lists all 3 traits of the
-  target every time, identical to its zero-shot prior (prior-match 1.0).
-  The prior-correction arm of the battery correctly reclassifies this as
-  shared model bias, not convention. (Design caveat: items are generated
-  per population, so E3's cross-population diversity comparison is not
-  informative as built; a shared-item-set variant is the fix.)
-- *E4:* live populations reach no norm at all — demands split roughly
-  uniformly across 30/50/70 with ~65% compatibility ('fractious' in all
-  6 populations), where the substrate settles into egalitarian (28/60) or
-  Axtell–Epstein–Young class (9/60) conventions.
+### Reading (corrected cells + convention-inducing levers)
 
-**Synthesis.** Combining with the naming-game tier: haiku-scale LLM
-populations form conventions readily when payoff directly rewards
-alignment (consensus at the criterion floor), but did NOT accrete
-arbitrary conventions as a side product of ordinary competent joint work
-here. The mechanism is visible in transcripts: competence substitutes
-for convention. Flexible parsing (E1) and exhaustive description (E3)
-remove the benefit that alignment would otherwise carry; where a
-convention would genuinely have paid (E2 partitions, E4 bargaining
-norms), this model failed to discover the underlying strategy within the
-interaction budget. Convention formation tracked the payoff-coupling of
-alignment — not mere co-presence. Limitations: 4–6 live populations per
-cell, short in-context histories (3–8 events), one small model, and
-budgets sized to a ~$25 projection; the infrastructure (journaled,
-resumable, capped) supports scaling all four dimensions.
+**With parsing repaired and every lever pulled — compression, noise,
+memory, negotiation, explicit deliberation, and a stronger model — the
+live environments produced exactly one (weak) side-product convention:
+E1 under a 6-word squeeze. The correction also overturns E4's reported
+'no norm at all': live populations reliably converge on the egalitarian
+50/50 norm. What never appears live is the *arbitrary* convention the
+substrate produces freely.**
+
+- *E1 squeeze:* 6 words cannot name all 5 label+entry pairs, so naming
+  everything stops being free. The model triages — names ~2.7 of 5
+  entries and accepts ~42–65% success (vs ~94% at 12 words) — rather
+  than inventing the values-only positional code that would fit all 5
+  (exactly the ordering convention the substrate exploits). One of 4
+  populations conventionalized a shared label-subset-and-order (modal
+  share 0.27 vs shuffle 0.16; inter-agent agreement 0.26 vs 0.02–0.03
+  at loose budgets): the suite's first live side-product convention,
+  weak but above baseline. Doubling memory did not amplify it (0/4,
+  agreement 0.13), and the noisy channel produced nothing (0/4,
+  agreement 0.02). In the substrate the squeeze *destroys* conventions
+  (0/40) — clipped notes starve its imitation channel — so the live
+  uptick is model-specific compression behaviour, not substrate
+  dynamics.
+- *E2 corrected:* the model's real grid play is *worse* than the
+  malformed-era random fallback (success 0.00–0.15 vs ~0.38): both
+  agents chase the same salient cells. Haiku fails via ~40% occupied
+  picks (misread grids); sonnet reads the grid near-perfectly (2%
+  malformed) yet still fails 0/72-ish, colliding 5–6 times per episode —
+  two copies of one deterministic policy are a mirror match, and extra
+  capability sharpens the mirror. No badge→region convention forms in
+  any variant (0/11 populations).
+- *E2 dialogue:* the message channel is used in 100% of episodes and
+  lifts success 0.04→0.15, but pacts never fossilize into a population
+  convention: both partners propose plans *simultaneously* each episode,
+  the proposals conflict (each typically assigns itself the same role),
+  and partners rotate every episode, so no badge-anchored mapping
+  stabilizes (0/4).
+- *E3 repaired:* both new cells confirm the shared-bias classification.
+  e3_redo (chooser given room to answer) reproduces exhaustive
+  description (per-item share 0.99, prior-match 1.00). e3_squeeze gives
+  the diversity test real teeth by sharing ONE item set across
+  populations: all 4 populations settle on the *same* scheme (1
+  distinct) — the signature of shared model bias, since genuine
+  convention predicts cross-population diversity (substrate: 40/40
+  distinct schemes on matched tasks).
+- *E4 corrected:* the 'fractious' result was fallback noise. With
+  parseable replies, all 7 corrected populations (4 haiku + 3 sonnet)
+  stabilize on 50/50 demands with 0.95–1.00 tail compatibility —
+  sonnet perfectly egalitarian in 3/3. Zero populations form the
+  Axtell–Epstein–Young badge-conditioned class convention (substrate:
+  9/60): the model's fairness prior absorbs the symmetry instead of
+  breaking it.
+
+**Synthesis (revised).** In the substrate, conventions form wherever
+familiarity is learnable. In live LLM populations, prior-driven
+competence dominates history: the model plays each encounter from its
+priors — flexible parsing (E1 loose), exhaustive description (E3),
+fairness (E4), salience (E2) — leaving little residue for population
+history to accrete on. Levers that merely make the task harder (noise,
+memory limits, hard distractors) create no conventions; compression
+that makes the prior strategy *infeasible* (E1 squeeze) produces the
+first weak one; negotiation helps performance but its simultaneous,
+partner-rotating structure blocks fossilization; and a stronger model
+sharpens priors — locking the egalitarian norm faster while making
+symmetric coordination *worse*. Convention formation in LLM populations
+tracks whether the individually-optimal prior policy leaves a residual
+coordination problem that only shared history can solve — co-presence,
+turnover, and even dialogue are not enough. Limitations: 3–4 live
+populations per variant cell, short in-context histories, two models;
+variant-suite spend $44.5 (cumulative env spend $60.87 of a $110 cap).
 """
 
 

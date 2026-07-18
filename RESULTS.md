@@ -13,6 +13,8 @@ across conditions.)*
 | Experiment B pipeline, end-to-end in free mock mode | **Complete** (42 runs, all phases, judge, validation export) |
 | Experiment B live LLM runs (claude-haiku-4.5 via OpenRouter) | **Complete**: 42/42 runs (genesis, transmission ± dialogue, solitary, founder & post-transmission minority), 4,507 messages judged; total spend $15.56 of a $250 cap |
 | Judge validation | **FAILED** at the gate (second-annotator κ = 0.06 « 0.6) — enforcement classifications are not reportable; the author hand-label file remains open (`results/expB_live/validation_sample_TO_HAND_LABEL.csv`) |
+| E1–E4 side-product convention suite | **Complete**: 300 substrate + 28 live populations |
+| E1–E4 convention-inducing variants + integrity repair | **Complete**: 220 substrate + 38 live populations (compression / noise / memory / dialogue / scratch-line / sonnet); original live e2/e4 cells found VOID (reply-cap truncation → 98% fallback moves) and superseded by corrected cells; cumulative env spend $60.87 of a $110 cap |
 
 ## 1. Pre-registered criteria (fixed before any data collection)
 
@@ -99,6 +101,30 @@ across conditions.)*
     analysis session, reading each message against the strict rubric;
     labels in `validation_sample_second_annotator.csv`). The gate
     decision reported uses this second annotation.
+14. **Reply-cap invalidation and repair (E2/E4/E3 live).** The env
+    cells inherited short reply caps (20 tokens per E2 turn, 8 per E4
+    demand, 8 per E3 pick) on the assumption the model would comply
+    with "reply with only X". Raw-reply probes showed it preambles
+    first in nearly every turn, so truncation sent 98.1% (E2) / 98.8%
+    (E4) / 36.3% (E3 chooser) of live moves to the pre-registered
+    random fallback; E1 was unaffected. Decision: mark the original
+    live e2/e4 cells VOID (journals retained), and repair rather than
+    reinterpret — a one-line scratch turn with a 200-token cap and
+    final-anchored-answer parsing (e2_think/e4_think, e2_dialogue,
+    sonnet cells), a 24-token chooser for E3 (e3_redo, e3_squeeze) —
+    with parse failures journaled separately from occupied-cell picks.
+    The substrate tier is unaffected (well-formed by construction).
+15. **Variant (lever) design.** All convention-inducing levers are
+    payoff/capacity/structure changes only — word budgets, channel
+    noise, memory size, a neutral pre-episode message channel, the
+    scratch line, model tier — and every prompt still passes the
+    banned-vocabulary lint (nothing names consistency, order, style or
+    agreement). e2_dialogue rides on the scratch-line turn format (its
+    no-dialogue control is e2_think); the sonnet cells use the same
+    scratch-line design (matched haiku controls e2_think/e4_think).
+    e3_squeeze fixes E3's diversity-test flaw by sharing one fixed item
+    set across populations; the per-population zero-shot prior probe
+    still measures token-level bias on the shared traits.
 
 ## 3. Experiment A results (minimal agents; the substrate control)
 
@@ -435,62 +461,123 @@ Axtell–Epstein–Young 'emergent classes' game).  Full definitions in
 ### Substrate tier (minimal policies; the control)
 - **E1 (12-word notes)**: 0.950 [0.863, 0.983] (57/60) of populations conventionalized on a note ordering (modal share 0.81 [0.77, 0.84]); **42 distinct modal orderings** across 60 populations (Simpson diversity 0.99); inter-agent agreement 0.87 [0.82, 0.92]; task success (tail) high; newcomer first-3-notes adoption of the incumbent ordering 0.33 [0.28, 0.38] vs founders' first-3 0.31 [0.28, 0.34]; scripted minority (f=0.25, fixed alternative ordering) flipped 0.48 [0.36, 0.61] (29/60). Shuffle control modal share 0.09 (97.5th pct 0.15).
 - **E1 (25-word notes)**: 0.983 [0.911, 0.997] (59/60) of populations conventionalized on a note ordering (modal share 0.83 [0.81, 0.85]); **43 distinct modal orderings** across 60 populations (Simpson diversity 0.99); inter-agent agreement 0.90 [0.86, 0.94]; task success (tail) high; newcomer first-3-notes adoption of the incumbent ordering 0.34 [0.29, 0.38] vs founders' first-3 0.29 [0.25, 0.32]; scripted minority (f=0.25, fixed alternative ordering) flipped 0.45 [0.33, 0.58] (27/60). Shuffle control modal share 0.08 (97.5th pct 0.12).
+- **E1 squeeze (6-word notes)**: 0.000 [0.000, 0.088] (0/40) of populations conventionalized on a note ordering (modal share 0.07 [0.06, 0.07]); **0 distinct modal orderings** across 40 populations (Simpson diversity 0.00); inter-agent agreement 0.02 [0.01, 0.02]; task success (tail) high; newcomer first-3-notes adoption of the incumbent ordering 0.01 [0.01, 0.02] vs founders' first-3 0.01 [0.01, 0.02]; scripted minority (f=0.25, fixed alternative ordering) flipped n/a. Shuffle control modal share 0.07 (97.5th pct 0.10).
+- **E1 squeeze + 2× memory (6-word notes)**: 0.000 [0.000, 0.088] (0/40) of populations conventionalized on a note ordering (modal share 0.06 [0.06, 0.07]); **0 distinct modal orderings** across 40 populations (Simpson diversity 0.00); inter-agent agreement 0.01 [0.01, 0.02]; task success (tail) high; newcomer first-3-notes adoption of the incumbent ordering 0.02 [0.01, 0.03] vs founders' first-3 0.01 [0.01, 0.02]; scripted minority (f=0.25, fixed alternative ordering) flipped n/a. Shuffle control modal share 0.06 (97.5th pct 0.10).
+- **E1 noisy channel (12-word notes, 25% word deletion)**: 0.975 [0.871, 0.996] (39/40) of populations conventionalized on a note ordering (modal share 0.82 [0.80, 0.84]); **34 distinct modal orderings** across 40 populations (Simpson diversity 0.99); inter-agent agreement 0.91 [0.85, 0.96]; task success (tail) high; newcomer first-3-notes adoption of the incumbent ordering 0.37 [0.32, 0.42] vs founders' first-3 0.31 [0.28, 0.35]; scripted minority (f=0.25, fixed alternative ordering) flipped n/a. Shuffle control modal share 0.08 (97.5th pct 0.12).
 - **E1 stranger-pool control**: tracked informers facing fresh memoryless responders self-lock (self-consistency 0.85 [0.84, 0.87]) but agree with EACH OTHER at only 0.01 — individual habit forms alone; population-wide agreement is the social part.
-- **E2 (grid assembly)**: 0.025 [0.004, 0.129] (1/40) of populations conventionalized a badge→region mapping (mapping share 0.09 [0.05, 0.12]); episode success first-12 0.43 [0.39, 0.47] → last-12 0.51 [0.47, 0.55]; 1 distinct modal mappings: [["('bottom', 'top')", 1]].
+- **E2 (grid assembly)**: 0.025 [0.004, 0.129] (1/40) of populations conventionalized a badge→region mapping (mapping share 0.09 [0.05, 0.12]); episode success first-12 0.43 [0.39, 0.47] → last-12 0.51 [0.47, 0.55]; 1 distinct modal mappings: [["('bottom', 'top')", 1]]; malformed/call 0.00 [0.00, 0.00].
+- **E2 + scratch line (corrected turn protocol)**: 0.000 [0.000, 0.161] (0/20) of populations conventionalized a badge→region mapping (mapping share 0.11 [0.06, 0.16]); episode success first-12 0.42 [0.38, 0.48] → last-12 0.47 [0.42, 0.53]; 0 distinct modal mappings: []; malformed/call 0.00 [0.00, 0.00]; message-channel use 0.00 [0.00, 0.00].
+- **E2 + scratch line + pre-episode message channel**: 0.000 [0.000, 0.161] (0/20) of populations conventionalized a badge→region mapping (mapping share 0.08 [0.04, 0.12]); episode success first-12 0.45 [0.38, 0.51] → last-12 0.45 [0.39, 0.50]; 0 distinct modal mappings: []; malformed/call 0.00 [0.00, 0.00]; message-channel use 0.00 [0.00, 0.00].
 - **E3 (open-lexicon reference)**: 3.9 [3.6, 4.2] of 6 items per population settled on one description (mean per-item modal share 0.58 [0.57, 0.60]); **60 distinct population-level description schemes** across 60 populations; note length 2.3 [2.3, 2.3] words (first third) → 2.3 [2.3, 2.3] (last third); modal description matches a zero-shot prior probe in 0.40 [0.35, 0.46] of items; coined non-word labels: 0.
+- **E3 squeeze (3-word notes, hard distractors, shared items)**: 4.2 [3.8, 4.5] of 6 items per population settled on one description (mean per-item modal share 0.59 [0.57, 0.61]); **40 distinct population-level description schemes** across 40 populations; note length 2.3 [2.3, 2.3] words (first third) → 2.3 [2.3, 2.3] (last third); modal description matches a zero-shot prior probe in 0.48 [0.42, 0.53] of items; coined non-word labels: 0.
 - **E4 (tagged bargaining)**: equilibrium types across 60 populations: {'class': 9, 'egalitarian': 28, 'other_stable_50_50': 17, 'fractious': 6}; class (badge-conditioned 70/30) share 0.15 [0.08, 0.26] (9/60); egalitarian share 0.47 [0.35, 0.59] (28/60); tail compatibility 0.86 [0.85, 0.87].
+- **E4 + scratch line (corrected turn protocol)**: equilibrium types across 20 populations: {'class': 3, 'egalitarian': 10, 'fractious': 1, 'other_stable_50_50': 6}; class (badge-conditioned 70/30) share 0.15 [0.05, 0.36] (3/20); egalitarian share 0.50 [0.30, 0.70] (10/20); tail compatibility 0.86 [0.84, 0.87].
 
 ### Live LLM tier (claude-haiku-4.5)
 - **E1 (12-word notes)**: 0.000 [0.000, 0.490] (0/4) of populations conventionalized on a note ordering (modal share 0.11 [0.05, 0.23]); **0 distinct modal orderings** across 4 populations (Simpson diversity 0.00); inter-agent agreement 0.03 [0.00, 0.06]; task success (tail) high; newcomer first-3-notes adoption of the incumbent ordering 0.00 [0.00, 0.00] vs founders' first-3 0.01 [0.00, 0.02]; scripted minority (f=0.25, fixed alternative ordering) flipped 0.00 [0.00, 0.49] (0/4). Shuffle control modal share 0.10 (97.5th pct 0.15).
 - **E1 (25-word notes)**: 0.000 [0.000, 0.490] (0/4) of populations conventionalized on a note ordering (modal share 0.05 [0.04, 0.05]); **0 distinct modal orderings** across 4 populations (Simpson diversity 0.00); inter-agent agreement 0.02 [0.02, 0.04]; task success (tail) high; newcomer first-3-notes adoption of the incumbent ordering 0.00 [0.00, 0.00] vs founders' first-3 0.01 [0.00, 0.02]; scripted minority (f=0.25, fixed alternative ordering) flipped 0.00 [0.00, 0.49] (0/4). Shuffle control modal share 0.05 (97.5th pct 0.07).
+- **E1 squeeze (6-word notes)**: 0.250 [0.046, 0.699] (1/4) of populations conventionalized on a note ordering (modal share 0.27 [0.12, 0.47]); **1 distinct modal orderings** across 4 populations (Simpson diversity 0.00); inter-agent agreement 0.26 [0.03, 0.64]; task success (tail) high; newcomer first-3-notes adoption of the incumbent ordering 0.01 [0.00, 0.03] vs founders' first-3 0.09 [0.01, 0.22]; scripted minority (f=0.25, fixed alternative ordering) flipped n/a. Shuffle control modal share 0.16 (97.5th pct 0.25).
+- **E1 squeeze + 2× memory (6-word notes)**: 0.000 [0.000, 0.490] (0/4) of populations conventionalized on a note ordering (modal share 0.17 [0.03, 0.36]); **0 distinct modal orderings** across 4 populations (Simpson diversity 0.00); inter-agent agreement 0.13 [0.02, 0.26]; task success (tail) high; newcomer first-3-notes adoption of the incumbent ordering 0.03 [0.03, 0.03] vs founders' first-3 0.04 [0.00, 0.11]; scripted minority (f=0.25, fixed alternative ordering) flipped n/a.
+- **E1 noisy channel (12-word notes, 25% word deletion)**: 0.000 [0.000, 0.490] (0/4) of populations conventionalized on a note ordering (modal share 0.08 [0.06, 0.10]); **0 distinct modal orderings** across 4 populations (Simpson diversity 0.00); inter-agent agreement 0.02 [0.00, 0.05]; task success (tail) high; newcomer first-3-notes adoption of the incumbent ordering 0.01 [0.00, 0.02] vs founders' first-3 0.00 [0.00, 0.00]; scripted minority (f=0.25, fixed alternative ordering) flipped n/a. Shuffle control modal share 0.06 (97.5th pct 0.08).
 - **E1 stranger-pool control**: tracked informers facing fresh memoryless responders self-lock (self-consistency 0.17 [0.09, 0.28]) but agree with EACH OTHER at only 0.00 — individual habit forms alone; population-wide agreement is the social part.
-- **E2 (grid assembly)**: 0.000 [0.000, 0.390] (0/6) of populations conventionalized a badge→region mapping (mapping share 0.06 [0.03, 0.08]); episode success first-12 0.38 [0.28, 0.47] → last-12 0.36 [0.25, 0.47]; 0 distinct modal mappings: [].
+- **E2 (grid assembly) — VOID live, see integrity note**: 0.000 [0.000, 0.390] (0/6) of populations conventionalized a badge→region mapping (mapping share 0.06 [0.03, 0.08]); episode success first-12 0.38 [0.28, 0.47] → last-12 0.36 [0.25, 0.47]; 0 distinct modal mappings: []; malformed/call 0.98 [0.98, 0.99].
+- **E2 + scratch line (corrected turn protocol)**: 0.000 [0.000, 0.490] (0/4) of populations conventionalized a badge→region mapping (mapping share 0.00 [0.00, 0.00]); episode success first-12 0.04 [0.00, 0.08] → last-12 0.04 [0.00, 0.08]; 0 distinct modal mappings: []; malformed/call 0.44 [0.42, 0.46] (parse failures 0.06 [0.05, 0.07]); message-channel use 0.00 [0.00, 0.00].
+- **E2 + scratch line + pre-episode message channel**: 0.000 [0.000, 0.490] (0/4) of populations conventionalized a badge→region mapping (mapping share 0.02 [0.00, 0.06]); episode success first-12 0.04 [0.00, 0.08] → last-12 0.15 [0.08, 0.21]; 0 distinct modal mappings: []; malformed/call 0.42 [0.40, 0.46] (parse failures 0.03 [0.02, 0.04]); message-channel use 1.00 [1.00, 1.00].
+- **E2 + scratch line, claude-sonnet-4.5**: 0.000 [0.000, 0.561] (0/3) of populations conventionalized a badge→region mapping (mapping share 0.00 [0.00, 0.00]); episode success first-12 0.00 [0.00, 0.00] → last-12 0.00 [0.00, 0.00]; 0 distinct modal mappings: []; malformed/call 0.02 [0.01, 0.05] (parse failures 0.01 [0.00, 0.02]); message-channel use 0.00 [0.00, 0.00].
 - **E3 (open-lexicon reference)**: 6.0 [6.0, 6.0] of 6 items per population settled on one description (mean per-item modal share 0.99 [0.98, 1.00]); **6 distinct population-level description schemes** across 6 populations; note length 5.0 [4.5, 5.6] words (first third) → 4.7 [4.2, 5.3] (last third); modal description matches a zero-shot prior probe in 1.00 [1.00, 1.00] of items; coined non-word labels: 138.
-- **E4 (tagged bargaining)**: equilibrium types across 6 populations: {'fractious': 6}; class (badge-conditioned 70/30) share 0.00 [0.00, 0.39] (0/6); egalitarian share 0.00 [0.00, 0.39] (0/6); tail compatibility 0.65 [0.60, 0.69].
+- **E3 redo (chooser reply-token repair)**: 6.0 [6.0, 6.0] of 6 items per population settled on one description (mean per-item modal share 0.99 [0.98, 1.00]); **4 distinct population-level description schemes** across 4 populations; note length 5.3 [5.0, 5.6] words (first third) → 5.2 [4.8, 5.7] (last third); modal description matches a zero-shot prior probe in 1.00 [1.00, 1.00] of items; coined non-word labels: 346.
+- **E3 squeeze (3-word notes, hard distractors, shared items)**: 6.0 [6.0, 6.0] of 6 items per population settled on one description (mean per-item modal share 0.99 [0.98, 0.99]); **1 distinct population-level description schemes** across 4 populations; note length 3.0 [3.0, 3.0] words (first third) → 3.0 [3.0, 3.0] (last third); modal description matches a zero-shot prior probe in 1.00 [1.00, 1.00] of items; coined non-word labels: 0.
+- **E4 (tagged bargaining) — VOID live, see integrity note**: equilibrium types across 6 populations: {'fractious': 6}; class (badge-conditioned 70/30) share 0.00 [0.00, 0.39] (0/6); egalitarian share 0.00 [0.00, 0.39] (0/6); tail compatibility 0.65 [0.60, 0.69].
+- **E4 + scratch line (corrected turn protocol)**: equilibrium types across 4 populations: {'egalitarian': 3, 'other_stable_50_50': 1}; class (badge-conditioned 70/30) share 0.00 [0.00, 0.49] (0/4); egalitarian share 0.75 [0.30, 0.95] (3/4); tail compatibility 0.95 [0.94, 0.96].
+- **E4 + scratch line, claude-sonnet-4.5**: equilibrium types across 3 populations: {'egalitarian': 3}; class (badge-conditioned 70/30) share 0.00 [0.00, 0.56] (0/3); egalitarian share 1.00 [0.44, 1.00] (3/3); tail compatibility 1.00 [1.00, 1.00].
 
-### Reading (mechanisms verified in transcripts)
+### Integrity correction — supersedes the first live E2/E4 reading
 
-**The naming-game result does not automatically generalize: at this
-scale, none of the four live environments produced a history-dependent
-side-product convention — while the substrate tier shows the dynamics
-readily produce them for policies that benefit from familiarity.**
+After the first live pass was written up, probes of raw replies showed
+the original live E2 and E4 cells were **invalid**: with their short
+reply caps (20 tokens per E2 turn, 8 per E4 demand, 8 per E3 pick) the
+model's free-text preamble was truncated before any parseable move, so
+**98.1% (E2) and 98.8% (E4) of live moves fell to the deterministic
+random fallback** (E3's chooser: 36.3%; E1 unaffected — answer accuracy
+0.74–0.99). Those cells measured the fallback distribution, not model
+behaviour; their rows above are marked VOID (journals retained), and
+plain-instruction re-probes at larger caps showed the model simply does
+not comply with "reply with only X" once it has room to chat (0/6
+parseable E2 replies at a 200-token cap). The corrected protocol asks
+for one scratch line then the move on its own line, gives it room, and
+parses the final anchored answer; parse failures are journaled
+separately from occupied-cell picks. The substrate tier is unaffected
+(mock replies are well-formed by construction).
 
-- *E1:* live populations solve the task (~94% success) by transcribing —
-  92% of notes preserve the randomized INPUT order, and zero-shot probes
-  copy the input order in 81–100% of cases — so no endogenous ordering
-  ever forms (modal share ≈ the shuffle-control baseline; inter-agent
-  agreement 2–3%). The responder parses any format, so format alignment
-  has no payoff. In the substrate — where parsing success was coupled to
-  format familiarity — 95–98% of populations conventionalized, with 42–43
-  distinct formats across 60 populations.
-- *E2:* live pairs never discover complementary partitions (69/72
-  episodes 'mixed'; success flat at ~0.36–0.47), so there is no strategy
-  for a convention to stabilize; the substrate's reinforcement learners
-  at least trend toward partitions.
-- *E3:* the live tier's near-perfect within-population concentration
-  (0.99) is exhaustive description — the model lists all 3 traits of the
-  target every time, identical to its zero-shot prior (prior-match 1.0).
-  The prior-correction arm of the battery correctly reclassifies this as
-  shared model bias, not convention. (Design caveat: items are generated
-  per population, so E3's cross-population diversity comparison is not
-  informative as built; a shared-item-set variant is the fix.)
-- *E4:* live populations reach no norm at all — demands split roughly
-  uniformly across 30/50/70 with ~65% compatibility ('fractious' in all
-  6 populations), where the substrate settles into egalitarian (28/60) or
-  Axtell–Epstein–Young class (9/60) conventions.
+### Reading (corrected cells + convention-inducing levers)
 
-**Synthesis.** Combining with the naming-game tier: haiku-scale LLM
-populations form conventions readily when payoff directly rewards
-alignment (consensus at the criterion floor), but did NOT accrete
-arbitrary conventions as a side product of ordinary competent joint work
-here. The mechanism is visible in transcripts: competence substitutes
-for convention. Flexible parsing (E1) and exhaustive description (E3)
-remove the benefit that alignment would otherwise carry; where a
-convention would genuinely have paid (E2 partitions, E4 bargaining
-norms), this model failed to discover the underlying strategy within the
-interaction budget. Convention formation tracked the payoff-coupling of
-alignment — not mere co-presence. Limitations: 4–6 live populations per
-cell, short in-context histories (3–8 events), one small model, and
-budgets sized to a ~$25 projection; the infrastructure (journaled,
-resumable, capped) supports scaling all four dimensions.
+**With parsing repaired and every lever pulled — compression, noise,
+memory, negotiation, explicit deliberation, and a stronger model — the
+live environments produced exactly one (weak) side-product convention:
+E1 under a 6-word squeeze. The correction also overturns E4's reported
+'no norm at all': live populations reliably converge on the egalitarian
+50/50 norm. What never appears live is the *arbitrary* convention the
+substrate produces freely.**
+
+- *E1 squeeze:* 6 words cannot name all 5 label+entry pairs, so naming
+  everything stops being free. The model triages — names ~2.7 of 5
+  entries and accepts ~42–65% success (vs ~94% at 12 words) — rather
+  than inventing the values-only positional code that would fit all 5
+  (exactly the ordering convention the substrate exploits). One of 4
+  populations conventionalized a shared label-subset-and-order (modal
+  share 0.27 vs shuffle 0.16; inter-agent agreement 0.26 vs 0.02–0.03
+  at loose budgets): the suite's first live side-product convention,
+  weak but above baseline. Doubling memory did not amplify it (0/4,
+  agreement 0.13), and the noisy channel produced nothing (0/4,
+  agreement 0.02). In the substrate the squeeze *destroys* conventions
+  (0/40) — clipped notes starve its imitation channel — so the live
+  uptick is model-specific compression behaviour, not substrate
+  dynamics.
+- *E2 corrected:* the model's real grid play is *worse* than the
+  malformed-era random fallback (success 0.00–0.15 vs ~0.38): both
+  agents chase the same salient cells. Haiku fails via ~40% occupied
+  picks (misread grids); sonnet reads the grid near-perfectly (2%
+  malformed) yet still fails 0/72-ish, colliding 5–6 times per episode —
+  two copies of one deterministic policy are a mirror match, and extra
+  capability sharpens the mirror. No badge→region convention forms in
+  any variant (0/11 populations).
+- *E2 dialogue:* the message channel is used in 100% of episodes and
+  lifts success 0.04→0.15, but pacts never fossilize into a population
+  convention: both partners propose plans *simultaneously* each episode,
+  the proposals conflict (each typically assigns itself the same role),
+  and partners rotate every episode, so no badge-anchored mapping
+  stabilizes (0/4).
+- *E3 repaired:* both new cells confirm the shared-bias classification.
+  e3_redo (chooser given room to answer) reproduces exhaustive
+  description (per-item share 0.99, prior-match 1.00). e3_squeeze gives
+  the diversity test real teeth by sharing ONE item set across
+  populations: all 4 populations settle on the *same* scheme (1
+  distinct) — the signature of shared model bias, since genuine
+  convention predicts cross-population diversity (substrate: 40/40
+  distinct schemes on matched tasks).
+- *E4 corrected:* the 'fractious' result was fallback noise. With
+  parseable replies, all 7 corrected populations (4 haiku + 3 sonnet)
+  stabilize on 50/50 demands with 0.95–1.00 tail compatibility —
+  sonnet perfectly egalitarian in 3/3. Zero populations form the
+  Axtell–Epstein–Young badge-conditioned class convention (substrate:
+  9/60): the model's fairness prior absorbs the symmetry instead of
+  breaking it.
+
+**Synthesis (revised).** In the substrate, conventions form wherever
+familiarity is learnable. In live LLM populations, prior-driven
+competence dominates history: the model plays each encounter from its
+priors — flexible parsing (E1 loose), exhaustive description (E3),
+fairness (E4), salience (E2) — leaving little residue for population
+history to accrete on. Levers that merely make the task harder (noise,
+memory limits, hard distractors) create no conventions; compression
+that makes the prior strategy *infeasible* (E1 squeeze) produces the
+first weak one; negotiation helps performance but its simultaneous,
+partner-rotating structure blocks fossilization; and a stronger model
+sharpens priors — locking the egalitarian norm faster while making
+symmetric coordination *worse*. Convention formation in LLM populations
+tracks whether the individually-optimal prior policy leaves a residual
+coordination problem that only shared history can solve — co-presence,
+turnover, and even dialogue are not enough. Limitations: 3–4 live
+populations per variant cell, short in-context histories, two models;
+variant-suite spend $44.5 (cumulative env spend $60.87 of a $110 cap).
 

@@ -13,6 +13,8 @@ across conditions.)*
 | Experiment B pipeline, end-to-end in free mock mode | **Complete** (42 runs, all phases, judge, validation export) |
 | Experiment B live LLM runs (claude-haiku-4.5 via OpenRouter) | **Complete**: 42/42 runs (genesis, transmission ± dialogue, solitary, founder & post-transmission minority), 4,507 messages judged; total spend $15.56 of a $250 cap |
 | Judge validation | **FAILED** at the gate (second-annotator κ = 0.06 « 0.6) — enforcement classifications are not reportable; the author hand-label file remains open (`results/expB_live/validation_sample_TO_HAND_LABEL.csv`) |
+| E1–E4 side-product convention suite | **Complete**: 300 substrate + 28 live populations |
+| E1–E4 convention-inducing variants + integrity repair | **Complete**: 220 substrate + 38 live populations (compression / noise / memory / dialogue / scratch-line / sonnet); original live e2/e4 cells found VOID (reply-cap truncation → 98% fallback moves) and superseded by corrected cells; cumulative env spend $60.87 of a $110 cap |
 
 ## 1. Pre-registered criteria (fixed before any data collection)
 
@@ -99,6 +101,30 @@ across conditions.)*
     analysis session, reading each message against the strict rubric;
     labels in `validation_sample_second_annotator.csv`). The gate
     decision reported uses this second annotation.
+14. **Reply-cap invalidation and repair (E2/E4/E3 live).** The env
+    cells inherited short reply caps (20 tokens per E2 turn, 8 per E4
+    demand, 8 per E3 pick) on the assumption the model would comply
+    with "reply with only X". Raw-reply probes showed it preambles
+    first in nearly every turn, so truncation sent 98.1% (E2) / 98.8%
+    (E4) / 36.3% (E3 chooser) of live moves to the pre-registered
+    random fallback; E1 was unaffected. Decision: mark the original
+    live e2/e4 cells VOID (journals retained), and repair rather than
+    reinterpret — a one-line scratch turn with a 200-token cap and
+    final-anchored-answer parsing (e2_think/e4_think, e2_dialogue,
+    sonnet cells), a 24-token chooser for E3 (e3_redo, e3_squeeze) —
+    with parse failures journaled separately from occupied-cell picks.
+    The substrate tier is unaffected (well-formed by construction).
+15. **Variant (lever) design.** All convention-inducing levers are
+    payoff/capacity/structure changes only — word budgets, channel
+    noise, memory size, a neutral pre-episode message channel, the
+    scratch line, model tier — and every prompt still passes the
+    banned-vocabulary lint (nothing names consistency, order, style or
+    agreement). e2_dialogue rides on the scratch-line turn format (its
+    no-dialogue control is e2_think); the sonnet cells use the same
+    scratch-line design (matched haiku controls e2_think/e4_think).
+    e3_squeeze fixes E3's diversity-test flaw by sharing one fixed item
+    set across populations; the per-population zero-shot prior probe
+    still measures token-level bias on the shared traits.
 
 ## 3. Experiment A results (minimal agents; the substrate control)
 
