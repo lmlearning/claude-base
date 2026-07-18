@@ -27,3 +27,14 @@ pseudo haiku p9 done
 pseudo haiku p10 done
 pseudo haiku p11 done
 pseudo haiku p12 done
+pseudo haiku p13 done
+pseudo haiku p14 done
+pseudo haiku p15 done
+pseudo done: {'m2': 0.1445, 'haiku': 0.0}
+transplant 0 r['adopted']=False r['latency_sends']=None
+transplant 1 r['adopted']=False r['latency_sends']=None
+transplant 2 r['adopted']=False r['latency_sends']=None
+transplant 3 r['adopted']=False r['latency_sends']=None
+transplant 4 r['adopted']=False r['latency_sends']=None
+transplant 5 r['adopted']=False r['latency_sends']=None
+transplant 6 r['adopted']=False r['latency_sends']=None
