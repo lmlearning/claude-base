@@ -1,0 +1,63 @@
+{
+  "config": {
+    "cell": "b_minority_posttrans_f25_b2k",
+    "run_index": 2,
+    "seed": 3351522972,
+    "phase": "minority",
+    "dialogue": true,
+    "framing": "market",
+    "model": "claude-haiku-4-5",
+    "n_agents": 24,
+    "n_names": 10,
+    "memory_size": 5,
+    "pre_transmission": true,
+    "minority_fraction": 0.25,
+    "minority_budget": 2000
+  },
+  "comprehension_passed": true,
+  "priors": {
+    "paze": 4,
+    "livi": 6,
+    "gozad": 2,
+    "vodoz": 0,
+    "pigim": 1,
+    "gazap": 4,
+    "bepu": 0,
+    "senu": 2,
+    "leduz": 1,
+    "zutog": 0
+  },
+  "priors_malformed": 0,
+  "genesis": {
+    "converged": true,
+    "winner": "paze",
+    "consensus_time": 96
+  },
+  "pre_transmission": {
+    "original": "paze",
+    "final": "paze",
+    "survived": true,
+    "n_replacements": 24
+  },
+  "minority": {
+    "usable": true,
+    "original": "paze",
+    "alt": "gozad",
+    "n_committed": 6,
+    "flipped": false,
+    "interactions_used": 2488
+  },
+  "final": {
+    "t": 2488,
+    "fallback_choices": 0,
+    "unparseable_first_replies": 1,
+    "total_choices": 4977,
+    "malformed_rate": 0.00020092425155716296,
+    "consensus": null,
+    "dominant": [
+      "paze",
+      0.7604166666666666
+    ],
+    "success_rate_window": 0.6041666666666666
+  }
+}

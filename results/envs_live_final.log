@@ -58,3 +58,14 @@ done e2_think p4: {'done': True, 'episodes': 72}
 done e2_think p6: {'done': True, 'episodes': 72}
 done e2_think p5: {'done': True, 'episodes': 72}
 done e2_think p7: {'done': True, 'episodes': 72}
+done e4_think p7: {'done': True, 't': 632}
+done e4_think p4: {'done': True, 't': 632}
+done e4_think p5: {'done': True, 't': 632}
+done e4_think p6: {'done': True, 't': 632}
+done e2_think p8: {'done': True, 'episodes': 72}
+done e2_think p9: {'done': True, 'episodes': 72}
+done e4_think p8: {'done': True, 't': 632}
+done e4_think p10: {'done': True, 't': 632}
+done e4_think p9: {'done': True, 't': 632}
+done e4_think p11: {'done': True, 't': 632}
+ALL ENV CELLS DONE

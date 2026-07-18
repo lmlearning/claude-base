@@ -1,0 +1,63 @@
+{
+  "config": {
+    "cell": "b_minority_posttrans_f25_b2k",
+    "run_index": 1,
+    "seed": 2871025962,
+    "phase": "minority",
+    "dialogue": true,
+    "framing": "study",
+    "model": "claude-haiku-4-5",
+    "n_agents": 24,
+    "n_names": 10,
+    "memory_size": 5,
+    "pre_transmission": true,
+    "minority_fraction": 0.25,
+    "minority_budget": 2000
+  },
+  "comprehension_passed": true,
+  "priors": {
+    "sagu": 1,
+    "zilo": 0,
+    "fibi": 4,
+    "kofo": 5,
+    "rolo": 1,
+    "zoda": 0,
+    "sasi": 1,
+    "gazav": 5,
+    "darab": 3,
+    "tata": 0
+  },
+  "priors_malformed": 0,
+  "genesis": {
+    "converged": true,
+    "winner": "sagu",
+    "consensus_time": 96
+  },
+  "pre_transmission": {
+    "original": "sagu",
+    "final": "sagu",
+    "survived": true,
+    "n_replacements": 24
+  },
+  "minority": {
+    "usable": true,
+    "original": "sagu",
+    "alt": "fibi",
+    "n_committed": 6,
+    "flipped": false,
+    "interactions_used": 2488
+  },
+  "final": {
+    "t": 2488,
+    "fallback_choices": 0,
+    "unparseable_first_replies": 0,
+    "total_choices": 4976,
+    "malformed_rate": 0.0,
+    "consensus": null,
+    "dominant": [
+      "sagu",
+      0.7760416666666666
+    ],
+    "success_rate_window": 0.6354166666666666
+  }
+}

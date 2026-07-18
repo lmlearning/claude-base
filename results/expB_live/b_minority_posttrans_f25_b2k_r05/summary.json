@@ -1,0 +1,63 @@
+{
+  "config": {
+    "cell": "b_minority_posttrans_f25_b2k",
+    "run_index": 5,
+    "seed": 1442793425,
+    "phase": "minority",
+    "dialogue": true,
+    "framing": "market",
+    "model": "claude-haiku-4-5",
+    "n_agents": 24,
+    "n_names": 10,
+    "memory_size": 5,
+    "pre_transmission": true,
+    "minority_fraction": 0.25,
+    "minority_budget": 2000
+  },
+  "comprehension_passed": true,
+  "priors": {
+    "ribka": 0,
+    "farpa": 0,
+    "gumum": 2,
+    "tovne": 1,
+    "feku": 0,
+    "gizot": 15,
+    "napo": 2,
+    "poruv": 0,
+    "radse": 0,
+    "bunip": 0
+  },
+  "priors_malformed": 0,
+  "genesis": {
+    "converged": true,
+    "winner": "ribka",
+    "consensus_time": 96
+  },
+  "pre_transmission": {
+    "original": "ribka",
+    "final": "ribka",
+    "survived": true,
+    "n_replacements": 24
+  },
+  "minority": {
+    "usable": true,
+    "original": "ribka",
+    "alt": "feku",
+    "n_committed": 6,
+    "flipped": false,
+    "interactions_used": 2488
+  },
+  "final": {
+    "t": 2488,
+    "fallback_choices": 0,
+    "unparseable_first_replies": 0,
+    "total_choices": 4976,
+    "malformed_rate": 0.0,
+    "consensus": null,
+    "dominant": [
+      "ribka",
+      0.7083333333333334
+    ],
+    "success_rate_window": 0.5208333333333334
+  }
+}

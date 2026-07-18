@@ -1,0 +1,63 @@
+{
+  "config": {
+    "cell": "b_minority_posttrans_f25_b2k",
+    "run_index": 0,
+    "seed": 2763359662,
+    "phase": "minority",
+    "dialogue": true,
+    "framing": "rounds",
+    "model": "claude-haiku-4-5",
+    "n_agents": 24,
+    "n_names": 10,
+    "memory_size": 5,
+    "pre_transmission": true,
+    "minority_fraction": 0.25,
+    "minority_budget": 2000
+  },
+  "comprehension_passed": true,
+  "priors": {
+    "sesis": 0,
+    "vaklo": 1,
+    "ferda": 10,
+    "dobob": 0,
+    "tusop": 0,
+    "favip": 0,
+    "muki": 9,
+    "punbo": 0,
+    "badiv": 0,
+    "bebun": 0
+  },
+  "priors_malformed": 0,
+  "genesis": {
+    "converged": true,
+    "winner": "sesis",
+    "consensus_time": 96
+  },
+  "pre_transmission": {
+    "original": "sesis",
+    "final": "sesis",
+    "survived": true,
+    "n_replacements": 24
+  },
+  "minority": {
+    "usable": true,
+    "original": "sesis",
+    "alt": "ferda",
+    "n_committed": 6,
+    "flipped": false,
+    "interactions_used": 2488
+  },
+  "final": {
+    "t": 2488,
+    "fallback_choices": 0,
+    "unparseable_first_replies": 0,
+    "total_choices": 4976,
+    "malformed_rate": 0.0,
+    "consensus": null,
+    "dominant": [
+      "sesis",
+      0.6302083333333334
+    ],
+    "success_rate_window": 0.4895833333333333
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "config": {
+    "cell": "b_minority_posttrans_f25_b2k",
+    "run_index": 7,
+    "seed": 1122758734,
+    "phase": "minority",
+    "dialogue": true,
+    "framing": "study",
+    "model": "claude-haiku-4-5",
+    "n_agents": 24,
+    "n_names": 10,
+    "memory_size": 5,
+    "pre_transmission": true,
+    "minority_fraction": 0.25,
+    "minority_budget": 2000
+  },
+  "comprehension_passed": true,
+  "priors": {
+    "kuzto": 4,
+    "povep": 0,
+    "pudo": 2,
+    "zodfa": 1,
+    "nuzel": 2,
+    "zuna": 1,
+    "lakon": 5,
+    "lerod": 4,
+    "difop": 1,
+    "lubne": 0
+  },
+  "priors_malformed": 0,
+  "genesis": {
+    "converged": true,
+    "winner": "kuzto",
+    "consensus_time": 96
+  },
+  "pre_transmission": {
+    "original": "kuzto",
+    "final": "kuzto",
+    "survived": true,
+    "n_replacements": 24
+  },
+  "minority": {
+    "usable": true,
+    "original": "kuzto",
+    "alt": "pudo",
+    "n_committed": 6,
+    "flipped": false,
+    "interactions_used": 2488
+  },
+  "final": {
+    "t": 2488,
+    "fallback_choices": 0,
+    "unparseable_first_replies": 0,
+    "total_choices": 4976,
+    "malformed_rate": 0.0,
+    "consensus": null,
+    "dominant": [
+      "kuzto",
+      0.75
+    ],
+    "success_rate_window": 0.5833333333333334
+  }
+}

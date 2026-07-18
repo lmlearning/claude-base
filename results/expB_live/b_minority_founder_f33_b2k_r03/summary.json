@@ -1,0 +1,57 @@
+{
+  "config": {
+    "cell": "b_minority_founder_f33_b2k",
+    "run_index": 3,
+    "seed": 3290247036,
+    "phase": "minority",
+    "dialogue": true,
+    "framing": "rounds",
+    "model": "claude-haiku-4-5",
+    "n_agents": 24,
+    "n_names": 10,
+    "memory_size": 5,
+    "pre_transmission": false,
+    "minority_fraction": 0.33,
+    "minority_budget": 2000
+  },
+  "comprehension_passed": true,
+  "priors": {
+    "nutab": 1,
+    "dedi": 0,
+    "gufme": 0,
+    "fiku": 1,
+    "liziv": 0,
+    "gifi": 0,
+    "firak": 5,
+    "buzor": 0,
+    "togir": 9,
+    "tavo": 4
+  },
+  "priors_malformed": 0,
+  "genesis": {
+    "converged": true,
+    "winner": "nutab",
+    "consensus_time": 96
+  },
+  "minority": {
+    "usable": true,
+    "original": "nutab",
+    "alt": "fiku",
+    "n_committed": 8,
+    "flipped": true,
+    "interactions_used": 517
+  },
+  "final": {
+    "t": 517,
+    "fallback_choices": 0,
+    "unparseable_first_replies": 0,
+    "total_choices": 1034,
+    "malformed_rate": 0.0,
+    "consensus": null,
+    "dominant": [
+      "fiku",
+      0.9010416666666666
+    ],
+    "success_rate_window": 0.8229166666666666
+  }
+}
