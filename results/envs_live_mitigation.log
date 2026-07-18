@@ -1,0 +1,9 @@
+=== E1-E4 cost projection (upper bound, live pricing) ===
+{
+  "per_pop_usd": {
+    "e2_role": 2.48,
+    "e2_hetero": 2.48
+  },
+  "total_upper_bound_usd": 39.72
+}
+live backend ready; spend so far $106.92 of $180.00
