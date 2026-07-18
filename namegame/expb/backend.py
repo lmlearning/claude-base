@@ -28,6 +28,12 @@ PRICES = {
     # against /api/v1/models at run time)
     "anthropic/claude-haiku-4.5": (1.0e-6, 5.0e-6),
     "anthropic/claude-sonnet-4.5": (3.0e-6, 15.0e-6),
+    # second model family (non-Anthropic; prices verified against
+    # OpenRouter /api/v1/models on 2026-07-18); gpt-5-mini selected by
+    # the operator ("a gpt 5 old version": original GPT-5-generation
+    # mini tier), gemini-2.5-flash-lite is the pre-declared fallback
+    "openai/gpt-5-mini": (0.25e-6, 2.0e-6),
+    "google/gemini-2.5-flash-lite": (0.1e-6, 0.4e-6),
 }
 
 
@@ -133,6 +139,12 @@ class OpenRouterBackend(Backend):
         messages.append({"role": "user", "content": user})
         body = {"model": self.model, "max_tokens": max_tokens,
                 "messages": messages}
+        if self.model.startswith("openai/gpt-5"):
+            # reasoning models: without this, hidden reasoning tokens can
+            # consume small max_tokens budgets and return empty content.
+            # Adapter-level parameter only; prompts are unchanged.
+            body["reasoning"] = {"effort": "minimal"}
+            body["max_tokens"] = max(max_tokens, 64)
         if context and context.get("kind") == "judge":
             body["temperature"] = 0  # deterministic-ish classification
         last_err = None

@@ -1,0 +1,161 @@
+{
+  "author_sheet_found": false,
+  "kappa": {
+    "annotators": [
+      "judge",
+      "strict"
+    ],
+    "n": 151,
+    "pairwise_kappa": {
+      "judge-strict": 0.062
+    },
+    "label_distributions": {
+      "judge": {
+        "directive": 50,
+        "descriptive": 50,
+        "normative": 50,
+        "other": 1
+      },
+      "strict": {
+        "directive": 145,
+        "descriptive": 5,
+        "other": 1
+      }
+    }
+  },
+  "detector_frozen_lexicons": {
+    "deontic": [
+      "\\bshould\\b",
+      "\\bmust\\b",
+      "\\bought\\b",
+      "\\bsupposed to\\b",
+      "\\bhave to\\b",
+      "\\bhas to\\b"
+    ],
+    "correctness": [
+      "\\bright\\b",
+      "\\bcorrect(ly)?\\b",
+      "\\bwrong\\b",
+      "\\bincorrect\\b",
+      "\\bproper(ly)?\\b"
+    ],
+    "group_appeal": [
+      "\\beveryone\\b",
+      "\\beverybody\\b",
+      "\\bwe all\\b",
+      "\\ball of us\\b",
+      "\\bothers\\b",
+      "\\bthe group\\b",
+      "\\bthe rest\\b",
+      "\\bmost (people|players|agents|participants)\\b"
+    ],
+    "sanction_blame": [
+      "\\bblame\\b",
+      "\\bfault\\b",
+      "\\bpenalt",
+      "\\bpunish",
+      "\\bsanction",
+      "\\byou (failed|ruined|broke|caused)\\b",
+      "\\bbecause of you\\b",
+      "\\byou should have\\b",
+      "\\byou shouldn['\u2019]t have\\b",
+      "\\breport you\\b"
+    ]
+  },
+  "detector_validation": {
+    "deontic": {
+      "hits": 0,
+      "precision_vs_any_normative": null,
+      "recall_vs_any_normative": 0.0,
+      "fp_rate_on_all_negative": 0.0,
+      "fp_examples": []
+    },
+    "correctness": {
+      "hits": 0,
+      "precision_vs_any_normative": null,
+      "recall_vs_any_normative": 0.0,
+      "fp_rate_on_all_negative": 0.0,
+      "fp_examples": []
+    },
+    "group_appeal": {
+      "hits": 0,
+      "precision_vs_any_normative": null,
+      "recall_vs_any_normative": 0.0,
+      "fp_rate_on_all_negative": 0.0,
+      "fp_examples": []
+    },
+    "sanction_blame": {
+      "hits": 0,
+      "precision_vs_any_normative": null,
+      "recall_vs_any_normative": 0.0,
+      "fp_rate_on_all_negative": 0.0,
+      "fp_examples": []
+    },
+    "_n_any_normative": 50,
+    "_n_all_non_normative": 101
+  },
+  "prevalence": {
+    "haiku_population": {
+      "n_messages": 3694,
+      "deontic": {
+        "k": 0,
+        "n": 3694,
+        "p": 0.0,
+        "lo": 0.0,
+        "hi": 0.001
+      },
+      "correctness": {
+        "k": 0,
+        "n": 3694,
+        "p": 0.0,
+        "lo": 0.0,
+        "hi": 0.001
+      },
+      "group_appeal": {
+        "k": 0,
+        "n": 3694,
+        "p": 0.0,
+        "lo": 0.0,
+        "hi": 0.001
+      },
+      "sanction_blame": {
+        "k": 0,
+        "n": 3694,
+        "p": 0.0,
+        "lo": 0.0,
+        "hi": 0.001
+      }
+    },
+    "haiku_solitary": {
+      "n_messages": 813,
+      "deontic": {
+        "k": 0,
+        "n": 813,
+        "p": 0.0,
+        "lo": 0.0,
+        "hi": 0.00453
+      },
+      "correctness": {
+        "k": 0,
+        "n": 813,
+        "p": 0.0,
+        "lo": 0.0,
+        "hi": 0.00453
+      },
+      "group_appeal": {
+        "k": 0,
+        "n": 813,
+        "p": 0.0,
+        "lo": 0.0,
+        "hi": 0.00453
+      },
+      "sanction_blame": {
+        "k": 0,
+        "n": 813,
+        "p": 0.0,
+        "lo": 0.0,
+        "hi": 0.00453
+      }
+    }
+  }
+}

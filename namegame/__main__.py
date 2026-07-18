@@ -31,6 +31,10 @@ def main() -> None:
     pb.add_argument("--spend-cap-usd", type=float, default=250.0)
     pb.add_argument("--project-cost", action="store_true",
                     help="print cost projection and exit")
+    pb.add_argument("--model", default=None,
+                    help="OpenRouter model id override (second family)")
+    pb.add_argument("--n-runs", nargs="*", default=None, metavar="CELL=N",
+                    help="per-cell n_runs override")
 
     pe = sub.add_parser("envs", help="run E1-E4 side-product convention envs")
     pe.add_argument("--mode", choices=["mock", "live"], default="mock")
@@ -39,6 +43,10 @@ def main() -> None:
     pe.add_argument("--workers", type=int, default=None)
     pe.add_argument("--spend-cap-usd", type=float, default=100.0)
     pe.add_argument("--project-cost", action="store_true")
+    pe.add_argument("--model", default=None,
+                    help="OpenRouter model id override (second family)")
+    pe.add_argument("--npops", nargs="*", default=None, metavar="CELL=N",
+                    help="per-cell n_pops override")
 
     pan = sub.add_parser("analyze", help="run analysis and figures")
     pan.add_argument("--results", default="results")

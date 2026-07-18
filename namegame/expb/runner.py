@@ -38,12 +38,18 @@ MODEL = "claude-haiku-4-5"
 MODEL_OPENROUTER = "anthropic/claude-haiku-4.5"
 
 
-def _live_backend_factory(outdir: str, cap_usd: float):
+def _live_backend_factory(outdir: str, cap_usd: float,
+                          model: str | None = None):
     """One shared CostTracker; OpenRouter key takes precedence when the
-    operator supplied one, else first-party Anthropic."""
+    operator supplied one, else first-party Anthropic.  ``model``
+    overrides the default subject model (second-family runs); the
+    override requires the OpenRouter route."""
     cost = CostTracker(cap_usd, os.path.join(outdir, "cost_state.json"))
     if os.environ.get("OPENROUTER_API_KEY"):
-        return cost, (lambda: OpenRouterBackend(MODEL_OPENROUTER, cost))
+        return cost, (lambda: OpenRouterBackend(model or MODEL_OPENROUTER,
+                                                cost))
+    if model:
+        raise SystemExit("--model override requires OPENROUTER_API_KEY")
     if os.environ.get("ANTHROPIC_API_KEY"):
         return cost, (lambda: AnthropicBackend(MODEL, cost))
     raise SystemExit("no OPENROUTER_API_KEY or ANTHROPIC_API_KEY set")
@@ -62,27 +68,45 @@ def define_cells_b() -> dict[str, dict]:
     cells = {}
     cells["b_genesis_dlg"] = dict(phase="genesis", dialogue=True, n_runs=9)
     cells["b_genesis_nodlg"] = dict(phase="genesis", dialogue=False, n_runs=6)
-    cells["b_trans_dlg"] = dict(phase="transmission", dialogue=True, n_runs=6)
+    # n_runs raised 6 -> 10 for the final submission power upgrade
+    # (frozen prompts/criteria; runs r00-r05 are the pilot and count)
+    cells["b_trans_dlg"] = dict(phase="transmission", dialogue=True,
+                                n_runs=10)
     cells["b_trans_nodlg"] = dict(phase="transmission", dialogue=False,
-                                  n_runs=6)
+                                  n_runs=10)
     cells["b_solitary"] = dict(phase="solitary", dialogue=True, n_runs=3)
-    # P1 (run with --only):
+    # P1 pilot cells (f=0.25, 600-interaction budget), kept as-is:
     cells["b_minority_founder"] = dict(phase="minority", dialogue=True,
                                        n_runs=6, pre_transmission=False)
     cells["b_minority_posttrans"] = dict(phase="minority", dialogue=True,
                                          n_runs=6, pre_transmission=True)
+    # Threshold sweep: longer budget makes these SEPARATE cells from the
+    # pilot (documented in the decision log); the flip criterion itself
+    # (alt share >= 0.9 of the full trailing window) is unchanged.
+    for f, tag in ((0.25, "f25"), (0.33, "f33"), (0.42, "f42")):
+        cells[f"b_minority_founder_{tag}_b2k"] = dict(
+            phase="minority", dialogue=True, n_runs=8,
+            pre_transmission=False, minority_fraction=f,
+            minority_budget=2000)
+        cells[f"b_minority_posttrans_{tag}_b2k"] = dict(
+            phase="minority", dialogue=True, n_runs=8,
+            pre_transmission=True, minority_fraction=f,
+            minority_budget=2000)
     return cells
 
 
-def _run_config(cell_name: str, cell: dict, idx: int) -> dict:
+def _run_config(cell_name: str, cell: dict, idx: int,
+                model: str | None = None) -> dict:
     seed = int(np.random.SeedSequence(
         [MASTER_SEED_B, zlib.crc32(cell_name.encode()),
          idx]).generate_state(1)[0])
     return {"cell": cell_name, "run_index": idx, "seed": seed,
             "phase": cell["phase"], "dialogue": cell["dialogue"],
             "framing": FRAMING_CYCLE[idx % len(FRAMING_CYCLE)],
-            "model": MODEL, **CORE,
-            "pre_transmission": cell.get("pre_transmission", False)}
+            "model": model or MODEL, **CORE,
+            "pre_transmission": cell.get("pre_transmission", False),
+            "minority_fraction": cell.get("minority_fraction", 0.25),
+            "minority_budget": cell.get("minority_budget", 600)}
 
 
 def execute_run(config: dict, outdir: str, backend) -> dict:
@@ -120,7 +144,9 @@ def execute_run(config: dict, outdir: str, backend) -> dict:
             if config["pre_transmission"]:
                 summary["pre_transmission"] = run.run_transmission(
                     TRANS_K, generations=1, settle=TRANS_SETTLE)
-            summary["minority"] = _run_minority(run)
+            summary["minority"] = _run_minority(
+                run, fraction=config.get("minority_fraction", 0.25),
+                budget=config.get("minority_budget", 600))
     summary["final"] = run.summary()
     _write(done_path, summary)
     return summary
@@ -213,7 +239,7 @@ def project_cost(cells: dict[str, dict]) -> dict:
                                        cell.get("pre_transmission")):
             inter += TRANS_K * CORE["n_agents"] + TRANS_SETTLE
         if phase == "minority":
-            inter += 600
+            inter += cell.get("minority_budget", 600)
         if phase == "solitary":
             inter = SOLITARY_ROUNDS
         choice_calls = inter * (1 if phase == "solitary" else 2) * 1.05
@@ -250,9 +276,10 @@ def main_expb(args) -> None:
     outdir = args.outdir or f"results/expB_{args.mode}"
     os.makedirs(outdir, exist_ok=True)
 
+    model_override = getattr(args, "model", None)
     proj = project_cost({k: cells[k] for k in selected})
     print("=== Cost projection (upper bound), live pricing for "
-          f"{MODEL} ===")
+          f"{model_override or MODEL} ===")
     print(json.dumps(proj, indent=2))
     if args.project_cost:
         return
@@ -263,18 +290,22 @@ def main_expb(args) -> None:
                 f"projection ${proj['grand_total_upper_bound_usd']} exceeds "
                 f"spend cap ${args.spend_cap_usd}; refusing to start "
                 "(protocol: stop and flag, do not trim silently)")
-        cost, factory = _live_backend_factory(outdir, args.spend_cap_usd)
+        cost, factory = _live_backend_factory(outdir, args.spend_cap_usd,
+                                              model_override)
         make_backend = lambda seed: factory()
         print(f"live backend ready; spend so far ${cost.cost_usd:.2f} of "
               f"${args.spend_cap_usd:.2f} cap")
     else:
         make_backend = lambda seed: MockBackend(seed=seed)
 
+    n_runs_over = dict(kv.split("=") for kv in (getattr(args, "n_runs", None)
+                                                or []))
     jobs = []
     for name in selected:
         cell = cells[name]
-        for idx in range(cell["n_runs"]):
-            jobs.append(_run_config(name, cell, idx))
+        n = int(n_runs_over.get(name, cell["n_runs"]))
+        for idx in range(n):
+            jobs.append(_run_config(name, cell, idx, model_override))
 
     def do(config):
         backend = make_backend(config["seed"])

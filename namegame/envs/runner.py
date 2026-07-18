@@ -29,14 +29,18 @@ def define_cells(mode: str) -> dict[str, dict]:
     (substrate) tier carries the statistics, the live tier the LLM claim."""
     big = mode == "mock"
     cells = {}
-    # E1: budget sweep is the functional-pressure lever
-    for tag, budget in (("tight", 12), ("loose", 25)):
+    # E1: budget sweep is the functional-pressure lever.
+    # Final-submission power upgrade: the 12-word cell (the paper's
+    # "loose" arm of the loose-vs-squeeze compression contrast) runs 12
+    # live populations; the 25-word cell stays at pilot n=4.
+    for tag, budget, n_live in (("tight", 12, 12), ("loose", 25, 4)):
         cells[f"e1_{tag}"] = dict(
             env="e1", n_agents=12, budget_words=budget,
             formation_interactions=360, interactions_per_replacement=6,
             settle_interactions=60, minority_fraction=0.25,
             minority_interactions=200,
-            n_pops=(60 if big else 4), framings=["activity", "office"])
+            n_pops=(60 if big else n_live),
+            framings=["activity", "office"])
     cells["e1_stranger"] = dict(
         env="e1", n_agents=4, budget_words=12, stranger_pool=True,
         formation_interactions=120, interactions_per_replacement=0,
@@ -67,15 +71,15 @@ def define_cells(mode: str) -> dict[str, dict]:
         cells[f"e1_{tag}"] = dict(
             env="e1", n_agents=12, formation_interactions=360,
             interactions_per_replacement=6, settle_interactions=60,
-            n_pops=(40 if big else 4), framings=["activity", "office"],
-            **extra)
+            n_pops=(40 if big else (12 if tag == "squeeze" else 4)),
+            framings=["activity", "office"], **extra)
     # E3: 3-word budget + hardest distractors + a SHARED item set across
     # populations (makes the cross-population diversity test direct).
     cells["e3_squeeze"] = dict(
         env="e3", n_agents=12, note_words=3, hard_distractors=True,
         shared_items=True, recv_tokens=24, formation_interactions=360,
         interactions_per_replacement=6, settle_interactions=60,
-        n_pops=(40 if big else 4), framings=["picker", "warehouse"])
+        n_pops=(40 if big else 12), framings=["picker", "warehouse"])
     # E2: a neutral pre-episode message channel (does negotiated division
     # of labour fossilize across partners and survive turnover?), and a
     # one-line scratch turn (does explicit deliberation find the
@@ -87,16 +91,16 @@ def define_cells(mode: str) -> dict[str, dict]:
     cells["e2_dialogue"] = dict(
         env="e2", n_agents=8, dialogue=True, think=True,
         formation_episodes=48, episodes_per_replacement=2,
-        settle_episodes=8, n_pops=(20 if big else 4),
+        settle_episodes=8, n_pops=(20 if big else 10),
         framings=["site", "workshop"])
     cells["e2_think"] = dict(
         env="e2", n_agents=8, think=True, formation_episodes=48,
         episodes_per_replacement=2, settle_episodes=8,
-        n_pops=(20 if big else 4), framings=["site", "workshop"])
+        n_pops=(20 if big else 10), framings=["site", "workshop"])
     cells["e4_think"] = dict(
         env="e4", n_agents=12, think=True, formation_interactions=500,
         interactions_per_replacement=6, settle_interactions=60,
-        n_pops=(20 if big else 4), framings=["bonus", "market"])
+        n_pops=(20 if big else 12), framings=["bonus", "market"])
     if not big:
         # repair cell: the original live e3 chooser was truncated at 8
         # reply tokens (36% of picks fell to the random fallback); rerun
@@ -195,6 +199,15 @@ def main_envs(args) -> None:
     cells = define_cells(args.mode)
     if args.only:
         cells = {k: v for k, v in cells.items() if k in args.only}
+    # second-family route: --model swaps the subject model for EVERY
+    # selected cell (frozen prompts); --npops CELL=N sizes the cells
+    model_override = getattr(args, "model", None)
+    if model_override:
+        cells = {k: {**v, "model": model_override} for k, v in cells.items()}
+    for kv in (getattr(args, "npops", None) or []):
+        k, n = kv.split("=")
+        if k in cells:
+            cells[k] = {**cells[k], "n_pops": int(n)}
     outdir = args.outdir or f"results/envs_{args.mode}"
     os.makedirs(outdir, exist_ok=True)
 
