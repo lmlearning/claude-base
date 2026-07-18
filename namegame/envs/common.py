@@ -84,6 +84,23 @@ class EnvMockBackend(Backend):
         return self.mock_reply(context, self.rng)
 
 
+class SplitBackend(Backend):
+    """Per-slot backend router for heterogeneous-pairing cells
+    (decision-log entry 20): slots below the split use backend_a,
+    the rest backend_b. Prompts are identical for both."""
+
+    def __init__(self, backend_a: Backend, backend_b: Backend,
+                 split: int = 4):
+        self.a, self.b, self.split = backend_a, backend_b, split
+
+    def for_slot(self, slot: int) -> Backend:
+        return self.a if slot < self.split else self.b
+
+    def complete(self, system, user, max_tokens, context=None):
+        # non-slot calls (comprehension gate, messages) go to backend_a
+        return self.a.complete(system, user, max_tokens, context)
+
+
 def run_comprehension(backend: Backend, system: str,
                       questions: list[tuple[str, str]],
                       journal: Journal, reps: int = 2) -> bool:

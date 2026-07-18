@@ -101,6 +101,16 @@ def define_cells(mode: str) -> dict[str, dict]:
         env="e4", n_agents=12, think=True, formation_interactions=500,
         interactions_per_replacement=6, settle_interactions=60,
         n_pops=(20 if big else 12), framings=["bonus", "market"])
+    # review-response mitigation cells (decision-log entry 20)
+    cells["e2_role"] = dict(
+        env="e2", n_agents=8, think=True, role_line=True,
+        formation_episodes=48, episodes_per_replacement=2,
+        settle_episodes=8, n_pops=8, framings=["site", "workshop"])
+    if not big:
+        cells["e2_hetero"] = dict(
+            env="e2", n_agents=8, think=True, hetero=True,
+            formation_episodes=48, episodes_per_replacement=2,
+            settle_episodes=8, n_pops=8, framings=["site", "workshop"])
     if not big:
         # repair cell: the original live e3 chooser was truncated at 8
         # reply tokens (36% of picks fell to the random fallback); rerun
@@ -224,9 +234,17 @@ def main_envs(args) -> None:
         cost, factory = _live_backend_factory(outdir, args.spend_cap_usd)
         print(f"live backend ready; spend so far ${cost.cost_usd:.2f} of "
               f"${args.spend_cap_usd:.2f}")
-        backend_factory = lambda cfg: (
-            OpenRouterBackend(cfg["model"], cost) if cfg.get("model")
-            else factory())
+        from .common import SplitBackend
+
+        def backend_factory(cfg):
+            if cfg.get("hetero"):
+                return SplitBackend(
+                    OpenRouterBackend("anthropic/claude-haiku-4.5", cost),
+                    OpenRouterBackend("openai/gpt-5-mini", cost),
+                    split=cfg["n_agents"] // 2)
+            if cfg.get("model"):
+                return OpenRouterBackend(cfg["model"], cost)
+            return factory()
     else:
         backend_factory = lambda cfg: EnvMockBackend(
             ENVS[cfg["env"]].mock_reply, seed=cfg["seed"] ^ 0x5EED)

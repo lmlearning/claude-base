@@ -85,10 +85,15 @@ MSG_INSTR = ("A new episode is starting - you are the {badge} participant. "
              "and nothing else, or the single word NONE.")
 MSG_BLOCK = ("Message you sent: \"{msg}\"\nMessage from your partner: "
              "\"{pmsg}\"")
+# mitigation cell (decision-log entry 20): one FACTUAL line stating a
+# fixed badge->half assignment; no coordination vocabulary
+ROLE_LINE = ("In every episode, the {badge_a} participant fills the top "
+             "two rows and the {badge_b} participant fills the bottom "
+             "two rows.")
 
 lint_env(list(FRAMINGS.values()) + [TURN_INSTR, TURN_INSTR_THINK, HIST_LINE,
                                     HIST_MSGS, DIALOGUE_SYS, MSG_INSTR,
-                                    MSG_BLOCK])
+                                    MSG_BLOCK, ROLE_LINE])
 
 
 # ---------------------------------------------------------------------------
@@ -171,6 +176,9 @@ def _system(cfg):
         badge_a=cfg["badges"][0], badge_b=cfg["badges"][1])
     if cfg.get("dialogue"):
         s += DIALOGUE_SYS.format(msg_words=MSG_WORDS)
+    if cfg.get("role_line"):
+        s += " " + ROLE_LINE.format(badge_a=cfg["badges"][0],
+                                    badge_b=cfg["badges"][1])
     return s
 
 
@@ -262,10 +270,12 @@ def _play_episode(ep: int, agents, slot_a, slot_b, cfg, backend, journal):
                 badge=badge, grid=_grid_text(mine, partner),
                 rnd=rnd + 1, rounds=ROUNDS, K=K))
             user = "\n\n".join(parts)
-            reply = backend.complete(_system(cfg), user, turn_max,
-                                     {"kind": "turn", "empty": empty,
-                                      "badge": badge,
-                                      "region_prefs": me.region_prefs})
+            be = (backend.for_slot(slot) if hasattr(backend, "for_slot")
+                  else backend)
+            reply = be.complete(_system(cfg), user, turn_max,
+                                {"kind": "turn", "empty": empty,
+                                 "badge": badge,
+                                 "region_prefs": me.region_prefs})
             cell = _parse_cell(reply)
             if cell is None or cell not in empty:
                 malformed += 1
@@ -359,10 +369,16 @@ def run_population(cfg: dict, backend: Backend, run_dir: str) -> dict:
 
     def sample_pair(ep):
         r = rng_for(seed, 3, ep)
-        i = int(r.integers(n))
-        j = int(r.integers(n - 1))
-        if j >= i:
-            j += 1
+        if cfg.get("hetero"):
+            # cross-family pairing: slots 0..n/2-1 are family A, the
+            # rest family B (entry 20); badge assignment still random
+            i = int(r.integers(n // 2))
+            j = int(n // 2 + r.integers(n - n // 2))
+        else:
+            i = int(r.integers(n))
+            j = int(r.integers(n - 1))
+            if j >= i:
+                j += 1
         if r.random() < 0.5:      # randomize badge assignment
             return i, j
         return j, i
