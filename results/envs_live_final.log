@@ -1,0 +1,26 @@
+=== E1-E4 cost projection (upper bound, live pricing) ===
+{
+  "per_pop_usd": {
+    "e1_tight": 1.06,
+    "e1_squeeze": 0.77,
+    "e3_squeeze": 0.75,
+    "e2_dialogue": 3.26,
+    "e2_think": 2.48,
+    "e4_think": 1.84
+  },
+  "total_upper_bound_usd": 110.51
+}
+no OPENROUTER_API_KEY or ANTHROPIC_API_KEY set
+=== E1-E4 cost projection (upper bound, live pricing) ===
+{
+  "per_pop_usd": {
+    "e1_tight": 1.06,
+    "e1_squeeze": 0.77,
+    "e3_squeeze": 0.75,
+    "e2_dialogue": 3.26,
+    "e2_think": 2.48,
+    "e4_think": 1.84
+  },
+  "total_upper_bound_usd": 110.51
+}
+live backend ready; spend so far $60.87 of $140.00

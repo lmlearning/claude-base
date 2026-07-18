@@ -1,0 +1,29 @@
+=== Cost projection (upper bound; genesis bound 500 = 1.45x the observed live max over 39 runs; completed runs credited), haiku pricing, model claude-haiku-4-5 ===
+{
+  "per_run_usd": {
+    "b_trans_dlg": 1.31,
+    "b_trans_nodlg": 0.82,
+    "b_minority_founder_f25_b2k": 3.78,
+    "b_minority_posttrans_f25_b2k": 4.2,
+    "b_minority_founder_f33_b2k": 3.78,
+    "b_minority_posttrans_f33_b2k": 4.2,
+    "b_minority_founder_f42_b2k": 3.78,
+    "b_minority_posttrans_f42_b2k": 4.2
+  },
+  "runs_total_usd": 200.03,
+  "judge_usd": 1.7,
+  "grand_total_upper_bound_usd": 201.73
+}
+live backend ready; spend so far $15.56 of $250.00 cap
+done b_trans_dlg r0: {"converged": true, "winner": "mikil", "consensus_time": 96}
+done b_trans_dlg r1: {"converged": true, "winner": "guma", "consensus_time": 121}
+done b_trans_dlg r2: {"converged": true, "winner": "kepir", "consensus_time": 96}done b_trans_dlg r5: {"converged": true, "winner": "nido", "consensus_time": 102}
+
+done b_trans_dlg r4: {"converged": true, "winner": "lari", "consensus_time": 96}
+done b_trans_nodlg r1: {"converged": true, "winner": "lulo", "consensus_time": 96}
+done b_trans_nodlg r2: {"converged": true, "winner": "badim", "consensus_time": 96}
+done b_trans_dlg r3: {"converged": true, "winner": "sipe", "consensus_time": 149}
+done b_trans_nodlg r0: {"converged": true, "winner": "puso", "consensus_time": 96}
+done b_trans_nodlg r5: {"converged": true, "winner": "lafu", "consensus_time": 96}
+done b_trans_nodlg r3: {"converged": true, "winner": "life", "consensus_time": 96}
+done b_trans_nodlg r4: {"converged": true, "winner": "rimep", "consensus_time": 96}

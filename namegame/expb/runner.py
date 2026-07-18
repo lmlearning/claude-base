@@ -210,8 +210,15 @@ def _write(path: str, obj: dict) -> None:
 # Cost projection
 # --------------------------------------------------------------------------
 
-def project_cost(cells: dict[str, dict]) -> dict:
-    """Upper-bound projection printed before any live call."""
+def project_cost(cells: dict[str, dict], outdir: str | None = None,
+                 genesis_upper: int | None = None) -> dict:
+    """Upper-bound projection printed before any live call.
+
+    ``outdir``: completed runs (summary.json present) are credited at
+    zero marginal cost — they will be skipped, not re-run.
+    ``genesis_upper``: replaces the 1500-interaction genesis cap with a
+    measured bound when the caller has one (the live pilot observed
+    median 96 / max 343 over 39 converged runs; 500 = 1.45x the max)."""
     # measured from a sample rendered prompt (chars/4 heuristic + margin)
     from .tokens import generate_pool
     pool = generate_pool(CORE["n_names"], np.random.default_rng(0))
@@ -227,8 +234,14 @@ def project_cost(cells: dict[str, dict]) -> dict:
     def cost_calls(n_in_calls, in_tok, out_tok):
         return n_in_calls * (in_tok * pin + out_tok * pout)
 
+    def n_done(cell_name, n_runs):
+        if not outdir:
+            return 0
+        return sum(1 for i in range(n_runs) if os.path.exists(
+            os.path.join(outdir, f"{cell_name}_r{i:02d}", "summary.json")))
+
     per_run = {}
-    genesis_inter = GENESIS_CAP  # upper bound; typical much less
+    genesis_inter = genesis_upper or GENESIS_CAP
     fail_share = 0.5             # share of failed interactions (upper bound)
     for name, cell in cells.items():
         phase = cell["phase"]
@@ -249,7 +262,8 @@ def project_cost(cells: dict[str, dict]) -> dict:
              cost_calls(msg_calls, msg_in, msg_out) +
              cost_calls(32, 400, 15))    # comprehension + priors
         per_run[name] = c
-    total = sum(per_run[n] * c["n_runs"] for n, c in cells.items())
+    total = sum(per_run[n] * (c["n_runs"] - n_done(n, c["n_runs"]))
+                for n, c in cells.items())
     judge_cost = 5000 * (300 * pin + 8 * pout)   # generous message count
     return {"per_run_usd": {k: round(v, 2) for k, v in per_run.items()},
             "runs_total_usd": round(total, 2),
@@ -277,9 +291,11 @@ def main_expb(args) -> None:
     os.makedirs(outdir, exist_ok=True)
 
     model_override = getattr(args, "model", None)
-    proj = project_cost({k: cells[k] for k in selected})
-    print("=== Cost projection (upper bound), live pricing for "
-          f"{model_override or MODEL} ===")
+    proj = project_cost({k: cells[k] for k in selected}, outdir=outdir,
+                        genesis_upper=500)
+    print("=== Cost projection (upper bound; genesis bound 500 = 1.45x "
+          "the observed live max over 39 runs; completed runs credited), "
+          f"haiku pricing, model {model_override or MODEL} ===")
     print(json.dumps(proj, indent=2))
     if args.project_cost:
         return

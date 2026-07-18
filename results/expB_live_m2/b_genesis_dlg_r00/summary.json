@@ -1,0 +1,49 @@
+{
+  "config": {
+    "cell": "b_genesis_dlg",
+    "run_index": 0,
+    "seed": 2630193575,
+    "phase": "genesis",
+    "dialogue": true,
+    "framing": "rounds",
+    "model": "openai/gpt-5-mini",
+    "n_agents": 24,
+    "n_names": 10,
+    "memory_size": 5,
+    "pre_transmission": false,
+    "minority_fraction": 0.25,
+    "minority_budget": 600
+  },
+  "comprehension_passed": true,
+  "priors": {
+    "tepa": 6,
+    "lapob": 1,
+    "dolu": 0,
+    "gakek": 1,
+    "rirfe": 0,
+    "kesal": 1,
+    "kifo": 2,
+    "bekno": 1,
+    "laki": 0,
+    "morib": 8
+  },
+  "priors_malformed": 0,
+  "genesis": {
+    "converged": true,
+    "winner": "tepa",
+    "consensus_time": 96
+  },
+  "final": {
+    "t": 196,
+    "fallback_choices": 0,
+    "unparseable_first_replies": 0,
+    "total_choices": 392,
+    "malformed_rate": 0.0,
+    "consensus": "tepa",
+    "dominant": [
+      "tepa",
+      1.0
+    ],
+    "success_rate_window": 1.0
+  }
+}
