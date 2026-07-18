@@ -651,6 +651,7 @@ def analyze_envs(outdir: str, figdir: str, mode: str) -> dict:
         summary["e1_stranger"] = analyze_e1_stranger(outdir)
     for cell, fn in (("e2", analyze_e2), ("e2_dialogue", analyze_e2),
                      ("e2_think", analyze_e2), ("e2_sonnet", analyze_e2),
+                     ("e2_role", analyze_e2), ("e2_hetero", analyze_e2),
                      ("e3", analyze_e3), ("e3_squeeze", analyze_e3),
                      ("e3_redo", analyze_e3),
                      ("e4", analyze_e4), ("e4_think", analyze_e4),

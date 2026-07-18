@@ -424,6 +424,9 @@ def render_envs():
         "e2_think": "E2 + scratch line (corrected turn protocol)",
         "e2_dialogue": "E2 + scratch line + pre-episode message channel",
         "e2_sonnet": "E2 + scratch line, claude-sonnet-4.5",
+        "e2_role": "E2 mitigation: exogenous role line (entry 20)",
+        "e2_hetero": "E2 mitigation: heterogeneous pairing "
+                     "(haiku × gpt-5-mini, entry 20)",
     }
     E3_LABELS = {
         "e3": "E3 (open-lexicon reference)",

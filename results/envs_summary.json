@@ -1,6 +1,11 @@
 {
   "mock": {
     "e1_tight": {
+      "diversity_ratio_ci": {
+        "estimate": 0.5139333333333332,
+        "lo": 0.43333333333333335,
+        "hi": 0.5833333333333334
+      },
       "n_pops": 60,
       "conventionalized": {
         "n": 60,
@@ -86,6 +91,11 @@
       }
     },
     "e1_loose": {
+      "diversity_ratio_ci": {
+        "estimate": 0.5166499999999999,
+        "lo": 0.45,
+        "hi": 0.5833333333333334
+      },
       "n_pops": 60,
       "conventionalized": {
         "n": 60,
@@ -171,6 +181,11 @@
       }
     },
     "e1_squeeze": {
+      "diversity_ratio_ci": {
+        "estimate": 0.5661999999999999,
+        "lo": 0.475,
+        "hi": 0.65
+      },
       "n_pops": 40,
       "conventionalized": {
         "n": 40,
@@ -230,6 +245,11 @@
       }
     },
     "e1_squeeze_mem": {
+      "diversity_ratio_ci": {
+        "estimate": 0.4611375,
+        "lo": 0.375,
+        "hi": 0.55
+      },
       "n_pops": 40,
       "conventionalized": {
         "n": 40,
@@ -289,6 +309,11 @@
       }
     },
     "e1_noisy": {
+      "diversity_ratio_ci": {
+        "estimate": 0.5867249999999999,
+        "lo": 0.5,
+        "hi": 0.675
+      },
       "n_pops": 40,
       "conventionalized": {
         "n": 40,
@@ -528,6 +553,11 @@
     },
     "e3": {
       "n_pops": 60,
+      "diversity_ratio_ci": {
+        "estimate": 0.6357999999999999,
+        "lo": 0.5666666666666667,
+        "hi": 0.7166666666666667
+      },
       "items_conventionalized_of6": {
         "n": 60,
         "estimate": 3.9166666666666665,
@@ -577,6 +607,11 @@
     },
     "e3_squeeze": {
       "n_pops": 40,
+      "diversity_ratio_ci": {
+        "estimate": 0.6360625,
+        "lo": 0.55,
+        "hi": 0.725
+      },
       "items_conventionalized_of6": {
         "n": 40,
         "estimate": 4.15,
@@ -685,6 +720,11 @@
   },
   "live": {
     "e1_tight": {
+      "diversity_ratio_ci": {
+        "estimate": 0.6511666666666667,
+        "lo": 0.5,
+        "hi": 0.8333333333333334
+      },
       "n_pops": 12,
       "conventionalized": {
         "n": 12,
@@ -745,6 +785,11 @@
       }
     },
     "e1_loose": {
+      "diversity_ratio_ci": {
+        "estimate": 0.68575,
+        "lo": 0.5,
+        "hi": 1.0
+      },
       "n_pops": 4,
       "conventionalized": {
         "n": 4,
@@ -805,6 +850,11 @@
       }
     },
     "e1_squeeze": {
+      "diversity_ratio_ci": {
+        "estimate": 0.6168333333333333,
+        "lo": 0.4166666666666667,
+        "hi": 0.75
+      },
       "n_pops": 12,
       "conventionalized": {
         "n": 12,
@@ -869,6 +919,11 @@
       }
     },
     "e1_squeeze_mem": {
+      "diversity_ratio_ci": {
+        "estimate": 0.68575,
+        "lo": 0.5,
+        "hi": 1.0
+      },
       "n_pops": 4,
       "conventionalized": {
         "n": 4,
@@ -924,6 +979,11 @@
       }
     },
     "e1_noisy": {
+      "diversity_ratio_ci": {
+        "estimate": 0.68575,
+        "lo": 0.5,
+        "hi": 1.0
+      },
       "n_pops": 4,
       "conventionalized": {
         "n": 4,
@@ -1179,8 +1239,109 @@
       "distinct_modal_mappings": 0,
       "modal_mapping_counts": []
     },
+    "e2_role": {
+      "n_pops": 8,
+      "msg_use_rate": {
+        "n": 8,
+        "estimate": 0.0,
+        "lo": 0.0,
+        "hi": 0.0
+      },
+      "malformed_per_call": {
+        "n": 8,
+        "estimate": 0.4615591035405895,
+        "lo": 0.45295831167784434,
+        "hi": 0.47060171007317897
+      },
+      "parse_fail_per_call": {
+        "n": 8,
+        "estimate": 0.03767740899166505,
+        "lo": 0.032803338215315246,
+        "hi": 0.04348447350243544
+      },
+      "conventionalized": {
+        "n": 8,
+        "k": 0,
+        "p": 0.0,
+        "lo": 0.0,
+        "hi": 0.32440756488388023
+      },
+      "mapping_share": {
+        "n": 8,
+        "estimate": 0.11458333333333331,
+        "lo": 0.06249999999999999,
+        "hi": 0.16666666666666666
+      },
+      "success_first12": {
+        "n": 8,
+        "estimate": 0.25,
+        "lo": 0.17708333333333331,
+        "hi": 0.3333333333333333
+      },
+      "success_last12": {
+        "n": 8,
+        "estimate": 0.13541666666666666,
+        "lo": 0.07291666666666666,
+        "hi": 0.20833333333333331
+      },
+      "distinct_modal_mappings": 0,
+      "modal_mapping_counts": []
+    },
+    "e2_hetero": {
+      "n_pops": 8,
+      "msg_use_rate": {
+        "n": 8,
+        "estimate": 0.0,
+        "lo": 0.0,
+        "hi": 0.0
+      },
+      "malformed_per_call": {
+        "n": 8,
+        "estimate": 0.25926242317070536,
+        "lo": 0.24336212136702526,
+        "hi": 0.27443137914798277
+      },
+      "parse_fail_per_call": {
+        "n": 8,
+        "estimate": 0.025844695294283293,
+        "lo": 0.02253420763322927,
+        "hi": 0.02868803428224805
+      },
+      "conventionalized": {
+        "n": 8,
+        "k": 0,
+        "p": 0.0,
+        "lo": 0.0,
+        "hi": 0.32440756488388023
+      },
+      "mapping_share": {
+        "n": 8,
+        "estimate": 0.020833333333333332,
+        "lo": 0.0,
+        "hi": 0.05208333333333333
+      },
+      "success_first12": {
+        "n": 8,
+        "estimate": 0.08333333333333333,
+        "lo": 0.03125,
+        "hi": 0.14583333333333331
+      },
+      "success_last12": {
+        "n": 8,
+        "estimate": 0.0625,
+        "lo": 0.03125,
+        "hi": 0.10416666666666666
+      },
+      "distinct_modal_mappings": 0,
+      "modal_mapping_counts": []
+    },
     "e3": {
       "n_pops": 6,
+      "diversity_ratio_ci": {
+        "estimate": 0.66625,
+        "lo": 0.5,
+        "hi": 0.8333333333333334
+      },
       "items_conventionalized_of6": {
         "n": 6,
         "estimate": 6.0,
@@ -1230,6 +1391,11 @@
     },
     "e3_squeeze": {
       "n_pops": 12,
+      "diversity_ratio_ci": {
+        "estimate": 0.08333333333333331,
+        "lo": 0.08333333333333333,
+        "hi": 0.08333333333333333
+      },
       "items_conventionalized_of6": {
         "n": 12,
         "estimate": 6.0,
@@ -1271,6 +1437,11 @@
     },
     "e3_redo": {
       "n_pops": 4,
+      "diversity_ratio_ci": {
+        "estimate": 0.68575,
+        "lo": 0.5,
+        "hi": 1.0
+      },
       "items_conventionalized_of6": {
         "n": 4,
         "estimate": 6.0,
@@ -1401,6 +1572,11 @@
   },
   "m2": {
     "e1_tight": {
+      "diversity_ratio_ci": {
+        "estimate": 0.6583125,
+        "lo": 0.5,
+        "hi": 0.875
+      },
       "n_pops": 8,
       "conventionalized": {
         "n": 8,
@@ -1461,6 +1637,11 @@
       }
     },
     "e1_squeeze": {
+      "diversity_ratio_ci": {
+        "estimate": 0.536,
+        "lo": 0.375,
+        "hi": 0.75
+      },
       "n_pops": 8,
       "conventionalized": {
         "n": 8,
@@ -1565,6 +1746,11 @@
     },
     "e3_squeeze": {
       "n_pops": 8,
+      "diversity_ratio_ci": {
+        "estimate": 0.6059375,
+        "lo": 0.375,
+        "hi": 0.75
+      },
       "items_conventionalized_of6": {
         "n": 8,
         "estimate": 3.375,

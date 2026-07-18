@@ -21,3 +21,6 @@ done e2_hetero p1: {'done': True, 'episodes': 72}
 done e2_hetero p3: {'done': True, 'episodes': 72}
 done e2_hetero p0: {'done': True, 'episodes': 72}
 done e2_hetero p2: {'done': True, 'episodes': 72}
+done e2_hetero p7: {'done': True, 'episodes': 72}
+done e2_hetero p4: {'done': True, 'episodes': 72}
+ALL ENV CELLS DONE
