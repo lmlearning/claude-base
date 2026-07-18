@@ -184,6 +184,17 @@ across conditions.)*
     family per setting in which the target code/scheme is explicitly
     specified; success = mechanical check of the emitted note. Both
     probes fixed before any live axis data is collected.
+23. **E3-m2 turnover criteria (logged before the analysis ran; the
+    existing e3_squeeze journals already contain one full generation of
+    gradual replacement — interactions_per_replacement=6, the design
+    analogue of the naming game's k=8 — so this section is computed on
+    existing data, not new runs).** Scheme survival: the settle-phase
+    per-item modal sets equal the pre-turnover formation-tail modal
+    sets on >= 4 of 6 items. Newcomer adoption: a turnover-born agent
+    adopts if >= 80% of its last 10 sends match the pre-turnover modal
+    set of the sent item (same window and threshold as the transplant
+    criterion, entry 18); newcomers with fewer than 10 sends report
+    the raw match share instead.
 22. **Survival-figure units (correction).** The turnover sweep's k is
     INTERACTIONS PER REPLACEMENT (TransmissionConfig; one slot replaced
     every k interactions, r slots per event when k=1). A generation is
