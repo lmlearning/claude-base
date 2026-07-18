@@ -1,0 +1,63 @@
+{
+  "config": {
+    "cell": "b_minority_posttrans_f42_b2k",
+    "run_index": 2,
+    "seed": 544443862,
+    "phase": "minority",
+    "dialogue": true,
+    "framing": "market",
+    "model": "claude-haiku-4-5",
+    "n_agents": 24,
+    "n_names": 10,
+    "memory_size": 5,
+    "pre_transmission": true,
+    "minority_fraction": 0.42,
+    "minority_budget": 2000
+  },
+  "comprehension_passed": true,
+  "priors": {
+    "kemna": 0,
+    "norzi": 4,
+    "tokur": 1,
+    "lekad": 0,
+    "kevta": 4,
+    "buzeb": 0,
+    "zine": 9,
+    "nanri": 2,
+    "tafzu": 0,
+    "sekbo": 0
+  },
+  "priors_malformed": 0,
+  "genesis": {
+    "converged": true,
+    "winner": "kemna",
+    "consensus_time": 96
+  },
+  "pre_transmission": {
+    "original": "kemna",
+    "final": "kemna",
+    "survived": true,
+    "n_replacements": 24
+  },
+  "minority": {
+    "usable": true,
+    "original": "kemna",
+    "alt": "tafzu",
+    "n_committed": 10,
+    "flipped": true,
+    "interactions_used": 702
+  },
+  "final": {
+    "t": 702,
+    "fallback_choices": 0,
+    "unparseable_first_replies": 0,
+    "total_choices": 1404,
+    "malformed_rate": 0.0,
+    "consensus": null,
+    "dominant": [
+      "tafzu",
+      0.9010416666666666
+    ],
+    "success_rate_window": 0.8229166666666666
+  }
+}

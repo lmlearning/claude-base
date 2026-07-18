@@ -1,0 +1,63 @@
+{
+  "config": {
+    "cell": "b_minority_posttrans_f42_b2k",
+    "run_index": 0,
+    "seed": 1703983541,
+    "phase": "minority",
+    "dialogue": true,
+    "framing": "rounds",
+    "model": "claude-haiku-4-5",
+    "n_agents": 24,
+    "n_names": 10,
+    "memory_size": 5,
+    "pre_transmission": true,
+    "minority_fraction": 0.42,
+    "minority_budget": 2000
+  },
+  "comprehension_passed": true,
+  "priors": {
+    "durne": 0,
+    "gabpu": 0,
+    "fatma": 10,
+    "deszo": 0,
+    "nurdi": 3,
+    "modim": 1,
+    "boki": 0,
+    "zibo": 2,
+    "nili": 4,
+    "narot": 0
+  },
+  "priors_malformed": 0,
+  "genesis": {
+    "converged": true,
+    "winner": "durne",
+    "consensus_time": 96
+  },
+  "pre_transmission": {
+    "original": "durne",
+    "final": "durne",
+    "survived": true,
+    "n_replacements": 24
+  },
+  "minority": {
+    "usable": true,
+    "original": "durne",
+    "alt": "gabpu",
+    "n_committed": 10,
+    "flipped": true,
+    "interactions_used": 814
+  },
+  "final": {
+    "t": 814,
+    "fallback_choices": 0,
+    "unparseable_first_replies": 0,
+    "total_choices": 1628,
+    "malformed_rate": 0.0,
+    "consensus": null,
+    "dominant": [
+      "gabpu",
+      0.9010416666666666
+    ],
+    "success_rate_window": 0.8229166666666666
+  }
+}

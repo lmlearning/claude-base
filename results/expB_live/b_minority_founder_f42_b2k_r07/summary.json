@@ -1,0 +1,57 @@
+{
+  "config": {
+    "cell": "b_minority_founder_f42_b2k",
+    "run_index": 7,
+    "seed": 2865814182,
+    "phase": "minority",
+    "dialogue": true,
+    "framing": "study",
+    "model": "claude-haiku-4-5",
+    "n_agents": 24,
+    "n_names": 10,
+    "memory_size": 5,
+    "pre_transmission": false,
+    "minority_fraction": 0.42,
+    "minority_budget": 2000
+  },
+  "comprehension_passed": true,
+  "priors": {
+    "seked": 9,
+    "rokpo": 0,
+    "ropsi": 0,
+    "libo": 1,
+    "kantu": 5,
+    "nikef": 3,
+    "vuzbe": 0,
+    "nodbe": 0,
+    "gofa": 2,
+    "napvu": 0
+  },
+  "priors_malformed": 0,
+  "genesis": {
+    "converged": true,
+    "winner": "seked",
+    "consensus_time": 96
+  },
+  "minority": {
+    "usable": true,
+    "original": "seked",
+    "alt": "nodbe",
+    "n_committed": 10,
+    "flipped": true,
+    "interactions_used": 443
+  },
+  "final": {
+    "t": 443,
+    "fallback_choices": 0,
+    "unparseable_first_replies": 0,
+    "total_choices": 886,
+    "malformed_rate": 0.0,
+    "consensus": null,
+    "dominant": [
+      "nodbe",
+      0.9010416666666666
+    ],
+    "success_rate_window": 0.8020833333333334
+  }
+}

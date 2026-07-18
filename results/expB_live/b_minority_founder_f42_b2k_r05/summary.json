@@ -1,0 +1,57 @@
+{
+  "config": {
+    "cell": "b_minority_founder_f42_b2k",
+    "run_index": 5,
+    "seed": 1939754641,
+    "phase": "minority",
+    "dialogue": true,
+    "framing": "market",
+    "model": "claude-haiku-4-5",
+    "n_agents": 24,
+    "n_names": 10,
+    "memory_size": 5,
+    "pre_transmission": false,
+    "minority_fraction": 0.42,
+    "minority_budget": 2000
+  },
+  "comprehension_passed": true,
+  "priors": {
+    "dosi": 0,
+    "pesum": 2,
+    "foko": 4,
+    "nevu": 1,
+    "zolud": 1,
+    "nofre": 1,
+    "pepim": 8,
+    "butap": 0,
+    "fomo": 2,
+    "donfo": 1
+  },
+  "priors_malformed": 0,
+  "genesis": {
+    "converged": true,
+    "winner": "dosi",
+    "consensus_time": 96
+  },
+  "minority": {
+    "usable": true,
+    "original": "dosi",
+    "alt": "pepim",
+    "n_committed": 10,
+    "flipped": true,
+    "interactions_used": 489
+  },
+  "final": {
+    "t": 489,
+    "fallback_choices": 0,
+    "unparseable_first_replies": 0,
+    "total_choices": 978,
+    "malformed_rate": 0.0,
+    "consensus": null,
+    "dominant": [
+      "pepim",
+      0.90625
+    ],
+    "success_rate_window": 0.8333333333333334
+  }
+}

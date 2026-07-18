@@ -1,0 +1,63 @@
+{
+  "config": {
+    "cell": "b_minority_posttrans_f42_b2k",
+    "run_index": 3,
+    "seed": 2499592903,
+    "phase": "minority",
+    "dialogue": true,
+    "framing": "rounds",
+    "model": "claude-haiku-4-5",
+    "n_agents": 24,
+    "n_names": 10,
+    "memory_size": 5,
+    "pre_transmission": true,
+    "minority_fraction": 0.42,
+    "minority_budget": 2000
+  },
+  "comprehension_passed": true,
+  "priors": {
+    "tikak": 4,
+    "madza": 0,
+    "ravko": 9,
+    "fafub": 0,
+    "pavu": 0,
+    "bapu": 3,
+    "rofiv": 0,
+    "funi": 1,
+    "reggi": 2,
+    "zite": 1
+  },
+  "priors_malformed": 0,
+  "genesis": {
+    "converged": true,
+    "winner": "tikak",
+    "consensus_time": 96
+  },
+  "pre_transmission": {
+    "original": "tikak",
+    "final": "tikak",
+    "survived": true,
+    "n_replacements": 24
+  },
+  "minority": {
+    "usable": true,
+    "original": "tikak",
+    "alt": "reggi",
+    "n_committed": 10,
+    "flipped": true,
+    "interactions_used": 884
+  },
+  "final": {
+    "t": 884,
+    "fallback_choices": 0,
+    "unparseable_first_replies": 0,
+    "total_choices": 1768,
+    "malformed_rate": 0.0,
+    "consensus": null,
+    "dominant": [
+      "reggi",
+      0.90625
+    ],
+    "success_rate_window": 0.8541666666666666
+  }
+}

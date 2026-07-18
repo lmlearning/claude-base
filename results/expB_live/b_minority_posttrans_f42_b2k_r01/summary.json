@@ -1,0 +1,63 @@
+{
+  "config": {
+    "cell": "b_minority_posttrans_f42_b2k",
+    "run_index": 1,
+    "seed": 3945363925,
+    "phase": "minority",
+    "dialogue": true,
+    "framing": "study",
+    "model": "claude-haiku-4-5",
+    "n_agents": 24,
+    "n_names": 10,
+    "memory_size": 5,
+    "pre_transmission": true,
+    "minority_fraction": 0.42,
+    "minority_budget": 2000
+  },
+  "comprehension_passed": true,
+  "priors": {
+    "galud": 2,
+    "babra": 1,
+    "pitod": 0,
+    "pikpo": 3,
+    "lero": 3,
+    "palu": 0,
+    "nefu": 0,
+    "vafa": 8,
+    "fuvuf": 0,
+    "malzo": 3
+  },
+  "priors_malformed": 0,
+  "genesis": {
+    "converged": true,
+    "winner": "galud",
+    "consensus_time": 96
+  },
+  "pre_transmission": {
+    "original": "galud",
+    "final": "galud",
+    "survived": true,
+    "n_replacements": 24
+  },
+  "minority": {
+    "usable": true,
+    "original": "galud",
+    "alt": "pitod",
+    "n_committed": 10,
+    "flipped": true,
+    "interactions_used": 927
+  },
+  "final": {
+    "t": 927,
+    "fallback_choices": 0,
+    "unparseable_first_replies": 0,
+    "total_choices": 1854,
+    "malformed_rate": 0.0,
+    "consensus": null,
+    "dominant": [
+      "pitod",
+      0.9010416666666666
+    ],
+    "success_rate_window": 0.8020833333333334
+  }
+}

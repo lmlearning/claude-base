@@ -1,0 +1,57 @@
+{
+  "config": {
+    "cell": "b_minority_founder_f42_b2k",
+    "run_index": 3,
+    "seed": 4238155635,
+    "phase": "minority",
+    "dialogue": true,
+    "framing": "rounds",
+    "model": "claude-haiku-4-5",
+    "n_agents": 24,
+    "n_names": 10,
+    "memory_size": 5,
+    "pre_transmission": false,
+    "minority_fraction": 0.42,
+    "minority_budget": 2000
+  },
+  "comprehension_passed": true,
+  "priors": {
+    "kulzo": 1,
+    "vibmu": 3,
+    "puvo": 0,
+    "bupig": 0,
+    "figa": 2,
+    "rifu": 1,
+    "rafa": 9,
+    "sinzo": 3,
+    "dosaf": 0,
+    "neno": 1
+  },
+  "priors_malformed": 0,
+  "genesis": {
+    "converged": true,
+    "winner": "kulzo",
+    "consensus_time": 96
+  },
+  "minority": {
+    "usable": true,
+    "original": "kulzo",
+    "alt": "neno",
+    "n_committed": 10,
+    "flipped": true,
+    "interactions_used": 531
+  },
+  "final": {
+    "t": 531,
+    "fallback_choices": 0,
+    "unparseable_first_replies": 0,
+    "total_choices": 1062,
+    "malformed_rate": 0.0,
+    "consensus": null,
+    "dominant": [
+      "neno",
+      0.9010416666666666
+    ],
+    "success_rate_window": 0.84375
+  }
+}
