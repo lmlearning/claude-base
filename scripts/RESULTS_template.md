@@ -130,6 +130,67 @@ across conditions.)*
     e3_squeeze fixes E3's diversity-test flaw by sharing one fixed item
     set across populations; the per-population zero-shot prior probe
     still measures token-level bias on the shared traits.
+16. **Scheme coding rules (frozen before the §R1 baseline data).** A
+    population's per-item description is the modal extracted trait-set
+    over the last 15 formation-phase mentions of that item; a
+    population's *scheme* is the 6-tuple of per-item modal sets. Rule A
+    (headline, as used throughout): schemes are distinct iff their
+    normalised tuples differ exactly. Rule B (coarser): agglomerative
+    clustering with mean per-item Jaccard similarity, threshold 0.5 —
+    schemes in one cluster count once. Rule C (finer): distinct iff ANY
+    item's modal set differs (identical to A for full tuples; differs
+    only when items lack a modal set). All three are reported for every
+    headline count; no rule is chosen after seeing the null.
+17. **E3 no-interaction pseudo-population design.** Per family, 16
+    pseudo-populations; each consists of independent zero-shot
+    generations from the frozen SEND prompt with the empty-history
+    header, same shared items, same per-item event counts as the
+    matched real cell (drawn from its journals), run temperature.
+    Pushed through the identical extraction and all three coding rules.
+    The null probability reported is the fraction of 2,000 resamples of
+    8 pseudo-populations showing >= 7 distinct schemes (Rule A, with B
+    and C alongside).
+18. **Transplant adoption criterion (frozen before any transplant
+    run).** A transplanted agent counts as ADOPTED if, over its last 10
+    sends in the host, >= 80% of extracted trait-sets equal the host's
+    pre-transplant modal set for the sent item. Latency = number of
+    sends until the criterion window first holds. Host stability =
+    host's per-item modal sets unchanged in the final 15-mention
+    window. Protocol: one agent, journaled state replayed, replaces a
+    random host slot; 240 further interactions under normal random
+    pairing; >= 10 ordered pairs of distinct-scheme gpt-5-mini
+    populations.
+19. **Swap protocol (frozen).** Evaluation-only episodes with all
+    memories frozen at end-of-run state: describer sampled from
+    population A, responder from population B, 30 episodes per ordered
+    pair (all 56 m2 ordered pairs + 8 within-population baselines;
+    haiku control: 24 sampled ordered pairs + 12 baselines). Statistic:
+    success difference (within minus cross) with run-level bootstrap
+    CI. No agent state is updated by evaluation episodes.
+20. **E2 mitigation cells (prompts frozen after lint + tiny pilot).**
+    e2_role: e2_think plus one factual line in the episode state
+    assigning each badge a fixed grid half (wording lint-checked, no
+    coordination vocabulary). e2_hetero: e2_think with each pair
+    drawn one-from-each family (haiku-4.5 x gpt-5-mini), no role line;
+    pairing always cross-family (an environment-structure property of
+    the cell, not a prompt change). n = 8 populations each; success
+    measured against the e2_think baseline at matched n.
+21. **Independent axis probes (journaled separately; exempt from the
+    banned-vocabulary lint because naming the scheme is their
+    function; no probe wording enters any population prompt).** Prior
+    concentration: >= 50 zero-shot samples per E3 item per family and
+    per E1 budget at run temperature; entropy and modal probability
+    with bootstrap CIs. Reachability: >= 30 execution trials per
+    family per setting in which the target code/scheme is explicitly
+    specified; success = mechanical check of the emitted note. Both
+    probes fixed before any live axis data is collected.
+22. **Survival-figure units (correction).** The turnover sweep's k is
+    INTERACTIONS PER REPLACEMENT (TransmissionConfig; one slot replaced
+    every k interactions, r slots per event when k=1). A generation is
+    N*k interactions; an agent plays 2/N of interactions, so expected
+    agent lifetime is ~2k plays. The earlier axis label ("replacements
+    per 24 interactions") inverted this; axis, caption, and text are
+    now derived from the simulator structure above.
 
 ## 3. Experiment A results (minimal agents; the substrate control)
 
