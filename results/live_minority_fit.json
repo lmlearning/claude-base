@@ -1,0 +1,48 @@
+{
+ "founder": {
+  "f50": 0.3004,
+  "lo": 0.2659,
+  "hi": 0.33,
+  "slope": 40.3,
+  "points": {
+   "0.25": [
+    1,
+    8
+   ],
+   "0.33": [
+    6,
+    8
+   ],
+   "0.42": [
+    8,
+    8
+   ]
+  },
+  "n_boot_kept": 1441
+ },
+ "posttrans": {
+  "f50": 0.2864,
+  "slope": 611.1,
+  "points": {
+   "0.25": [
+    0,
+    8
+   ],
+   "0.33": [
+    8,
+    8
+   ],
+   "0.42": [
+    8,
+    8
+   ]
+  },
+  "n_boot_kept": 2000,
+  "separable": true,
+  "interval": [
+   0.25,
+   0.33
+  ]
+ },
+ "note": "2-parameter logistic MLE on flip counts; f50 CI by parametric bootstrap (2000 reps). Flip criterion unchanged from pre-registration; 2000-interaction budget cells (pilot 600-budget cells reported separately). Posttrans flips are perfectly separated (0/8 at f=.25, 8/8 at f=.33), so the MLE is degenerate; the honest statement is f50 in (0.25, 0.33), point estimate at the separation midpoint."
+}

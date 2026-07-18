@@ -169,10 +169,11 @@ def fig_minority(figdir):
         ax.errorbar(f, p, yerr=err, fmt="o-", ms=2.5, lw=1.1, capsize=1.5,
                     elinewidth=0.6, color=color, label=label)
     sweep = _live_sweep_points()
-    for cond, mk, color in (("founder", "^", ORANGE), ("posttrans", "v", PINK)):
+    for cond, mk, color, dx in (("founder", "^", ORANGE, -0.004),
+                                ("posttrans", "v", PINK, 0.004)):
         pts = sorted(sweep[cond].items())
         if pts:
-            fs = [f for f, _ in pts]
+            fs = [f + dx for f, _ in pts]
             ps = [k / n for _, (k, n) in pts]
             ax.plot(fs, ps, mk, color=color, ms=6, mec="white", mew=0.5,
                     label=f"live LLM, {cond} (2k budget)")
@@ -239,12 +240,14 @@ def fig_inversion(figdir):
     ga = A.get("genesis_core", {}).get("convergence_rate", {})
     entries.append(("naming game\n(alignment paid directly)",
                     ga.get("p"), gm.get("p")))
+    gm2 = (S.get("expB_live", {}) or {})  # naming m2 handled below if present
     for cell, label in (("e1_tight", "E1 wire format, 12w"),
                         ("e1_squeeze", "E1 wire format, 6w\n(prior infeasible)"),
                         ("e2_think", "E2 grid partition"),
                         ("e3_squeeze", "E3 description scheme")):
         sm = E.get("mock", {}).get(cell, {})
         lv = E.get("live", {}).get(cell, {})
+        m2 = E.get("m2", {}).get(cell, {})
 
         def conv_of(c):
             if not c:
@@ -257,22 +260,32 @@ def fig_inversion(figdir):
                 k = max(0, (c.get("distinct_schemes") or 1) - 1)
                 return k / max(1, n)
             return (c.get("conventionalized") or {}).get("p")
-        entries.append((label, conv_of(sm), conv_of(lv)))
+        entries.append((label, conv_of(sm), conv_of(lv), conv_of(m2)))
     e4s = E.get("mock", {}).get("e4", {}).get("class_share", {})
     e4l = E.get("live", {}).get("e4_think", {}).get("class_share", {})
+    e4m = E.get("m2", {}).get("e4_think", {}).get("class_share", {})
     entries.append(("E4 bargaining classes\n(fairness prior wins)",
-                    e4s.get("p"), e4l.get("p")))
+                    e4s.get("p"), e4l.get("p"), e4m.get("p")))
+    entries[0] = entries[0] + (None,) if len(entries[0]) == 3 else entries[0]
+    entries = [(e + (None,))[:4] for e in entries]
 
     entries = [e for e in entries if e[1] is not None and e[2] is not None]
     fig, ax = plt.subplots(figsize=(COL_W, 2.6))
     y = np.arange(len(entries))[::-1]
-    for yi, (label, ps, pl) in zip(y, entries):
-        ax.plot([ps, pl], [yi, yi], "-", color=GRAY, lw=1.0, zorder=1)
+    for yi, e in zip(y, entries):
+        xs = [x for x in e[1:] if x is not None]
+        ax.plot([min(xs), max(xs)], [yi, yi], "-", color=GRAY, lw=1.0,
+                zorder=1)
     ax.scatter([e[1] for e in entries], y, s=52, zorder=3,
                facecolors="none", edgecolors=BLUE, linewidths=1.5,
                label="substrate")
     ax.scatter([e[2] for e in entries], y, color=ORANGE, s=24, zorder=2,
-               label="live LLM")
+               label="haiku-4.5")
+    m2y = [(yi, e[3]) for yi, e in zip(y, entries) if e[3] is not None]
+    if m2y:
+        ax.scatter([v for _, v in m2y], [yi for yi, _ in m2y],
+                   color=GREEN, s=24, zorder=2, marker="D",
+                   label="gpt-5-mini")
     ax.set_yticks(y)
     ax.set_yticklabels([e[0] for e in entries], fontsize=6.5)
     ax.set_xlabel("share forming an arbitrary convention")

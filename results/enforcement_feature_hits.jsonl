@@ -1,0 +1,4 @@
+{"family": "haiku", "arm": "population", "run": "b_minority_founder_f33_b2k_r02", "t": 625, "text": "I've been picking \"bimma\" and got it right 3 of 5 times. Let's both pick \"bimma\" next cycle for mutual gain.", "solitary": false, "feature": "correctness"}
+{"family": "haiku", "arm": "population", "run": "b_minority_posttrans_f25_b2k_r00", "t": 2122, "text": "I've been picking sesis and it matches most participants. Please pick sesis next round!", "solitary": false, "feature": "group_appeal"}
+{"family": "gptfivemini", "arm": "population", "run": "b_genesis_dlg_r01", "t": 40, "text": "I think we should both pick \"dagod\" next time to win 100 points each.", "solitary": false, "feature": "deontic"}
+{"family": "gptfivemini", "arm": "population", "run": "b_trans_dlg_r02", "t": 14, "text": "Oops\u2014wrong choice! Want to try matching next round? I'll pick \"kepir\" if you do.", "solitary": false, "feature": "correctness"}

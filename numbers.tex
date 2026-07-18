@@ -20,19 +20,19 @@
 \newcommand{\kJudgeStrict}{0.062}
 \newcommand{\kJudgeAuthor}{\textbf{TBD}}
 \newcommand{\kAuthorStrict}{\textbf{TBD}}
-\newcommand{\prevDeonticPop}{0.0000 [0.0000, 0.0010]}
+\newcommand{\prevDeonticPop}{0.0000 [0.0000, 0.0001]}
 \newcommand{\prevDeonticSol}{0.0000 [0.0000, 0.0045]}
-\newcommand{\prevDeonticMTwo}{\textbf{TBD}}
-\newcommand{\prevCorrectnessPop}{0.0000 [0.0000, 0.0010]}
+\newcommand{\prevDeonticMTwo}{0.0029 [0.0001, 0.0160]}
+\newcommand{\prevCorrectnessPop}{0.0000 [0.0000, 0.0002]}
 \newcommand{\prevCorrectnessSol}{0.0000 [0.0000, 0.0045]}
-\newcommand{\prevCorrectnessMTwo}{\textbf{TBD}}
-\newcommand{\prevGroupAppealPop}{0.0000 [0.0000, 0.0010]}
+\newcommand{\prevCorrectnessMTwo}{0.0029 [0.0001, 0.0160]}
+\newcommand{\prevGroupAppealPop}{0.0000 [0.0000, 0.0002]}
 \newcommand{\prevGroupAppealSol}{0.0000 [0.0000, 0.0045]}
-\newcommand{\prevGroupAppealMTwo}{\textbf{TBD}}
-\newcommand{\prevSanctionPop}{0.0000 [0.0000, 0.0010]}
+\newcommand{\prevGroupAppealMTwo}{0.0000 [0.0000, 0.0106]}
+\newcommand{\prevSanctionPop}{0.0000 [0.0000, 0.0001]}
 \newcommand{\prevSanctionSol}{0.0000 [0.0000, 0.0045]}
-\newcommand{\prevSanctionMTwo}{\textbf{TBD}}
-\newcommand{\nEnforcementCorpus}{3694}
+\newcommand{\prevSanctionMTwo}{0.0000 [0.0000, 0.0106]}
+\newcommand{\nEnforcementCorpus}{27502}
 \newcommand{\nEnforcementSolitary}{813}
 \newcommand{\convEOneTwelveSub}{0.95 [0.86, 0.98]}
 \newcommand{\agreeEOneTwelveSub}{0.87 [0.82, 0.92]}
@@ -75,18 +75,18 @@
 \newcommand{\classEFourThinkSub}{0.15 [0.05, 0.36]}
 \newcommand{\egalEFourThinkSub}{0.50 [0.30, 0.70]}
 \newcommand{\npopsEFourThinkSub}{20}
-\newcommand{\convEOneTwelveLive}{0.00 [0.00, 0.49]}
-\newcommand{\agreeEOneTwelveLive}{0.03 [0.00, 0.06]}
+\newcommand{\convEOneTwelveLive}{0.00 [0.00, 0.24]}
+\newcommand{\agreeEOneTwelveLive}{0.03 [0.01, 0.04]}
 \newcommand{\nvarEOneTwelveLive}{0}
-\newcommand{\npopsEOneTwelveLive}{4}
+\newcommand{\npopsEOneTwelveLive}{12}
 \newcommand{\convEOneTwentyfiveLive}{0.00 [0.00, 0.49]}
 \newcommand{\agreeEOneTwentyfiveLive}{0.02 [0.02, 0.04]}
 \newcommand{\nvarEOneTwentyfiveLive}{0}
 \newcommand{\npopsEOneTwentyfiveLive}{4}
-\newcommand{\convEOneSqueezeLive}{0.25 [0.05, 0.70]}
-\newcommand{\agreeEOneSqueezeLive}{0.26 [0.03, 0.64]}
+\newcommand{\convEOneSqueezeLive}{0.08 [0.01, 0.35]}
+\newcommand{\agreeEOneSqueezeLive}{0.13 [0.05, 0.27]}
 \newcommand{\nvarEOneSqueezeLive}{1}
-\newcommand{\npopsEOneSqueezeLive}{4}
+\newcommand{\npopsEOneSqueezeLive}{12}
 \newcommand{\convEOneSqueezeMemLive}{0.00 [0.00, 0.49]}
 \newcommand{\agreeEOneSqueezeMemLive}{0.13 [0.02, 0.26]}
 \newcommand{\nvarEOneSqueezeMemLive}{0}
@@ -98,12 +98,12 @@
 \newcommand{\convETwoLive}{0.00 [0.00, 0.39]}
 \newcommand{\succETwoLive}{0.36 [0.25, 0.47]}
 \newcommand{\npopsETwoLive}{6}
-\newcommand{\convETwoThinkLive}{0.00 [0.00, 0.49]}
-\newcommand{\succETwoThinkLive}{0.04 [0.00, 0.08]}
-\newcommand{\npopsETwoThinkLive}{4}
-\newcommand{\convETwoDialogueLive}{0.00 [0.00, 0.49]}
-\newcommand{\succETwoDialogueLive}{0.15 [0.08, 0.21]}
-\newcommand{\npopsETwoDialogueLive}{4}
+\newcommand{\convETwoThinkLive}{0.00 [0.00, 0.28]}
+\newcommand{\succETwoThinkLive}{0.04 [0.02, 0.07]}
+\newcommand{\npopsETwoThinkLive}{10}
+\newcommand{\convETwoDialogueLive}{0.00 [0.00, 0.28]}
+\newcommand{\succETwoDialogueLive}{0.14 [0.10, 0.19]}
+\newcommand{\npopsETwoDialogueLive}{10}
 \newcommand{\convETwoSonnetLive}{0.00 [0.00, 0.56]}
 \newcommand{\succETwoSonnetLive}{0.00 [0.00, 0.00]}
 \newcommand{\npopsETwoSonnetLive}{3}
@@ -114,14 +114,31 @@
 \newcommand{\priorEThreeRedoLive}{1.00 [1.00, 1.00]}
 \newcommand{\npopsEThreeRedoLive}{4}
 \newcommand{\schemesEThreeSqueezeLive}{1}
-\newcommand{\priorEThreeSqueezeLive}{1.00 [1.00, 1.00]}
-\newcommand{\npopsEThreeSqueezeLive}{4}
+\newcommand{\priorEThreeSqueezeLive}{0.99 [0.96, 1.00]}
+\newcommand{\npopsEThreeSqueezeLive}{12}
 \newcommand{\classEFourLive}{0.00 [0.00, 0.39]}
 \newcommand{\egalEFourLive}{0.00 [0.00, 0.39]}
 \newcommand{\npopsEFourLive}{6}
-\newcommand{\classEFourThinkLive}{0.00 [0.00, 0.49]}
-\newcommand{\egalEFourThinkLive}{0.75 [0.30, 0.95]}
-\newcommand{\npopsEFourThinkLive}{4}
+\newcommand{\classEFourThinkLive}{0.00 [0.00, 0.24]}
+\newcommand{\egalEFourThinkLive}{0.83 [0.55, 0.95]}
+\newcommand{\npopsEFourThinkLive}{12}
 \newcommand{\classEFourSonnetLive}{0.00 [0.00, 0.56]}
 \newcommand{\egalEFourSonnetLive}{1.00 [0.44, 1.00]}
 \newcommand{\npopsEFourSonnetLive}{3}
+\newcommand{\convEOneTwelveMTwo}{0.00 [0.00, 0.32]}
+\newcommand{\agreeEOneTwelveMTwo}{0.01 [0.00, 0.02]}
+\newcommand{\nvarEOneTwelveMTwo}{0}
+\newcommand{\npopsEOneTwelveMTwo}{8}
+\newcommand{\convEOneSqueezeMTwo}{0.00 [0.00, 0.32]}
+\newcommand{\agreeEOneSqueezeMTwo}{\textbf{TBD}}
+\newcommand{\nvarEOneSqueezeMTwo}{0}
+\newcommand{\npopsEOneSqueezeMTwo}{8}
+\newcommand{\convETwoThinkMTwo}{0.00 [0.00, 0.39]}
+\newcommand{\succETwoThinkMTwo}{0.06 [0.03, 0.08]}
+\newcommand{\npopsETwoThinkMTwo}{6}
+\newcommand{\schemesEThreeSqueezeMTwo}{7}
+\newcommand{\priorEThreeSqueezeMTwo}{0.19 [0.12, 0.25]}
+\newcommand{\npopsEThreeSqueezeMTwo}{8}
+\newcommand{\classEFourThinkMTwo}{0.00 [0.00, 0.39]}
+\newcommand{\egalEFourThinkMTwo}{0.83 [0.44, 0.97]}
+\newcommand{\npopsEFourThinkMTwo}{6}

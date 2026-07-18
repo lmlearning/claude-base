@@ -124,6 +124,10 @@ def analyze_e1(outdir: str, cell: str) -> dict:
         stream = _e1_perm_stream(p["recs"])
         tail = [x[1] for x in stream[-60:]]
         modal, share = _modal(tail)
+        # extraction-validity guard: a modal share computed over a handful
+        # of well-formed notes is not evidence of a population convention
+        # (some gpt-5-mini populations emit <5% well-formed notes)
+        tail_valid = len(tail)
         # turnover adoption
         pre_modal = modal
         newcomer_first, founder_first = [], []
@@ -170,7 +174,9 @@ def analyze_e1(outdir: str, cell: str) -> dict:
         per_pop.append({
             "inter_agent_agreement": inter_agree,
             "pop": p["name"], "modal": modal, "share": share,
-            "conventionalized": bool(modal and share >= 0.5),
+            "n_tail_valid": tail_valid,
+            "conventionalized": bool(modal and share >= 0.5
+                                     and tail_valid >= 10),
             "success_tail": float(np.mean(
                 [r["correct"] for r in wf[-60:]])) if wf else None,
             "wellformed_share": float(np.mean(
@@ -191,6 +197,7 @@ def analyze_e1(outdir: str, cell: str) -> dict:
         "conventionalized": binomial_ci(
             sum(p["conventionalized"] for p in per_pop), len(per_pop)),
         "modal_share": bootstrap_ci([p["share"] for p in per_pop]),
+        "success_tail": bootstrap_ci([p["success_tail"] for p in per_pop]),
         "distinct_modal_variants": len(set(modals)),
         "modal_variant_counts": Counter(
             [str(list(m)) for m in modals]).most_common(6),
@@ -643,8 +650,9 @@ def analyze_envs(outdir: str, figdir: str, mode: str) -> dict:
 def main_envs_analysis(results_dir: str = "results",
                        figdir: str = "figures") -> None:
     out = {}
-    for mode in ("mock", "live"):
-        d = os.path.join(results_dir, f"envs_{mode}")
+    for mode, sub in (("mock", "envs_mock"), ("live", "envs_live"),
+                      ("m2", "envs_live_m2")):
+        d = os.path.join(results_dir, sub)
         if os.path.isdir(d):
             print(f"analysing envs ({mode}) ...")
             out[mode] = analyze_envs(d, figdir, mode)

@@ -96,34 +96,34 @@
   },
   "prevalence": {
     "haiku_population": {
-      "n_messages": 3694,
+      "n_messages": 27502,
       "deontic": {
         "k": 0,
-        "n": 3694,
+        "n": 27502,
         "p": 0.0,
         "lo": 0.0,
-        "hi": 0.001
+        "hi": 0.00013
       },
       "correctness": {
-        "k": 0,
-        "n": 3694,
-        "p": 0.0,
+        "k": 1,
+        "n": 27502,
+        "p": 4e-05,
         "lo": 0.0,
-        "hi": 0.001
+        "hi": 0.0002
       },
       "group_appeal": {
-        "k": 0,
-        "n": 3694,
-        "p": 0.0,
+        "k": 1,
+        "n": 27502,
+        "p": 4e-05,
         "lo": 0.0,
-        "hi": 0.001
+        "hi": 0.0002
       },
       "sanction_blame": {
         "k": 0,
-        "n": 3694,
+        "n": 27502,
         "p": 0.0,
         "lo": 0.0,
-        "hi": 0.001
+        "hi": 0.00013
       }
     },
     "haiku_solitary": {
@@ -155,6 +155,68 @@
         "p": 0.0,
         "lo": 0.0,
         "hi": 0.00453
+      }
+    },
+    "gptfivemini_population": {
+      "n_messages": 345,
+      "deontic": {
+        "k": 1,
+        "n": 345,
+        "p": 0.0029,
+        "lo": 7e-05,
+        "hi": 0.01604
+      },
+      "correctness": {
+        "k": 1,
+        "n": 345,
+        "p": 0.0029,
+        "lo": 7e-05,
+        "hi": 0.01604
+      },
+      "group_appeal": {
+        "k": 0,
+        "n": 345,
+        "p": 0.0,
+        "lo": 0.0,
+        "hi": 0.01064
+      },
+      "sanction_blame": {
+        "k": 0,
+        "n": 345,
+        "p": 0.0,
+        "lo": 0.0,
+        "hi": 0.01064
+      }
+    },
+    "gptfivemini_solitary": {
+      "n_messages": 0,
+      "deontic": {
+        "k": 0,
+        "n": 0,
+        "p": null,
+        "lo": null,
+        "hi": null
+      },
+      "correctness": {
+        "k": 0,
+        "n": 0,
+        "p": null,
+        "lo": null,
+        "hi": null
+      },
+      "group_appeal": {
+        "k": 0,
+        "n": 0,
+        "p": null,
+        "lo": null,
+        "hi": null
+      },
+      "sanction_blame": {
+        "k": 0,
+        "n": 0,
+        "p": null,
+        "lo": null,
+        "hi": null
       }
     }
   }

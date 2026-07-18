@@ -257,19 +257,42 @@ Unvalidated judge-label numbers, for completeness:
 
 
 def b_minority_section(B):
-    return """
-### Committed minority (P1, live): founder vs post-transmission
-A scripted committed minority at f = 0.25 (6 of 24 agents; 600-interaction
-budget) flipped the convention in **0/6 founder** populations and **0/6
-post-transmission** populations (every post-transmission population had
-first survived a full generation of turnover). Two readings: (i) LLM
-conventions at this scale are far more robust to committed minorities
-than the minimal-agent substrate, where f = 0.25 flips 500/500 runs
-within the same budget; (ii) the fragility hypothesis — post-transmission
-conventions flip more easily — receives **no support** in either tier at
-the tested operating point. (Caveats: n = 6 per condition, a single f,
-and a 600-interaction budget; a higher-f or longer-budget sweep is the
-natural P2 extension.)"""
+    try:
+        fit = json.load(open("results/live_minority_fit.json"))
+    except FileNotFoundError:
+        fit = None
+    pilot = """
+### Committed minority, live — pilot (f = 0.25, 600-interaction budget)
+A scripted committed minority at f = 0.25 flipped **0/6 founder** and
+**0/6 post-transmission** populations. Kept as the pilot; the threshold
+sweep below supersedes it as the headline."""
+    if not fit:
+        return pilot + "\n\n*(threshold sweep not yet run)*"
+    fo, po = fit["founder"], fit["posttrans"]
+
+    def pts(d):
+        return "; ".join(f"f={f}: {k}/{n}" for f, (k, n)
+                         in sorted(d["points"].items()))
+    return pilot + f"""
+
+### Committed-minority threshold, live (final: f ∈ {{0.25, 0.33, 0.42}}, 2,000-interaction budget, n = 8/cell)
+Flips — founder: {pts(fo)}. Post-transmission: {pts(po)}.
+
+Logistic fit (unchanged pre-registered flip criterion): **live f₅₀
+(founder) = {fo['f50']:.3f} [{fo['lo']:.3f}, {fo['hi']:.3f}]**;
+post-transmission flips are perfectly separated between f = 0.25 (0/8)
+and f = 0.33 (8/8), so the honest statement is **f₅₀ ∈ (0.25, 0.33)**
+(the MLE is degenerate; no sham-precise CI is reported). Readings:
+(i) the live threshold is ~2.4× the substrate's (f₅₀ = 0.126
+[0.125, 0.126]) and close to the ε-greedy RL substrate's 0.342 —
+LLM conventions are markedly more minority-resistant than the
+imitation substrate; (ii) the founder and post-transmission conditions
+are statistically indistinguishable — the fragility hypothesis
+(transmitted conventions flip more easily) again receives **no
+support**; if anything the point estimates run in the opposite
+direction ({po['f50']:.3f} vs {fo['f50']:.3f}); (iii) the pilot's
+0/6+0/6 at f = 0.25 is confirmed as sub-threshold rather than
+budget-limited (1/16 flips even at the 2,000-interaction budget)."""
 
 
 b_live = b_section(BL, "live") + b_minority_section(BL)
@@ -429,7 +452,8 @@ def render_envs():
                 f"across {c['n_pops']} populations (Simpson diversity "
                 f"{c['simpson_diversity']:.2f}); inter-agent agreement "
                 f"{ci(c.get('inter_agent_agreement', {}), '{:.2f}')}; task "
-                f"success (tail) high; newcomer first-3-notes adoption of "
+                f"success (tail) {ci(c.get('success_tail', {}), '{:.2f}')}; "
+                f"newcomer first-3-notes adoption of "
                 f"the incumbent ordering {ci(c['newcomer_adopt'], '{:.2f}')} vs "
                 f"founders' first-3 {ci(c['founder_early'], '{:.2f}')}; scripted "
                 f"minority (f=0.25, fixed alternative ordering) flipped "
@@ -526,6 +550,9 @@ Axtell–Epstein–Young 'emergent classes' game).  Full definitions in
 ### Live LLM tier (claude-haiku-4.5)
 {tier("live")}
 
+### Second model family (openai/gpt-5-mini, frozen prompts)
+{tier("m2")}
+
 ### Integrity correction — supersedes the first live E2/E4 reading
 
 After the first live pass was written up, probes of raw replies showed
@@ -544,77 +571,101 @@ parses the final anchored answer; parse failures are journaled
 separately from occupied-cell picks. The substrate tier is unaffected
 (mock replies are well-formed by construction).
 
-### Reading (corrected cells + convention-inducing levers)
+### Reading (final n; supersedes every pilot number above and below)
 
-**With parsing repaired and every lever pulled — compression, noise,
-memory, negotiation, explicit deliberation, and a stronger model — the
-live environments produced exactly one (weak) side-product convention:
-E1 under a 6-word squeeze. The correction also overturns E4's reported
-'no norm at all': live populations reliably converge on the egalitarian
-50/50 norm. What never appears live is the *arbitrary* convention the
-substrate produces freely.**
+**Two live results replace the pilot picture. (1) In the haiku family,
+with parsing repaired and every lever pulled, side-product conventions
+are rare: the 6-word squeeze produced one conventionalized population in
+12 (agreement 0.13 vs shuffle 0.08 — a weak, above-baseline signal, not
+the 1/4 the pilot suggested). (2) The second model family produced the
+suite's first unambiguous live side-product convention: on an identical
+shared item set, gpt-5-mini populations settled on 7 distinct
+description schemes across 8 populations with prior-match 0.19 —
+cross-population diversity on a shared world, the pre-registered
+signature separating convention from model bias. Convention formation is
+capability-gated: the model must be strong enough to exploit minimal
+discriminating descriptions (creating the arbitrary-choice space) while
+its prior leaves the choice open; haiku's exhaustive-description prior
+closes that space (1 scheme across 12 populations, prior-match 1.0),
+and no lever in the haiku family opens it.**
 
-- *E1 squeeze:* 6 words cannot name all 5 label+entry pairs, so naming
-  everything stops being free. The model triages — names ~2.7 of 5
-  entries and accepts ~42–65% success (vs ~94% at 12 words) — rather
-  than inventing the values-only positional code that would fit all 5
-  (exactly the ordering convention the substrate exploits). One of 4
-  populations conventionalized a shared label-subset-and-order (modal
-  share 0.27 vs shuffle 0.16; inter-agent agreement 0.26 vs 0.02–0.03
-  at loose budgets): the suite's first live side-product convention,
-  weak but above baseline. Doubling memory did not amplify it (0/4,
-  agreement 0.13), and the noisy channel produced nothing (0/4,
-  agreement 0.02). In the substrate the squeeze *destroys* conventions
-  (0/40) — clipped notes starve its imitation channel — so the live
-  uptick is model-specific compression behaviour, not substrate
-  dynamics.
-- *E2 corrected:* the model's real grid play is *worse* than the
-  malformed-era random fallback (success 0.00–0.15 vs ~0.38): both
+- *E1 squeeze (final n=12):* 6 words cannot name all 5 label+entry
+  pairs, so naming everything stops being free. Haiku triages — names
+  ~2.7 of 5 entries and accepts ~40–65% success (vs ~94% at 12 words) —
+  rather than inventing the values-only positional code that would fit
+  all 5 (exactly the ordering convention the substrate exploits). At
+  final n, 1 of 12 populations conventionalized a shared
+  label-subset-and-order (modal share 0.17 [0.11, 0.25] vs shuffle
+  0.08; agreement 0.13 vs 0.03 at 12 words): real but rare — the
+  pilot's 1-in-4 was an early read on the same single population.
+  Memory doubling and channel noise produced nothing (pilot cells,
+  n=4 each). In the substrate the squeeze *destroys* conventions
+  (0/40) — clipped notes starve its imitation channel. gpt-5-mini
+  fails differently and instructively: its populations bifurcate
+  between plain `label=value` enumeration (success 0.83) and invented
+  pseudo-ciphers ("entry = label shifted two letters") that transmit
+  nothing (success ~0.02, wellformed notes 0–4%) — over-engineered
+  encodings, journaled verbatim; its 12-word cell replicates the
+  E1 null (0/8, agreement 0.01).
+- *E2 (final n=10+10 + families):* real grid play is *worse* than the
+  malformed-era random fallback (success 0.03–0.14 vs ~0.38): both
   agents chase the same salient cells. Haiku fails via ~40% occupied
   picks (misread grids); sonnet reads the grid near-perfectly (2%
-  malformed) yet still fails 0/72-ish, colliding 5–6 times per episode —
-  two copies of one deterministic policy are a mirror match, and extra
-  capability sharpens the mirror. No badge→region convention forms in
-  any variant (0/11 populations).
-- *E2 dialogue:* the message channel is used in 100% of episodes and
-  lifts success 0.04→0.15, but pacts never fossilize into a population
-  convention: both partners propose plans *simultaneously* each episode,
-  the proposals conflict (each typically assigns itself the same role),
-  and partners rotate every episode, so no badge-anchored mapping
-  stabilizes (0/4).
-- *E3 repaired:* both new cells confirm the shared-bias classification.
-  e3_redo (chooser given room to answer) reproduces exhaustive
-  description (per-item share 0.99, prior-match 1.00). e3_squeeze gives
-  the diversity test real teeth by sharing ONE item set across
-  populations: all 4 populations settle on the *same* scheme (1
-  distinct) — the signature of shared model bias, since genuine
-  convention predicts cross-population diversity (substrate: 40/40
-  distinct schemes on matched tasks).
-- *E4 corrected:* the 'fractious' result was fallback noise. With
-  parseable replies, all 7 corrected populations (4 haiku + 3 sonnet)
-  stabilize on 50/50 demands with 0.95–1.00 tail compatibility —
-  sonnet perfectly egalitarian in 3/3. Zero populations form the
-  Axtell–Epstein–Young badge-conditioned class convention (substrate:
-  9/60): the model's fairness prior absorbs the symmetry instead of
+  malformed) yet collides 5–6 times per episode — two copies of one
+  deterministic policy are a mirror match, and extra capability
+  sharpens the mirror; gpt-5-mini replicates (0/6, success ~0.05). No
+  badge→region convention forms in any cell of any family (0/29
+  corrected populations).
+- *E2 dialogue (n=10):* the message channel is used in 100% of episodes
+  and lifts success (last-12 0.14 vs 0.04 without), but pacts never
+  fossilize into a population convention: both partners propose plans
+  *simultaneously* each episode, the proposals conflict (each typically
+  assigns itself the same role), and partners rotate every episode, so
+  no badge-anchored mapping stabilizes (0/10).
+- *E3 (final n=12 + second family):* the haiku cells confirm the
+  shared-bias classification — e3_redo reproduces exhaustive
+  description (per-item share 0.99, prior-match 1.00), and on the
+  shared item set all 12 e3_squeeze populations settle on the *same*
+  scheme (1 distinct). **gpt-5-mini inverts this**: on the identical
+  items, its 8 populations concentrate within-population (per-item
+  modal share 0.52, task success 0.68–0.92, well above haiku's
+  0.48–0.63) while settling on 7 *distinct* schemes across populations
+  with prior-match 0.19 — population-specific description conventions,
+  the pre-registered convention signature (substrate: 40/40 distinct).
+  The contrast localizes the mechanism: with hard distractors and a
+  3-word budget, several minimal discriminating descriptions exist per
+  item; a model competent enough to find them, whose prior does not
+  privilege one, lets interaction history pick — and different
+  populations pick differently.
+- *E4 (final n=12 + families):* with parseable replies, 11 of 12 haiku
+  populations stabilize at 50/50 demands (10 egalitarian + 1 other
+  stable-50/50; compatibility 0.96), sonnet 3/3 and gpt-5-mini 5/6
+  egalitarian. Across 21 corrected live populations and three models:
+  **zero** Axtell–Epstein–Young badge-conditioned class conventions
+  (substrate: 9/60). The fairness prior absorbs the symmetry instead of
   breaking it.
 
-**Synthesis (revised).** In the substrate, conventions form wherever
-familiarity is learnable. In live LLM populations, prior-driven
-competence dominates history: the model plays each encounter from its
-priors — flexible parsing (E1 loose), exhaustive description (E3),
-fairness (E4), salience (E2) — leaving little residue for population
-history to accrete on. Levers that merely make the task harder (noise,
-memory limits, hard distractors) create no conventions; compression
-that makes the prior strategy *infeasible* (E1 squeeze) produces the
-first weak one; negotiation helps performance but its simultaneous,
-partner-rotating structure blocks fossilization; and a stronger model
-sharpens priors — locking the egalitarian norm faster while making
-symmetric coordination *worse*. Convention formation in LLM populations
-tracks whether the individually-optimal prior policy leaves a residual
-coordination problem that only shared history can solve — co-presence,
-turnover, and even dialogue are not enough. Limitations: 3–4 live
-populations per variant cell, short in-context histories, two models;
-variant-suite spend $44.5 (cumulative env spend $60.87 of a $110 cap).
+**Synthesis (final).** Conventions form in an LLM population exactly
+when the individually-optimal prior policy leaves a residual
+coordination problem that only shared history can solve. When the prior
+solves the encounter alone — flexible parsing (E1 at 12 words, all
+families), exhaustive description (haiku E3), fairness (E4, all three
+models), salience-chasing (E2, all three models) — history has nothing
+to grab and no convention forms, however much co-presence, turnover, or
+even explicit negotiation is supplied. When capacity pressure makes the
+prior strategy infeasible but the model cannot construct an
+alternative, it degrades instead of conventionalizing (haiku E1
+squeeze: rare weak conventions; gpt-5-mini E1 squeeze: pseudo-cipher
+collapse). When the model is competent enough to reach the
+reward-equivalent solution manifold and its prior does not single out a
+point on it — gpt-5-mini's minimal discriminating descriptions in E3 —
+population-specific conventions emerge and diverge across populations,
+the full Lewisian signature. The naming game (all families converge)
+and E3-m2 bracket the phenomenon: payoff-coupled alignment is
+sufficient, and prior-underdetermined competence is the side-product
+route. Limitations: 6–12 live populations per load-bearing cell,
+n=3–8 on secondary cells, short in-context histories, three models
+from two vendors.
 """
 
 
