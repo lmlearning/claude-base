@@ -31,3 +31,13 @@
 {"type": "interaction", "t": 28, "i": 0, "j": 15, "agent_i": 0, "agent_j": 15, "name_i": "dosi", "name_j": "dosi", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
 {"type": "interaction", "t": 29, "i": 6, "j": 4, "agent_i": 6, "agent_j": 4, "name_i": "dosi", "name_j": "dosi", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
 {"type": "interaction", "t": 30, "i": 5, "j": 11, "agent_i": 5, "agent_j": 11, "name_i": "dosi", "name_j": "dosi", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 31, "i": 1, "j": 3, "agent_i": 1, "agent_j": 3, "name_i": "dosi", "name_j": "dosi", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 32, "i": 0, "j": 3, "agent_i": 0, "agent_j": 3, "name_i": "dosi", "name_j": "dosi", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 33, "i": 3, "j": 20, "agent_i": 3, "agent_j": 20, "name_i": "dosi", "name_j": "dosi", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 34, "i": 17, "j": 6, "agent_i": 17, "agent_j": 6, "name_i": "dosi", "name_j": "dosi", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 35, "i": 11, "j": 6, "agent_i": 11, "agent_j": 6, "name_i": "dosi", "name_j": "dosi", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 36, "i": 3, "j": 11, "agent_i": 3, "agent_j": 11, "name_i": "dosi", "name_j": "dosi", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 37, "i": 5, "j": 14, "agent_i": 5, "agent_j": 14, "name_i": "dosi", "name_j": "dosi", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 38, "i": 3, "j": 20, "agent_i": 3, "agent_j": 20, "name_i": "dosi", "name_j": "dosi", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 39, "i": 3, "j": 20, "agent_i": 3, "agent_j": 20, "name_i": "dosi", "name_j": "dosi", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 40, "i": 11, "j": 12, "agent_i": 11, "agent_j": 12, "name_i": "dosi", "name_j": "dosi", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
