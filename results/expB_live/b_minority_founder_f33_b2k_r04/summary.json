@@ -1,0 +1,57 @@
+{
+  "config": {
+    "cell": "b_minority_founder_f33_b2k",
+    "run_index": 4,
+    "seed": 1463233429,
+    "phase": "minority",
+    "dialogue": true,
+    "framing": "study",
+    "model": "claude-haiku-4-5",
+    "n_agents": 24,
+    "n_names": 10,
+    "memory_size": 5,
+    "pre_transmission": false,
+    "minority_fraction": 0.33,
+    "minority_budget": 2000
+  },
+  "comprehension_passed": true,
+  "priors": {
+    "diti": 0,
+    "fudiv": 0,
+    "didke": 0,
+    "tovup": 0,
+    "verke": 3,
+    "galne": 2,
+    "pumdi": 0,
+    "pobi": 6,
+    "kabe": 7,
+    "ruke": 2
+  },
+  "priors_malformed": 0,
+  "genesis": {
+    "converged": true,
+    "winner": "diti",
+    "consensus_time": 96
+  },
+  "minority": {
+    "usable": true,
+    "original": "diti",
+    "alt": "tovup",
+    "n_committed": 8,
+    "flipped": false,
+    "interactions_used": 2196
+  },
+  "final": {
+    "t": 2196,
+    "fallback_choices": 0,
+    "unparseable_first_replies": 0,
+    "total_choices": 4392,
+    "malformed_rate": 0.0,
+    "consensus": null,
+    "dominant": [
+      "diti",
+      0.6197916666666666
+    ],
+    "success_rate_window": 0.46875
+  }
+}

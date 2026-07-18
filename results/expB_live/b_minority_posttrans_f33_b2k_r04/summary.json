@@ -1,0 +1,63 @@
+{
+  "config": {
+    "cell": "b_minority_posttrans_f33_b2k",
+    "run_index": 4,
+    "seed": 718257337,
+    "phase": "minority",
+    "dialogue": true,
+    "framing": "study",
+    "model": "claude-haiku-4-5",
+    "n_agents": 24,
+    "n_names": 10,
+    "memory_size": 5,
+    "pre_transmission": true,
+    "minority_fraction": 0.33,
+    "minority_budget": 2000
+  },
+  "comprehension_passed": true,
+  "priors": {
+    "tampe": 5,
+    "pizoz": 0,
+    "dimuz": 0,
+    "dalif": 0,
+    "lepdi": 0,
+    "bazi": 1,
+    "naka": 3,
+    "bibo": 4,
+    "zirle": 7,
+    "dadzo": 0
+  },
+  "priors_malformed": 0,
+  "genesis": {
+    "converged": true,
+    "winner": "bazi",
+    "consensus_time": 96
+  },
+  "pre_transmission": {
+    "original": "bazi",
+    "final": "bazi",
+    "survived": true,
+    "n_replacements": 24
+  },
+  "minority": {
+    "usable": true,
+    "original": "bazi",
+    "alt": "dalif",
+    "n_committed": 8,
+    "flipped": true,
+    "interactions_used": 1804
+  },
+  "final": {
+    "t": 1804,
+    "fallback_choices": 0,
+    "unparseable_first_replies": 2,
+    "total_choices": 3610,
+    "malformed_rate": 0.000554016620498615,
+    "consensus": null,
+    "dominant": [
+      "dalif",
+      0.9010416666666666
+    ],
+    "success_rate_window": 0.8020833333333334
+  }
+}

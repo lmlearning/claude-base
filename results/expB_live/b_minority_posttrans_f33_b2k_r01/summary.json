@@ -1,0 +1,63 @@
+{
+  "config": {
+    "cell": "b_minority_posttrans_f33_b2k",
+    "run_index": 1,
+    "seed": 1539069446,
+    "phase": "minority",
+    "dialogue": true,
+    "framing": "study",
+    "model": "claude-haiku-4-5",
+    "n_agents": 24,
+    "n_names": 10,
+    "memory_size": 5,
+    "pre_transmission": true,
+    "minority_fraction": 0.33,
+    "minority_budget": 2000
+  },
+  "comprehension_passed": true,
+  "priors": {
+    "mipfi": 0,
+    "zazit": 11,
+    "fivu": 0,
+    "rilki": 6,
+    "bibko": 1,
+    "nulug": 0,
+    "bemi": 0,
+    "gorve": 2,
+    "lozsa": 0,
+    "tozu": 0
+  },
+  "priors_malformed": 0,
+  "genesis": {
+    "converged": true,
+    "winner": "mipfi",
+    "consensus_time": 96
+  },
+  "pre_transmission": {
+    "original": "mipfi",
+    "final": "mipfi",
+    "survived": true,
+    "n_replacements": 24
+  },
+  "minority": {
+    "usable": true,
+    "original": "mipfi",
+    "alt": "tozu",
+    "n_committed": 8,
+    "flipped": true,
+    "interactions_used": 1697
+  },
+  "final": {
+    "t": 1697,
+    "fallback_choices": 0,
+    "unparseable_first_replies": 0,
+    "total_choices": 3394,
+    "malformed_rate": 0.0,
+    "consensus": null,
+    "dominant": [
+      "tozu",
+      0.9010416666666666
+    ],
+    "success_rate_window": 0.8229166666666666
+  }
+}

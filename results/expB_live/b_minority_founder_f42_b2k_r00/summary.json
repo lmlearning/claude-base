@@ -1,0 +1,57 @@
+{
+  "config": {
+    "cell": "b_minority_founder_f42_b2k",
+    "run_index": 0,
+    "seed": 2345231753,
+    "phase": "minority",
+    "dialogue": true,
+    "framing": "rounds",
+    "model": "claude-haiku-4-5",
+    "n_agents": 24,
+    "n_names": 10,
+    "memory_size": 5,
+    "pre_transmission": false,
+    "minority_fraction": 0.42,
+    "minority_budget": 2000
+  },
+  "comprehension_passed": true,
+  "priors": {
+    "zafki": 0,
+    "bates": 16,
+    "gubez": 0,
+    "sunvu": 0,
+    "ginna": 2,
+    "vapmu": 0,
+    "zezi": 1,
+    "dapi": 1,
+    "nisuf": 0,
+    "mufiv": 0
+  },
+  "priors_malformed": 0,
+  "genesis": {
+    "converged": true,
+    "winner": "zafki",
+    "consensus_time": 102
+  },
+  "minority": {
+    "usable": true,
+    "original": "zafki",
+    "alt": "vapmu",
+    "n_committed": 10,
+    "flipped": true,
+    "interactions_used": 436
+  },
+  "final": {
+    "t": 436,
+    "fallback_choices": 0,
+    "unparseable_first_replies": 0,
+    "total_choices": 872,
+    "malformed_rate": 0.0,
+    "consensus": null,
+    "dominant": [
+      "vapmu",
+      0.9010416666666666
+    ],
+    "success_rate_window": 0.84375
+  }
+}
