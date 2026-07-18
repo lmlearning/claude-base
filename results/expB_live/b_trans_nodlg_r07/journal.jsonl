@@ -377,3 +377,26 @@
 {"type": "interaction", "t": 355, "i": 14, "j": 18, "agent_i": 14, "agent_j": 30, "name_i": "lunu", "name_j": "lunu", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
 {"type": "interaction", "t": 356, "i": 8, "j": 20, "agent_i": 28, "agent_j": 33, "name_i": "lunu", "name_j": "lunu", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
 {"type": "replacement", "t": 356, "slot": 16, "agent_id": 43, "generation": 0}
+{"type": "interaction", "t": 357, "i": 17, "j": 16, "agent_i": 37, "agent_j": 43, "name_i": "lunu", "name_j": "lunu", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 358, "i": 2, "j": 3, "agent_i": 36, "agent_j": 42, "name_i": "lunu", "name_j": "lunu", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 359, "i": 0, "j": 6, "agent_i": 40, "agent_j": 39, "name_i": "lunu", "name_j": "lunu", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 360, "i": 9, "j": 11, "agent_i": 24, "agent_j": 25, "name_i": "lunu", "name_j": "lunu", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 361, "i": 4, "j": 17, "agent_i": 26, "agent_j": 37, "name_i": "lunu", "name_j": "lunu", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 362, "i": 0, "j": 5, "agent_i": 40, "agent_j": 27, "name_i": "lunu", "name_j": "lunu", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 363, "i": 5, "j": 3, "agent_i": 27, "agent_j": 42, "name_i": "lunu", "name_j": "lunu", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 364, "i": 19, "j": 22, "agent_i": 29, "agent_j": 38, "name_i": "lunu", "name_j": "lunu", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "replacement", "t": 364, "slot": 14, "agent_id": 44, "generation": 0}
+{"type": "interaction", "t": 365, "i": 17, "j": 6, "agent_i": 37, "agent_j": 39, "name_i": "lunu", "name_j": "lunu", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 366, "i": 1, "j": 23, "agent_i": 32, "agent_j": 35, "name_i": "lunu", "name_j": "lunu", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 367, "i": 12, "j": 22, "agent_i": 12, "agent_j": 38, "name_i": "lunu", "name_j": "lunu", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 368, "i": 19, "j": 2, "agent_i": 29, "agent_j": 36, "name_i": "lunu", "name_j": "lunu", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 369, "i": 0, "j": 4, "agent_i": 40, "agent_j": 26, "name_i": "lunu", "name_j": "lunu", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 370, "i": 11, "j": 6, "agent_i": 25, "agent_j": 39, "name_i": "lunu", "name_j": "lunu", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 371, "i": 2, "j": 21, "agent_i": 36, "agent_j": 41, "name_i": "lunu", "name_j": "lunu", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 372, "i": 23, "j": 22, "agent_i": 35, "agent_j": 38, "name_i": "lunu", "name_j": "lunu", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "replacement", "t": 372, "slot": 15, "agent_id": 45, "generation": 0}
+{"type": "interaction", "t": 373, "i": 4, "j": 5, "agent_i": 26, "agent_j": 27, "name_i": "lunu", "name_j": "lunu", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 374, "i": 19, "j": 15, "agent_i": 29, "agent_j": 45, "name_i": "lunu", "name_j": "lunu", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 375, "i": 18, "j": 22, "agent_i": 30, "agent_j": 38, "name_i": "lunu", "name_j": "lunu", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 376, "i": 11, "j": 6, "agent_i": 25, "agent_j": 39, "name_i": "lunu", "name_j": "lunu", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 377, "i": 6, "j": 13, "agent_i": 39, "agent_j": 13, "name_i": "lunu", "name_j": "lunu", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}

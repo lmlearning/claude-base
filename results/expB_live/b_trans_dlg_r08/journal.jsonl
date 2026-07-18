@@ -365,3 +365,28 @@
 {"type": "interaction", "t": 344, "i": 13, "j": 12, "agent_i": 28, "agent_j": 12, "name_i": "mubel", "name_j": "mubel", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
 {"type": "interaction", "t": 345, "i": 11, "j": 7, "agent_i": 25, "agent_j": 30, "name_i": "mubel", "name_j": "mubel", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
 {"type": "interaction", "t": 346, "i": 19, "j": 6, "agent_i": 29, "agent_j": 31, "name_i": "mubel", "name_j": "mubel", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 347, "i": 11, "j": 8, "agent_i": 25, "agent_j": 8, "name_i": "mubel", "name_j": "mubel", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 348, "i": 12, "j": 11, "agent_i": 12, "agent_j": 25, "name_i": "mubel", "name_j": "mubel", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "replacement", "t": 348, "slot": 23, "agent_id": 42, "generation": 0}
+{"type": "interaction", "t": 349, "i": 5, "j": 15, "agent_i": 35, "agent_j": 15, "name_i": "mubel", "name_j": "mubel", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 350, "i": 6, "j": 22, "agent_i": 31, "agent_j": 22, "name_i": "mubel", "name_j": "mubel", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 351, "i": 20, "j": 23, "agent_i": 40, "agent_j": 42, "name_i": "mubel", "name_j": "mubel", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 352, "i": 4, "j": 2, "agent_i": 41, "agent_j": 24, "name_i": "mubel", "name_j": "mubel", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 353, "i": 8, "j": 19, "agent_i": 8, "agent_j": 29, "name_i": "mubel", "name_j": "mubel", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 354, "i": 5, "j": 3, "agent_i": 35, "agent_j": 39, "name_i": "mubel", "name_j": "mubel", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 355, "i": 1, "j": 0, "agent_i": 38, "agent_j": 34, "name_i": "mubel", "name_j": "mubel", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 356, "i": 3, "j": 11, "agent_i": 39, "agent_j": 25, "name_i": "mubel", "name_j": "mubel", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "replacement", "t": 356, "slot": 22, "agent_id": 43, "generation": 0}
+{"type": "interaction", "t": 357, "i": 9, "j": 23, "agent_i": 32, "agent_j": 42, "name_i": "mubel", "name_j": "mubel", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 358, "i": 15, "j": 16, "agent_i": 15, "agent_j": 26, "name_i": "mubel", "name_j": "mubel", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 359, "i": 6, "j": 3, "agent_i": 31, "agent_j": 39, "name_i": "mubel", "name_j": "mubel", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 360, "i": 0, "j": 6, "agent_i": 34, "agent_j": 31, "name_i": "mubel", "name_j": "mubel", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 361, "i": 4, "j": 9, "agent_i": 41, "agent_j": 32, "name_i": "mubel", "name_j": "mubel", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 362, "i": 16, "j": 12, "agent_i": 26, "agent_j": 12, "name_i": "mubel", "name_j": "mubel", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 363, "i": 19, "j": 3, "agent_i": 29, "agent_j": 39, "name_i": "mubel", "name_j": "mubel", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 364, "i": 13, "j": 3, "agent_i": 28, "agent_j": 39, "name_i": "mubel", "name_j": "mubel", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "replacement", "t": 364, "slot": 15, "agent_id": 44, "generation": 0}
+{"type": "interaction", "t": 365, "i": 6, "j": 0, "agent_i": 31, "agent_j": 34, "name_i": "mubel", "name_j": "mubel", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 366, "i": 19, "j": 12, "agent_i": 29, "agent_j": 12, "name_i": "mubel", "name_j": "mubel", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 367, "i": 23, "j": 2, "agent_i": 42, "agent_j": 24, "name_i": "mubel", "name_j": "mubel", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 368, "i": 6, "j": 21, "agent_i": 31, "agent_j": 33, "name_i": "mubel", "name_j": "mubel", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}

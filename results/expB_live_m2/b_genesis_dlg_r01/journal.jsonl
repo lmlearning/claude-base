@@ -245,3 +245,8 @@
 {"type": "interaction", "t": 242, "i": 12, "j": 11, "agent_i": 12, "agent_j": 11, "name_i": "dagod", "name_j": "dagod", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
 {"type": "interaction", "t": 243, "i": 7, "j": 0, "agent_i": 7, "agent_j": 0, "name_i": "dagod", "name_j": "dagod", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
 {"type": "interaction", "t": 244, "i": 6, "j": 1, "agent_i": 6, "agent_j": 1, "name_i": "dagod", "name_j": "dagod", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 245, "i": 6, "j": 4, "agent_i": 6, "agent_j": 4, "name_i": "dagod", "name_j": "dagod", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 246, "i": 17, "j": 8, "agent_i": 17, "agent_j": 8, "name_i": "dagod", "name_j": "dagod", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 247, "i": 4, "j": 7, "agent_i": 4, "agent_j": 7, "name_i": "dagod", "name_j": "dagod", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 248, "i": 15, "j": 4, "agent_i": 15, "agent_j": 4, "name_i": "dagod", "name_j": "dagod", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 249, "i": 19, "j": 6, "agent_i": 19, "agent_j": 6, "name_i": "dagod", "name_j": "dagod", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}

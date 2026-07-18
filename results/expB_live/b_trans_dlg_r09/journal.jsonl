@@ -345,3 +345,27 @@
 {"type": "interaction", "t": 326, "i": 20, "j": 10, "agent_i": 20, "agent_j": 31, "name_i": "lokga", "name_j": "lokga", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
 {"type": "interaction", "t": 327, "i": 5, "j": 21, "agent_i": 33, "agent_j": 21, "name_i": "lokga", "name_j": "lokga", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
 {"type": "interaction", "t": 328, "i": 20, "j": 10, "agent_i": 20, "agent_j": 31, "name_i": "lokga", "name_j": "lokga", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 329, "i": 14, "j": 18, "agent_i": 14, "agent_j": 18, "name_i": "lokga", "name_j": "lokga", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 330, "i": 6, "j": 11, "agent_i": 34, "agent_j": 11, "name_i": "lokga", "name_j": "lokga", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 331, "i": 4, "j": 13, "agent_i": 29, "agent_j": 13, "name_i": "lokga", "name_j": "lokga", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 332, "i": 12, "j": 16, "agent_i": 12, "agent_j": 26, "name_i": "lokga", "name_j": "lokga", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "replacement", "t": 332, "slot": 21, "agent_id": 40, "generation": 0}
+{"type": "interaction", "t": 333, "i": 2, "j": 19, "agent_i": 28, "agent_j": 30, "name_i": "lokga", "name_j": "lokga", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 334, "i": 6, "j": 8, "agent_i": 34, "agent_j": 25, "name_i": "lokga", "name_j": "lokga", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 335, "i": 17, "j": 4, "agent_i": 38, "agent_j": 29, "name_i": "lokga", "name_j": "lokga", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 336, "i": 9, "j": 0, "agent_i": 9, "agent_j": 36, "name_i": "lokga", "name_j": "lokga", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 337, "i": 8, "j": 20, "agent_i": 25, "agent_j": 20, "name_i": "lokga", "name_j": "lokga", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 338, "i": 7, "j": 20, "agent_i": 24, "agent_j": 20, "name_i": "lokga", "name_j": "lokga", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 339, "i": 3, "j": 19, "agent_i": 32, "agent_j": 30, "name_i": "lokga", "name_j": "lokga", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 340, "i": 18, "j": 13, "agent_i": 18, "agent_j": 13, "name_i": "lokga", "name_j": "lokga", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "replacement", "t": 340, "slot": 18, "agent_id": 41, "generation": 0}
+{"type": "interaction", "t": 341, "i": 20, "j": 18, "agent_i": 20, "agent_j": 41, "name_i": "lokga", "name_j": "lokga", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 342, "i": 7, "j": 8, "agent_i": 24, "agent_j": 25, "name_i": "lokga", "name_j": "lokga", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 343, "i": 4, "j": 22, "agent_i": 29, "agent_j": 39, "name_i": "lokga", "name_j": "lokga", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 344, "i": 23, "j": 19, "agent_i": 37, "agent_j": 30, "name_i": "lokga", "name_j": "lokga", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 345, "i": 6, "j": 1, "agent_i": 34, "agent_j": 35, "name_i": "lokga", "name_j": "lokga", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 346, "i": 13, "j": 15, "agent_i": 13, "agent_j": 27, "name_i": "lokga", "name_j": "lokga", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 347, "i": 1, "j": 16, "agent_i": 35, "agent_j": 26, "name_i": "lokga", "name_j": "lokga", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 348, "i": 8, "j": 15, "agent_i": 25, "agent_j": 27, "name_i": "lokga", "name_j": "lokga", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "replacement", "t": 348, "slot": 9, "agent_id": 42, "generation": 0}
+{"type": "interaction", "t": 349, "i": 13, "j": 17, "agent_i": 13, "agent_j": 38, "name_i": "lokga", "name_j": "lokga", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}

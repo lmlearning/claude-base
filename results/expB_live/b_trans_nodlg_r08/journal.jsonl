@@ -359,3 +359,27 @@
 {"type": "interaction", "t": 339, "i": 10, "j": 19, "agent_i": 24, "agent_j": 19, "name_i": "zufli", "name_j": "zufli", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
 {"type": "interaction", "t": 340, "i": 10, "j": 12, "agent_i": 24, "agent_j": 34, "name_i": "zufli", "name_j": "zufli", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
 {"type": "replacement", "t": 340, "slot": 16, "agent_id": 41, "generation": 0}
+{"type": "interaction", "t": 341, "i": 23, "j": 16, "agent_i": 23, "agent_j": 41, "name_i": "zufli", "name_j": "zufli", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 342, "i": 20, "j": 15, "agent_i": 20, "agent_j": 39, "name_i": "zufli", "name_j": "zufli", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 343, "i": 19, "j": 8, "agent_i": 19, "agent_j": 27, "name_i": "zufli", "name_j": "zufli", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 344, "i": 6, "j": 5, "agent_i": 40, "agent_j": 5, "name_i": "zufli", "name_j": "zufli", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 345, "i": 23, "j": 7, "agent_i": 23, "agent_j": 33, "name_i": "zufli", "name_j": "zufli", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 346, "i": 11, "j": 5, "agent_i": 11, "agent_j": 5, "name_i": "zufli", "name_j": "zufli", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 347, "i": 23, "j": 19, "agent_i": 23, "agent_j": 19, "name_i": "zufli", "name_j": "zufli", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 348, "i": 18, "j": 9, "agent_i": 25, "agent_j": 37, "name_i": "zufli", "name_j": "zufli", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "replacement", "t": 348, "slot": 23, "agent_id": 42, "generation": 0}
+{"type": "interaction", "t": 349, "i": 3, "j": 5, "agent_i": 38, "agent_j": 5, "name_i": "zufli", "name_j": "zufli", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 350, "i": 7, "j": 22, "agent_i": 33, "agent_j": 29, "name_i": "zufli", "name_j": "zufli", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 351, "i": 15, "j": 12, "agent_i": 39, "agent_j": 34, "name_i": "zufli", "name_j": "zufli", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 352, "i": 18, "j": 7, "agent_i": 25, "agent_j": 33, "name_i": "zufli", "name_j": "zufli", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 353, "i": 2, "j": 20, "agent_i": 30, "agent_j": 20, "name_i": "zufli", "name_j": "zufli", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 354, "i": 1, "j": 23, "agent_i": 31, "agent_j": 42, "name_i": "zufli", "name_j": "zufli", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 355, "i": 11, "j": 21, "agent_i": 11, "agent_j": 35, "name_i": "zufli", "name_j": "zufli", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 356, "i": 13, "j": 18, "agent_i": 36, "agent_j": 25, "name_i": "zufli", "name_j": "zufli", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "replacement", "t": 356, "slot": 20, "agent_id": 43, "generation": 0}
+{"type": "interaction", "t": 357, "i": 13, "j": 7, "agent_i": 36, "agent_j": 33, "name_i": "zufli", "name_j": "zufli", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 358, "i": 1, "j": 0, "agent_i": 31, "agent_j": 0, "name_i": "zufli", "name_j": "zufli", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 359, "i": 13, "j": 8, "agent_i": 36, "agent_j": 27, "name_i": "zufli", "name_j": "zufli", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 360, "i": 15, "j": 21, "agent_i": 39, "agent_j": 35, "name_i": "zufli", "name_j": "zufli", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 361, "i": 20, "j": 22, "agent_i": 43, "agent_j": 29, "name_i": "zufli", "name_j": "zufli", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 362, "i": 11, "j": 17, "agent_i": 11, "agent_j": 26, "name_i": "zufli", "name_j": "zufli", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
