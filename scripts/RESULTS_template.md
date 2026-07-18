@@ -260,3 +260,7 @@ mock mode.
 ## 9. Claims → evidence map
 
 {{CLAIMS}}
+
+## 10. Review-response experiments
+
+{{REVIEW}}

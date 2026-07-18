@@ -1,0 +1,25 @@
+{
+ "substrate": {
+  "delta_point": -0.00021,
+  "delta_range_compatible": [
+   -0.00064,
+   0.00032
+  ],
+  "method": "difference of independent bootstrap CIs (conservative)"
+ },
+ "live": {
+  "founder_ci": [
+   0.2659,
+   0.33
+  ],
+  "posttrans_interval": [
+   0.25,
+   0.33
+  ],
+  "delta_range_compatible": [
+   -0.08,
+   0.064
+  ],
+  "method": "interval arithmetic on the founder bootstrap CI and the posttrans separation interval"
+ }
+}

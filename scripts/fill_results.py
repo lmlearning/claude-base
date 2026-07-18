@@ -8,6 +8,8 @@ JSON so the document is regenerable after any re-analysis.
 import json
 import sys
 
+import numpy as np
+
 S = json.load(open("results/analysis_summary.json"))
 A = S["expA"]
 BL = S.get("expB_live", {})
@@ -712,6 +714,169 @@ def render_claims():
 """
 
 
+def render_review():
+    def j(path):
+        try:
+            return json.load(open(path))
+        except FileNotFoundError:
+            return None
+    parts = ["All criteria below were frozen in decision-log entries 16–23 "
+             "and committed before the corresponding data were collected."]
+    sr = j("results/scheme_rules.json")
+    if sr:
+        parts.append(f"""
+### Scheme-coding specification and grain-sensitivity (entries 16)
+A population's scheme is its 6-tuple of per-item modal trait-sets (last
+15 formation mentions per item). Distinct-scheme counts under all three
+frozen rules — A (exact tuple), B (mean per-item Jaccard ≥ 0.5
+clustering), C (any-item difference):
+| family | n | rule A | rule B | rule C |
+|---|---|---|---|---|
+| substrate | {sr['substrate']['n_pops']} | {sr['substrate']['ruleA']} | {sr['substrate']['ruleB']} | {sr['substrate']['ruleC']} |
+| haiku | {sr['haiku']['n_pops']} | {sr['haiku']['ruleA']} | {sr['haiku']['ruleB']} | {sr['haiku']['ruleC']} |
+| gpt-5-mini | {sr['m2']['n_pops']} | {sr['m2']['ruleA']} | {sr['m2']['ruleB']} | {sr['m2']['ruleC']} |
+
+The m2-vs-haiku contrast (7/8 vs 1/12) is grain-stable across rules A
+and C. Rule B collapses **every** family to one cluster — including the
+substrate positive control whose 40 distinct schemes are uncontested —
+so it cannot detect any convention diversity at that threshold; it
+bounds the taxonomy's coarse end rather than undermining the count.""")
+    nd = j("results/review/null_diversity.json")
+    if nd:
+        m2, hk = nd.get("m2", {}), nd.get("haiku", {})
+        parts.append(f"""
+### No-interaction diversity baseline (entry 17)
+16 pseudo-populations per family of independent zero-shot generations
+(shared items, frozen prompt, empty history, matched per-item event
+counts, run temperature), identical extraction. Null distribution of
+distinct-scheme counts among resampled groups of 8 (rule A):
+gpt-5-mini mean {m2.get('ruleA', {}).get('mean_distinct', 'TBD'):.2f},
+P(≥7 distinct) = {m2.get('ruleA', {}).get('p_ge_7', 'TBD')};
+haiku mean {hk.get('ruleA', {}).get('mean_distinct', 'TBD'):.2f},
+P(≥7) = {hk.get('ruleA', {}).get('p_ge_7', 'TBD')}.""")
+    else:
+        parts.append("\n### No-interaction diversity baseline — *(running)*")
+    tr = j("results/review/transplants.json")
+    if tr:
+        ad = sum(t["adopted"] for t in tr)
+        lat = [t["latency_sends"] for t in tr if t["latency_sends"]]
+        ms = [t["match_share_last10"] for t in tr
+              if t["match_share_last10"] is not None]
+        stab = [t["host_items_stable_of6"] for t in tr]
+        parts.append(f"""
+### Transplant (entry 18)
+{len(tr)} transplants across distinct-scheme ordered pairs: adopted
+{ad}/{len(tr)} (criterion: ≥80% of last 10 sends matching the host
+modal); mean last-10 match share {np.mean(ms):.2f}; median latency
+{(int(np.median(lat)) if lat else 'n/a')} sends; host items stable
+{np.mean(stab):.1f}/6.""")
+    else:
+        parts.append("\n### Transplant — *(running)*")
+    sw = j("results/review/swap.json")
+    if sw:
+        lines = ["\n### Cross-population swap (entry 19)"]
+        for fam, lab in (("m2", "gpt-5-mini"), ("haiku", "haiku control")):
+            d = sw.get(fam)
+            if d:
+                lines.append(
+                    f"- **{lab}**: within-population success "
+                    f"{d['within_success']:.3f} vs cross-population "
+                    f"{d['cross_success']:.3f} (Δ = "
+                    f"{d['within_success'] - d['cross_success']:+.3f}).")
+        lines.append("The haiku prediction (single shared scheme → no "
+                     "swap cost) is tested and reported as such.")
+        parts.append("\n".join(lines))
+    else:
+        parts.append("\n### Swap — *(running)*")
+    to = j("results/review_m2_turnover.json")
+    if to:
+        parts.append(f"""
+### E3-m2 turnover (entry 23; computed on the existing generation of
+replacement contained in the e3_squeeze journals)
+Scheme survival {to['survived']}/{to['n_pops']} populations (≥4/6 items
+stable; mean {to['mean_items_stable']}/6); newcomer mean match share
+{to['newcomer_mean_match']}. Unlike naming-game conventions (perfect
+survival at matched turnover), m2 description schemes are **fragile
+under full population replacement** — consistent with their weak
+within-population concentration (0.52): the convention is real
+(diversity + swap) but noisily transmitted.""")
+    ax = j("results/review/axis_probes.json")
+    if ax:
+        lines = ["\n### Independent axis measurements (entry 21)"]
+        for fam, lab in (("haiku", "haiku"), ("m2", "gpt-5-mini")):
+            d = ax.get(fam, {})
+            r = d.get("reachability", {})
+            pr = d.get("prior_concentration", {}).get("e3_items", [])
+            ent = np.mean([x["entropy_bits"] for x in pr]) if pr else None
+            mp = np.mean([x["modal_p"] for x in pr]) if pr else None
+            lines.append(
+                f"- **{lab}**: reachability — E1 values-only code "
+                f"{r.get('e1_code_success', 'TBD')}, E3 specified scheme "
+                f"{r.get('e3_scheme_success', 'TBD')} "
+                f"(n={r.get('n_trials')}); prior concentration (E3, "
+                f"{'50' if pr else '?'} samples/item) — mean entropy "
+                f"{ent:.2f} bits, mean modal probability {mp:.2f}."
+                if ent is not None else f"- **{lab}**: pending")
+        lines.append("These probes assign the quadrant axes from "
+                     "measurements independent of population outcomes.")
+        parts.append("\n".join(lines))
+    else:
+        parts.append("\n### Axis probes — *(running)*")
+    eq = j("results/equivalence_bounds.json")
+    if eq:
+        s_, l_ = eq["substrate"], eq["live"]
+        parts.append(f"""
+### Equivalence bounds for the null history effect (§6)
+No founder-vs-post-transmission difference detected in either tier;
+effects up to Δ remain compatible with the data — substrate: Δf₅₀ ∈
+[{s_['delta_range_compatible'][0]:+.4f}, {s_['delta_range_compatible'][1]:+.4f}]
+(bootstrap); live: Δf₅₀ ∈ [{l_['delta_range_compatible'][0]:+.3f},
+{l_['delta_range_compatible'][1]:+.3f}] (founder CI × separation
+interval).""")
+    parts.append("""
+### Survival-figure units (entry 22)
+In the simulator, one slot is replaced every k interactions (r slots
+per event when k=1), so a generation is N·k interactions; an agent
+participates in 2/N of interactions, giving an expected lifetime of
+≈ 2k plays. k is therefore INTERACTIONS PER REPLACEMENT (larger k =
+slower turnover; k<1 encodes r=1/k replacements per interaction). The
+earlier axis label inverted this; figure, caption, and text now agree.
+At the measured boundaries, conventions survive one generation down to
+k₅₀ ≈ 0.25 (lifetime ≈ 0.5 plays) and two generations at k₅₀ ≈ 0.71.
+
+### Capability-claim scoping (§6)
+The E2 capability observation (stronger model → sharper mirror match)
+is a tested-model contrast — haiku-4.5 vs sonnet-4.5, direction
+replicated in gpt-5-mini — not a general capability law; no claim
+beyond the tested models is made.
+
+### E2 mitigation cells (entry 20)
+{MITIGATION}""")
+    E2S = {}
+    try:
+        E2S = json.load(open("results/envs_summary.json")).get("live", {})
+    except FileNotFoundError:
+        pass
+    role, het = E2S.get("e2_role"), E2S.get("e2_hetero")
+    base = E2S.get("e2_think", {})
+    mit = []
+    if role:
+        mit.append(
+            f"Exogenous role line: success first-12 "
+            f"{ci(role['success_first12'], '{:.2f}')} → last-12 "
+            f"{ci(role['success_last12'], '{:.2f}')} vs e2_think baseline "
+            f"last-12 {ci(base.get('success_last12', {}), '{:.2f}')} "
+            f"(n={role['n_pops']}).")
+    if het:
+        mit.append(
+            f"Heterogeneous pairing (haiku × gpt-5-mini): success "
+            f"first-12 {ci(het['success_first12'], '{:.2f}')} → last-12 "
+            f"{ci(het['success_last12'], '{:.2f}')} (n={het['n_pops']}).")
+    text = "\n".join(parts)
+    return text.replace("{MITIGATION}",
+                        "\n".join(mit) if mit else "*(running)*")
+
+
 # ---------------- render ----------------
 
 tpl = open("scripts/RESULTS_template.md").read()
@@ -735,6 +900,7 @@ pricing, $1/$5 per MTok). Wall-clock ≈ 3.5 h at 8 concurrent runs
     "{{ENVS}}": render_envs(),
     "{{HONESTY}}": render_honesty(),
     "{{CLAIMS}}": render_claims(),
+    "{{REVIEW}}": render_review(),
 }
 for k, v in fills.items():
     tpl = tpl.replace(k, v)

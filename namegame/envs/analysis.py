@@ -192,7 +192,16 @@ def analyze_e1(outdir: str, cell: str) -> dict:
         })
     modals = [p["modal"] for p in per_pop if p["conventionalized"]]
     counts = list(Counter(modals).values())
+    all_modals = [p["modal"] for p in per_pop]
+    rngb = np.random.default_rng(1)
+    dr = [len({str(all_modals[i]) for i in
+               rngb.integers(len(all_modals), size=len(all_modals))})
+          / len(all_modals) for _ in range(2000)] if all_modals else []
     out = {
+        "diversity_ratio_ci": ({"estimate": float(np.mean(dr)),
+                                "lo": float(np.quantile(dr, 0.025)),
+                                "hi": float(np.quantile(dr, 0.975))}
+                               if dr else None),
         "n_pops": len(per_pop),
         "conventionalized": binomial_ci(
             sum(p["conventionalized"] for p in per_pop), len(per_pop)),
@@ -385,8 +394,16 @@ def analyze_e3(outdir: str, cell: str = "e3") -> dict:
                                           if matches_prior else None),
         })
     schemes = [str(p["scheme"]) for p in per_pop]
+    rngb = np.random.default_rng(1)
+    dr = [len({schemes[i] for i in
+               rngb.integers(len(schemes), size=len(schemes))})
+          / len(schemes) for _ in range(2000)] if schemes else []
     return {
         "n_pops": len(per_pop),
+        "diversity_ratio_ci": ({"estimate": float(np.mean(dr)),
+                                "lo": float(np.quantile(dr, 0.025)),
+                                "hi": float(np.quantile(dr, 0.975))}
+                               if dr else None),
         "items_conventionalized_of6": bootstrap_ci(
             [p["items_conventionalized"] for p in per_pop]),
         "mean_item_share": bootstrap_ci([p["mean_item_share"]

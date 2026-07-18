@@ -1,0 +1,20 @@
+{
+ "m2": {
+  "n_pops": 8,
+  "ruleA": 7,
+  "ruleB": 1,
+  "ruleC": 7
+ },
+ "haiku": {
+  "n_pops": 12,
+  "ruleA": 1,
+  "ruleB": 1,
+  "ruleC": 1
+ },
+ "substrate": {
+  "n_pops": 40,
+  "ruleA": 40,
+  "ruleB": 1,
+  "ruleC": 40
+ }
+}

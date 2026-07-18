@@ -106,7 +106,10 @@ def fig_survival(figdir):
         if x:
             ax.axvline(x, color=color, lw=0.8, ls=":")
     ax.set_xscale("log")
-    ax.set_xlabel("turnover rate k (replacements per 24 interactions)")
+    # units derived from the simulator (decision-log entry 22): k is
+    # interactions per replacement; expected agent lifetime ~ 2k plays
+    ax.set_xlabel("k = interactions per replacement"
+                  "  (agent lifetime $\\approx$ 2k plays)")
     ax.set_ylabel("survival probability")
     ax.legend(loc="lower left")
     save(fig, figdir, "fig_survival.pdf")
@@ -217,9 +220,26 @@ def fig_esuite(figdir):
             labels.append(label)
         x = np.arange(len(xs))
         ax.bar(x - 0.19, cs, width=0.36, color=BLUE,
-               label="within-pop concentration")
+               label="within-pop concentration\n(mean modal share)")
         ax.bar(x + 0.19, ds, width=0.36, color=ORANGE,
-               label="cross-pop diversity\n(distinct schemes / n)")
+               label="cross-pop diversity\n(distinct schemes / n, rule A)")
+        # bootstrap CIs over populations for both statistics
+        for i, (cell, _) in enumerate([c for c in cells if
+                                       d.get(c[0])][:len(xs)]):
+            c = d.get(cell, {})
+            ms = (c.get("modal_share") if cell.startswith("e1")
+                  else c.get("mean_item_share")) or {}
+            if ms.get("lo") is not None:
+                ax.errorbar([i - 0.19], [ms["estimate"]],
+                            yerr=[[max(0, ms["estimate"] - ms["lo"])],
+                                  [max(0, ms["hi"] - ms["estimate"])]],
+                            fmt="none", ecolor=GRAY, lw=0.8, capsize=2)
+            dr = c.get("diversity_ratio_ci") or {}
+            if dr.get("lo") is not None:
+                ax.errorbar([i + 0.19], [dr["estimate"]],
+                            yerr=[[max(0, dr["estimate"] - dr["lo"])],
+                                  [max(0, dr["hi"] - dr["estimate"])]],
+                            fmt="none", ecolor=GRAY, lw=0.8, capsize=2)
         ax.set_xticks(x)
         ax.set_xticklabels(labels)
         ax.set_ylim(0, 1.05)

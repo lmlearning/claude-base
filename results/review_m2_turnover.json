@@ -1,0 +1,664 @@
+{
+ "survived": 2,
+ "n_pops": 8,
+ "mean_items_stable": 2.75,
+ "newcomer_mean_match": 0.356,
+ "per_pop": [
+  {
+   "pop": "e3_squeeze_p00",
+   "items_stable_of6": 3,
+   "survived": false,
+   "n_newcomers": 12,
+   "newcomer_mean_match": 0.379,
+   "newcomers_adopted": 0,
+   "adoptions": [
+    {
+     "agent": 12,
+     "n_sends": 10,
+     "match_share": 0.5,
+     "adopted": false
+    },
+    {
+     "agent": 14,
+     "n_sends": 14,
+     "match_share": 0.4,
+     "adopted": false
+    },
+    {
+     "agent": 16,
+     "n_sends": 8,
+     "match_share": 0.25,
+     "adopted": false
+    },
+    {
+     "agent": 15,
+     "n_sends": 4,
+     "match_share": 0.25,
+     "adopted": false
+    },
+    {
+     "agent": 13,
+     "n_sends": 6,
+     "match_share": 0.667,
+     "adopted": false
+    },
+    {
+     "agent": 19,
+     "n_sends": 16,
+     "match_share": 0.3,
+     "adopted": false
+    },
+    {
+     "agent": 18,
+     "n_sends": 5,
+     "match_share": 0.6,
+     "adopted": false
+    },
+    {
+     "agent": 20,
+     "n_sends": 7,
+     "match_share": 0.0,
+     "adopted": false
+    },
+    {
+     "agent": 21,
+     "n_sends": 1,
+     "match_share": 0.0,
+     "adopted": false
+    },
+    {
+     "agent": 17,
+     "n_sends": 8,
+     "match_share": 0.5,
+     "adopted": false
+    },
+    {
+     "agent": 22,
+     "n_sends": 7,
+     "match_share": 0.286,
+     "adopted": false
+    },
+    {
+     "agent": 23,
+     "n_sends": 5,
+     "match_share": 0.8,
+     "adopted": false
+    }
+   ]
+  },
+  {
+   "pop": "e3_squeeze_p01",
+   "items_stable_of6": 4,
+   "survived": true,
+   "n_newcomers": 12,
+   "newcomer_mean_match": 0.408,
+   "newcomers_adopted": 0,
+   "adoptions": [
+    {
+     "agent": 13,
+     "n_sends": 11,
+     "match_share": 0.3,
+     "adopted": false
+    },
+    {
+     "agent": 12,
+     "n_sends": 8,
+     "match_share": 0.5,
+     "adopted": false
+    },
+    {
+     "agent": 14,
+     "n_sends": 7,
+     "match_share": 0.0,
+     "adopted": false
+    },
+    {
+     "agent": 15,
+     "n_sends": 9,
+     "match_share": 0.333,
+     "adopted": false
+    },
+    {
+     "agent": 18,
+     "n_sends": 9,
+     "match_share": 0.222,
+     "adopted": false
+    },
+    {
+     "agent": 17,
+     "n_sends": 5,
+     "match_share": 0.6,
+     "adopted": false
+    },
+    {
+     "agent": 19,
+     "n_sends": 7,
+     "match_share": 0.571,
+     "adopted": false
+    },
+    {
+     "agent": 16,
+     "n_sends": 6,
+     "match_share": 0.667,
+     "adopted": false
+    },
+    {
+     "agent": 21,
+     "n_sends": 7,
+     "match_share": 0.571,
+     "adopted": false
+    },
+    {
+     "agent": 22,
+     "n_sends": 11,
+     "match_share": 0.1,
+     "adopted": false
+    },
+    {
+     "agent": 20,
+     "n_sends": 7,
+     "match_share": 0.286,
+     "adopted": false
+    },
+    {
+     "agent": 23,
+     "n_sends": 4,
+     "match_share": 0.75,
+     "adopted": false
+    }
+   ]
+  },
+  {
+   "pop": "e3_squeeze_p02",
+   "items_stable_of6": 4,
+   "survived": true,
+   "n_newcomers": 12,
+   "newcomer_mean_match": 0.431,
+   "newcomers_adopted": 0,
+   "adoptions": [
+    {
+     "agent": 14,
+     "n_sends": 10,
+     "match_share": 0.1,
+     "adopted": false
+    },
+    {
+     "agent": 13,
+     "n_sends": 11,
+     "match_share": 0.7,
+     "adopted": false
+    },
+    {
+     "agent": 16,
+     "n_sends": 11,
+     "match_share": 0.4,
+     "adopted": false
+    },
+    {
+     "agent": 17,
+     "n_sends": 8,
+     "match_share": 0.625,
+     "adopted": false
+    },
+    {
+     "agent": 15,
+     "n_sends": 8,
+     "match_share": 0.25,
+     "adopted": false
+    },
+    {
+     "agent": 19,
+     "n_sends": 10,
+     "match_share": 0.4,
+     "adopted": false
+    },
+    {
+     "agent": 18,
+     "n_sends": 8,
+     "match_share": 0.5,
+     "adopted": false
+    },
+    {
+     "agent": 21,
+     "n_sends": 5,
+     "match_share": 0.6,
+     "adopted": false
+    },
+    {
+     "agent": 20,
+     "n_sends": 11,
+     "match_share": 0.6,
+     "adopted": false
+    },
+    {
+     "agent": 23,
+     "n_sends": 6,
+     "match_share": 0.5,
+     "adopted": false
+    },
+    {
+     "agent": 12,
+     "n_sends": 4,
+     "match_share": 0.5,
+     "adopted": false
+    },
+    {
+     "agent": 22,
+     "n_sends": 2,
+     "match_share": 0.0,
+     "adopted": false
+    }
+   ]
+  },
+  {
+   "pop": "e3_squeeze_p03",
+   "items_stable_of6": 2,
+   "survived": false,
+   "n_newcomers": 12,
+   "newcomer_mean_match": 0.311,
+   "newcomers_adopted": 0,
+   "adoptions": [
+    {
+     "agent": 12,
+     "n_sends": 11,
+     "match_share": 0.7,
+     "adopted": false
+    },
+    {
+     "agent": 13,
+     "n_sends": 7,
+     "match_share": 0.286,
+     "adopted": false
+    },
+    {
+     "agent": 14,
+     "n_sends": 15,
+     "match_share": 0.3,
+     "adopted": false
+    },
+    {
+     "agent": 16,
+     "n_sends": 7,
+     "match_share": 0.286,
+     "adopted": false
+    },
+    {
+     "agent": 15,
+     "n_sends": 9,
+     "match_share": 0.556,
+     "adopted": false
+    },
+    {
+     "agent": 18,
+     "n_sends": 10,
+     "match_share": 0.3,
+     "adopted": false
+    },
+    {
+     "agent": 20,
+     "n_sends": 7,
+     "match_share": 0.143,
+     "adopted": false
+    },
+    {
+     "agent": 17,
+     "n_sends": 11,
+     "match_share": 0.4,
+     "adopted": false
+    },
+    {
+     "agent": 22,
+     "n_sends": 5,
+     "match_share": 0.0,
+     "adopted": false
+    },
+    {
+     "agent": 21,
+     "n_sends": 6,
+     "match_share": 0.167,
+     "adopted": false
+    },
+    {
+     "agent": 23,
+     "n_sends": 5,
+     "match_share": 0.6,
+     "adopted": false
+    },
+    {
+     "agent": 19,
+     "n_sends": 1,
+     "match_share": 0.0,
+     "adopted": false
+    }
+   ]
+  },
+  {
+   "pop": "e3_squeeze_p04",
+   "items_stable_of6": 3,
+   "survived": false,
+   "n_newcomers": 12,
+   "newcomer_mean_match": 0.335,
+   "newcomers_adopted": 0,
+   "adoptions": [
+    {
+     "agent": 12,
+     "n_sends": 11,
+     "match_share": 0.3,
+     "adopted": false
+    },
+    {
+     "agent": 14,
+     "n_sends": 9,
+     "match_share": 0.222,
+     "adopted": false
+    },
+    {
+     "agent": 13,
+     "n_sends": 12,
+     "match_share": 0.4,
+     "adopted": false
+    },
+    {
+     "agent": 15,
+     "n_sends": 12,
+     "match_share": 0.6,
+     "adopted": false
+    },
+    {
+     "agent": 16,
+     "n_sends": 6,
+     "match_share": 0.333,
+     "adopted": false
+    },
+    {
+     "agent": 17,
+     "n_sends": 9,
+     "match_share": 0.333,
+     "adopted": false
+    },
+    {
+     "agent": 18,
+     "n_sends": 8,
+     "match_share": 0.125,
+     "adopted": false
+    },
+    {
+     "agent": 19,
+     "n_sends": 7,
+     "match_share": 0.429,
+     "adopted": false
+    },
+    {
+     "agent": 20,
+     "n_sends": 5,
+     "match_share": 0.2,
+     "adopted": false
+    },
+    {
+     "agent": 21,
+     "n_sends": 4,
+     "match_share": 0.25,
+     "adopted": false
+    },
+    {
+     "agent": 22,
+     "n_sends": 7,
+     "match_share": 0.429,
+     "adopted": false
+    },
+    {
+     "agent": 23,
+     "n_sends": 5,
+     "match_share": 0.4,
+     "adopted": false
+    }
+   ]
+  },
+  {
+   "pop": "e3_squeeze_p05",
+   "items_stable_of6": 3,
+   "survived": false,
+   "n_newcomers": 12,
+   "newcomer_mean_match": 0.409,
+   "newcomers_adopted": 0,
+   "adoptions": [
+    {
+     "agent": 13,
+     "n_sends": 14,
+     "match_share": 0.3,
+     "adopted": false
+    },
+    {
+     "agent": 14,
+     "n_sends": 2,
+     "match_share": 0.5,
+     "adopted": false
+    },
+    {
+     "agent": 15,
+     "n_sends": 7,
+     "match_share": 0.429,
+     "adopted": false
+    },
+    {
+     "agent": 19,
+     "n_sends": 7,
+     "match_share": 0.429,
+     "adopted": false
+    },
+    {
+     "agent": 17,
+     "n_sends": 8,
+     "match_share": 0.5,
+     "adopted": false
+    },
+    {
+     "agent": 16,
+     "n_sends": 6,
+     "match_share": 0.667,
+     "adopted": false
+    },
+    {
+     "agent": 12,
+     "n_sends": 12,
+     "match_share": 0.2,
+     "adopted": false
+    },
+    {
+     "agent": 21,
+     "n_sends": 6,
+     "match_share": 0.333,
+     "adopted": false
+    },
+    {
+     "agent": 18,
+     "n_sends": 3,
+     "match_share": 0.333,
+     "adopted": false
+    },
+    {
+     "agent": 22,
+     "n_sends": 4,
+     "match_share": 0.5,
+     "adopted": false
+    },
+    {
+     "agent": 20,
+     "n_sends": 9,
+     "match_share": 0.222,
+     "adopted": false
+    },
+    {
+     "agent": 23,
+     "n_sends": 6,
+     "match_share": 0.5,
+     "adopted": false
+    }
+   ]
+  },
+  {
+   "pop": "e3_squeeze_p06",
+   "items_stable_of6": 3,
+   "survived": false,
+   "n_newcomers": 12,
+   "newcomer_mean_match": 0.282,
+   "newcomers_adopted": 0,
+   "adoptions": [
+    {
+     "agent": 13,
+     "n_sends": 13,
+     "match_share": 0.3,
+     "adopted": false
+    },
+    {
+     "agent": 14,
+     "n_sends": 11,
+     "match_share": 0.4,
+     "adopted": false
+    },
+    {
+     "agent": 12,
+     "n_sends": 7,
+     "match_share": 0.286,
+     "adopted": false
+    },
+    {
+     "agent": 15,
+     "n_sends": 8,
+     "match_share": 0.5,
+     "adopted": false
+    },
+    {
+     "agent": 16,
+     "n_sends": 13,
+     "match_share": 0.6,
+     "adopted": false
+    },
+    {
+     "agent": 17,
+     "n_sends": 6,
+     "match_share": 0.167,
+     "adopted": false
+    },
+    {
+     "agent": 18,
+     "n_sends": 11,
+     "match_share": 0.3,
+     "adopted": false
+    },
+    {
+     "agent": 20,
+     "n_sends": 6,
+     "match_share": 0.0,
+     "adopted": false
+    },
+    {
+     "agent": 21,
+     "n_sends": 4,
+     "match_share": 0.25,
+     "adopted": false
+    },
+    {
+     "agent": 19,
+     "n_sends": 7,
+     "match_share": 0.286,
+     "adopted": false
+    },
+    {
+     "agent": 23,
+     "n_sends": 10,
+     "match_share": 0.3,
+     "adopted": false
+    },
+    {
+     "agent": 22,
+     "n_sends": 4,
+     "match_share": 0.0,
+     "adopted": false
+    }
+   ]
+  },
+  {
+   "pop": "e3_squeeze_p07",
+   "items_stable_of6": 0,
+   "survived": false,
+   "n_newcomers": 12,
+   "newcomer_mean_match": 0.296,
+   "newcomers_adopted": 0,
+   "adoptions": [
+    {
+     "agent": 13,
+     "n_sends": 12,
+     "match_share": 0.5,
+     "adopted": false
+    },
+    {
+     "agent": 14,
+     "n_sends": 8,
+     "match_share": 0.25,
+     "adopted": false
+    },
+    {
+     "agent": 12,
+     "n_sends": 13,
+     "match_share": 0.7,
+     "adopted": false
+    },
+    {
+     "agent": 15,
+     "n_sends": 8,
+     "match_share": 0.0,
+     "adopted": false
+    },
+    {
+     "agent": 16,
+     "n_sends": 12,
+     "match_share": 0.2,
+     "adopted": false
+    },
+    {
+     "agent": 17,
+     "n_sends": 6,
+     "match_share": 0.167,
+     "adopted": false
+    },
+    {
+     "agent": 18,
+     "n_sends": 6,
+     "match_share": 0.5,
+     "adopted": false
+    },
+    {
+     "agent": 19,
+     "n_sends": 6,
+     "match_share": 0.0,
+     "adopted": false
+    },
+    {
+     "agent": 20,
+     "n_sends": 10,
+     "match_share": 0.1,
+     "adopted": false
+    },
+    {
+     "agent": 23,
+     "n_sends": 5,
+     "match_share": 0.2,
+     "adopted": false
+    },
+    {
+     "agent": 21,
+     "n_sends": 4,
+     "match_share": 0.5,
+     "adopted": false
+    },
+    {
+     "agent": 22,
+     "n_sends": 7,
+     "match_share": 0.429,
+     "adopted": false
+    }
+   ]
+  }
+ ]
+}
