@@ -618,6 +618,49 @@ variant-suite spend $44.5 (cumulative env spend $60.87 of a $110 cap).
 """
 
 
+def render_honesty():
+    return """
+| Result family | Status | Basis |
+|---|---|---|
+| Naming-game consensus / conformity / survival / flip criteria | **Pre-registered** | §1: criteria fixed before any data collection; unchanged throughout, including the 2,000-interaction minority sweep (same flip criterion, longer budget = separate cells) |
+| Experiment A sweeps (turnover phase boundary, minority thresholds, transplant, N-sweep) | **Pre-registered protocol** | Substrate policy choice documented pre-run (decision log #1) |
+| Experiment B genesis / transmission / dialogue ablation | **Pre-registered** | Same criteria as A; prompts frozen after the documented pilot stage (decision log #12) |
+| Judge four-way taxonomy | **Failed instrument** | Declared unreliable on this corpus (κ = 0.06); category shares appendix-only |
+| Surface-feature enforcement detector | **Exploratory, pre-frozen** | Lexicons and rules committed before any corpus scan; validated on the 151-message sample first |
+| E1–E4 environments and all levers (squeeze, memory, noise, dialogue, scratch line, model tier) | **Exploratory** | Designed after the naming-game results; controls (fresh tokens, banned vocabulary, priors, shuffle, stranger pool) applied throughout |
+| Reply-cap repair cycle (VOID e2/e4 cells → scratch-line protocol) | **Exploratory, documented repair** | Decision log #14; voided journals retained |
+| Second model family (gpt-5-mini) | **Confirmatory replication** | Frozen prompts and gates; run after all haiku results were in |
+"""
+
+
+def render_claims():
+    E2 = {}
+    try:
+        E2 = json.load(open("results/envs_summary.json"))
+    except FileNotFoundError:
+        pass
+
+    def n_of(mode, cell):
+        return (E2.get(mode, {}).get(cell, {}) or {}).get("n_pops", "TBD")
+
+    bt = S.get("expB_live", {})
+    n_gen = bt.get("genesis", {}).get("n_runs", "TBD")
+    return f"""
+| Paper claim | Cells (final n) | Figures / numbers |
+|---|---|---|
+| LLM populations form arbitrary conventions when payoff rewards alignment directly, and they persist under 100% turnover (positive control) | b_genesis (n={n_gen}); b_trans_dlg / b_trans_nodlg (n=10/10) | fig_convergence, fig_survival; `\\pNamingGenesisConv`, `\\pNamingSurvivedDlgOn/Off` |
+| Newcomer socialisation is dialogue-mediated | b_trans_dlg vs b_trans_nodlg | fig_socialisation; `\\pSocialisationMWU` |
+| Substrate committed-minority threshold f50 ≈ 0.126, history-independent | expA minority cells (n=500/point) | fig_minority; `\\fFiftySubstrateFounder/Posttrans` |
+| Live minority threshold: f50 or lower bound vs substrate | b_minority_{{founder,posttrans}}_{{f25,f33,f42}}_b2k (n=8 each) | fig_minority |
+| Compression produces the first live side-product convention (loose-vs-squeeze contrast) | e1_tight (n={n_of('live','e1_tight')}) vs e1_squeeze (n={n_of('live','e1_squeeze')}) live; substrate n=60/40 | fig_inversion, fig_esuite; `\\convEOneSqueezeLive` |
+| E3 concentration is shared model bias, not convention (diversity signature on a shared item set) | e3_squeeze (n={n_of('live','e3_squeeze')}) + zero-shot priors | fig_esuite; `\\schemesEThreeSqueezeLive`, `\\priorEThreeSqueezeLive` |
+| The fairness prior absorbs the symmetry that produces Axtell–Epstein–Young classes in the substrate | e4_think (n={n_of('live','e4_think')}), e4_sonnet (n=3), substrate e4 (n=60) | fig_inversion; `\\classEFourThinkLive`, `\\egalEFourThinkLive` |
+| Capability sharpens priors: mirror-match coordination failure; negotiated pacts do not fossilize | e2_think (n={n_of('live','e2_think')}), e2_dialogue (n={n_of('live','e2_dialogue')}), e2_sonnet (n=3) | §7 E2 rows; `\\convETwoThinkLive`, `\\succETwoDialogueLive` |
+| Enforcement surface features are absent (annotation-invariant) in populations and solitary alike | detector scan over all live dialogue | `\\prevDeonticPop` etc.; enforcement_analysis.json |
+| Findings hold across model families | m2 cells: naming genesis n=8, trans n=6; e1 (8/8), e3 (8), e4 (6), e2 (6) | §7 m2 tier rows; `\\convEOneSqueezeMTwo` etc. |
+"""
+
+
 # ---------------- render ----------------
 
 tpl = open("scripts/RESULTS_template.md").read()
@@ -639,6 +682,8 @@ pricing, $1/$5 per MTok). Wall-clock ≈ 3.5 h at 8 concurrent runs
     "{{INTEGRITY}}": integrity,
     "{{INTERPRETATION}}": interpretation,
     "{{ENVS}}": render_envs(),
+    "{{HONESTY}}": render_honesty(),
+    "{{CLAIMS}}": render_claims(),
 }
 for k, v in fills.items():
     tpl = tpl.replace(k, v)

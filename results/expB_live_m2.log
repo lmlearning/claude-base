@@ -14,3 +14,5 @@ done b_genesis_dlg r6: {"converged": true, "winner": "muke", "consensus_time": 9
 done b_genesis_dlg r4: {"converged": true, "winner": "votsi", "consensus_time": 96}
 done b_genesis_dlg r0: {"converged": true, "winner": "tepa", "consensus_time": 96}
 done b_genesis_dlg r7: {"converged": true, "winner": "latu", "consensus_time": 115}
+done b_genesis_dlg r3: {"converged": true, "winner": "bobu", "consensus_time": 129}
+done b_genesis_dlg r5: {"converged": true, "winner": "bimna", "consensus_time": 134}

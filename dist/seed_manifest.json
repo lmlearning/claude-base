@@ -1,0 +1,4749 @@
+{
+ "master_seeds": {
+  "expA": "recorded per-cell in results/expA",
+  "expB": 20260718,
+  "envs": 20260719
+ },
+ "runs": [
+  {
+   "dir": "results/envs_live/e1_loose_p00",
+   "seed": 681212607,
+   "cell": "e1_loose",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_live/e1_loose_p01",
+   "seed": 1711874729,
+   "cell": "e1_loose",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_live/e1_loose_p02",
+   "seed": 1803003506,
+   "cell": "e1_loose",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_live/e1_loose_p03",
+   "seed": 367179687,
+   "cell": "e1_loose",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_live/e1_noisy_p00",
+   "seed": 2049460509,
+   "cell": "e1_noisy",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_live/e1_noisy_p01",
+   "seed": 577516709,
+   "cell": "e1_noisy",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_live/e1_noisy_p02",
+   "seed": 2671211908,
+   "cell": "e1_noisy",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_live/e1_noisy_p03",
+   "seed": 3187049882,
+   "cell": "e1_noisy",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_live/e1_squeeze_mem_p00",
+   "seed": 258483102,
+   "cell": "e1_squeeze_mem",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_live/e1_squeeze_mem_p01",
+   "seed": 1509160859,
+   "cell": "e1_squeeze_mem",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_live/e1_squeeze_mem_p02",
+   "seed": 1871701565,
+   "cell": "e1_squeeze_mem",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_live/e1_squeeze_mem_p03",
+   "seed": 1189722036,
+   "cell": "e1_squeeze_mem",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_live/e1_squeeze_p00",
+   "seed": 81438895,
+   "cell": "e1_squeeze",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_live/e1_squeeze_p01",
+   "seed": 3061026066,
+   "cell": "e1_squeeze",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_live/e1_squeeze_p02",
+   "seed": 149178126,
+   "cell": "e1_squeeze",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_live/e1_squeeze_p03",
+   "seed": 4025832704,
+   "cell": "e1_squeeze",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_live/e1_stranger_p00",
+   "seed": 783850387,
+   "cell": "e1_stranger",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_live/e1_stranger_p01",
+   "seed": 1132916185,
+   "cell": "e1_stranger",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_live/e1_tight_p00",
+   "seed": 2105856205,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_live/e1_tight_p01",
+   "seed": 170452868,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_live/e1_tight_p02",
+   "seed": 4288356756,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_live/e1_tight_p03",
+   "seed": 1297269466,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_live/e2_dialogue_p00",
+   "seed": 3684514777,
+   "cell": "e2_dialogue",
+   "model": null,
+   "framing": "site"
+  },
+  {
+   "dir": "results/envs_live/e2_dialogue_p01",
+   "seed": 2635268138,
+   "cell": "e2_dialogue",
+   "model": null,
+   "framing": "workshop"
+  },
+  {
+   "dir": "results/envs_live/e2_dialogue_p02",
+   "seed": 3965424058,
+   "cell": "e2_dialogue",
+   "model": null,
+   "framing": "site"
+  },
+  {
+   "dir": "results/envs_live/e2_dialogue_p03",
+   "seed": 3473274933,
+   "cell": "e2_dialogue",
+   "model": null,
+   "framing": "workshop"
+  },
+  {
+   "dir": "results/envs_live/e2_p00",
+   "seed": 3368412237,
+   "cell": "e2",
+   "model": null,
+   "framing": "site"
+  },
+  {
+   "dir": "results/envs_live/e2_p01",
+   "seed": 1897593139,
+   "cell": "e2",
+   "model": null,
+   "framing": "workshop"
+  },
+  {
+   "dir": "results/envs_live/e2_p02",
+   "seed": 1884214643,
+   "cell": "e2",
+   "model": null,
+   "framing": "site"
+  },
+  {
+   "dir": "results/envs_live/e2_p03",
+   "seed": 3246311087,
+   "cell": "e2",
+   "model": null,
+   "framing": "workshop"
+  },
+  {
+   "dir": "results/envs_live/e2_p04",
+   "seed": 3457631724,
+   "cell": "e2",
+   "model": null,
+   "framing": "site"
+  },
+  {
+   "dir": "results/envs_live/e2_p05",
+   "seed": 2896451878,
+   "cell": "e2",
+   "model": null,
+   "framing": "workshop"
+  },
+  {
+   "dir": "results/envs_live/e2_sonnet_p00",
+   "seed": 607272432,
+   "cell": "e2_sonnet",
+   "model": "anthropic/claude-sonnet-4.5",
+   "framing": "site"
+  },
+  {
+   "dir": "results/envs_live/e2_sonnet_p01",
+   "seed": 3524651004,
+   "cell": "e2_sonnet",
+   "model": "anthropic/claude-sonnet-4.5",
+   "framing": "workshop"
+  },
+  {
+   "dir": "results/envs_live/e2_sonnet_p02",
+   "seed": 2259301248,
+   "cell": "e2_sonnet",
+   "model": "anthropic/claude-sonnet-4.5",
+   "framing": "site"
+  },
+  {
+   "dir": "results/envs_live/e2_think_p00",
+   "seed": 2720035827,
+   "cell": "e2_think",
+   "model": null,
+   "framing": "site"
+  },
+  {
+   "dir": "results/envs_live/e2_think_p01",
+   "seed": 1666238924,
+   "cell": "e2_think",
+   "model": null,
+   "framing": "workshop"
+  },
+  {
+   "dir": "results/envs_live/e2_think_p02",
+   "seed": 1223583902,
+   "cell": "e2_think",
+   "model": null,
+   "framing": "site"
+  },
+  {
+   "dir": "results/envs_live/e2_think_p03",
+   "seed": 2457540802,
+   "cell": "e2_think",
+   "model": null,
+   "framing": "workshop"
+  },
+  {
+   "dir": "results/envs_live/e3_p00",
+   "seed": 4268102221,
+   "cell": "e3",
+   "model": null,
+   "framing": "picker"
+  },
+  {
+   "dir": "results/envs_live/e3_p01",
+   "seed": 1026961513,
+   "cell": "e3",
+   "model": null,
+   "framing": "warehouse"
+  },
+  {
+   "dir": "results/envs_live/e3_p02",
+   "seed": 2998910919,
+   "cell": "e3",
+   "model": null,
+   "framing": "picker"
+  },
+  {
+   "dir": "results/envs_live/e3_p03",
+   "seed": 1170924191,
+   "cell": "e3",
+   "model": null,
+   "framing": "warehouse"
+  },
+  {
+   "dir": "results/envs_live/e3_p04",
+   "seed": 3207097520,
+   "cell": "e3",
+   "model": null,
+   "framing": "picker"
+  },
+  {
+   "dir": "results/envs_live/e3_p05",
+   "seed": 46594739,
+   "cell": "e3",
+   "model": null,
+   "framing": "warehouse"
+  },
+  {
+   "dir": "results/envs_live/e3_redo_p00",
+   "seed": 1129744292,
+   "cell": "e3_redo",
+   "model": null,
+   "framing": "picker"
+  },
+  {
+   "dir": "results/envs_live/e3_redo_p01",
+   "seed": 319504382,
+   "cell": "e3_redo",
+   "model": null,
+   "framing": "warehouse"
+  },
+  {
+   "dir": "results/envs_live/e3_redo_p02",
+   "seed": 3336506852,
+   "cell": "e3_redo",
+   "model": null,
+   "framing": "picker"
+  },
+  {
+   "dir": "results/envs_live/e3_redo_p03",
+   "seed": 1534294460,
+   "cell": "e3_redo",
+   "model": null,
+   "framing": "warehouse"
+  },
+  {
+   "dir": "results/envs_live/e3_squeeze_p00",
+   "seed": 4277933404,
+   "cell": "e3_squeeze",
+   "model": null,
+   "framing": "picker"
+  },
+  {
+   "dir": "results/envs_live/e3_squeeze_p01",
+   "seed": 3506863326,
+   "cell": "e3_squeeze",
+   "model": null,
+   "framing": "warehouse"
+  },
+  {
+   "dir": "results/envs_live/e3_squeeze_p02",
+   "seed": 1722815458,
+   "cell": "e3_squeeze",
+   "model": null,
+   "framing": "picker"
+  },
+  {
+   "dir": "results/envs_live/e3_squeeze_p03",
+   "seed": 2812496590,
+   "cell": "e3_squeeze",
+   "model": null,
+   "framing": "warehouse"
+  },
+  {
+   "dir": "results/envs_live/e4_p00",
+   "seed": 739898328,
+   "cell": "e4",
+   "model": null,
+   "framing": "bonus"
+  },
+  {
+   "dir": "results/envs_live/e4_p01",
+   "seed": 314191648,
+   "cell": "e4",
+   "model": null,
+   "framing": "market"
+  },
+  {
+   "dir": "results/envs_live/e4_p02",
+   "seed": 86350978,
+   "cell": "e4",
+   "model": null,
+   "framing": "bonus"
+  },
+  {
+   "dir": "results/envs_live/e4_p03",
+   "seed": 2893130855,
+   "cell": "e4",
+   "model": null,
+   "framing": "market"
+  },
+  {
+   "dir": "results/envs_live/e4_p04",
+   "seed": 2951891996,
+   "cell": "e4",
+   "model": null,
+   "framing": "bonus"
+  },
+  {
+   "dir": "results/envs_live/e4_p05",
+   "seed": 3175394769,
+   "cell": "e4",
+   "model": null,
+   "framing": "market"
+  },
+  {
+   "dir": "results/envs_live/e4_sonnet_p00",
+   "seed": 474098852,
+   "cell": "e4_sonnet",
+   "model": "anthropic/claude-sonnet-4.5",
+   "framing": "bonus"
+  },
+  {
+   "dir": "results/envs_live/e4_sonnet_p01",
+   "seed": 1183698436,
+   "cell": "e4_sonnet",
+   "model": "anthropic/claude-sonnet-4.5",
+   "framing": "market"
+  },
+  {
+   "dir": "results/envs_live/e4_sonnet_p02",
+   "seed": 2709044313,
+   "cell": "e4_sonnet",
+   "model": "anthropic/claude-sonnet-4.5",
+   "framing": "bonus"
+  },
+  {
+   "dir": "results/envs_live/e4_think_p00",
+   "seed": 2641863466,
+   "cell": "e4_think",
+   "model": null,
+   "framing": "bonus"
+  },
+  {
+   "dir": "results/envs_live/e4_think_p01",
+   "seed": 1578296109,
+   "cell": "e4_think",
+   "model": null,
+   "framing": "market"
+  },
+  {
+   "dir": "results/envs_live/e4_think_p02",
+   "seed": 4151544585,
+   "cell": "e4_think",
+   "model": null,
+   "framing": "bonus"
+  },
+  {
+   "dir": "results/envs_live/e4_think_p03",
+   "seed": 2897513003,
+   "cell": "e4_think",
+   "model": null,
+   "framing": "market"
+  },
+  {
+   "dir": "results/envs_mock/e1_loose_p00",
+   "seed": 681212607,
+   "cell": "e1_loose",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_loose_p01",
+   "seed": 1711874729,
+   "cell": "e1_loose",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_loose_p02",
+   "seed": 1803003506,
+   "cell": "e1_loose",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_loose_p03",
+   "seed": 367179687,
+   "cell": "e1_loose",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_loose_p04",
+   "seed": 3759288458,
+   "cell": "e1_loose",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_loose_p05",
+   "seed": 507093916,
+   "cell": "e1_loose",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_loose_p06",
+   "seed": 1401782743,
+   "cell": "e1_loose",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_loose_p07",
+   "seed": 2101741130,
+   "cell": "e1_loose",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_loose_p08",
+   "seed": 193961496,
+   "cell": "e1_loose",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_loose_p09",
+   "seed": 1701382462,
+   "cell": "e1_loose",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_loose_p10",
+   "seed": 3395552988,
+   "cell": "e1_loose",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_loose_p11",
+   "seed": 2126064429,
+   "cell": "e1_loose",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_loose_p12",
+   "seed": 4225854361,
+   "cell": "e1_loose",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_loose_p13",
+   "seed": 2454019221,
+   "cell": "e1_loose",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_loose_p14",
+   "seed": 3743054283,
+   "cell": "e1_loose",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_loose_p15",
+   "seed": 3359668028,
+   "cell": "e1_loose",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_loose_p16",
+   "seed": 1853775821,
+   "cell": "e1_loose",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_loose_p17",
+   "seed": 1970147888,
+   "cell": "e1_loose",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_loose_p18",
+   "seed": 3365445882,
+   "cell": "e1_loose",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_loose_p19",
+   "seed": 1374068239,
+   "cell": "e1_loose",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_loose_p20",
+   "seed": 40289180,
+   "cell": "e1_loose",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_loose_p21",
+   "seed": 1007676043,
+   "cell": "e1_loose",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_loose_p22",
+   "seed": 3349492603,
+   "cell": "e1_loose",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_loose_p23",
+   "seed": 96364660,
+   "cell": "e1_loose",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_loose_p24",
+   "seed": 1017708565,
+   "cell": "e1_loose",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_loose_p25",
+   "seed": 1339619972,
+   "cell": "e1_loose",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_loose_p26",
+   "seed": 521967854,
+   "cell": "e1_loose",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_loose_p27",
+   "seed": 735436164,
+   "cell": "e1_loose",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_loose_p28",
+   "seed": 1047925082,
+   "cell": "e1_loose",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_loose_p29",
+   "seed": 62742805,
+   "cell": "e1_loose",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_loose_p30",
+   "seed": 1342308084,
+   "cell": "e1_loose",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_loose_p31",
+   "seed": 651257468,
+   "cell": "e1_loose",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_loose_p32",
+   "seed": 1454631934,
+   "cell": "e1_loose",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_loose_p33",
+   "seed": 1294452641,
+   "cell": "e1_loose",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_loose_p34",
+   "seed": 718186762,
+   "cell": "e1_loose",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_loose_p35",
+   "seed": 1346480355,
+   "cell": "e1_loose",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_loose_p36",
+   "seed": 1647897283,
+   "cell": "e1_loose",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_loose_p37",
+   "seed": 2672384543,
+   "cell": "e1_loose",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_loose_p38",
+   "seed": 276493719,
+   "cell": "e1_loose",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_loose_p39",
+   "seed": 3490120725,
+   "cell": "e1_loose",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_loose_p40",
+   "seed": 3423419327,
+   "cell": "e1_loose",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_loose_p41",
+   "seed": 2235381159,
+   "cell": "e1_loose",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_loose_p42",
+   "seed": 319154850,
+   "cell": "e1_loose",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_loose_p43",
+   "seed": 3084289991,
+   "cell": "e1_loose",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_loose_p44",
+   "seed": 3023893506,
+   "cell": "e1_loose",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_loose_p45",
+   "seed": 272184945,
+   "cell": "e1_loose",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_loose_p46",
+   "seed": 1904195453,
+   "cell": "e1_loose",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_loose_p47",
+   "seed": 885181980,
+   "cell": "e1_loose",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_loose_p48",
+   "seed": 844577451,
+   "cell": "e1_loose",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_loose_p49",
+   "seed": 57353099,
+   "cell": "e1_loose",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_loose_p50",
+   "seed": 3589877309,
+   "cell": "e1_loose",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_loose_p51",
+   "seed": 57242669,
+   "cell": "e1_loose",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_loose_p52",
+   "seed": 858257724,
+   "cell": "e1_loose",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_loose_p53",
+   "seed": 2534993185,
+   "cell": "e1_loose",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_loose_p54",
+   "seed": 853964222,
+   "cell": "e1_loose",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_loose_p55",
+   "seed": 2159947973,
+   "cell": "e1_loose",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_loose_p56",
+   "seed": 2359590447,
+   "cell": "e1_loose",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_loose_p57",
+   "seed": 793775253,
+   "cell": "e1_loose",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_loose_p58",
+   "seed": 416277765,
+   "cell": "e1_loose",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_loose_p59",
+   "seed": 3558540152,
+   "cell": "e1_loose",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_noisy_p00",
+   "seed": 2049460509,
+   "cell": "e1_noisy",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_noisy_p01",
+   "seed": 577516709,
+   "cell": "e1_noisy",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_noisy_p02",
+   "seed": 2671211908,
+   "cell": "e1_noisy",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_noisy_p03",
+   "seed": 3187049882,
+   "cell": "e1_noisy",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_noisy_p04",
+   "seed": 1925919648,
+   "cell": "e1_noisy",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_noisy_p05",
+   "seed": 1035981081,
+   "cell": "e1_noisy",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_noisy_p06",
+   "seed": 247682432,
+   "cell": "e1_noisy",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_noisy_p07",
+   "seed": 4092908363,
+   "cell": "e1_noisy",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_noisy_p08",
+   "seed": 274778543,
+   "cell": "e1_noisy",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_noisy_p09",
+   "seed": 3146962159,
+   "cell": "e1_noisy",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_noisy_p10",
+   "seed": 3859787766,
+   "cell": "e1_noisy",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_noisy_p11",
+   "seed": 3390350340,
+   "cell": "e1_noisy",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_noisy_p12",
+   "seed": 166480015,
+   "cell": "e1_noisy",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_noisy_p13",
+   "seed": 2255218313,
+   "cell": "e1_noisy",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_noisy_p14",
+   "seed": 857642193,
+   "cell": "e1_noisy",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_noisy_p15",
+   "seed": 4222140741,
+   "cell": "e1_noisy",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_noisy_p16",
+   "seed": 1269464020,
+   "cell": "e1_noisy",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_noisy_p17",
+   "seed": 3125431850,
+   "cell": "e1_noisy",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_noisy_p18",
+   "seed": 206741974,
+   "cell": "e1_noisy",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_noisy_p19",
+   "seed": 438894561,
+   "cell": "e1_noisy",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_noisy_p20",
+   "seed": 3335986972,
+   "cell": "e1_noisy",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_noisy_p21",
+   "seed": 1522087087,
+   "cell": "e1_noisy",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_noisy_p22",
+   "seed": 26708950,
+   "cell": "e1_noisy",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_noisy_p23",
+   "seed": 1336902571,
+   "cell": "e1_noisy",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_noisy_p24",
+   "seed": 3999203124,
+   "cell": "e1_noisy",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_noisy_p25",
+   "seed": 3067874567,
+   "cell": "e1_noisy",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_noisy_p26",
+   "seed": 2311063047,
+   "cell": "e1_noisy",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_noisy_p27",
+   "seed": 1972959029,
+   "cell": "e1_noisy",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_noisy_p28",
+   "seed": 3957866573,
+   "cell": "e1_noisy",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_noisy_p29",
+   "seed": 1555374638,
+   "cell": "e1_noisy",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_noisy_p30",
+   "seed": 3936510645,
+   "cell": "e1_noisy",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_noisy_p31",
+   "seed": 2168064798,
+   "cell": "e1_noisy",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_noisy_p32",
+   "seed": 3379649393,
+   "cell": "e1_noisy",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_noisy_p33",
+   "seed": 3499272669,
+   "cell": "e1_noisy",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_noisy_p34",
+   "seed": 1686823855,
+   "cell": "e1_noisy",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_noisy_p35",
+   "seed": 1858359669,
+   "cell": "e1_noisy",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_noisy_p36",
+   "seed": 4193441568,
+   "cell": "e1_noisy",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_noisy_p37",
+   "seed": 778336490,
+   "cell": "e1_noisy",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_noisy_p38",
+   "seed": 2252905980,
+   "cell": "e1_noisy",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_noisy_p39",
+   "seed": 16752278,
+   "cell": "e1_noisy",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_mem_p00",
+   "seed": 258483102,
+   "cell": "e1_squeeze_mem",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_mem_p01",
+   "seed": 1509160859,
+   "cell": "e1_squeeze_mem",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_mem_p02",
+   "seed": 1871701565,
+   "cell": "e1_squeeze_mem",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_mem_p03",
+   "seed": 1189722036,
+   "cell": "e1_squeeze_mem",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_mem_p04",
+   "seed": 3723276605,
+   "cell": "e1_squeeze_mem",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_mem_p05",
+   "seed": 4079675110,
+   "cell": "e1_squeeze_mem",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_mem_p06",
+   "seed": 3075025752,
+   "cell": "e1_squeeze_mem",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_mem_p07",
+   "seed": 4088079467,
+   "cell": "e1_squeeze_mem",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_mem_p08",
+   "seed": 487262169,
+   "cell": "e1_squeeze_mem",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_mem_p09",
+   "seed": 3832704049,
+   "cell": "e1_squeeze_mem",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_mem_p10",
+   "seed": 3504946626,
+   "cell": "e1_squeeze_mem",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_mem_p11",
+   "seed": 73634739,
+   "cell": "e1_squeeze_mem",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_mem_p12",
+   "seed": 1194115564,
+   "cell": "e1_squeeze_mem",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_mem_p13",
+   "seed": 999642918,
+   "cell": "e1_squeeze_mem",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_mem_p14",
+   "seed": 207934616,
+   "cell": "e1_squeeze_mem",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_mem_p15",
+   "seed": 1323320886,
+   "cell": "e1_squeeze_mem",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_mem_p16",
+   "seed": 2298093716,
+   "cell": "e1_squeeze_mem",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_mem_p17",
+   "seed": 422244090,
+   "cell": "e1_squeeze_mem",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_mem_p18",
+   "seed": 680689283,
+   "cell": "e1_squeeze_mem",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_mem_p19",
+   "seed": 1781315432,
+   "cell": "e1_squeeze_mem",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_mem_p20",
+   "seed": 3571406027,
+   "cell": "e1_squeeze_mem",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_mem_p21",
+   "seed": 1384954021,
+   "cell": "e1_squeeze_mem",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_mem_p22",
+   "seed": 1583166075,
+   "cell": "e1_squeeze_mem",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_mem_p23",
+   "seed": 681149306,
+   "cell": "e1_squeeze_mem",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_mem_p24",
+   "seed": 4173288326,
+   "cell": "e1_squeeze_mem",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_mem_p25",
+   "seed": 3189376528,
+   "cell": "e1_squeeze_mem",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_mem_p26",
+   "seed": 2387833925,
+   "cell": "e1_squeeze_mem",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_mem_p27",
+   "seed": 3238062951,
+   "cell": "e1_squeeze_mem",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_mem_p28",
+   "seed": 949883032,
+   "cell": "e1_squeeze_mem",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_mem_p29",
+   "seed": 3249198822,
+   "cell": "e1_squeeze_mem",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_mem_p30",
+   "seed": 2583976845,
+   "cell": "e1_squeeze_mem",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_mem_p31",
+   "seed": 4227888859,
+   "cell": "e1_squeeze_mem",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_mem_p32",
+   "seed": 235373934,
+   "cell": "e1_squeeze_mem",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_mem_p33",
+   "seed": 1409478627,
+   "cell": "e1_squeeze_mem",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_mem_p34",
+   "seed": 2073999586,
+   "cell": "e1_squeeze_mem",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_mem_p35",
+   "seed": 3644794679,
+   "cell": "e1_squeeze_mem",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_mem_p36",
+   "seed": 1267413684,
+   "cell": "e1_squeeze_mem",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_mem_p37",
+   "seed": 2636006753,
+   "cell": "e1_squeeze_mem",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_mem_p38",
+   "seed": 3969295019,
+   "cell": "e1_squeeze_mem",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_mem_p39",
+   "seed": 441578672,
+   "cell": "e1_squeeze_mem",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_p00",
+   "seed": 81438895,
+   "cell": "e1_squeeze",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_p01",
+   "seed": 3061026066,
+   "cell": "e1_squeeze",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_p02",
+   "seed": 149178126,
+   "cell": "e1_squeeze",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_p03",
+   "seed": 4025832704,
+   "cell": "e1_squeeze",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_p04",
+   "seed": 609607500,
+   "cell": "e1_squeeze",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_p05",
+   "seed": 291734603,
+   "cell": "e1_squeeze",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_p06",
+   "seed": 2477604693,
+   "cell": "e1_squeeze",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_p07",
+   "seed": 4270548895,
+   "cell": "e1_squeeze",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_p08",
+   "seed": 2693913656,
+   "cell": "e1_squeeze",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_p09",
+   "seed": 2888590605,
+   "cell": "e1_squeeze",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_p10",
+   "seed": 1605220737,
+   "cell": "e1_squeeze",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_p11",
+   "seed": 3241886762,
+   "cell": "e1_squeeze",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_p12",
+   "seed": 3304766870,
+   "cell": "e1_squeeze",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_p13",
+   "seed": 4025364057,
+   "cell": "e1_squeeze",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_p14",
+   "seed": 99453179,
+   "cell": "e1_squeeze",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_p15",
+   "seed": 2529894165,
+   "cell": "e1_squeeze",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_p16",
+   "seed": 118341664,
+   "cell": "e1_squeeze",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_p17",
+   "seed": 981507005,
+   "cell": "e1_squeeze",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_p18",
+   "seed": 3695751481,
+   "cell": "e1_squeeze",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_p19",
+   "seed": 1590996844,
+   "cell": "e1_squeeze",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_p20",
+   "seed": 3523019619,
+   "cell": "e1_squeeze",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_p21",
+   "seed": 1234939959,
+   "cell": "e1_squeeze",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_p22",
+   "seed": 192409218,
+   "cell": "e1_squeeze",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_p23",
+   "seed": 291008789,
+   "cell": "e1_squeeze",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_p24",
+   "seed": 919721323,
+   "cell": "e1_squeeze",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_p25",
+   "seed": 2976493948,
+   "cell": "e1_squeeze",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_p26",
+   "seed": 2400247593,
+   "cell": "e1_squeeze",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_p27",
+   "seed": 4001468137,
+   "cell": "e1_squeeze",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_p28",
+   "seed": 3978774689,
+   "cell": "e1_squeeze",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_p29",
+   "seed": 1934825070,
+   "cell": "e1_squeeze",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_p30",
+   "seed": 1825985406,
+   "cell": "e1_squeeze",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_p31",
+   "seed": 3331685678,
+   "cell": "e1_squeeze",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_p32",
+   "seed": 3907207830,
+   "cell": "e1_squeeze",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_p33",
+   "seed": 816936337,
+   "cell": "e1_squeeze",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_p34",
+   "seed": 1755190994,
+   "cell": "e1_squeeze",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_p35",
+   "seed": 2219106778,
+   "cell": "e1_squeeze",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_p36",
+   "seed": 653183644,
+   "cell": "e1_squeeze",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_p37",
+   "seed": 2334614649,
+   "cell": "e1_squeeze",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_p38",
+   "seed": 4067875321,
+   "cell": "e1_squeeze",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_squeeze_p39",
+   "seed": 3845048489,
+   "cell": "e1_squeeze",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_stranger_p00",
+   "seed": 783850387,
+   "cell": "e1_stranger",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_stranger_p01",
+   "seed": 1132916185,
+   "cell": "e1_stranger",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_stranger_p02",
+   "seed": 2296110554,
+   "cell": "e1_stranger",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_stranger_p03",
+   "seed": 2836859492,
+   "cell": "e1_stranger",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_stranger_p04",
+   "seed": 2908376455,
+   "cell": "e1_stranger",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_stranger_p05",
+   "seed": 51249765,
+   "cell": "e1_stranger",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_stranger_p06",
+   "seed": 3536620418,
+   "cell": "e1_stranger",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_stranger_p07",
+   "seed": 3997063358,
+   "cell": "e1_stranger",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_stranger_p08",
+   "seed": 2223368797,
+   "cell": "e1_stranger",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_stranger_p09",
+   "seed": 3643496095,
+   "cell": "e1_stranger",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_stranger_p10",
+   "seed": 514255067,
+   "cell": "e1_stranger",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_stranger_p11",
+   "seed": 3689539185,
+   "cell": "e1_stranger",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_stranger_p12",
+   "seed": 728543611,
+   "cell": "e1_stranger",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_stranger_p13",
+   "seed": 3882290343,
+   "cell": "e1_stranger",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_stranger_p14",
+   "seed": 1620375891,
+   "cell": "e1_stranger",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_stranger_p15",
+   "seed": 2283106099,
+   "cell": "e1_stranger",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_stranger_p16",
+   "seed": 2291896886,
+   "cell": "e1_stranger",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_stranger_p17",
+   "seed": 894768497,
+   "cell": "e1_stranger",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_stranger_p18",
+   "seed": 2821603823,
+   "cell": "e1_stranger",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_stranger_p19",
+   "seed": 3284450879,
+   "cell": "e1_stranger",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_tight_p00",
+   "seed": 2105856205,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_tight_p01",
+   "seed": 170452868,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_tight_p02",
+   "seed": 4288356756,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_tight_p03",
+   "seed": 1297269466,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_tight_p04",
+   "seed": 836698155,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_tight_p05",
+   "seed": 2302716212,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_tight_p06",
+   "seed": 2546224933,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_tight_p07",
+   "seed": 3161520981,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_tight_p08",
+   "seed": 2630574848,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_tight_p09",
+   "seed": 1223241961,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_tight_p10",
+   "seed": 579539064,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_tight_p11",
+   "seed": 3402010915,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_tight_p12",
+   "seed": 576006317,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_tight_p13",
+   "seed": 1683298388,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_tight_p14",
+   "seed": 1185834893,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_tight_p15",
+   "seed": 3758172670,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_tight_p16",
+   "seed": 2520033618,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_tight_p17",
+   "seed": 3970471708,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_tight_p18",
+   "seed": 3691557962,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_tight_p19",
+   "seed": 3712085568,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_tight_p20",
+   "seed": 1715035749,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_tight_p21",
+   "seed": 1563489909,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_tight_p22",
+   "seed": 2352444245,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_tight_p23",
+   "seed": 1806111636,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_tight_p24",
+   "seed": 3729834350,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_tight_p25",
+   "seed": 2850016339,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_tight_p26",
+   "seed": 339823194,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_tight_p27",
+   "seed": 1718209900,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_tight_p28",
+   "seed": 944455333,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_tight_p29",
+   "seed": 3266483528,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_tight_p30",
+   "seed": 1315828475,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_tight_p31",
+   "seed": 2402073906,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_tight_p32",
+   "seed": 3402021478,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_tight_p33",
+   "seed": 1341230387,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_tight_p34",
+   "seed": 726060274,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_tight_p35",
+   "seed": 1238032076,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_tight_p36",
+   "seed": 542089210,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_tight_p37",
+   "seed": 3880626396,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_tight_p38",
+   "seed": 2454015903,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_tight_p39",
+   "seed": 2170510005,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_tight_p40",
+   "seed": 2682709850,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_tight_p41",
+   "seed": 2629679365,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_tight_p42",
+   "seed": 3410313408,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_tight_p43",
+   "seed": 3904216641,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_tight_p44",
+   "seed": 1946131435,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_tight_p45",
+   "seed": 2696638269,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_tight_p46",
+   "seed": 197239483,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_tight_p47",
+   "seed": 214339629,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_tight_p48",
+   "seed": 2232189952,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_tight_p49",
+   "seed": 4126629608,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_tight_p50",
+   "seed": 1909148356,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_tight_p51",
+   "seed": 222012782,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_tight_p52",
+   "seed": 2779310557,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_tight_p53",
+   "seed": 959261393,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_tight_p54",
+   "seed": 558350828,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_tight_p55",
+   "seed": 3718248086,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_tight_p56",
+   "seed": 3138257934,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_tight_p57",
+   "seed": 739259785,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e1_tight_p58",
+   "seed": 2343131041,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_mock/e1_tight_p59",
+   "seed": 1779646853,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_mock/e2_dialogue_p00",
+   "seed": 3684514777,
+   "cell": "e2_dialogue",
+   "model": null,
+   "framing": "site"
+  },
+  {
+   "dir": "results/envs_mock/e2_dialogue_p01",
+   "seed": 2635268138,
+   "cell": "e2_dialogue",
+   "model": null,
+   "framing": "workshop"
+  },
+  {
+   "dir": "results/envs_mock/e2_dialogue_p02",
+   "seed": 3965424058,
+   "cell": "e2_dialogue",
+   "model": null,
+   "framing": "site"
+  },
+  {
+   "dir": "results/envs_mock/e2_dialogue_p03",
+   "seed": 3473274933,
+   "cell": "e2_dialogue",
+   "model": null,
+   "framing": "workshop"
+  },
+  {
+   "dir": "results/envs_mock/e2_dialogue_p04",
+   "seed": 3284557529,
+   "cell": "e2_dialogue",
+   "model": null,
+   "framing": "site"
+  },
+  {
+   "dir": "results/envs_mock/e2_dialogue_p05",
+   "seed": 1422295157,
+   "cell": "e2_dialogue",
+   "model": null,
+   "framing": "workshop"
+  },
+  {
+   "dir": "results/envs_mock/e2_dialogue_p06",
+   "seed": 1833078625,
+   "cell": "e2_dialogue",
+   "model": null,
+   "framing": "site"
+  },
+  {
+   "dir": "results/envs_mock/e2_dialogue_p07",
+   "seed": 1748185731,
+   "cell": "e2_dialogue",
+   "model": null,
+   "framing": "workshop"
+  },
+  {
+   "dir": "results/envs_mock/e2_dialogue_p08",
+   "seed": 1099525774,
+   "cell": "e2_dialogue",
+   "model": null,
+   "framing": "site"
+  },
+  {
+   "dir": "results/envs_mock/e2_dialogue_p09",
+   "seed": 3209640277,
+   "cell": "e2_dialogue",
+   "model": null,
+   "framing": "workshop"
+  },
+  {
+   "dir": "results/envs_mock/e2_dialogue_p10",
+   "seed": 2952302732,
+   "cell": "e2_dialogue",
+   "model": null,
+   "framing": "site"
+  },
+  {
+   "dir": "results/envs_mock/e2_dialogue_p11",
+   "seed": 1320223152,
+   "cell": "e2_dialogue",
+   "model": null,
+   "framing": "workshop"
+  },
+  {
+   "dir": "results/envs_mock/e2_dialogue_p12",
+   "seed": 1495684046,
+   "cell": "e2_dialogue",
+   "model": null,
+   "framing": "site"
+  },
+  {
+   "dir": "results/envs_mock/e2_dialogue_p13",
+   "seed": 2972084094,
+   "cell": "e2_dialogue",
+   "model": null,
+   "framing": "workshop"
+  },
+  {
+   "dir": "results/envs_mock/e2_dialogue_p14",
+   "seed": 2638941067,
+   "cell": "e2_dialogue",
+   "model": null,
+   "framing": "site"
+  },
+  {
+   "dir": "results/envs_mock/e2_dialogue_p15",
+   "seed": 2718733436,
+   "cell": "e2_dialogue",
+   "model": null,
+   "framing": "workshop"
+  },
+  {
+   "dir": "results/envs_mock/e2_dialogue_p16",
+   "seed": 2641131012,
+   "cell": "e2_dialogue",
+   "model": null,
+   "framing": "site"
+  },
+  {
+   "dir": "results/envs_mock/e2_dialogue_p17",
+   "seed": 220639953,
+   "cell": "e2_dialogue",
+   "model": null,
+   "framing": "workshop"
+  },
+  {
+   "dir": "results/envs_mock/e2_dialogue_p18",
+   "seed": 1414493412,
+   "cell": "e2_dialogue",
+   "model": null,
+   "framing": "site"
+  },
+  {
+   "dir": "results/envs_mock/e2_dialogue_p19",
+   "seed": 523445680,
+   "cell": "e2_dialogue",
+   "model": null,
+   "framing": "workshop"
+  },
+  {
+   "dir": "results/envs_mock/e2_p00",
+   "seed": 3368412237,
+   "cell": "e2",
+   "model": null,
+   "framing": "site"
+  },
+  {
+   "dir": "results/envs_mock/e2_p01",
+   "seed": 1897593139,
+   "cell": "e2",
+   "model": null,
+   "framing": "workshop"
+  },
+  {
+   "dir": "results/envs_mock/e2_p02",
+   "seed": 1884214643,
+   "cell": "e2",
+   "model": null,
+   "framing": "site"
+  },
+  {
+   "dir": "results/envs_mock/e2_p03",
+   "seed": 3246311087,
+   "cell": "e2",
+   "model": null,
+   "framing": "workshop"
+  },
+  {
+   "dir": "results/envs_mock/e2_p04",
+   "seed": 3457631724,
+   "cell": "e2",
+   "model": null,
+   "framing": "site"
+  },
+  {
+   "dir": "results/envs_mock/e2_p05",
+   "seed": 2896451878,
+   "cell": "e2",
+   "model": null,
+   "framing": "workshop"
+  },
+  {
+   "dir": "results/envs_mock/e2_p06",
+   "seed": 280815188,
+   "cell": "e2",
+   "model": null,
+   "framing": "site"
+  },
+  {
+   "dir": "results/envs_mock/e2_p07",
+   "seed": 3608025405,
+   "cell": "e2",
+   "model": null,
+   "framing": "workshop"
+  },
+  {
+   "dir": "results/envs_mock/e2_p08",
+   "seed": 3493424500,
+   "cell": "e2",
+   "model": null,
+   "framing": "site"
+  },
+  {
+   "dir": "results/envs_mock/e2_p09",
+   "seed": 536060939,
+   "cell": "e2",
+   "model": null,
+   "framing": "workshop"
+  },
+  {
+   "dir": "results/envs_mock/e2_p10",
+   "seed": 2600828534,
+   "cell": "e2",
+   "model": null,
+   "framing": "site"
+  },
+  {
+   "dir": "results/envs_mock/e2_p11",
+   "seed": 343296890,
+   "cell": "e2",
+   "model": null,
+   "framing": "workshop"
+  },
+  {
+   "dir": "results/envs_mock/e2_p12",
+   "seed": 3234702732,
+   "cell": "e2",
+   "model": null,
+   "framing": "site"
+  },
+  {
+   "dir": "results/envs_mock/e2_p13",
+   "seed": 195200341,
+   "cell": "e2",
+   "model": null,
+   "framing": "workshop"
+  },
+  {
+   "dir": "results/envs_mock/e2_p14",
+   "seed": 1935602405,
+   "cell": "e2",
+   "model": null,
+   "framing": "site"
+  },
+  {
+   "dir": "results/envs_mock/e2_p15",
+   "seed": 889609843,
+   "cell": "e2",
+   "model": null,
+   "framing": "workshop"
+  },
+  {
+   "dir": "results/envs_mock/e2_p16",
+   "seed": 3342368075,
+   "cell": "e2",
+   "model": null,
+   "framing": "site"
+  },
+  {
+   "dir": "results/envs_mock/e2_p17",
+   "seed": 634833349,
+   "cell": "e2",
+   "model": null,
+   "framing": "workshop"
+  },
+  {
+   "dir": "results/envs_mock/e2_p18",
+   "seed": 2041288147,
+   "cell": "e2",
+   "model": null,
+   "framing": "site"
+  },
+  {
+   "dir": "results/envs_mock/e2_p19",
+   "seed": 632993118,
+   "cell": "e2",
+   "model": null,
+   "framing": "workshop"
+  },
+  {
+   "dir": "results/envs_mock/e2_p20",
+   "seed": 576721028,
+   "cell": "e2",
+   "model": null,
+   "framing": "site"
+  },
+  {
+   "dir": "results/envs_mock/e2_p21",
+   "seed": 1547659060,
+   "cell": "e2",
+   "model": null,
+   "framing": "workshop"
+  },
+  {
+   "dir": "results/envs_mock/e2_p22",
+   "seed": 846147156,
+   "cell": "e2",
+   "model": null,
+   "framing": "site"
+  },
+  {
+   "dir": "results/envs_mock/e2_p23",
+   "seed": 1608187208,
+   "cell": "e2",
+   "model": null,
+   "framing": "workshop"
+  },
+  {
+   "dir": "results/envs_mock/e2_p24",
+   "seed": 1895051084,
+   "cell": "e2",
+   "model": null,
+   "framing": "site"
+  },
+  {
+   "dir": "results/envs_mock/e2_p25",
+   "seed": 4031627891,
+   "cell": "e2",
+   "model": null,
+   "framing": "workshop"
+  },
+  {
+   "dir": "results/envs_mock/e2_p26",
+   "seed": 2929681452,
+   "cell": "e2",
+   "model": null,
+   "framing": "site"
+  },
+  {
+   "dir": "results/envs_mock/e2_p27",
+   "seed": 1677719633,
+   "cell": "e2",
+   "model": null,
+   "framing": "workshop"
+  },
+  {
+   "dir": "results/envs_mock/e2_p28",
+   "seed": 3582102677,
+   "cell": "e2",
+   "model": null,
+   "framing": "site"
+  },
+  {
+   "dir": "results/envs_mock/e2_p29",
+   "seed": 2060637086,
+   "cell": "e2",
+   "model": null,
+   "framing": "workshop"
+  },
+  {
+   "dir": "results/envs_mock/e2_p30",
+   "seed": 1645190637,
+   "cell": "e2",
+   "model": null,
+   "framing": "site"
+  },
+  {
+   "dir": "results/envs_mock/e2_p31",
+   "seed": 1997469098,
+   "cell": "e2",
+   "model": null,
+   "framing": "workshop"
+  },
+  {
+   "dir": "results/envs_mock/e2_p32",
+   "seed": 592576466,
+   "cell": "e2",
+   "model": null,
+   "framing": "site"
+  },
+  {
+   "dir": "results/envs_mock/e2_p33",
+   "seed": 1533011011,
+   "cell": "e2",
+   "model": null,
+   "framing": "workshop"
+  },
+  {
+   "dir": "results/envs_mock/e2_p34",
+   "seed": 1273468315,
+   "cell": "e2",
+   "model": null,
+   "framing": "site"
+  },
+  {
+   "dir": "results/envs_mock/e2_p35",
+   "seed": 3381723667,
+   "cell": "e2",
+   "model": null,
+   "framing": "workshop"
+  },
+  {
+   "dir": "results/envs_mock/e2_p36",
+   "seed": 189248247,
+   "cell": "e2",
+   "model": null,
+   "framing": "site"
+  },
+  {
+   "dir": "results/envs_mock/e2_p37",
+   "seed": 1245203468,
+   "cell": "e2",
+   "model": null,
+   "framing": "workshop"
+  },
+  {
+   "dir": "results/envs_mock/e2_p38",
+   "seed": 4292044032,
+   "cell": "e2",
+   "model": null,
+   "framing": "site"
+  },
+  {
+   "dir": "results/envs_mock/e2_p39",
+   "seed": 1006455918,
+   "cell": "e2",
+   "model": null,
+   "framing": "workshop"
+  },
+  {
+   "dir": "results/envs_mock/e2_think_p00",
+   "seed": 2720035827,
+   "cell": "e2_think",
+   "model": null,
+   "framing": "site"
+  },
+  {
+   "dir": "results/envs_mock/e2_think_p01",
+   "seed": 1666238924,
+   "cell": "e2_think",
+   "model": null,
+   "framing": "workshop"
+  },
+  {
+   "dir": "results/envs_mock/e2_think_p02",
+   "seed": 1223583902,
+   "cell": "e2_think",
+   "model": null,
+   "framing": "site"
+  },
+  {
+   "dir": "results/envs_mock/e2_think_p03",
+   "seed": 2457540802,
+   "cell": "e2_think",
+   "model": null,
+   "framing": "workshop"
+  },
+  {
+   "dir": "results/envs_mock/e2_think_p04",
+   "seed": 4124530325,
+   "cell": "e2_think",
+   "model": null,
+   "framing": "site"
+  },
+  {
+   "dir": "results/envs_mock/e2_think_p05",
+   "seed": 3347351084,
+   "cell": "e2_think",
+   "model": null,
+   "framing": "workshop"
+  },
+  {
+   "dir": "results/envs_mock/e2_think_p06",
+   "seed": 2515965284,
+   "cell": "e2_think",
+   "model": null,
+   "framing": "site"
+  },
+  {
+   "dir": "results/envs_mock/e2_think_p07",
+   "seed": 2009164946,
+   "cell": "e2_think",
+   "model": null,
+   "framing": "workshop"
+  },
+  {
+   "dir": "results/envs_mock/e2_think_p08",
+   "seed": 562350524,
+   "cell": "e2_think",
+   "model": null,
+   "framing": "site"
+  },
+  {
+   "dir": "results/envs_mock/e2_think_p09",
+   "seed": 2265080616,
+   "cell": "e2_think",
+   "model": null,
+   "framing": "workshop"
+  },
+  {
+   "dir": "results/envs_mock/e2_think_p10",
+   "seed": 679956975,
+   "cell": "e2_think",
+   "model": null,
+   "framing": "site"
+  },
+  {
+   "dir": "results/envs_mock/e2_think_p11",
+   "seed": 973542505,
+   "cell": "e2_think",
+   "model": null,
+   "framing": "workshop"
+  },
+  {
+   "dir": "results/envs_mock/e2_think_p12",
+   "seed": 188624825,
+   "cell": "e2_think",
+   "model": null,
+   "framing": "site"
+  },
+  {
+   "dir": "results/envs_mock/e2_think_p13",
+   "seed": 2824986825,
+   "cell": "e2_think",
+   "model": null,
+   "framing": "workshop"
+  },
+  {
+   "dir": "results/envs_mock/e2_think_p14",
+   "seed": 3845164206,
+   "cell": "e2_think",
+   "model": null,
+   "framing": "site"
+  },
+  {
+   "dir": "results/envs_mock/e2_think_p15",
+   "seed": 3358749754,
+   "cell": "e2_think",
+   "model": null,
+   "framing": "workshop"
+  },
+  {
+   "dir": "results/envs_mock/e2_think_p16",
+   "seed": 891134331,
+   "cell": "e2_think",
+   "model": null,
+   "framing": "site"
+  },
+  {
+   "dir": "results/envs_mock/e2_think_p17",
+   "seed": 728150038,
+   "cell": "e2_think",
+   "model": null,
+   "framing": "workshop"
+  },
+  {
+   "dir": "results/envs_mock/e2_think_p18",
+   "seed": 2135370213,
+   "cell": "e2_think",
+   "model": null,
+   "framing": "site"
+  },
+  {
+   "dir": "results/envs_mock/e2_think_p19",
+   "seed": 2940622326,
+   "cell": "e2_think",
+   "model": null,
+   "framing": "workshop"
+  },
+  {
+   "dir": "results/envs_mock/e3_p00",
+   "seed": 4268102221,
+   "cell": "e3",
+   "model": null,
+   "framing": "picker"
+  },
+  {
+   "dir": "results/envs_mock/e3_p01",
+   "seed": 1026961513,
+   "cell": "e3",
+   "model": null,
+   "framing": "warehouse"
+  },
+  {
+   "dir": "results/envs_mock/e3_p02",
+   "seed": 2998910919,
+   "cell": "e3",
+   "model": null,
+   "framing": "picker"
+  },
+  {
+   "dir": "results/envs_mock/e3_p03",
+   "seed": 1170924191,
+   "cell": "e3",
+   "model": null,
+   "framing": "warehouse"
+  },
+  {
+   "dir": "results/envs_mock/e3_p04",
+   "seed": 3207097520,
+   "cell": "e3",
+   "model": null,
+   "framing": "picker"
+  },
+  {
+   "dir": "results/envs_mock/e3_p05",
+   "seed": 46594739,
+   "cell": "e3",
+   "model": null,
+   "framing": "warehouse"
+  },
+  {
+   "dir": "results/envs_mock/e3_p06",
+   "seed": 3260689784,
+   "cell": "e3",
+   "model": null,
+   "framing": "picker"
+  },
+  {
+   "dir": "results/envs_mock/e3_p07",
+   "seed": 45764339,
+   "cell": "e3",
+   "model": null,
+   "framing": "warehouse"
+  },
+  {
+   "dir": "results/envs_mock/e3_p08",
+   "seed": 3214987367,
+   "cell": "e3",
+   "model": null,
+   "framing": "picker"
+  },
+  {
+   "dir": "results/envs_mock/e3_p09",
+   "seed": 1335043581,
+   "cell": "e3",
+   "model": null,
+   "framing": "warehouse"
+  },
+  {
+   "dir": "results/envs_mock/e3_p10",
+   "seed": 3192459896,
+   "cell": "e3",
+   "model": null,
+   "framing": "picker"
+  },
+  {
+   "dir": "results/envs_mock/e3_p11",
+   "seed": 2096099791,
+   "cell": "e3",
+   "model": null,
+   "framing": "warehouse"
+  },
+  {
+   "dir": "results/envs_mock/e3_p12",
+   "seed": 3407628871,
+   "cell": "e3",
+   "model": null,
+   "framing": "picker"
+  },
+  {
+   "dir": "results/envs_mock/e3_p13",
+   "seed": 1416580943,
+   "cell": "e3",
+   "model": null,
+   "framing": "warehouse"
+  },
+  {
+   "dir": "results/envs_mock/e3_p14",
+   "seed": 3703514370,
+   "cell": "e3",
+   "model": null,
+   "framing": "picker"
+  },
+  {
+   "dir": "results/envs_mock/e3_p15",
+   "seed": 322114181,
+   "cell": "e3",
+   "model": null,
+   "framing": "warehouse"
+  },
+  {
+   "dir": "results/envs_mock/e3_p16",
+   "seed": 2814072000,
+   "cell": "e3",
+   "model": null,
+   "framing": "picker"
+  },
+  {
+   "dir": "results/envs_mock/e3_p17",
+   "seed": 1765232784,
+   "cell": "e3",
+   "model": null,
+   "framing": "warehouse"
+  },
+  {
+   "dir": "results/envs_mock/e3_p18",
+   "seed": 1083925866,
+   "cell": "e3",
+   "model": null,
+   "framing": "picker"
+  },
+  {
+   "dir": "results/envs_mock/e3_p19",
+   "seed": 2224234018,
+   "cell": "e3",
+   "model": null,
+   "framing": "warehouse"
+  },
+  {
+   "dir": "results/envs_mock/e3_p20",
+   "seed": 2848643623,
+   "cell": "e3",
+   "model": null,
+   "framing": "picker"
+  },
+  {
+   "dir": "results/envs_mock/e3_p21",
+   "seed": 4130724026,
+   "cell": "e3",
+   "model": null,
+   "framing": "warehouse"
+  },
+  {
+   "dir": "results/envs_mock/e3_p22",
+   "seed": 1211530605,
+   "cell": "e3",
+   "model": null,
+   "framing": "picker"
+  },
+  {
+   "dir": "results/envs_mock/e3_p23",
+   "seed": 1837795198,
+   "cell": "e3",
+   "model": null,
+   "framing": "warehouse"
+  },
+  {
+   "dir": "results/envs_mock/e3_p24",
+   "seed": 1852774123,
+   "cell": "e3",
+   "model": null,
+   "framing": "picker"
+  },
+  {
+   "dir": "results/envs_mock/e3_p25",
+   "seed": 1042337382,
+   "cell": "e3",
+   "model": null,
+   "framing": "warehouse"
+  },
+  {
+   "dir": "results/envs_mock/e3_p26",
+   "seed": 1158490700,
+   "cell": "e3",
+   "model": null,
+   "framing": "picker"
+  },
+  {
+   "dir": "results/envs_mock/e3_p27",
+   "seed": 131268593,
+   "cell": "e3",
+   "model": null,
+   "framing": "warehouse"
+  },
+  {
+   "dir": "results/envs_mock/e3_p28",
+   "seed": 381102705,
+   "cell": "e3",
+   "model": null,
+   "framing": "picker"
+  },
+  {
+   "dir": "results/envs_mock/e3_p29",
+   "seed": 2084392653,
+   "cell": "e3",
+   "model": null,
+   "framing": "warehouse"
+  },
+  {
+   "dir": "results/envs_mock/e3_p30",
+   "seed": 2967385358,
+   "cell": "e3",
+   "model": null,
+   "framing": "picker"
+  },
+  {
+   "dir": "results/envs_mock/e3_p31",
+   "seed": 1102513460,
+   "cell": "e3",
+   "model": null,
+   "framing": "warehouse"
+  },
+  {
+   "dir": "results/envs_mock/e3_p32",
+   "seed": 2158546086,
+   "cell": "e3",
+   "model": null,
+   "framing": "picker"
+  },
+  {
+   "dir": "results/envs_mock/e3_p33",
+   "seed": 2027134837,
+   "cell": "e3",
+   "model": null,
+   "framing": "warehouse"
+  },
+  {
+   "dir": "results/envs_mock/e3_p34",
+   "seed": 2974041662,
+   "cell": "e3",
+   "model": null,
+   "framing": "picker"
+  },
+  {
+   "dir": "results/envs_mock/e3_p35",
+   "seed": 3991083060,
+   "cell": "e3",
+   "model": null,
+   "framing": "warehouse"
+  },
+  {
+   "dir": "results/envs_mock/e3_p36",
+   "seed": 3038227509,
+   "cell": "e3",
+   "model": null,
+   "framing": "picker"
+  },
+  {
+   "dir": "results/envs_mock/e3_p37",
+   "seed": 774017694,
+   "cell": "e3",
+   "model": null,
+   "framing": "warehouse"
+  },
+  {
+   "dir": "results/envs_mock/e3_p38",
+   "seed": 3775517338,
+   "cell": "e3",
+   "model": null,
+   "framing": "picker"
+  },
+  {
+   "dir": "results/envs_mock/e3_p39",
+   "seed": 2165683797,
+   "cell": "e3",
+   "model": null,
+   "framing": "warehouse"
+  },
+  {
+   "dir": "results/envs_mock/e3_p40",
+   "seed": 4092974139,
+   "cell": "e3",
+   "model": null,
+   "framing": "picker"
+  },
+  {
+   "dir": "results/envs_mock/e3_p41",
+   "seed": 1164077341,
+   "cell": "e3",
+   "model": null,
+   "framing": "warehouse"
+  },
+  {
+   "dir": "results/envs_mock/e3_p42",
+   "seed": 3530786033,
+   "cell": "e3",
+   "model": null,
+   "framing": "picker"
+  },
+  {
+   "dir": "results/envs_mock/e3_p43",
+   "seed": 205813115,
+   "cell": "e3",
+   "model": null,
+   "framing": "warehouse"
+  },
+  {
+   "dir": "results/envs_mock/e3_p44",
+   "seed": 4266357369,
+   "cell": "e3",
+   "model": null,
+   "framing": "picker"
+  },
+  {
+   "dir": "results/envs_mock/e3_p45",
+   "seed": 2204343299,
+   "cell": "e3",
+   "model": null,
+   "framing": "warehouse"
+  },
+  {
+   "dir": "results/envs_mock/e3_p46",
+   "seed": 3898650178,
+   "cell": "e3",
+   "model": null,
+   "framing": "picker"
+  },
+  {
+   "dir": "results/envs_mock/e3_p47",
+   "seed": 409189778,
+   "cell": "e3",
+   "model": null,
+   "framing": "warehouse"
+  },
+  {
+   "dir": "results/envs_mock/e3_p48",
+   "seed": 3183692486,
+   "cell": "e3",
+   "model": null,
+   "framing": "picker"
+  },
+  {
+   "dir": "results/envs_mock/e3_p49",
+   "seed": 3611063530,
+   "cell": "e3",
+   "model": null,
+   "framing": "warehouse"
+  },
+  {
+   "dir": "results/envs_mock/e3_p50",
+   "seed": 786236808,
+   "cell": "e3",
+   "model": null,
+   "framing": "picker"
+  },
+  {
+   "dir": "results/envs_mock/e3_p51",
+   "seed": 3091514491,
+   "cell": "e3",
+   "model": null,
+   "framing": "warehouse"
+  },
+  {
+   "dir": "results/envs_mock/e3_p52",
+   "seed": 612489932,
+   "cell": "e3",
+   "model": null,
+   "framing": "picker"
+  },
+  {
+   "dir": "results/envs_mock/e3_p53",
+   "seed": 1818855175,
+   "cell": "e3",
+   "model": null,
+   "framing": "warehouse"
+  },
+  {
+   "dir": "results/envs_mock/e3_p54",
+   "seed": 40539020,
+   "cell": "e3",
+   "model": null,
+   "framing": "picker"
+  },
+  {
+   "dir": "results/envs_mock/e3_p55",
+   "seed": 3861733149,
+   "cell": "e3",
+   "model": null,
+   "framing": "warehouse"
+  },
+  {
+   "dir": "results/envs_mock/e3_p56",
+   "seed": 802050242,
+   "cell": "e3",
+   "model": null,
+   "framing": "picker"
+  },
+  {
+   "dir": "results/envs_mock/e3_p57",
+   "seed": 1096214199,
+   "cell": "e3",
+   "model": null,
+   "framing": "warehouse"
+  },
+  {
+   "dir": "results/envs_mock/e3_p58",
+   "seed": 500877086,
+   "cell": "e3",
+   "model": null,
+   "framing": "picker"
+  },
+  {
+   "dir": "results/envs_mock/e3_p59",
+   "seed": 1592600297,
+   "cell": "e3",
+   "model": null,
+   "framing": "warehouse"
+  },
+  {
+   "dir": "results/envs_mock/e3_squeeze_p00",
+   "seed": 4277933404,
+   "cell": "e3_squeeze",
+   "model": null,
+   "framing": "picker"
+  },
+  {
+   "dir": "results/envs_mock/e3_squeeze_p01",
+   "seed": 3506863326,
+   "cell": "e3_squeeze",
+   "model": null,
+   "framing": "warehouse"
+  },
+  {
+   "dir": "results/envs_mock/e3_squeeze_p02",
+   "seed": 1722815458,
+   "cell": "e3_squeeze",
+   "model": null,
+   "framing": "picker"
+  },
+  {
+   "dir": "results/envs_mock/e3_squeeze_p03",
+   "seed": 2812496590,
+   "cell": "e3_squeeze",
+   "model": null,
+   "framing": "warehouse"
+  },
+  {
+   "dir": "results/envs_mock/e3_squeeze_p04",
+   "seed": 12680794,
+   "cell": "e3_squeeze",
+   "model": null,
+   "framing": "picker"
+  },
+  {
+   "dir": "results/envs_mock/e3_squeeze_p05",
+   "seed": 210823534,
+   "cell": "e3_squeeze",
+   "model": null,
+   "framing": "warehouse"
+  },
+  {
+   "dir": "results/envs_mock/e3_squeeze_p06",
+   "seed": 1156478449,
+   "cell": "e3_squeeze",
+   "model": null,
+   "framing": "picker"
+  },
+  {
+   "dir": "results/envs_mock/e3_squeeze_p07",
+   "seed": 1694962666,
+   "cell": "e3_squeeze",
+   "model": null,
+   "framing": "warehouse"
+  },
+  {
+   "dir": "results/envs_mock/e3_squeeze_p08",
+   "seed": 1008176747,
+   "cell": "e3_squeeze",
+   "model": null,
+   "framing": "picker"
+  },
+  {
+   "dir": "results/envs_mock/e3_squeeze_p09",
+   "seed": 1782553662,
+   "cell": "e3_squeeze",
+   "model": null,
+   "framing": "warehouse"
+  },
+  {
+   "dir": "results/envs_mock/e3_squeeze_p10",
+   "seed": 1638342115,
+   "cell": "e3_squeeze",
+   "model": null,
+   "framing": "picker"
+  },
+  {
+   "dir": "results/envs_mock/e3_squeeze_p11",
+   "seed": 284645550,
+   "cell": "e3_squeeze",
+   "model": null,
+   "framing": "warehouse"
+  },
+  {
+   "dir": "results/envs_mock/e3_squeeze_p12",
+   "seed": 1926693408,
+   "cell": "e3_squeeze",
+   "model": null,
+   "framing": "picker"
+  },
+  {
+   "dir": "results/envs_mock/e3_squeeze_p13",
+   "seed": 1174628251,
+   "cell": "e3_squeeze",
+   "model": null,
+   "framing": "warehouse"
+  },
+  {
+   "dir": "results/envs_mock/e3_squeeze_p14",
+   "seed": 3746115081,
+   "cell": "e3_squeeze",
+   "model": null,
+   "framing": "picker"
+  },
+  {
+   "dir": "results/envs_mock/e3_squeeze_p15",
+   "seed": 1086569851,
+   "cell": "e3_squeeze",
+   "model": null,
+   "framing": "warehouse"
+  },
+  {
+   "dir": "results/envs_mock/e3_squeeze_p16",
+   "seed": 295969859,
+   "cell": "e3_squeeze",
+   "model": null,
+   "framing": "picker"
+  },
+  {
+   "dir": "results/envs_mock/e3_squeeze_p17",
+   "seed": 1666139870,
+   "cell": "e3_squeeze",
+   "model": null,
+   "framing": "warehouse"
+  },
+  {
+   "dir": "results/envs_mock/e3_squeeze_p18",
+   "seed": 3768217702,
+   "cell": "e3_squeeze",
+   "model": null,
+   "framing": "picker"
+  },
+  {
+   "dir": "results/envs_mock/e3_squeeze_p19",
+   "seed": 2254282244,
+   "cell": "e3_squeeze",
+   "model": null,
+   "framing": "warehouse"
+  },
+  {
+   "dir": "results/envs_mock/e3_squeeze_p20",
+   "seed": 1532098606,
+   "cell": "e3_squeeze",
+   "model": null,
+   "framing": "picker"
+  },
+  {
+   "dir": "results/envs_mock/e3_squeeze_p21",
+   "seed": 2923271178,
+   "cell": "e3_squeeze",
+   "model": null,
+   "framing": "warehouse"
+  },
+  {
+   "dir": "results/envs_mock/e3_squeeze_p22",
+   "seed": 3828281420,
+   "cell": "e3_squeeze",
+   "model": null,
+   "framing": "picker"
+  },
+  {
+   "dir": "results/envs_mock/e3_squeeze_p23",
+   "seed": 1686580475,
+   "cell": "e3_squeeze",
+   "model": null,
+   "framing": "warehouse"
+  },
+  {
+   "dir": "results/envs_mock/e3_squeeze_p24",
+   "seed": 1999402393,
+   "cell": "e3_squeeze",
+   "model": null,
+   "framing": "picker"
+  },
+  {
+   "dir": "results/envs_mock/e3_squeeze_p25",
+   "seed": 3253542304,
+   "cell": "e3_squeeze",
+   "model": null,
+   "framing": "warehouse"
+  },
+  {
+   "dir": "results/envs_mock/e3_squeeze_p26",
+   "seed": 1632906447,
+   "cell": "e3_squeeze",
+   "model": null,
+   "framing": "picker"
+  },
+  {
+   "dir": "results/envs_mock/e3_squeeze_p27",
+   "seed": 699291510,
+   "cell": "e3_squeeze",
+   "model": null,
+   "framing": "warehouse"
+  },
+  {
+   "dir": "results/envs_mock/e3_squeeze_p28",
+   "seed": 3957483669,
+   "cell": "e3_squeeze",
+   "model": null,
+   "framing": "picker"
+  },
+  {
+   "dir": "results/envs_mock/e3_squeeze_p29",
+   "seed": 3382432759,
+   "cell": "e3_squeeze",
+   "model": null,
+   "framing": "warehouse"
+  },
+  {
+   "dir": "results/envs_mock/e3_squeeze_p30",
+   "seed": 2986746085,
+   "cell": "e3_squeeze",
+   "model": null,
+   "framing": "picker"
+  },
+  {
+   "dir": "results/envs_mock/e3_squeeze_p31",
+   "seed": 635482534,
+   "cell": "e3_squeeze",
+   "model": null,
+   "framing": "warehouse"
+  },
+  {
+   "dir": "results/envs_mock/e3_squeeze_p32",
+   "seed": 2423683275,
+   "cell": "e3_squeeze",
+   "model": null,
+   "framing": "picker"
+  },
+  {
+   "dir": "results/envs_mock/e3_squeeze_p33",
+   "seed": 1214994771,
+   "cell": "e3_squeeze",
+   "model": null,
+   "framing": "warehouse"
+  },
+  {
+   "dir": "results/envs_mock/e3_squeeze_p34",
+   "seed": 2722984124,
+   "cell": "e3_squeeze",
+   "model": null,
+   "framing": "picker"
+  },
+  {
+   "dir": "results/envs_mock/e3_squeeze_p35",
+   "seed": 996226734,
+   "cell": "e3_squeeze",
+   "model": null,
+   "framing": "warehouse"
+  },
+  {
+   "dir": "results/envs_mock/e3_squeeze_p36",
+   "seed": 2398764287,
+   "cell": "e3_squeeze",
+   "model": null,
+   "framing": "picker"
+  },
+  {
+   "dir": "results/envs_mock/e3_squeeze_p37",
+   "seed": 2948131077,
+   "cell": "e3_squeeze",
+   "model": null,
+   "framing": "warehouse"
+  },
+  {
+   "dir": "results/envs_mock/e3_squeeze_p38",
+   "seed": 1762251827,
+   "cell": "e3_squeeze",
+   "model": null,
+   "framing": "picker"
+  },
+  {
+   "dir": "results/envs_mock/e3_squeeze_p39",
+   "seed": 4218604747,
+   "cell": "e3_squeeze",
+   "model": null,
+   "framing": "warehouse"
+  },
+  {
+   "dir": "results/envs_mock/e4_p00",
+   "seed": 739898328,
+   "cell": "e4",
+   "model": null,
+   "framing": "bonus"
+  },
+  {
+   "dir": "results/envs_mock/e4_p01",
+   "seed": 314191648,
+   "cell": "e4",
+   "model": null,
+   "framing": "market"
+  },
+  {
+   "dir": "results/envs_mock/e4_p02",
+   "seed": 86350978,
+   "cell": "e4",
+   "model": null,
+   "framing": "bonus"
+  },
+  {
+   "dir": "results/envs_mock/e4_p03",
+   "seed": 2893130855,
+   "cell": "e4",
+   "model": null,
+   "framing": "market"
+  },
+  {
+   "dir": "results/envs_mock/e4_p04",
+   "seed": 2951891996,
+   "cell": "e4",
+   "model": null,
+   "framing": "bonus"
+  },
+  {
+   "dir": "results/envs_mock/e4_p05",
+   "seed": 3175394769,
+   "cell": "e4",
+   "model": null,
+   "framing": "market"
+  },
+  {
+   "dir": "results/envs_mock/e4_p06",
+   "seed": 1076906587,
+   "cell": "e4",
+   "model": null,
+   "framing": "bonus"
+  },
+  {
+   "dir": "results/envs_mock/e4_p07",
+   "seed": 1083249796,
+   "cell": "e4",
+   "model": null,
+   "framing": "market"
+  },
+  {
+   "dir": "results/envs_mock/e4_p08",
+   "seed": 2404290622,
+   "cell": "e4",
+   "model": null,
+   "framing": "bonus"
+  },
+  {
+   "dir": "results/envs_mock/e4_p09",
+   "seed": 3877232385,
+   "cell": "e4",
+   "model": null,
+   "framing": "market"
+  },
+  {
+   "dir": "results/envs_mock/e4_p10",
+   "seed": 987544931,
+   "cell": "e4",
+   "model": null,
+   "framing": "bonus"
+  },
+  {
+   "dir": "results/envs_mock/e4_p11",
+   "seed": 1084158967,
+   "cell": "e4",
+   "model": null,
+   "framing": "market"
+  },
+  {
+   "dir": "results/envs_mock/e4_p12",
+   "seed": 1571377957,
+   "cell": "e4",
+   "model": null,
+   "framing": "bonus"
+  },
+  {
+   "dir": "results/envs_mock/e4_p13",
+   "seed": 2964143083,
+   "cell": "e4",
+   "model": null,
+   "framing": "market"
+  },
+  {
+   "dir": "results/envs_mock/e4_p14",
+   "seed": 2049652409,
+   "cell": "e4",
+   "model": null,
+   "framing": "bonus"
+  },
+  {
+   "dir": "results/envs_mock/e4_p15",
+   "seed": 2320479458,
+   "cell": "e4",
+   "model": null,
+   "framing": "market"
+  },
+  {
+   "dir": "results/envs_mock/e4_p16",
+   "seed": 1994626162,
+   "cell": "e4",
+   "model": null,
+   "framing": "bonus"
+  },
+  {
+   "dir": "results/envs_mock/e4_p17",
+   "seed": 2001518336,
+   "cell": "e4",
+   "model": null,
+   "framing": "market"
+  },
+  {
+   "dir": "results/envs_mock/e4_p18",
+   "seed": 3633567060,
+   "cell": "e4",
+   "model": null,
+   "framing": "bonus"
+  },
+  {
+   "dir": "results/envs_mock/e4_p19",
+   "seed": 3215715404,
+   "cell": "e4",
+   "model": null,
+   "framing": "market"
+  },
+  {
+   "dir": "results/envs_mock/e4_p20",
+   "seed": 2141393288,
+   "cell": "e4",
+   "model": null,
+   "framing": "bonus"
+  },
+  {
+   "dir": "results/envs_mock/e4_p21",
+   "seed": 1643690584,
+   "cell": "e4",
+   "model": null,
+   "framing": "market"
+  },
+  {
+   "dir": "results/envs_mock/e4_p22",
+   "seed": 2605606125,
+   "cell": "e4",
+   "model": null,
+   "framing": "bonus"
+  },
+  {
+   "dir": "results/envs_mock/e4_p23",
+   "seed": 3650681702,
+   "cell": "e4",
+   "model": null,
+   "framing": "market"
+  },
+  {
+   "dir": "results/envs_mock/e4_p24",
+   "seed": 1163581899,
+   "cell": "e4",
+   "model": null,
+   "framing": "bonus"
+  },
+  {
+   "dir": "results/envs_mock/e4_p25",
+   "seed": 1054134334,
+   "cell": "e4",
+   "model": null,
+   "framing": "market"
+  },
+  {
+   "dir": "results/envs_mock/e4_p26",
+   "seed": 1660498962,
+   "cell": "e4",
+   "model": null,
+   "framing": "bonus"
+  },
+  {
+   "dir": "results/envs_mock/e4_p27",
+   "seed": 3864184670,
+   "cell": "e4",
+   "model": null,
+   "framing": "market"
+  },
+  {
+   "dir": "results/envs_mock/e4_p28",
+   "seed": 4095958686,
+   "cell": "e4",
+   "model": null,
+   "framing": "bonus"
+  },
+  {
+   "dir": "results/envs_mock/e4_p29",
+   "seed": 1115545882,
+   "cell": "e4",
+   "model": null,
+   "framing": "market"
+  },
+  {
+   "dir": "results/envs_mock/e4_p30",
+   "seed": 476231095,
+   "cell": "e4",
+   "model": null,
+   "framing": "bonus"
+  },
+  {
+   "dir": "results/envs_mock/e4_p31",
+   "seed": 1963402157,
+   "cell": "e4",
+   "model": null,
+   "framing": "market"
+  },
+  {
+   "dir": "results/envs_mock/e4_p32",
+   "seed": 1653727163,
+   "cell": "e4",
+   "model": null,
+   "framing": "bonus"
+  },
+  {
+   "dir": "results/envs_mock/e4_p33",
+   "seed": 2424206256,
+   "cell": "e4",
+   "model": null,
+   "framing": "market"
+  },
+  {
+   "dir": "results/envs_mock/e4_p34",
+   "seed": 145501340,
+   "cell": "e4",
+   "model": null,
+   "framing": "bonus"
+  },
+  {
+   "dir": "results/envs_mock/e4_p35",
+   "seed": 1523057385,
+   "cell": "e4",
+   "model": null,
+   "framing": "market"
+  },
+  {
+   "dir": "results/envs_mock/e4_p36",
+   "seed": 1155887947,
+   "cell": "e4",
+   "model": null,
+   "framing": "bonus"
+  },
+  {
+   "dir": "results/envs_mock/e4_p37",
+   "seed": 3361121917,
+   "cell": "e4",
+   "model": null,
+   "framing": "market"
+  },
+  {
+   "dir": "results/envs_mock/e4_p38",
+   "seed": 587681636,
+   "cell": "e4",
+   "model": null,
+   "framing": "bonus"
+  },
+  {
+   "dir": "results/envs_mock/e4_p39",
+   "seed": 696786407,
+   "cell": "e4",
+   "model": null,
+   "framing": "market"
+  },
+  {
+   "dir": "results/envs_mock/e4_p40",
+   "seed": 1842649033,
+   "cell": "e4",
+   "model": null,
+   "framing": "bonus"
+  },
+  {
+   "dir": "results/envs_mock/e4_p41",
+   "seed": 3901781134,
+   "cell": "e4",
+   "model": null,
+   "framing": "market"
+  },
+  {
+   "dir": "results/envs_mock/e4_p42",
+   "seed": 33682830,
+   "cell": "e4",
+   "model": null,
+   "framing": "bonus"
+  },
+  {
+   "dir": "results/envs_mock/e4_p43",
+   "seed": 3855190975,
+   "cell": "e4",
+   "model": null,
+   "framing": "market"
+  },
+  {
+   "dir": "results/envs_mock/e4_p44",
+   "seed": 4238839135,
+   "cell": "e4",
+   "model": null,
+   "framing": "bonus"
+  },
+  {
+   "dir": "results/envs_mock/e4_p45",
+   "seed": 4222292356,
+   "cell": "e4",
+   "model": null,
+   "framing": "market"
+  },
+  {
+   "dir": "results/envs_mock/e4_p46",
+   "seed": 3054244508,
+   "cell": "e4",
+   "model": null,
+   "framing": "bonus"
+  },
+  {
+   "dir": "results/envs_mock/e4_p47",
+   "seed": 1017973227,
+   "cell": "e4",
+   "model": null,
+   "framing": "market"
+  },
+  {
+   "dir": "results/envs_mock/e4_p48",
+   "seed": 3129767062,
+   "cell": "e4",
+   "model": null,
+   "framing": "bonus"
+  },
+  {
+   "dir": "results/envs_mock/e4_p49",
+   "seed": 452802011,
+   "cell": "e4",
+   "model": null,
+   "framing": "market"
+  },
+  {
+   "dir": "results/envs_mock/e4_p50",
+   "seed": 3949303132,
+   "cell": "e4",
+   "model": null,
+   "framing": "bonus"
+  },
+  {
+   "dir": "results/envs_mock/e4_p51",
+   "seed": 1065443355,
+   "cell": "e4",
+   "model": null,
+   "framing": "market"
+  },
+  {
+   "dir": "results/envs_mock/e4_p52",
+   "seed": 1817226943,
+   "cell": "e4",
+   "model": null,
+   "framing": "bonus"
+  },
+  {
+   "dir": "results/envs_mock/e4_p53",
+   "seed": 295695859,
+   "cell": "e4",
+   "model": null,
+   "framing": "market"
+  },
+  {
+   "dir": "results/envs_mock/e4_p54",
+   "seed": 1646774446,
+   "cell": "e4",
+   "model": null,
+   "framing": "bonus"
+  },
+  {
+   "dir": "results/envs_mock/e4_p55",
+   "seed": 4261679183,
+   "cell": "e4",
+   "model": null,
+   "framing": "market"
+  },
+  {
+   "dir": "results/envs_mock/e4_p56",
+   "seed": 95306658,
+   "cell": "e4",
+   "model": null,
+   "framing": "bonus"
+  },
+  {
+   "dir": "results/envs_mock/e4_p57",
+   "seed": 159578108,
+   "cell": "e4",
+   "model": null,
+   "framing": "market"
+  },
+  {
+   "dir": "results/envs_mock/e4_p58",
+   "seed": 3584914576,
+   "cell": "e4",
+   "model": null,
+   "framing": "bonus"
+  },
+  {
+   "dir": "results/envs_mock/e4_p59",
+   "seed": 3134810817,
+   "cell": "e4",
+   "model": null,
+   "framing": "market"
+  },
+  {
+   "dir": "results/envs_mock/e4_think_p00",
+   "seed": 2641863466,
+   "cell": "e4_think",
+   "model": null,
+   "framing": "bonus"
+  },
+  {
+   "dir": "results/envs_mock/e4_think_p01",
+   "seed": 1578296109,
+   "cell": "e4_think",
+   "model": null,
+   "framing": "market"
+  },
+  {
+   "dir": "results/envs_mock/e4_think_p02",
+   "seed": 4151544585,
+   "cell": "e4_think",
+   "model": null,
+   "framing": "bonus"
+  },
+  {
+   "dir": "results/envs_mock/e4_think_p03",
+   "seed": 2897513003,
+   "cell": "e4_think",
+   "model": null,
+   "framing": "market"
+  },
+  {
+   "dir": "results/envs_mock/e4_think_p04",
+   "seed": 960334394,
+   "cell": "e4_think",
+   "model": null,
+   "framing": "bonus"
+  },
+  {
+   "dir": "results/envs_mock/e4_think_p05",
+   "seed": 3222458050,
+   "cell": "e4_think",
+   "model": null,
+   "framing": "market"
+  },
+  {
+   "dir": "results/envs_mock/e4_think_p06",
+   "seed": 2002791880,
+   "cell": "e4_think",
+   "model": null,
+   "framing": "bonus"
+  },
+  {
+   "dir": "results/envs_mock/e4_think_p07",
+   "seed": 382781974,
+   "cell": "e4_think",
+   "model": null,
+   "framing": "market"
+  },
+  {
+   "dir": "results/envs_mock/e4_think_p08",
+   "seed": 3927653488,
+   "cell": "e4_think",
+   "model": null,
+   "framing": "bonus"
+  },
+  {
+   "dir": "results/envs_mock/e4_think_p09",
+   "seed": 1130018500,
+   "cell": "e4_think",
+   "model": null,
+   "framing": "market"
+  },
+  {
+   "dir": "results/envs_mock/e4_think_p10",
+   "seed": 4165775964,
+   "cell": "e4_think",
+   "model": null,
+   "framing": "bonus"
+  },
+  {
+   "dir": "results/envs_mock/e4_think_p11",
+   "seed": 2799597527,
+   "cell": "e4_think",
+   "model": null,
+   "framing": "market"
+  },
+  {
+   "dir": "results/envs_mock/e4_think_p12",
+   "seed": 3456315013,
+   "cell": "e4_think",
+   "model": null,
+   "framing": "bonus"
+  },
+  {
+   "dir": "results/envs_mock/e4_think_p13",
+   "seed": 3002160449,
+   "cell": "e4_think",
+   "model": null,
+   "framing": "market"
+  },
+  {
+   "dir": "results/envs_mock/e4_think_p14",
+   "seed": 3361673339,
+   "cell": "e4_think",
+   "model": null,
+   "framing": "bonus"
+  },
+  {
+   "dir": "results/envs_mock/e4_think_p15",
+   "seed": 4066401365,
+   "cell": "e4_think",
+   "model": null,
+   "framing": "market"
+  },
+  {
+   "dir": "results/envs_mock/e4_think_p16",
+   "seed": 3993396312,
+   "cell": "e4_think",
+   "model": null,
+   "framing": "bonus"
+  },
+  {
+   "dir": "results/envs_mock/e4_think_p17",
+   "seed": 179062780,
+   "cell": "e4_think",
+   "model": null,
+   "framing": "market"
+  },
+  {
+   "dir": "results/envs_mock/e4_think_p18",
+   "seed": 2705654280,
+   "cell": "e4_think",
+   "model": null,
+   "framing": "bonus"
+  },
+  {
+   "dir": "results/envs_mock/e4_think_p19",
+   "seed": 2685411596,
+   "cell": "e4_think",
+   "model": null,
+   "framing": "market"
+  },
+  {
+   "dir": "results/expB_live/b_genesis_dlg_r00",
+   "seed": 2630193575,
+   "cell": "b_genesis_dlg",
+   "model": "claude-haiku-4-5",
+   "framing": "rounds"
+  },
+  {
+   "dir": "results/expB_live/b_genesis_dlg_r01",
+   "seed": 1768516326,
+   "cell": "b_genesis_dlg",
+   "model": "claude-haiku-4-5",
+   "framing": "study"
+  },
+  {
+   "dir": "results/expB_live/b_genesis_dlg_r02",
+   "seed": 4179578087,
+   "cell": "b_genesis_dlg",
+   "model": "claude-haiku-4-5",
+   "framing": "market"
+  },
+  {
+   "dir": "results/expB_live/b_genesis_dlg_r03",
+   "seed": 452901251,
+   "cell": "b_genesis_dlg",
+   "model": "claude-haiku-4-5",
+   "framing": "rounds"
+  },
+  {
+   "dir": "results/expB_live/b_genesis_dlg_r04",
+   "seed": 1878297761,
+   "cell": "b_genesis_dlg",
+   "model": "claude-haiku-4-5",
+   "framing": "study"
+  },
+  {
+   "dir": "results/expB_live/b_genesis_dlg_r05",
+   "seed": 223318226,
+   "cell": "b_genesis_dlg",
+   "model": "claude-haiku-4-5",
+   "framing": "market"
+  },
+  {
+   "dir": "results/expB_live/b_genesis_dlg_r06",
+   "seed": 2301573786,
+   "cell": "b_genesis_dlg",
+   "model": "claude-haiku-4-5",
+   "framing": "rounds"
+  },
+  {
+   "dir": "results/expB_live/b_genesis_dlg_r07",
+   "seed": 222370912,
+   "cell": "b_genesis_dlg",
+   "model": "claude-haiku-4-5",
+   "framing": "study"
+  },
+  {
+   "dir": "results/expB_live/b_genesis_dlg_r08",
+   "seed": 2424633100,
+   "cell": "b_genesis_dlg",
+   "model": "claude-haiku-4-5",
+   "framing": "market"
+  },
+  {
+   "dir": "results/expB_live/b_genesis_nodlg_r00",
+   "seed": 3384186516,
+   "cell": "b_genesis_nodlg",
+   "model": "claude-haiku-4-5",
+   "framing": "rounds"
+  },
+  {
+   "dir": "results/expB_live/b_genesis_nodlg_r01",
+   "seed": 1147074054,
+   "cell": "b_genesis_nodlg",
+   "model": "claude-haiku-4-5",
+   "framing": "study"
+  },
+  {
+   "dir": "results/expB_live/b_genesis_nodlg_r02",
+   "seed": 2584935997,
+   "cell": "b_genesis_nodlg",
+   "model": "claude-haiku-4-5",
+   "framing": "market"
+  },
+  {
+   "dir": "results/expB_live/b_genesis_nodlg_r03",
+   "seed": 2748687526,
+   "cell": "b_genesis_nodlg",
+   "model": "claude-haiku-4-5",
+   "framing": "rounds"
+  },
+  {
+   "dir": "results/expB_live/b_genesis_nodlg_r04",
+   "seed": 3445028660,
+   "cell": "b_genesis_nodlg",
+   "model": "claude-haiku-4-5",
+   "framing": "study"
+  },
+  {
+   "dir": "results/expB_live/b_genesis_nodlg_r05",
+   "seed": 3427324176,
+   "cell": "b_genesis_nodlg",
+   "model": "claude-haiku-4-5",
+   "framing": "market"
+  },
+  {
+   "dir": "results/expB_live/b_minority_founder_r00",
+   "seed": 3730159864,
+   "cell": "b_minority_founder",
+   "model": "claude-haiku-4-5",
+   "framing": "rounds"
+  },
+  {
+   "dir": "results/expB_live/b_minority_founder_r01",
+   "seed": 3948730680,
+   "cell": "b_minority_founder",
+   "model": "claude-haiku-4-5",
+   "framing": "study"
+  },
+  {
+   "dir": "results/expB_live/b_minority_founder_r02",
+   "seed": 1019234931,
+   "cell": "b_minority_founder",
+   "model": "claude-haiku-4-5",
+   "framing": "market"
+  },
+  {
+   "dir": "results/expB_live/b_minority_founder_r03",
+   "seed": 2975820207,
+   "cell": "b_minority_founder",
+   "model": "claude-haiku-4-5",
+   "framing": "rounds"
+  },
+  {
+   "dir": "results/expB_live/b_minority_founder_r04",
+   "seed": 839806166,
+   "cell": "b_minority_founder",
+   "model": "claude-haiku-4-5",
+   "framing": "study"
+  },
+  {
+   "dir": "results/expB_live/b_minority_founder_r05",
+   "seed": 2205766404,
+   "cell": "b_minority_founder",
+   "model": "claude-haiku-4-5",
+   "framing": "market"
+  },
+  {
+   "dir": "results/expB_live/b_minority_posttrans_r00",
+   "seed": 2517286534,
+   "cell": "b_minority_posttrans",
+   "model": "claude-haiku-4-5",
+   "framing": "rounds"
+  },
+  {
+   "dir": "results/expB_live/b_minority_posttrans_r01",
+   "seed": 133792574,
+   "cell": "b_minority_posttrans",
+   "model": "claude-haiku-4-5",
+   "framing": "study"
+  },
+  {
+   "dir": "results/expB_live/b_minority_posttrans_r02",
+   "seed": 3641338383,
+   "cell": "b_minority_posttrans",
+   "model": "claude-haiku-4-5",
+   "framing": "market"
+  },
+  {
+   "dir": "results/expB_live/b_minority_posttrans_r03",
+   "seed": 27778351,
+   "cell": "b_minority_posttrans",
+   "model": "claude-haiku-4-5",
+   "framing": "rounds"
+  },
+  {
+   "dir": "results/expB_live/b_minority_posttrans_r04",
+   "seed": 1129020987,
+   "cell": "b_minority_posttrans",
+   "model": "claude-haiku-4-5",
+   "framing": "study"
+  },
+  {
+   "dir": "results/expB_live/b_minority_posttrans_r05",
+   "seed": 1230622032,
+   "cell": "b_minority_posttrans",
+   "model": "claude-haiku-4-5",
+   "framing": "market"
+  },
+  {
+   "dir": "results/expB_live/b_solitary_r00",
+   "seed": 2081862003,
+   "cell": "b_solitary",
+   "model": "claude-haiku-4-5",
+   "framing": "rounds"
+  },
+  {
+   "dir": "results/expB_live/b_solitary_r01",
+   "seed": 819546271,
+   "cell": "b_solitary",
+   "model": "claude-haiku-4-5",
+   "framing": "study"
+  },
+  {
+   "dir": "results/expB_live/b_solitary_r02",
+   "seed": 2246231176,
+   "cell": "b_solitary",
+   "model": "claude-haiku-4-5",
+   "framing": "market"
+  },
+  {
+   "dir": "results/expB_live/b_trans_dlg_r00",
+   "seed": 2805948386,
+   "cell": "b_trans_dlg",
+   "model": "claude-haiku-4-5",
+   "framing": "rounds"
+  },
+  {
+   "dir": "results/expB_live/b_trans_dlg_r01",
+   "seed": 4174240088,
+   "cell": "b_trans_dlg",
+   "model": "claude-haiku-4-5",
+   "framing": "study"
+  },
+  {
+   "dir": "results/expB_live/b_trans_dlg_r02",
+   "seed": 2258290082,
+   "cell": "b_trans_dlg",
+   "model": "claude-haiku-4-5",
+   "framing": "market"
+  },
+  {
+   "dir": "results/expB_live/b_trans_dlg_r03",
+   "seed": 2627787388,
+   "cell": "b_trans_dlg",
+   "model": "claude-haiku-4-5",
+   "framing": "rounds"
+  },
+  {
+   "dir": "results/expB_live/b_trans_dlg_r04",
+   "seed": 3601483329,
+   "cell": "b_trans_dlg",
+   "model": "claude-haiku-4-5",
+   "framing": "study"
+  },
+  {
+   "dir": "results/expB_live/b_trans_dlg_r05",
+   "seed": 3226325838,
+   "cell": "b_trans_dlg",
+   "model": "claude-haiku-4-5",
+   "framing": "market"
+  },
+  {
+   "dir": "results/expB_live/b_trans_nodlg_r00",
+   "seed": 903813849,
+   "cell": "b_trans_nodlg",
+   "model": "claude-haiku-4-5",
+   "framing": "rounds"
+  },
+  {
+   "dir": "results/expB_live/b_trans_nodlg_r01",
+   "seed": 3125603683,
+   "cell": "b_trans_nodlg",
+   "model": "claude-haiku-4-5",
+   "framing": "study"
+  },
+  {
+   "dir": "results/expB_live/b_trans_nodlg_r02",
+   "seed": 3453105278,
+   "cell": "b_trans_nodlg",
+   "model": "claude-haiku-4-5",
+   "framing": "market"
+  },
+  {
+   "dir": "results/expB_live/b_trans_nodlg_r03",
+   "seed": 2632821816,
+   "cell": "b_trans_nodlg",
+   "model": "claude-haiku-4-5",
+   "framing": "rounds"
+  },
+  {
+   "dir": "results/expB_live/b_trans_nodlg_r04",
+   "seed": 3848259510,
+   "cell": "b_trans_nodlg",
+   "model": "claude-haiku-4-5",
+   "framing": "study"
+  },
+  {
+   "dir": "results/expB_live/b_trans_nodlg_r05",
+   "seed": 1951921486,
+   "cell": "b_trans_nodlg",
+   "model": "claude-haiku-4-5",
+   "framing": "market"
+  },
+  {
+   "dir": "results/expB_live_m2/b_genesis_dlg_r00",
+   "seed": 2630193575,
+   "cell": "b_genesis_dlg",
+   "model": "openai/gpt-5-mini",
+   "framing": "rounds"
+  },
+  {
+   "dir": "results/expB_live_m2/b_genesis_dlg_r02",
+   "seed": 4179578087,
+   "cell": "b_genesis_dlg",
+   "model": "openai/gpt-5-mini",
+   "framing": "market"
+  },
+  {
+   "dir": "results/expB_live_m2/b_genesis_dlg_r03",
+   "seed": 452901251,
+   "cell": "b_genesis_dlg",
+   "model": "openai/gpt-5-mini",
+   "framing": "rounds"
+  },
+  {
+   "dir": "results/expB_live_m2/b_genesis_dlg_r04",
+   "seed": 1878297761,
+   "cell": "b_genesis_dlg",
+   "model": "openai/gpt-5-mini",
+   "framing": "study"
+  },
+  {
+   "dir": "results/expB_live_m2/b_genesis_dlg_r05",
+   "seed": 223318226,
+   "cell": "b_genesis_dlg",
+   "model": "openai/gpt-5-mini",
+   "framing": "market"
+  },
+  {
+   "dir": "results/expB_live_m2/b_genesis_dlg_r06",
+   "seed": 2301573786,
+   "cell": "b_genesis_dlg",
+   "model": "openai/gpt-5-mini",
+   "framing": "rounds"
+  },
+  {
+   "dir": "results/expB_live_m2/b_genesis_dlg_r07",
+   "seed": 222370912,
+   "cell": "b_genesis_dlg",
+   "model": "openai/gpt-5-mini",
+   "framing": "study"
+  },
+  {
+   "dir": "results/expB_mock/b_genesis_dlg_r00",
+   "seed": 2630193575,
+   "cell": "b_genesis_dlg",
+   "model": "claude-haiku-4-5",
+   "framing": "rounds"
+  },
+  {
+   "dir": "results/expB_mock/b_genesis_dlg_r01",
+   "seed": 1768516326,
+   "cell": "b_genesis_dlg",
+   "model": "claude-haiku-4-5",
+   "framing": "study"
+  },
+  {
+   "dir": "results/expB_mock/b_genesis_dlg_r02",
+   "seed": 4179578087,
+   "cell": "b_genesis_dlg",
+   "model": "claude-haiku-4-5",
+   "framing": "market"
+  },
+  {
+   "dir": "results/expB_mock/b_genesis_dlg_r03",
+   "seed": 452901251,
+   "cell": "b_genesis_dlg",
+   "model": "claude-haiku-4-5",
+   "framing": "rounds"
+  },
+  {
+   "dir": "results/expB_mock/b_genesis_dlg_r04",
+   "seed": 1878297761,
+   "cell": "b_genesis_dlg",
+   "model": "claude-haiku-4-5",
+   "framing": "study"
+  },
+  {
+   "dir": "results/expB_mock/b_genesis_dlg_r05",
+   "seed": 223318226,
+   "cell": "b_genesis_dlg",
+   "model": "claude-haiku-4-5",
+   "framing": "market"
+  },
+  {
+   "dir": "results/expB_mock/b_genesis_dlg_r06",
+   "seed": 2301573786,
+   "cell": "b_genesis_dlg",
+   "model": "claude-haiku-4-5",
+   "framing": "rounds"
+  },
+  {
+   "dir": "results/expB_mock/b_genesis_dlg_r07",
+   "seed": 222370912,
+   "cell": "b_genesis_dlg",
+   "model": "claude-haiku-4-5",
+   "framing": "study"
+  },
+  {
+   "dir": "results/expB_mock/b_genesis_dlg_r08",
+   "seed": 2424633100,
+   "cell": "b_genesis_dlg",
+   "model": "claude-haiku-4-5",
+   "framing": "market"
+  },
+  {
+   "dir": "results/expB_mock/b_genesis_nodlg_r00",
+   "seed": 3384186516,
+   "cell": "b_genesis_nodlg",
+   "model": "claude-haiku-4-5",
+   "framing": "rounds"
+  },
+  {
+   "dir": "results/expB_mock/b_genesis_nodlg_r01",
+   "seed": 1147074054,
+   "cell": "b_genesis_nodlg",
+   "model": "claude-haiku-4-5",
+   "framing": "study"
+  },
+  {
+   "dir": "results/expB_mock/b_genesis_nodlg_r02",
+   "seed": 2584935997,
+   "cell": "b_genesis_nodlg",
+   "model": "claude-haiku-4-5",
+   "framing": "market"
+  },
+  {
+   "dir": "results/expB_mock/b_genesis_nodlg_r03",
+   "seed": 2748687526,
+   "cell": "b_genesis_nodlg",
+   "model": "claude-haiku-4-5",
+   "framing": "rounds"
+  },
+  {
+   "dir": "results/expB_mock/b_genesis_nodlg_r04",
+   "seed": 3445028660,
+   "cell": "b_genesis_nodlg",
+   "model": "claude-haiku-4-5",
+   "framing": "study"
+  },
+  {
+   "dir": "results/expB_mock/b_genesis_nodlg_r05",
+   "seed": 3427324176,
+   "cell": "b_genesis_nodlg",
+   "model": "claude-haiku-4-5",
+   "framing": "market"
+  },
+  {
+   "dir": "results/expB_mock/b_minority_founder_r00",
+   "seed": 3730159864,
+   "cell": "b_minority_founder",
+   "model": "claude-haiku-4-5",
+   "framing": "rounds"
+  },
+  {
+   "dir": "results/expB_mock/b_minority_founder_r01",
+   "seed": 3948730680,
+   "cell": "b_minority_founder",
+   "model": "claude-haiku-4-5",
+   "framing": "study"
+  },
+  {
+   "dir": "results/expB_mock/b_minority_founder_r02",
+   "seed": 1019234931,
+   "cell": "b_minority_founder",
+   "model": "claude-haiku-4-5",
+   "framing": "market"
+  },
+  {
+   "dir": "results/expB_mock/b_minority_founder_r03",
+   "seed": 2975820207,
+   "cell": "b_minority_founder",
+   "model": "claude-haiku-4-5",
+   "framing": "rounds"
+  },
+  {
+   "dir": "results/expB_mock/b_minority_founder_r04",
+   "seed": 839806166,
+   "cell": "b_minority_founder",
+   "model": "claude-haiku-4-5",
+   "framing": "study"
+  },
+  {
+   "dir": "results/expB_mock/b_minority_founder_r05",
+   "seed": 2205766404,
+   "cell": "b_minority_founder",
+   "model": "claude-haiku-4-5",
+   "framing": "market"
+  },
+  {
+   "dir": "results/expB_mock/b_minority_posttrans_r00",
+   "seed": 2517286534,
+   "cell": "b_minority_posttrans",
+   "model": "claude-haiku-4-5",
+   "framing": "rounds"
+  },
+  {
+   "dir": "results/expB_mock/b_minority_posttrans_r01",
+   "seed": 133792574,
+   "cell": "b_minority_posttrans",
+   "model": "claude-haiku-4-5",
+   "framing": "study"
+  },
+  {
+   "dir": "results/expB_mock/b_minority_posttrans_r02",
+   "seed": 3641338383,
+   "cell": "b_minority_posttrans",
+   "model": "claude-haiku-4-5",
+   "framing": "market"
+  },
+  {
+   "dir": "results/expB_mock/b_minority_posttrans_r03",
+   "seed": 27778351,
+   "cell": "b_minority_posttrans",
+   "model": "claude-haiku-4-5",
+   "framing": "rounds"
+  },
+  {
+   "dir": "results/expB_mock/b_minority_posttrans_r04",
+   "seed": 1129020987,
+   "cell": "b_minority_posttrans",
+   "model": "claude-haiku-4-5",
+   "framing": "study"
+  },
+  {
+   "dir": "results/expB_mock/b_minority_posttrans_r05",
+   "seed": 1230622032,
+   "cell": "b_minority_posttrans",
+   "model": "claude-haiku-4-5",
+   "framing": "market"
+  },
+  {
+   "dir": "results/expB_mock/b_solitary_r00",
+   "seed": 2081862003,
+   "cell": "b_solitary",
+   "model": "claude-haiku-4-5",
+   "framing": "rounds"
+  },
+  {
+   "dir": "results/expB_mock/b_solitary_r01",
+   "seed": 819546271,
+   "cell": "b_solitary",
+   "model": "claude-haiku-4-5",
+   "framing": "study"
+  },
+  {
+   "dir": "results/expB_mock/b_solitary_r02",
+   "seed": 2246231176,
+   "cell": "b_solitary",
+   "model": "claude-haiku-4-5",
+   "framing": "market"
+  },
+  {
+   "dir": "results/expB_mock/b_trans_dlg_r00",
+   "seed": 2805948386,
+   "cell": "b_trans_dlg",
+   "model": "claude-haiku-4-5",
+   "framing": "rounds"
+  },
+  {
+   "dir": "results/expB_mock/b_trans_dlg_r01",
+   "seed": 4174240088,
+   "cell": "b_trans_dlg",
+   "model": "claude-haiku-4-5",
+   "framing": "study"
+  },
+  {
+   "dir": "results/expB_mock/b_trans_dlg_r02",
+   "seed": 2258290082,
+   "cell": "b_trans_dlg",
+   "model": "claude-haiku-4-5",
+   "framing": "market"
+  },
+  {
+   "dir": "results/expB_mock/b_trans_dlg_r03",
+   "seed": 2627787388,
+   "cell": "b_trans_dlg",
+   "model": "claude-haiku-4-5",
+   "framing": "rounds"
+  },
+  {
+   "dir": "results/expB_mock/b_trans_dlg_r04",
+   "seed": 3601483329,
+   "cell": "b_trans_dlg",
+   "model": "claude-haiku-4-5",
+   "framing": "study"
+  },
+  {
+   "dir": "results/expB_mock/b_trans_dlg_r05",
+   "seed": 3226325838,
+   "cell": "b_trans_dlg",
+   "model": "claude-haiku-4-5",
+   "framing": "market"
+  },
+  {
+   "dir": "results/expB_mock/b_trans_nodlg_r00",
+   "seed": 903813849,
+   "cell": "b_trans_nodlg",
+   "model": "claude-haiku-4-5",
+   "framing": "rounds"
+  },
+  {
+   "dir": "results/expB_mock/b_trans_nodlg_r01",
+   "seed": 3125603683,
+   "cell": "b_trans_nodlg",
+   "model": "claude-haiku-4-5",
+   "framing": "study"
+  },
+  {
+   "dir": "results/expB_mock/b_trans_nodlg_r02",
+   "seed": 3453105278,
+   "cell": "b_trans_nodlg",
+   "model": "claude-haiku-4-5",
+   "framing": "market"
+  },
+  {
+   "dir": "results/expB_mock/b_trans_nodlg_r03",
+   "seed": 2632821816,
+   "cell": "b_trans_nodlg",
+   "model": "claude-haiku-4-5",
+   "framing": "rounds"
+  },
+  {
+   "dir": "results/expB_mock/b_trans_nodlg_r04",
+   "seed": 3848259510,
+   "cell": "b_trans_nodlg",
+   "model": "claude-haiku-4-5",
+   "framing": "study"
+  },
+  {
+   "dir": "results/expB_mock/b_trans_nodlg_r05",
+   "seed": 1951921486,
+   "cell": "b_trans_nodlg",
+   "model": "claude-haiku-4-5",
+   "framing": "market"
+  }
+ ],
+ "n_runs": 677
+}

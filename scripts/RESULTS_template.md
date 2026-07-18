@@ -175,3 +175,11 @@ mock mode.
 ## 7. E1–E4: conventions as side products of ordinary joint work
 
 {{ENVS}}
+
+## 8. Honesty table (pre-registered vs exploratory)
+
+{{HONESTY}}
+
+## 9. Claims → evidence map
+
+{{CLAIMS}}

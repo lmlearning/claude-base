@@ -268,3 +268,82 @@
 {"type": "interaction", "t": 262, "i": 0, "j": 16, "agent_i": 0, "agent_j": 16, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
 {"type": "interaction", "t": 263, "i": 18, "j": 20, "agent_i": 18, "agent_j": 20, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
 {"type": "replacement", "t": 263, "slot": 13, "agent_id": 27, "generation": 0}
+{"type": "interaction", "t": 264, "i": 21, "j": 2, "agent_i": 21, "agent_j": 2, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 265, "i": 1, "j": 8, "agent_i": 1, "agent_j": 8, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 266, "i": 20, "j": 16, "agent_i": 20, "agent_j": 16, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 267, "i": 7, "j": 4, "agent_i": 7, "agent_j": 4, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 268, "i": 13, "j": 6, "agent_i": 27, "agent_j": 6, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 269, "i": 8, "j": 9, "agent_i": 8, "agent_j": 9, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 270, "i": 22, "j": 8, "agent_i": 26, "agent_j": 8, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 271, "i": 19, "j": 17, "agent_i": 19, "agent_j": 17, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "replacement", "t": 271, "slot": 4, "agent_id": 28, "generation": 0}
+{"type": "interaction", "t": 272, "i": 2, "j": 21, "agent_i": 2, "agent_j": 21, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 273, "i": 22, "j": 23, "agent_i": 26, "agent_j": 25, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 274, "i": 20, "j": 7, "agent_i": 20, "agent_j": 7, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 275, "i": 6, "j": 23, "agent_i": 6, "agent_j": 25, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 276, "i": 6, "j": 14, "agent_i": 6, "agent_j": 14, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 277, "i": 9, "j": 19, "agent_i": 9, "agent_j": 19, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 278, "i": 20, "j": 18, "agent_i": 20, "agent_j": 18, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 279, "i": 10, "j": 15, "agent_i": 10, "agent_j": 15, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "replacement", "t": 279, "slot": 21, "agent_id": 29, "generation": 0}
+{"type": "interaction", "t": 280, "i": 9, "j": 6, "agent_i": 9, "agent_j": 6, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 281, "i": 5, "j": 6, "agent_i": 24, "agent_j": 6, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 282, "i": 3, "j": 9, "agent_i": 3, "agent_j": 9, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 283, "i": 18, "j": 3, "agent_i": 18, "agent_j": 3, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 284, "i": 14, "j": 3, "agent_i": 14, "agent_j": 3, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 285, "i": 8, "j": 12, "agent_i": 8, "agent_j": 12, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 286, "i": 22, "j": 15, "agent_i": 26, "agent_j": 15, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 287, "i": 17, "j": 15, "agent_i": 17, "agent_j": 15, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "replacement", "t": 287, "slot": 19, "agent_id": 30, "generation": 0}
+{"type": "interaction", "t": 288, "i": 8, "j": 10, "agent_i": 8, "agent_j": 10, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 289, "i": 4, "j": 19, "agent_i": 28, "agent_j": 30, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 290, "i": 21, "j": 22, "agent_i": 29, "agent_j": 26, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 291, "i": 7, "j": 21, "agent_i": 7, "agent_j": 29, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 292, "i": 12, "j": 19, "agent_i": 12, "agent_j": 30, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 293, "i": 8, "j": 14, "agent_i": 8, "agent_j": 14, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 294, "i": 1, "j": 19, "agent_i": 1, "agent_j": 30, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 295, "i": 23, "j": 2, "agent_i": 25, "agent_j": 2, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "replacement", "t": 295, "slot": 1, "agent_id": 31, "generation": 0}
+{"type": "interaction", "t": 296, "i": 14, "j": 22, "agent_i": 14, "agent_j": 26, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 297, "i": 0, "j": 11, "agent_i": 0, "agent_j": 11, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 298, "i": 23, "j": 17, "agent_i": 25, "agent_j": 17, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 299, "i": 23, "j": 10, "agent_i": 25, "agent_j": 10, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 300, "i": 10, "j": 0, "agent_i": 10, "agent_j": 0, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 301, "i": 19, "j": 16, "agent_i": 30, "agent_j": 16, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 302, "i": 15, "j": 3, "agent_i": 15, "agent_j": 3, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 303, "i": 6, "j": 23, "agent_i": 6, "agent_j": 25, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "replacement", "t": 303, "slot": 17, "agent_id": 32, "generation": 0}
+{"type": "interaction", "t": 304, "i": 11, "j": 4, "agent_i": 11, "agent_j": 28, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 305, "i": 20, "j": 6, "agent_i": 20, "agent_j": 6, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 306, "i": 6, "j": 14, "agent_i": 6, "agent_j": 14, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 307, "i": 16, "j": 21, "agent_i": 16, "agent_j": 29, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 308, "i": 8, "j": 9, "agent_i": 8, "agent_j": 9, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 309, "i": 5, "j": 8, "agent_i": 24, "agent_j": 8, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 310, "i": 21, "j": 11, "agent_i": 29, "agent_j": 11, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 311, "i": 11, "j": 16, "agent_i": 11, "agent_j": 16, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "replacement", "t": 311, "slot": 8, "agent_id": 33, "generation": 0}
+{"type": "interaction", "t": 312, "i": 21, "j": 7, "agent_i": 29, "agent_j": 7, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 313, "i": 22, "j": 3, "agent_i": 26, "agent_j": 3, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 314, "i": 8, "j": 3, "agent_i": 33, "agent_j": 3, "name_i": "sona", "name_j": "kuni", "success": false, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": "kuni has worked perfectly for us. Let's keep picking kuni together!"}
+{"type": "interaction", "t": 315, "i": 2, "j": 17, "agent_i": 2, "agent_j": 32, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 316, "i": 9, "j": 1, "agent_i": 9, "agent_j": 31, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 317, "i": 8, "j": 22, "agent_i": 33, "agent_j": 26, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 318, "i": 20, "j": 5, "agent_i": 20, "agent_j": 24, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 319, "i": 18, "j": 6, "agent_i": 18, "agent_j": 6, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "replacement", "t": 319, "slot": 16, "agent_id": 34, "generation": 0}
+{"type": "interaction", "t": 320, "i": 6, "j": 20, "agent_i": 6, "agent_j": 20, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 321, "i": 20, "j": 0, "agent_i": 20, "agent_j": 0, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 322, "i": 18, "j": 1, "agent_i": 18, "agent_j": 31, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 323, "i": 6, "j": 1, "agent_i": 6, "agent_j": 31, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 324, "i": 16, "j": 22, "agent_i": 34, "agent_j": 26, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 325, "i": 21, "j": 13, "agent_i": 29, "agent_j": 27, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 326, "i": 20, "j": 19, "agent_i": 20, "agent_j": 30, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 327, "i": 8, "j": 7, "agent_i": 33, "agent_j": 7, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "replacement", "t": 327, "slot": 12, "agent_id": 35, "generation": 0}
+{"type": "interaction", "t": 328, "i": 15, "j": 22, "agent_i": 15, "agent_j": 26, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 329, "i": 8, "j": 2, "agent_i": 33, "agent_j": 2, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 330, "i": 16, "j": 22, "agent_i": 34, "agent_j": 26, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 331, "i": 3, "j": 5, "agent_i": 3, "agent_j": 24, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 332, "i": 10, "j": 22, "agent_i": 10, "agent_j": 26, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 333, "i": 19, "j": 9, "agent_i": 30, "agent_j": 9, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
+{"type": "interaction", "t": 334, "i": 2, "j": 22, "agent_i": 2, "agent_j": 26, "name_i": "kuni", "name_j": "kuni", "success": true, "malformed_i": 0, "malformed_j": 0, "retries": 0, "msg_i": null, "msg_j": null}
