@@ -15,3 +15,44 @@
   "total_upper_bound_usd": 84.48
 }
 live backend ready; spend so far $16.31 of $110.00
+done e1_squeeze_mem p2: {'done': True, 't': 492}
+done e1_squeeze p2: {'done': True, 't': 492}
+done e1_squeeze p3: {'done': True, 't': 492}
+done e1_squeeze p0: {'done': True, 't': 492}
+done e1_noisy p2: {'done': True, 't': 492}
+done e1_noisy p3: {'done': True, 't': 492}
+done e1_squeeze_mem p1: {'done': True, 't': 492}
+done e1_squeeze_mem p0: {'done': True, 't': 492}
+done e1_squeeze_mem p3: {'done': True, 't': 492}
+done e1_noisy p1: {'done': True, 't': 492}
+done e1_noisy p0: {'done': True, 't': 492}
+done e1_squeeze p1: {'done': True, 't': 492}
+done e3_squeeze p0: {'done': True, 't': 492}
+done e3_squeeze p1: {'done': True, 't': 492}
+done e3_squeeze p2: {'done': True, 't': 492}
+done e3_squeeze p3: {'done': True, 't': 492}
+done e2_dialogue p2: {'done': True, 'episodes': 72}
+done e2_dialogue p0: {'done': True, 'episodes': 72}
+done e2_think p0: {'done': True, 'episodes': 72}
+done e2_dialogue p3: {'done': True, 'episodes': 72}
+done e2_think p2: {'done': True, 'episodes': 72}
+done e2_dialogue p1: {'done': True, 'episodes': 72}
+done e2_think p3: {'done': True, 'episodes': 72}
+done e2_think p1: {'done': True, 'episodes': 72}
+=== E1-E4 cost projection (upper bound, live pricing) ===
+{
+  "per_pop_usd": {
+    "e1_squeeze": 0.77,
+    "e1_squeeze_mem": 0.77,
+    "e1_noisy": 0.77,
+    "e3_squeeze": 0.75,
+    "e2_dialogue": 3.26,
+    "e2_think": 2.48,
+    "e4_think": 1.84,
+    "e3_redo": 0.75,
+    "e2_sonnet": 7.45,
+    "e4_sonnet": 5.53
+  },
+  "total_upper_bound_usd": 84.48
+}
+live backend ready; spend so far $45.18 of $110.00
