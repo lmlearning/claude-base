@@ -1,0 +1,11 @@
+{
+ "adopted": false,
+ "latency_sends": null,
+ "n_mover_sends": 20,
+ "host_items_stable_of6": 3,
+ "match_share_last10": 0.4,
+ "pair": [
+  "e3_squeeze_p02",
+  "e3_squeeze_p04"
+ ]
+}

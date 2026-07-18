@@ -38,3 +38,5 @@ transplant 3 r['adopted']=False r['latency_sends']=None
 transplant 4 r['adopted']=False r['latency_sends']=None
 transplant 5 r['adopted']=False r['latency_sends']=None
 transplant 6 r['adopted']=False r['latency_sends']=None
+transplant 7 r['adopted']=False r['latency_sends']=None
+transplant 8 r['adopted']=False r['latency_sends']=None
