@@ -7,3 +7,17 @@
   "total_upper_bound_usd": 39.72
 }
 live backend ready; spend so far $106.92 of $180.00
+done e2_role p1: {'done': True, 'episodes': 72}
+done e2_role p2: {'done': True, 'episodes': 72}
+done e2_role p6: {'done': True, 'episodes': 72}
+done e2_role p3: {'done': True, 'episodes': 72}
+done e2_role p0: {'done': True, 'episodes': 72}
+done e2_role p4: {'done': True, 'episodes': 72}
+done e2_role p7: {'done': True, 'episodes': 72}
+done e2_role p5: {'done': True, 'episodes': 72}
+done e2_hetero p5: {'done': True, 'episodes': 72}
+done e2_hetero p6: {'done': True, 'episodes': 72}
+done e2_hetero p1: {'done': True, 'episodes': 72}
+done e2_hetero p3: {'done': True, 'episodes': 72}
+done e2_hetero p0: {'done': True, 'episodes': 72}
+done e2_hetero p2: {'done': True, 'episodes': 72}
