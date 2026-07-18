@@ -1,0 +1,57 @@
+{
+  "config": {
+    "cell": "b_minority_founder_f25_b2k",
+    "run_index": 4,
+    "seed": 2851508229,
+    "phase": "minority",
+    "dialogue": true,
+    "framing": "study",
+    "model": "claude-haiku-4-5",
+    "n_agents": 24,
+    "n_names": 10,
+    "memory_size": 5,
+    "pre_transmission": false,
+    "minority_fraction": 0.25,
+    "minority_budget": 2000
+  },
+  "comprehension_passed": true,
+  "priors": {
+    "fagi": 0,
+    "sakna": 5,
+    "benra": 1,
+    "boge": 1,
+    "rosi": 6,
+    "vesma": 1,
+    "tabul": 1,
+    "kadut": 2,
+    "ressi": 3,
+    "sufvo": 0
+  },
+  "priors_malformed": 0,
+  "genesis": {
+    "converged": true,
+    "winner": "sakna",
+    "consensus_time": 108
+  },
+  "minority": {
+    "usable": true,
+    "original": "sakna",
+    "alt": "sufvo",
+    "n_committed": 6,
+    "flipped": false,
+    "interactions_used": 2208
+  },
+  "final": {
+    "t": 2208,
+    "fallback_choices": 0,
+    "unparseable_first_replies": 1,
+    "total_choices": 4417,
+    "malformed_rate": 0.00022639800769753225,
+    "consensus": null,
+    "dominant": [
+      "sakna",
+      0.7604166666666666
+    ],
+    "success_rate_window": 0.5625
+  }
+}

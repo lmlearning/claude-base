@@ -1,0 +1,19 @@
+{
+  "config": {
+    "env": "e4",
+    "n_agents": 12,
+    "think": true,
+    "formation_interactions": 500,
+    "interactions_per_replacement": 6,
+    "settle_interactions": 60,
+    "model": "openai/gpt-5-mini",
+    "cell": "e4_think",
+    "pop_index": 4,
+    "seed": 960334394,
+    "framing": "bonus"
+  },
+  "result": {
+    "done": true,
+    "t": 632
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "config": {
+    "env": "e1",
+    "n_agents": 12,
+    "budget_words": 12,
+    "formation_interactions": 360,
+    "interactions_per_replacement": 6,
+    "settle_interactions": 60,
+    "minority_fraction": 0.25,
+    "minority_interactions": 200,
+    "model": "openai/gpt-5-mini",
+    "cell": "e1_tight",
+    "pop_index": 5,
+    "seed": 2302716212,
+    "framing": "office"
+  },
+  "result": {
+    "done": true,
+    "t": 692
+  }
+}

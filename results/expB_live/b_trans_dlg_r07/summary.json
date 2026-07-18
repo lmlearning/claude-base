@@ -1,0 +1,55 @@
+{
+  "config": {
+    "cell": "b_trans_dlg",
+    "run_index": 7,
+    "seed": 2360409864,
+    "phase": "transmission",
+    "dialogue": true,
+    "framing": "study",
+    "model": "claude-haiku-4-5",
+    "n_agents": 24,
+    "n_names": 10,
+    "memory_size": 5,
+    "pre_transmission": false,
+    "minority_fraction": 0.25,
+    "minority_budget": 600
+  },
+  "comprehension_passed": true,
+  "priors": {
+    "bapno": 0,
+    "tivim": 1,
+    "tafi": 5,
+    "zezfe": 0,
+    "ruveg": 0,
+    "koleb": 9,
+    "bupep": 0,
+    "refza": 0,
+    "vedaf": 5,
+    "matop": 0
+  },
+  "priors_malformed": 0,
+  "genesis": {
+    "converged": true,
+    "winner": "bapno",
+    "consensus_time": 132
+  },
+  "transmission": {
+    "original": "bapno",
+    "final": "bapno",
+    "survived": true,
+    "n_replacements": 24
+  },
+  "final": {
+    "t": 524,
+    "fallback_choices": 0,
+    "unparseable_first_replies": 0,
+    "total_choices": 1048,
+    "malformed_rate": 0.0,
+    "consensus": "bapno",
+    "dominant": [
+      "bapno",
+      1.0
+    ],
+    "success_rate_window": 1.0
+  }
+}

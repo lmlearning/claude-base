@@ -1,0 +1,19 @@
+{
+  "config": {
+    "env": "e2",
+    "n_agents": 8,
+    "think": true,
+    "formation_episodes": 48,
+    "episodes_per_replacement": 2,
+    "settle_episodes": 8,
+    "model": "openai/gpt-5-mini",
+    "cell": "e2_think",
+    "pop_index": 2,
+    "seed": 1223583902,
+    "framing": "site"
+  },
+  "result": {
+    "done": true,
+    "episodes": 72
+  }
+}

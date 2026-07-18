@@ -1,0 +1,55 @@
+{
+  "config": {
+    "cell": "b_trans_dlg",
+    "run_index": 8,
+    "seed": 2662955622,
+    "phase": "transmission",
+    "dialogue": true,
+    "framing": "market",
+    "model": "claude-haiku-4-5",
+    "n_agents": 24,
+    "n_names": 10,
+    "memory_size": 5,
+    "pre_transmission": false,
+    "minority_fraction": 0.25,
+    "minority_budget": 600
+  },
+  "comprehension_passed": true,
+  "priors": {
+    "mubel": 1,
+    "zutpu": 0,
+    "dona": 3,
+    "fabi": 11,
+    "desuz": 0,
+    "bagi": 1,
+    "gudus": 2,
+    "kisov": 0,
+    "vuti": 1,
+    "binra": 1
+  },
+  "priors_malformed": 0,
+  "genesis": {
+    "converged": true,
+    "winner": "mubel",
+    "consensus_time": 96
+  },
+  "transmission": {
+    "original": "mubel",
+    "final": "mubel",
+    "survived": true,
+    "n_replacements": 24
+  },
+  "final": {
+    "t": 488,
+    "fallback_choices": 0,
+    "unparseable_first_replies": 0,
+    "total_choices": 976,
+    "malformed_rate": 0.0,
+    "consensus": "mubel",
+    "dominant": [
+      "mubel",
+      1.0
+    ],
+    "success_rate_window": 1.0
+  }
+}

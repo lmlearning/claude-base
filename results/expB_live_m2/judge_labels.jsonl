@@ -1,0 +1,345 @@
+{"run": "b_genesis_dlg_r01", "t": 1, "sender": 13, "receiver_slot": 4, "text": "We missed matching\u2014care to try the same name next round? I'll pick the same if you do.", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r01", "t": 4, "sender": 0, "receiver_slot": 23, "text": "Sorry we missed\u2014want to try matching on \"dagod\" again to both get +100?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r01", "t": 4, "sender": 23, "receiver_slot": 0, "text": "Let's both pick \"nalre\" next round so we each get +100.", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r01", "t": 5, "sender": 6, "receiver_slot": 23, "text": "Let's try matching next round \u2014 pick \"rekse\" so we both get +100.", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r01", "t": 5, "sender": 23, "receiver_slot": 6, "text": "Sorry \u2014 want to try matching \"gavu\" next time?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r01", "t": 6, "sender": 1, "receiver_slot": 5, "text": "Let's try matching next round \u2014 I'll pick rekse.", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r01", "t": 6, "sender": 5, "receiver_slot": 1, "text": "Sorry we missed\u2014want to try matching on \"rekse\" this round?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r01", "t": 7, "sender": 13, "receiver_slot": 23, "text": "Sorry we missed\u2014want to try matching \"pinle\" next round?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r01", "t": 7, "sender": 23, "receiver_slot": 13, "text": "Sorry we missed\u2014want to both pick dagod next round?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r01", "t": 8, "sender": 1, "receiver_slot": 21, "text": "Want to try dagod again? Let's match and get 100 points.", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r01", "t": 9, "sender": 15, "receiver_slot": 17, "text": "Hey \u2014 want to try matching on \"sogo\" this round?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r01", "t": 9, "sender": 17, "receiver_slot": 15, "text": "Sorry we missed\u2014want to try matching on \"sogo\" this round?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r01", "t": 14, "sender": 1, "receiver_slot": 12, "text": "Hi \u2014 want to try coordinating on the same name next round? I can pick dagod if you agree.", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r01", "t": 14, "sender": 12, "receiver_slot": 1, "text": "Sorry we missed\u2014want to try matching next round? Pick \"nalre\" if you agree.", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r01", "t": 16, "sender": 13, "receiver_slot": 3, "text": "Sorry we missed\u2014wanna both pick dagod next round?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r01", "t": 16, "sender": 3, "receiver_slot": 13, "text": "Sorry we missed\u2014want to try matching on \"rekse\" this round?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r01", "t": 17, "sender": 23, "receiver_slot": 0, "text": "Let's pick the same next time. I will choose \"pinle\".", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r01", "t": 17, "sender": 0, "receiver_slot": 23, "text": "Hey \u2014 want to both pick dagod next round so we each get +100?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r01", "t": 18, "sender": 4, "receiver_slot": 17, "text": "We matched on dagod before\u2014want to pick dagod again to both gain 100?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r01", "t": 18, "sender": 17, "receiver_slot": 4, "text": "Want to match next round? I'll pick \"rekse\" again. Want to match too?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r01", "t": 21, "sender": 4, "receiver_slot": 10, "text": "Sorry we missed\u2014want to pick dagod next round?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r01", "t": 21, "sender": 10, "receiver_slot": 4, "text": "We almost matched before. Want to try picking dagod again to earn 100 each?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r01", "t": 22, "sender": 22, "receiver_slot": 17, "text": "Sorry \u2014 let's pick the same name next time to both gain points.", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r01", "t": 22, "sender": 17, "receiver_slot": 22, "text": "Hey \u2014 want to try choosing \"dagod\" again? We matched on it before; seems promising.", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r01", "t": 24, "sender": 23, "receiver_slot": 15, "text": "Let's both pick pinle next time for mutual +100\u2014agree?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r01", "t": 24, "sender": 15, "receiver_slot": 23, "text": "Tough luck \u2014 want to try matching on sogo next round?", "solitary": false, "label": "other"}
+{"run": "b_genesis_dlg_r01", "t": 25, "sender": 2, "receiver_slot": 3, "text": "We missed matching last time\u2014shall we both pick \"sogo\" this round for +100 each?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r01", "t": 26, "sender": 3, "receiver_slot": 16, "text": "Let's try matching this time. I'll pick \"rekse\" again \u2014 will you pick \"rekse\" too?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r01", "t": 26, "sender": 16, "receiver_slot": 3, "text": "We matched twice as dagod \u2014 let's pick dagod again to both gain 100.", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r01", "t": 27, "sender": 4, "receiver_slot": 5, "text": "I picked rekse last round. Want to try matching on rekse next for +100 each?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r01", "t": 27, "sender": 5, "receiver_slot": 4, "text": "Sorry we missed\u2014want to try matching \"pinle\" next time for +100 each?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r01", "t": 29, "sender": 10, "receiver_slot": 1, "text": "Last round mismatch\u2014I'm going to pick dagod again.", "solitary": false, "label": "descriptive"}
+{"run": "b_genesis_dlg_r01", "t": 29, "sender": 1, "receiver_slot": 10, "text": "I picked dagod twice; will you pick dagod next to match?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r01", "t": 31, "sender": 11, "receiver_slot": 19, "text": "We've matched on dagod before \u2014 let's both pick dagod again for a sure win.", "solitary": false, "label": "normative"}
+{"run": "b_genesis_dlg_r01", "t": 31, "sender": 19, "receiver_slot": 11, "text": "Nice to meet you\u2014want to try for gavu again?", "solitary": false, "label": "other"}
+{"run": "b_genesis_dlg_r01", "t": 32, "sender": 10, "receiver_slot": 8, "text": "We matched twice on dagod; please pick dagod again so we both win 100.", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r01", "t": 32, "sender": 8, "receiver_slot": 10, "text": "Sorry we missed\u2014want to try matching on \"laveg\" this round?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r01", "t": 33, "sender": 2, "receiver_slot": 12, "text": "Tough luck \u2014 want to try matching on \"rekse\" next round?", "solitary": false, "label": "other"}
+{"run": "b_genesis_dlg_r01", "t": 33, "sender": 12, "receiver_slot": 2, "text": "Sorry we missed\u2014want to try matching \"pinle\" next round for 100 points?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r01", "t": 34, "sender": 13, "receiver_slot": 14, "text": "Hey \u2014 I\u2019ve picked dagod the last few times; want to try dagod together this round?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r01", "t": 34, "sender": 14, "receiver_slot": 13, "text": "We matched before with \"rekse\" \u2014 shall we both pick \"rekse\" again to get 100 points?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r01", "t": 35, "sender": 15, "receiver_slot": 10, "text": "Hey \u2014 want to both pick sogo next round?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r01", "t": 35, "sender": 10, "receiver_slot": 15, "text": "Hey \u2014 can we both pick dagod next round so we each gain 100?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r01", "t": 36, "sender": 20, "receiver_slot": 23, "text": "We matched on dagod before \u2014 can we pick dagod again to both gain 100?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r01", "t": 36, "sender": 23, "receiver_slot": 20, "text": "Sorry we missed\u2014want to try picking dagod next round?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r01", "t": 37, "sender": 19, "receiver_slot": 12, "text": "Hi again \u2014 can you pick \"gavu\" next time so we both get +100?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r01", "t": 37, "sender": 12, "receiver_slot": 19, "text": "Hey \u2014 want to try coordinating on a name next round? Any preference?", "solitary": false, "label": "other"}
+{"run": "b_genesis_dlg_r01", "t": 38, "sender": 2, "receiver_slot": 20, "text": "I picked rekse last two times; will pick rekse again \u2014 please pick rekse so we both win.", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r01", "t": 38, "sender": 20, "receiver_slot": 2, "text": "Hey \u2014 want to pick dagod again so we both get 100?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r01", "t": 40, "sender": 2, "receiver_slot": 6, "text": "I think we should both pick \"dagod\" next time to win 100 points each.", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r01", "t": 40, "sender": 6, "receiver_slot": 2, "text": "Hi \u2014 want to pick gavu again so we both get 100?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r01", "t": 43, "sender": 17, "receiver_slot": 19, "text": "I picked dagod last time to match you. Can we both pick dagod again to get +100?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r01", "t": 43, "sender": 19, "receiver_slot": 17, "text": "Hey \u2014 we just missed. Want to try coordinating on a name next round for +100 each?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r01", "t": 44, "sender": 0, "receiver_slot": 14, "text": "I\u2019ll pick nalre next\u2014please pick nalre so we both gain 100.", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r01", "t": 44, "sender": 14, "receiver_slot": 0, "text": "Sorry we missed\u2014want to pick \"rekse\" again so we both get 100?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r01", "t": 45, "sender": 2, "receiver_slot": 5, "text": "Hi \u2014 let's both pick dagod next round to get +100 each.", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r01", "t": 45, "sender": 5, "receiver_slot": 2, "text": "Hey \u2014 want to try choosing rekse again? Seems we matched once; could coordinate for +100 each.", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r01", "t": 46, "sender": 14, "receiver_slot": 12, "text": "Last pick mismatched \u2014 want to try coordinating on a name next round?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r01", "t": 46, "sender": 12, "receiver_slot": 14, "text": "Let's try picking the same name\u2014how about \"pinle\"?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r01", "t": 47, "sender": 16, "receiver_slot": 13, "text": "We matched twice on dagod \u2014 can we pick dagod again to both gain 100?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r01", "t": 47, "sender": 13, "receiver_slot": 16, "text": "Hey \u2014 let's both pick dagod next round to get +100 each.", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r01", "t": 49, "sender": 0, "receiver_slot": 23, "text": "Hey \u2014 want to both pick dagod next round? It'll give us each +100.", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r01", "t": 49, "sender": 23, "receiver_slot": 0, "text": "Want to match next round? I\u2019ll pick dagod. If you pick dagod, we both win 100.", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r01", "t": 50, "sender": 11, "receiver_slot": 21, "text": "We matched twice before; please pick dagod again so we both win 100 points.", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r01", "t": 50, "sender": 21, "receiver_slot": 11, "text": "We matched twice on dagod \u2014 can we pick dagod again to both earn 100?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r01", "t": 52, "sender": 23, "receiver_slot": 4, "text": "Hey, same name again? I'll pick dagod \u2014 can you pick dagod too?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r01", "t": 52, "sender": 4, "receiver_slot": 23, "text": "Hey \u2014 want to both pick dagod next round? I'll pick dagod if you do.", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r01", "t": 53, "sender": 14, "receiver_slot": 18, "text": "Sorry we missed \u2014 can we both pick \"rekse\" this round?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r01", "t": 53, "sender": 18, "receiver_slot": 14, "text": "We matched before\u2014want to try dagod again to both gain 100?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r01", "t": 57, "sender": 2, "receiver_slot": 11, "text": "Sorry we missed\u2014want to try coordinating on \"rekse\" this round?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r01", "t": 57, "sender": 11, "receiver_slot": 2, "text": "We matched often\u2014can we both pick dagod next time to score 100 points each?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r01", "t": 58, "sender": 5, "receiver_slot": 0, "text": "Hey \u2014 want to try picking \"rekse\" next? It's worked before for me.", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r01", "t": 58, "sender": 0, "receiver_slot": 5, "text": "Let's both pick dagod next round to earn 100 each.", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r01", "t": 59, "sender": 10, "receiver_slot": 9, "text": "I picked dagod again\u2014want to match next time? If so, pick dagod and we both gain 100.", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r01", "t": 59, "sender": 9, "receiver_slot": 10, "text": "We matched on dagod five times. Can we pick dagod again to both gain 100 points?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r01", "t": 70, "sender": 7, "receiver_slot": 18, "text": "We matched twice with dagod\u2014let's pick dagod again to both gain 100.", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r01", "t": 70, "sender": 18, "receiver_slot": 7, "text": "We won together once\u2014can we try dagod again?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r03", "t": 2, "sender": 6, "receiver_slot": 16, "text": "Let's try picking \"doso\" next round \u2014 hope we match and get 100 points!", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r03", "t": 2, "sender": 16, "receiver_slot": 6, "text": "Let's try matching next time\u2014I'll pick \"lorat\".", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r03", "t": 4, "sender": 0, "receiver_slot": 9, "text": "Let's try coordinating on \"daref\" next round\u2014I'll pick it.", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r03", "t": 6, "sender": 5, "receiver_slot": 16, "text": "Sorry we missed\u2014let's try coordinating; next round, pick \"daref\" if you agree.", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r03", "t": 6, "sender": 16, "receiver_slot": 5, "text": "Tough luck \u2014 want to try picking the same name next round?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r03", "t": 8, "sender": 23, "receiver_slot": 12, "text": "Let's try choosing \"doref\" this time \u2014 hope you pick the same name for 100 points!", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r03", "t": 8, "sender": 12, "receiver_slot": 23, "text": "Let's try choosing \"doref\" next time?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r03", "t": 9, "sender": 7, "receiver_slot": 8, "text": "Hey \u2014 want to try picking \"bobu\" again so we both get 100?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r03", "t": 10, "sender": 3, "receiver_slot": 1, "text": "Let's try picking \"doso\" next time to coordinate\u2014agree?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r03", "t": 10, "sender": 1, "receiver_slot": 3, "text": "Let's try the same name next round to earn points together\u2014want to coordinate?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r03", "t": 11, "sender": 5, "receiver_slot": 14, "text": "Tough luck \u2014 want to try coordinating on the same name next round?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r03", "t": 11, "sender": 14, "receiver_slot": 5, "text": "Let's try choosing \"bobu\" next round to match.", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r03", "t": 15, "sender": 16, "receiver_slot": 19, "text": "We almost matched\u2014want to try picking \"bobu\" next round?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r03", "t": 26, "sender": 5, "receiver_slot": 10, "text": "Hi \u2014 I picked daref twice; if you pick daref next round we both get 100.", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r03", "t": 26, "sender": 10, "receiver_slot": 5, "text": "Hey \u2014 we mismatched last round. Want to pick \"daref\" again so we both get 100?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r03", "t": 29, "sender": 17, "receiver_slot": 12, "text": "Great meeting you! Want to pick \"bobu\" again so we both win?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r03", "t": 30, "sender": 9, "receiver_slot": 17, "text": "We almost matched last time\u2014can we both pick daref again to earn 100 points?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r03", "t": 30, "sender": 17, "receiver_slot": 9, "text": "Hey, we missed! If you like bobu, pick bobu again and we'll both win 100.", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r03", "t": 31, "sender": 23, "receiver_slot": 22, "text": "Tough luck! Want to try matching \"bobu\" again next round?", "solitary": false, "label": "other"}
+{"run": "b_genesis_dlg_r03", "t": 33, "sender": 10, "receiver_slot": 23, "text": "We matched once on daref \u2014 want to pick daref again to both gain 100?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r03", "t": 33, "sender": 23, "receiver_slot": 10, "text": "Let's both pick bobu next round to match and earn 100 points\u2014agree?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r03", "t": 43, "sender": 5, "receiver_slot": 7, "text": "Let's try matching\u2014pick \"bobu\" so we both get +100.", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r03", "t": 43, "sender": 7, "receiver_slot": 5, "text": "Hey \u2014 we mismatched last round. Want to pick \"bobu\" again to sync up?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r03", "t": 45, "sender": 21, "receiver_slot": 17, "text": "Hey \u2014 we matched before. Could you pick \"bobu\" again so we both win 100?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r03", "t": 45, "sender": 17, "receiver_slot": 21, "text": "Hey \u2014 we matched once with bobu. Can we both pick bobu again to score?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r03", "t": 60, "sender": 6, "receiver_slot": 2, "text": "Tough luck last round \u2014 want to try coordinating on \"rizbi\" this time?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r03", "t": 60, "sender": 2, "receiver_slot": 6, "text": "Hey \u2014 we matched previously on \"bobu\". Can we pick \"bobu\" again?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r03", "t": 70, "sender": 23, "receiver_slot": 20, "text": "Let's both pick \"daref\" next round for 100 points each \u2014 agree?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r03", "t": 70, "sender": 20, "receiver_slot": 23, "text": "We matched on bobu every time \u2014 shall we pick bobu again to keep scoring 100?", "solitary": false, "label": "normative"}
+{"run": "b_genesis_dlg_r04", "t": 22, "sender": 8, "receiver_slot": 6, "text": "Let's try the same name next round to both gain 100 points\u2014agree on \"votsi\"?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r04", "t": 22, "sender": 6, "receiver_slot": 8, "text": "Hey \u2014 let's both pick votsi again so we each gain 100 points.", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r05", "t": 3, "sender": 17, "receiver_slot": 13, "text": "Let's both pick \"tovi\" next round for a sure +100 each \u2014 agree?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r05", "t": 5, "sender": 22, "receiver_slot": 4, "text": "Hey \u2014 want to try coordinating on \"tovi\" next round?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r05", "t": 8, "sender": 4, "receiver_slot": 9, "text": "Sorry \u2014 want to try matching on \"tovi\" this round?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r05", "t": 8, "sender": 9, "receiver_slot": 4, "text": "Let's try matching next round \u2014 I'll pick \"tovi\".", "solitary": false, "label": "descriptive"}
+{"run": "b_genesis_dlg_r05", "t": 12, "sender": 15, "receiver_slot": 0, "text": "Let's match on \"bimna\" again \u2014 safe and profitable for both.", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r05", "t": 13, "sender": 6, "receiver_slot": 13, "text": "Let's both pick \"pazri\" again \u2014 works well for us.", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r05", "t": 13, "sender": 13, "receiver_slot": 6, "text": "Sorry we missed\u2014want to try picking pazri so we both win 100 points?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r05", "t": 14, "sender": 15, "receiver_slot": 9, "text": "Let's coordinate: I'll pick bimna next round. Will you pick bimna too?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r05", "t": 14, "sender": 9, "receiver_slot": 15, "text": "Hey \u2014 want to match next round? If so, pick \"bimna\" and we'll both get 100.", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r05", "t": 15, "sender": 9, "receiver_slot": 23, "text": "Let's both pick \"poko\" this round\u2014agree?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r05", "t": 16, "sender": 22, "receiver_slot": 8, "text": "Sorry \u2014 I picked tovi. If you pick tovi next round, I'll pick tovi too.", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r05", "t": 16, "sender": 8, "receiver_slot": 22, "text": "Hey \u2014 want to pick bimna next round so we both get 100?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r05", "t": 17, "sender": 17, "receiver_slot": 14, "text": "Sorry we missed\u2014shall we both pick \"guzra\" this round to match and gain points?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r05", "t": 20, "sender": 9, "receiver_slot": 6, "text": "Let's try matching\u2014I'll pick \"bimna\" again.", "solitary": false, "label": "descriptive"}
+{"run": "b_genesis_dlg_r05", "t": 20, "sender": 6, "receiver_slot": 9, "text": "Let's both pick pazri next round for sure \u2014 I will pick pazri.", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r05", "t": 21, "sender": 8, "receiver_slot": 2, "text": "Let's both pick bimna next round so we both get 100 points\u2014agree?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r05", "t": 21, "sender": 2, "receiver_slot": 8, "text": "We matched before on \"bimna\". Can we pick \"bimna\" again to both get 100 points?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r05", "t": 23, "sender": 18, "receiver_slot": 9, "text": "Let's try matching next time \u2014 I'll pick \"poko\" if you do too.", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r05", "t": 23, "sender": 9, "receiver_slot": 18, "text": "Let's both pick bimna next round for a sure win \u2014 agree?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r05", "t": 27, "sender": 1, "receiver_slot": 17, "text": "Let's pick bimna again \u2014 it worked twice.", "solitary": false, "label": "descriptive"}
+{"run": "b_genesis_dlg_r05", "t": 27, "sender": 17, "receiver_slot": 1, "text": "Sorry \u2014 want to try matching on \"tovi\" this round?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r05", "t": 29, "sender": 10, "receiver_slot": 4, "text": "Hey \u2014 last round mismatch. I\u2019ll pick bimna again; please pick bimna so we both earn 100.", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r05", "t": 29, "sender": 4, "receiver_slot": 10, "text": "Let's try matching\u2014I'll pick \"bimna\" this round.", "solitary": false, "label": "descriptive"}
+{"run": "b_genesis_dlg_r05", "t": 31, "sender": 23, "receiver_slot": 3, "text": "Sorry we missed\u2014want to try matching next round? I'll pick what you choose.", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r05", "t": 35, "sender": 22, "receiver_slot": 1, "text": "Let's both pick bimna for sure this round.", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r05", "t": 35, "sender": 1, "receiver_slot": 22, "text": "Let's both pick bimna next round so we both get +100.", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r05", "t": 38, "sender": 23, "receiver_slot": 12, "text": "Let's both pick \"bimna\" next round to win 100 points each.", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r05", "t": 38, "sender": 12, "receiver_slot": 23, "text": "Let's match on \"pazri\" again \u2014 I'll pick it.", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r05", "t": 44, "sender": 9, "receiver_slot": 3, "text": "Let's match on \"bimna\" next round \u2014 I'll pick bimna.", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r05", "t": 44, "sender": 3, "receiver_slot": 9, "text": "I picked bimna last time\u2014want to pick bimna again to both earn 100?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r05", "t": 48, "sender": 14, "receiver_slot": 12, "text": "Let's match next round \u2014 I'll pick bimna again.", "solitary": false, "label": "descriptive"}
+{"run": "b_genesis_dlg_r05", "t": 48, "sender": 12, "receiver_slot": 14, "text": "Let's pick pazri again \u2014 it's best for both of us.", "solitary": false, "label": "normative"}
+{"run": "b_genesis_dlg_r05", "t": 60, "sender": 5, "receiver_slot": 23, "text": "Let's try bimna again \u2014 I picked bimna before; want to match for +100?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r05", "t": 60, "sender": 23, "receiver_slot": 5, "text": "Let's both pick pazri this round for a sure 100 points.", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r05", "t": 81, "sender": 13, "receiver_slot": 0, "text": "We matched once on \"pazri\" \u2014 can we pick \"pazri\" again this round?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r05", "t": 81, "sender": 0, "receiver_slot": 13, "text": "Oops\u2014meant bimna. Will pick bimna again.", "solitary": false, "label": "descriptive"}
+{"run": "b_genesis_dlg_r06", "t": 18, "sender": 22, "receiver_slot": 23, "text": "Let's pick muke again \u2014 worked twice.", "solitary": false, "label": "descriptive"}
+{"run": "b_genesis_dlg_r07", "t": 1, "sender": 2, "receiver_slot": 23, "text": "Let's both pick \"latu\" next time to get +100 each.", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r07", "t": 1, "sender": 23, "receiver_slot": 2, "text": "Let's both pick zebmu \u2014 it's my choice this round.", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r07", "t": 2, "sender": 7, "receiver_slot": 14, "text": "Let's match next time \u2014 pick \"lomo\" so we both gain 100 points.", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r07", "t": 2, "sender": 14, "receiver_slot": 7, "text": "Let's try matching next time \u2014 pick \"latu\" so we both get 100 points.", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r07", "t": 8, "sender": 1, "receiver_slot": 2, "text": "Sorry we missed \u2014 can we both pick \"latu\" this round to get 100 each?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r07", "t": 8, "sender": 2, "receiver_slot": 1, "text": "Next time, try voting \"latu\" so we both get +100!", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r07", "t": 9, "sender": 11, "receiver_slot": 9, "text": "Let's pick \"latu\" again\u2014trust me, match and we both get 100 points.", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r07", "t": 9, "sender": 9, "receiver_slot": 11, "text": "Let's try again\u2014pick \"vora\" this round so we both get 100 points.", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r07", "t": 10, "sender": 11, "receiver_slot": 9, "text": "Hey \u2014 want to pick \"latu\" again so we both get +100?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r07", "t": 18, "sender": 4, "receiver_slot": 5, "text": "We almost matched before. Want to pick \"latu\" again to both gain 100?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r07", "t": 18, "sender": 5, "receiver_slot": 4, "text": "Let's both pick vora this round to get 100 points each.", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r07", "t": 19, "sender": 14, "receiver_slot": 15, "text": "Hey \u2014 want to try matching on \"latu\" next round?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r07", "t": 19, "sender": 15, "receiver_slot": 14, "text": "Let's try \"zebmu\" this round \u2014 aim for a match?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r07", "t": 21, "sender": 9, "receiver_slot": 14, "text": "Hey \u2014 want to match picks next round? I\u2019ll pick \"latu\" unless you prefer a different name.", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r07", "t": 21, "sender": 14, "receiver_slot": 9, "text": "Hi again \u2014 want to try coordinating picks? I can pick \"zebmu\" next; will you pick \"zebmu\" too?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r07", "t": 23, "sender": 10, "receiver_slot": 18, "text": "I picked latu before and will likely pick it again\u2014shall we both choose latu?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r07", "t": 23, "sender": 18, "receiver_slot": 10, "text": "Let's try matching next time \u2014 pick \"lomu\".", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r07", "t": 32, "sender": 9, "receiver_slot": 17, "text": "I\u2019ve picked \"latu\" the last few rounds\u2014thinking of choosing it again. Will you pick latu?", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r07", "t": 32, "sender": 17, "receiver_slot": 9, "text": "Let's pick latu again \u2014 we matched before and both did well.", "solitary": false, "label": "normative"}
+{"run": "b_genesis_dlg_r07", "t": 33, "sender": 4, "receiver_slot": 10, "text": "We matched once with \"latu\". If you want points, please pick \"latu\" again.", "solitary": false, "label": "directive"}
+{"run": "b_genesis_dlg_r07", "t": 33, "sender": 10, "receiver_slot": 4, "text": "Let's both pick latu next time to get 100 points each.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 2, "sender": 1, "receiver_slot": 22, "text": "Sorry we missed\u2014want to try coordinating on \"figo\" next round?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 2, "sender": 22, "receiver_slot": 1, "text": "Let's try picking \"figo\" next round \u2014 want to match and earn 100 points?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 3, "sender": 8, "receiver_slot": 19, "text": "Let's try coordinating \u2014 I'll pick \"bula\" next round.", "solitary": false, "label": "descriptive"}
+{"run": "b_trans_dlg_r00", "t": 3, "sender": 19, "receiver_slot": 8, "text": "Let's try picking \"figo\" next round to match and earn 100 points.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 5, "sender": 15, "receiver_slot": 10, "text": "Tough luck! Want to try coordinating on \"mikil\" next round?", "solitary": false, "label": "other"}
+{"run": "b_trans_dlg_r00", "t": 6, "sender": 0, "receiver_slot": 7, "text": "Let's try coordinating\u2014pick \"figo\" next round so we both win 100.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 7, "sender": 14, "receiver_slot": 16, "text": "Let's try coordinating on \"bula\" next round \u2014 interested?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 7, "sender": 16, "receiver_slot": 14, "text": "Let's try choosing \"bula\" next round \u2014 agree?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 8, "sender": 23, "receiver_slot": 10, "text": "Let's try picking \"figo\" next round\u2014match and we both gain 100 points.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 8, "sender": 10, "receiver_slot": 23, "text": "Tough luck \u2014 want to try coordinating on \"figo\" next round?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 11, "sender": 7, "receiver_slot": 20, "text": "Sorry we missed\u2014shall we both pick mikil next time?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 11, "sender": 20, "receiver_slot": 7, "text": "Let's coordinate \u2014 next round pick \"figo\" so we can match and both gain 100 points.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 13, "sender": 23, "receiver_slot": 13, "text": "Let's try coordinating \u2014 I'll pick \"mikil\" next round. Do you pick \"mikil\" too?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 15, "sender": 9, "receiver_slot": 11, "text": "Let's try picking \"figo\" next round \u2014 hope we match and get 100 points.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 17, "sender": 14, "receiver_slot": 16, "text": "Let's try coordinating \u2014 pick \"mikil\" next round so we both win 100 points.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 18, "sender": 23, "receiver_slot": 16, "text": "Let's coordinate \u2014 pick \"figo\" next round so we both win 100 points.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 18, "sender": 16, "receiver_slot": 23, "text": "I picked \"mikil\" last round; hoping we can match next time\u2014are you aiming for mikil too?", "solitary": false, "label": "descriptive"}
+{"run": "b_trans_dlg_r00", "t": 21, "sender": 21, "receiver_slot": 12, "text": "Let's try focusing on \"gine\" next round \u2014 I'll pick it.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 22, "sender": 9, "receiver_slot": 2, "text": "We matched once when I picked figo \u2014 want to try coordinating on figo again?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 23, "sender": 17, "receiver_slot": 16, "text": "Let's try picking \"feka\" next round \u2014 hope you'll match me!", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 23, "sender": 16, "receiver_slot": 17, "text": "Hi \u2014 want to try coordinating? I\u2019ll pick \"mikil\" next round if you pick it too.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 26, "sender": 8, "receiver_slot": 5, "text": "Let's pick the same name to win\u2014can we both choose \"figo\" this round?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 26, "sender": 5, "receiver_slot": 8, "text": "Let's try coordinating \u2014 I'll pick \"figo\" next round.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 27, "sender": 21, "receiver_slot": 5, "text": "Let's try the same name next round \u2014 how about \"mikil\"?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 27, "sender": 5, "receiver_slot": 21, "text": "Let's try picking the same name this round \u2014 how about both choose \"mikil\"?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 28, "sender": 14, "receiver_slot": 3, "text": "Let's both pick \"mikil\" next round for 100 points each.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 28, "sender": 3, "receiver_slot": 14, "text": "Let's pick figo again \u2014 worked great the last three times.", "solitary": false, "label": "normative"}
+{"run": "b_trans_dlg_r00", "t": 31, "sender": 8, "receiver_slot": 15, "text": "I picked figo again \u2014 let's both choose figo to get +100 points each.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 31, "sender": 15, "receiver_slot": 8, "text": "Hey\u2014seems we keep missing. Next round, pick \"mikil\" so we can both score.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 32, "sender": 6, "receiver_slot": 17, "text": "We matched twice before\u2014let's pick \"figo\" again for sure this round.", "solitary": false, "label": "normative"}
+{"run": "b_trans_dlg_r00", "t": 32, "sender": 17, "receiver_slot": 6, "text": "Hey \u2014 want to try coordinating on \"mikil\" next round so we both win 100?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 33, "sender": 10, "receiver_slot": 13, "text": "Want to coordinate? I'll pick figo next round\u2014let's both choose figo for 100 points.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 33, "sender": 13, "receiver_slot": 10, "text": "Let's try picking the same name \u2014 how about \"mikil\"?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 34, "sender": 23, "receiver_slot": 1, "text": "We've chosen differently three times. Want to pick the same next time? If so, which name shall we use?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 34, "sender": 1, "receiver_slot": 23, "text": "Hi \u2014 I've been choosing figo recently and will likely choose figo again.", "solitary": false, "label": "descriptive"}
+{"run": "b_trans_dlg_r00", "t": 35, "sender": 19, "receiver_slot": 7, "text": "Hey \u2014 want to try coordinating on the same name next round? Any preference?", "solitary": false, "label": "other"}
+{"run": "b_trans_dlg_r00", "t": 35, "sender": 7, "receiver_slot": 19, "text": "Let's try coordinating\u2014pick \"vagu\" next round so we both win 100.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 36, "sender": 22, "receiver_slot": 4, "text": "Hi again \u2014 want to try coordinating on \"figo\" next round?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 37, "sender": 12, "receiver_slot": 20, "text": "Sorry we missed\u2014want to try coordinating on \"figo\" next time?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 37, "sender": 20, "receiver_slot": 12, "text": "Tough luck last round \u2014 want to try coordinating on \"mapma\" next time?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 38, "sender": 20, "receiver_slot": 18, "text": "Let's try coordinating \u2014 I'll pick \"figo\" next round.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 43, "sender": 16, "receiver_slot": 13, "text": "Let's both pick the same name next time\u2014how about \"mikil\"?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 43, "sender": 13, "receiver_slot": 16, "text": "Let's try coordinating\u2014pick \"mikil\" next round so we both win 100 points.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 45, "sender": 10, "receiver_slot": 3, "text": "Let's both pick figo again \u2014 it worked once and gives us +100 each.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 45, "sender": 3, "receiver_slot": 10, "text": "Hey \u2014 you've picked different names twice now. Can we both pick \"figo\" next round?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 46, "sender": 4, "receiver_slot": 16, "text": "Close one! Want to try coordinating on \"figo\" again next round?", "solitary": false, "label": "other"}
+{"run": "b_trans_dlg_r00", "t": 46, "sender": 16, "receiver_slot": 4, "text": "Let's pick the same name\u2014how about \"mikil\"?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 47, "sender": 11, "receiver_slot": 19, "text": "We almost matched\u2014want to pick \"figo\" again to sync and both earn 100?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 47, "sender": 19, "receiver_slot": 11, "text": "Let's coordinate \u2014 pick \"mikil\" next round so we both get 100.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 48, "sender": 7, "receiver_slot": 12, "text": "Let's try coordinating \u2014 I'll pick \"bula\" next round.", "solitary": false, "label": "descriptive"}
+{"run": "b_trans_dlg_r00", "t": 48, "sender": 12, "receiver_slot": 7, "text": "Let's try coordinating \u2014 pick \"mikil\" next round so we both win 100 points.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 56, "sender": 13, "receiver_slot": 6, "text": "Hey\u2014want to try coordinating on \"feka\" next round?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 56, "sender": 6, "receiver_slot": 13, "text": "We matched often\u2014please pick \"figo\" again so we both win 100 points.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 57, "sender": 6, "receiver_slot": 14, "text": "I\u2019ve been picking \"figo\" consistently\u2014let\u2019s both pick \"figo\" next to get +100 each.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 57, "sender": 14, "receiver_slot": 6, "text": "I keep choosing mikil recently. If you want points, try picking mikil this round so we both win.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 60, "sender": 0, "receiver_slot": 21, "text": "Sorry we missed \u2014 can we both pick \"figo\" again to get 100 points?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 60, "sender": 21, "receiver_slot": 0, "text": "Hey \u2014 want to both pick \"mikil\" next round? I'll pick mikil again.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 61, "sender": 17, "receiver_slot": 5, "text": "Hey \u2014 I'll pick figo again. Want to coordinate on figo to both get 100?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 61, "sender": 5, "receiver_slot": 17, "text": "Let's try coordinating\u2014pick \"bula\" next round so we both win 100.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 62, "sender": 12, "receiver_slot": 14, "text": "Let's try \"mikil\" this round?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 62, "sender": 14, "receiver_slot": 12, "text": "Let's both pick the same name for guaranteed points. I will choose \"mikil\". Do you agree?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 67, "sender": 16, "receiver_slot": 17, "text": "I\u2019ve picked figo the last two rounds and will pick it again\u2014let\u2019s match for +100 each.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 67, "sender": 17, "receiver_slot": 16, "text": "Hey \u2014 I intend to pick figo next round. Want to match on figo?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 69, "sender": 14, "receiver_slot": 5, "text": "Let's both pick figo next round to get +100 \u2014 agree?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 69, "sender": 5, "receiver_slot": 14, "text": "Let's both pick figo again so we win 100 points each.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 75, "sender": 7, "receiver_slot": 16, "text": "Let's coordinate \u2014 pick \"figo\" next round so we both win 100 points.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 75, "sender": 16, "receiver_slot": 7, "text": "I picked figo in recent rounds; can we both pick figo next round?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 77, "sender": 5, "receiver_slot": 12, "text": "I prefer picking figo \u2014 will you pick figo next round?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 77, "sender": 12, "receiver_slot": 5, "text": "Hi \u2014 want to aim for the same name next round? If so, pick \"figo\".", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 83, "sender": 12, "receiver_slot": 4, "text": "Let's try picking the same name\u2014how about \"figo\"?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 83, "sender": 4, "receiver_slot": 12, "text": "Let's try picking figo again \u2014 I picked figo last time. Want to match for 100?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 85, "sender": 6, "receiver_slot": 7, "text": "Sorry we missed\u2014want to pick figo next round?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 85, "sender": 7, "receiver_slot": 6, "text": "Let's both pick \"mapma\" next time \u2014 agree?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 91, "sender": 6, "receiver_slot": 13, "text": "Sorry we missed\u2014want to pick \"figo\" next time so we both win?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 91, "sender": 13, "receiver_slot": 6, "text": "I picked figo hoping you'd do the same\u2014want to coordinate on figo next round?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 130, "sender": 20, "receiver_slot": 0, "text": "Great streak! Let's pick \"figo\" again \u2014 same as before?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 130, "sender": 0, "receiver_slot": 20, "text": "Let's both pick figo next time to win 100 points.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 292, "sender": 13, "receiver_slot": 4, "text": "We matched on \"figo\" consistently\u2014let's pick \"figo\" again to keep scoring 100 points.", "solitary": false, "label": "normative"}
+{"run": "b_trans_dlg_r00", "t": 292, "sender": 25, "receiver_slot": 13, "text": "Let's try matching next round\u2014pick \"garav\" so we both win 100 points.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 301, "sender": 0, "receiver_slot": 1, "text": "Let's stick with \"figo\" again \u2014 worked perfectly for us.", "solitary": false, "label": "normative"}
+{"run": "b_trans_dlg_r00", "t": 306, "sender": 24, "receiver_slot": 3, "text": "Let's try picking \"bula\" next round?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 306, "sender": 3, "receiver_slot": 19, "text": "Let's both pick \"figo\" again to keep winning 100 points each.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 309, "sender": 3, "receiver_slot": 8, "text": "I picked figo each time \u2014 let's both choose figo next round so we both win 100.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 309, "sender": 27, "receiver_slot": 3, "text": "Let's try picking \"vagu\" next round? If you agree, please pick vagu.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 311, "sender": 3, "receiver_slot": 4, "text": "Sorry \u2014 I picked figo again. Can we both pick figo next round?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 334, "sender": 30, "receiver_slot": 6, "text": "Let's try matching \"figo\" next round\u2014pick \"figo\" if you agree.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 334, "sender": 6, "receiver_slot": 16, "text": "Let's keep choosing \"figo\" again \u2014 worked every time so far!", "solitary": false, "label": "normative"}
+{"run": "b_trans_dlg_r00", "t": 361, "sender": 9, "receiver_slot": 10, "text": "Let's both pick \"figo\" again \u2014 it worked every time before.", "solitary": false, "label": "normative"}
+{"run": "b_trans_dlg_r00", "t": 370, "sender": 5, "receiver_slot": 2, "text": "We matched on \"figo\" before \u2014 can we both pick figo again this round?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 370, "sender": 35, "receiver_slot": 5, "text": "Let's both pick duine next time for a guaranteed match.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 386, "sender": 27, "receiver_slot": 18, "text": "I picked figo the last four times and will pick figo again\u2014please pick figo so we both get 100.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 405, "sender": 35, "receiver_slot": 3, "text": "We've matched on \"figo\" every time before \u2014 please pick \"figo\" again so we both gain 100.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 422, "sender": 5, "receiver_slot": 14, "text": "Let's keep choosing figo \u2014 we've matched consistently. Want to try figo again?", "solitary": false, "label": "normative"}
+{"run": "b_trans_dlg_r00", "t": 454, "sender": 38, "receiver_slot": 21, "text": "We matched before\u2014let's pick \"figo\" again to both gain 100.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 454, "sender": 45, "receiver_slot": 23, "text": "Let's try picking \"figo\" this round so we match and get 100 points.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 501, "sender": 39, "receiver_slot": 5, "text": "Let's pick figo again \u2014 worked well before.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r00", "t": 501, "sender": 47, "receiver_slot": 3, "text": "Let's try to pick the same name next round\u2014how about \"figo\"?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r02", "t": 2, "sender": 22, "receiver_slot": 15, "text": "Let's try matching next round\u2014pick \"mampi\" so we both get +100.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r02", "t": 2, "sender": 15, "receiver_slot": 22, "text": "I\u2019d like to match next time\u2014let\u2019s both pick zeli for 100 points.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r02", "t": 4, "sender": 22, "receiver_slot": 8, "text": "Let's try coordinating\u2014I'll pick kepir next time. Can you match kepir?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r02", "t": 9, "sender": 16, "receiver_slot": 6, "text": "We matched before \u2014 want to pick \"kepir\" again?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r02", "t": 9, "sender": 6, "receiver_slot": 16, "text": "Let's both pick \"zabi\" next round for a sure +100 each.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r02", "t": 11, "sender": 20, "receiver_slot": 1, "text": "Let's try choosing \"zabi\" next time for a sure match \u2014 agree?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r02", "t": 13, "sender": 14, "receiver_slot": 15, "text": "We matched twice with \"kepir\" before. Please pick kepir again so we both get 100.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r02", "t": 13, "sender": 15, "receiver_slot": 14, "text": "Hi \u2014 want to match next round? If so, pick \"zeli\" and we'll both get 100.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r02", "t": 14, "sender": 4, "receiver_slot": 23, "text": "Oops\u2014wrong choice! Want to try matching next round? I'll pick \"kepir\" if you do.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r02", "t": 14, "sender": 23, "receiver_slot": 4, "text": "Let's both pick kepir next time to get +100 each.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r02", "t": 19, "sender": 14, "receiver_slot": 0, "text": "I\u2019ll pick kepir again \u2014 will you match me this time?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r02", "t": 20, "sender": 16, "receiver_slot": 11, "text": "Let's try to match \u2014 I'll pick kepir unless you prefer another; what will you pick?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r02", "t": 30, "sender": 20, "receiver_slot": 2, "text": "I picked kepir last round \u2014 can we both pick kepir again to score 100?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r02", "t": 51, "sender": 20, "receiver_slot": 1, "text": "Let's both pick kepir next round for a sure +100 each.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r02", "t": 51, "sender": 1, "receiver_slot": 20, "text": "Sorry we didn't match \u2014 want to try \"kepir\" this round so we both win 100?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r02", "t": 56, "sender": 23, "receiver_slot": 5, "text": "Sorry about that\u2014let's pick \"kepir\" this round so we both win 100 points.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r02", "t": 56, "sender": 5, "receiver_slot": 23, "text": "Let's try matching next time \u2014 I'll pick kepir again.", "solitary": false, "label": "descriptive"}
+{"run": "b_trans_dlg_r02", "t": 233, "sender": 9, "receiver_slot": 4, "text": "I've been choosing kepir every round. Please pick kepir so we both get 100.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r02", "t": 233, "sender": 25, "receiver_slot": 9, "text": "Let's try matching next time\u2014I'll pick \"kepir\". If you pick \"kepir\" too, we both gain 100.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r02", "t": 275, "sender": 27, "receiver_slot": 3, "text": "Let's try matching next round \u2014 I'll pick \"zabi\".", "solitary": false, "label": "descriptive"}
+{"run": "b_trans_dlg_r02", "t": 275, "sender": 3, "receiver_slot": 10, "text": "Let's keep choosing kepir so we both earn 100 \u2014 agree?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r02", "t": 284, "sender": 24, "receiver_slot": 3, "text": "Let's both pick kepir again \u2014 worked four times; trust we match for +100 each.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r02", "t": 284, "sender": 3, "receiver_slot": 15, "text": "Hey \u2014 last round was weird. Want to pick \"kepir\" again so we both get +100?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r02", "t": 297, "sender": 2, "receiver_slot": 1, "text": "Why did you switch? Let's both pick kepir to keep earning 100 points.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r02", "t": 297, "sender": 33, "receiver_slot": 2, "text": "Let's try matching next round\u2014pick \"mampi\" so we both win 100 points.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r02", "t": 299, "sender": 27, "receiver_slot": 23, "text": "I\u2019ll pick kepir again \u2014 hope you\u2019ll match so we both win!", "solitary": false, "label": "descriptive"}
+{"run": "b_trans_dlg_r02", "t": 320, "sender": 26, "receiver_slot": 0, "text": "Hey \u2014 I\u2019ll pick kepir again. If you pick kepir, we both get 100.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r02", "t": 320, "sender": 28, "receiver_slot": 17, "text": "Let's try matching next round\u2014pick \"zabi\" so we both gain 100 points.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r02", "t": 322, "sender": 35, "receiver_slot": 9, "text": "Let's try kepir next round?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r02", "t": 322, "sender": 9, "receiver_slot": 5, "text": "I picked kepir last time \u2014 shall we both choose kepir again for 100 points?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r02", "t": 328, "sender": 6, "receiver_slot": 19, "text": "Why did you switch from kepir? Can we both pick kepir next round to get 100 each?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r02", "t": 328, "sender": 36, "receiver_slot": 6, "text": "Let's both pick zabi next round for a sure +100 each.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r02", "t": 355, "sender": 6, "receiver_slot": 21, "text": "Sorry about the mismatch \u2014 shall we both pick kepir this round?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r02", "t": 359, "sender": 27, "receiver_slot": 16, "text": "Hey \u2014 we matched on kepir before; can we both pick kepir again to get +100 each?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r02", "t": 359, "sender": 37, "receiver_slot": 10, "text": "Let's both pick \"kepir\" next round for +100 each.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r02", "t": 362, "sender": 30, "receiver_slot": 12, "text": "I always choose \"kepir\". Will you pick \"kepir\" next time?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r02", "t": 362, "sender": 41, "receiver_slot": 22, "text": "Let's try matching next round \u2014 I'll pick kepir.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r03", "t": 343, "sender": 34, "receiver_slot": 4, "text": "Hey \u2014 we matched on suddu before. Can we both pick \"suddu\" again to get +100 each?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r03", "t": 356, "sender": 42, "receiver_slot": 6, "text": "Let's try matching next time\u2014pick \"mota\" so we both win 100 points.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r03", "t": 356, "sender": 6, "receiver_slot": 16, "text": "Let's keep picking \"suddu\" \u2014 it works.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r04", "t": 7, "sender": 22, "receiver_slot": 16, "text": "Let's try the same name next time so we both earn 100 points.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r04", "t": 7, "sender": 16, "receiver_slot": 22, "text": "We matched before \u2014 want to pick \"ronsi\" again to both gain 100?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r04", "t": 28, "sender": 3, "receiver_slot": 17, "text": "Sorry we missed\u2014want to try ronsi next round?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r04", "t": 28, "sender": 17, "receiver_slot": 3, "text": "Sorry we missed\u2014want to try picking ronsi next round?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r04", "t": 273, "sender": 24, "receiver_slot": 22, "text": "Hey \u2014 want to pick ronsi again? Seems to work for both of us.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r04", "t": 273, "sender": 32, "receiver_slot": 13, "text": "Let's try ronsi this round so we both get +100.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r04", "t": 395, "sender": 46, "receiver_slot": 19, "text": "Let's try ronsi this round.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r04", "t": 395, "sender": 30, "receiver_slot": 5, "text": "We matched five times before \u2014 please pick \"ronsi\" again so we both win.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r04", "t": 409, "sender": 47, "receiver_slot": 16, "text": "Tough luck! Want to try ronsi this round?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r04", "t": 409, "sender": 35, "receiver_slot": 11, "text": "Let's keep choosing \"ronsi\" again so we both get +100 \u2014 agree?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r05", "t": 2, "sender": 9, "receiver_slot": 19, "text": "Let's try matching next time\u2014I'll pick zema.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r05", "t": 4, "sender": 19, "receiver_slot": 10, "text": "Hey \u2014 we missed. Want to coordinate next round? If so, pick \"zedos\" and I'll match.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r05", "t": 5, "sender": 11, "receiver_slot": 17, "text": "Let's both pick \"zema\" next round for a sure +100 each\u2014agree?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r05", "t": 5, "sender": 17, "receiver_slot": 11, "text": "Let's coordinate\u2014I'll pick gismu next round. Will you pick gismu too?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r05", "t": 7, "sender": 0, "receiver_slot": 5, "text": "Let's both pick \"gismu\" next round for +100 each.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r05", "t": 9, "sender": 2, "receiver_slot": 19, "text": "Let's try matching next round\u2014I'll pick \"gismu\". Want to match for +100 each?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r05", "t": 9, "sender": 19, "receiver_slot": 2, "text": "Let's both pick \"gismu\" next round for a sure win\u2014agree?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r05", "t": 12, "sender": 6, "receiver_slot": 16, "text": "We matched once before with \"gismu\". Can we pick gismu again to both gain 100?", "solitary": false, "label": "normative"}
+{"run": "b_trans_dlg_r05", "t": 13, "sender": 23, "receiver_slot": 3, "text": "Let's both pick gismu next round for +100 each.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r05", "t": 20, "sender": 2, "receiver_slot": 8, "text": "Sorry\u2014we missed. Can we both pick \"gismu\" next round so we both win?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r05", "t": 20, "sender": 8, "receiver_slot": 2, "text": "Let's match on \"gismu\" next round.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r05", "t": 21, "sender": 17, "receiver_slot": 13, "text": "Sorry about mismatch\u2014want to both pick \"gismu\" next round for +100 each?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r05", "t": 21, "sender": 13, "receiver_slot": 17, "text": "Let's try matching this round\u2014I'll pick \"gismu\".", "solitary": false, "label": "descriptive"}
+{"run": "b_trans_dlg_r05", "t": 27, "sender": 14, "receiver_slot": 12, "text": "Let's both pick \"gismu\" next round for a sure +100 each.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r05", "t": 39, "sender": 21, "receiver_slot": 23, "text": "Let's try the same label next round to both earn points. I will pick \"gismu\".", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r05", "t": 39, "sender": 23, "receiver_slot": 21, "text": "Let's pick gismu this round.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r05", "t": 61, "sender": 10, "receiver_slot": 20, "text": "Let's try again \u2014 I'll pick \"zema\" this round.", "solitary": false, "label": "descriptive"}
+{"run": "b_trans_dlg_r05", "t": 61, "sender": 20, "receiver_slot": 10, "text": "Hey \u2014 we matched on gismu before. Can we pick gismu again to both score?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r05", "t": 266, "sender": 21, "receiver_slot": 6, "text": "Let's keep choosing gismu \u2014 it's working.", "solitary": false, "label": "normative"}
+{"run": "b_trans_dlg_r05", "t": 305, "sender": 10, "receiver_slot": 9, "text": "Let's keep choosing \"gismu\" \u2014 it worked before.", "solitary": false, "label": "normative"}
+{"run": "b_trans_dlg_r05", "t": 315, "sender": 24, "receiver_slot": 23, "text": "Let's keep choosing \"gismu\" again \u2014 it worked every time.", "solitary": false, "label": "normative"}
+{"run": "b_trans_dlg_r05", "t": 315, "sender": 35, "receiver_slot": 19, "text": "Let's both pick \"gismu\" next round for an easy +100 each\u2014agree?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r05", "t": 333, "sender": 37, "receiver_slot": 7, "text": "Let's both pick \"gismu\" next round for sure \u2014 agree?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r05", "t": 333, "sender": 29, "receiver_slot": 11, "text": "I\u2019ll pick gismu again \u2014 please pick gismu so we both gain 100 points.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r05", "t": 337, "sender": 21, "receiver_slot": 12, "text": "Hey \u2014 I\u2019ll pick gismu again. Want to coordinate on gismu for mutual +100?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r05", "t": 347, "sender": 33, "receiver_slot": 21, "text": "We matched well before. Please pick \"gismu\" again so we both get 100 points.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r05", "t": 347, "sender": 39, "receiver_slot": 4, "text": "Let's try matching this round\u2014pick \"gismu\" so we both get +100.", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r05", "t": 371, "sender": 42, "receiver_slot": 6, "text": "Let's both pick \"gismu\" next round to earn 100 points each \u2014 agree?", "solitary": false, "label": "directive"}
+{"run": "b_trans_dlg_r05", "t": 371, "sender": 27, "receiver_slot": 13, "text": "Let's keep choosing gismu \u2014 it's working.", "solitary": false, "label": "normative"}
+{"run": "b_trans_dlg_r05", "t": 401, "sender": 26, "receiver_slot": 14, "text": "Let's keep choosing \"gismu\" \u2014 we've matched every time until now.", "solitary": false, "label": "normative"}
+{"run": "b_trans_dlg_r05", "t": 404, "sender": 39, "receiver_slot": 2, "text": "Let's keep choosing \"gismu\" like before\u2014it's working.", "solitary": false, "label": "normative"}
+{"run": "b_trans_dlg_r05", "t": 404, "sender": 45, "receiver_slot": 21, "text": "Let's try matching next round. I'll pick \"zema\" \u2014 hope you do too.", "solitary": false, "label": "directive"}

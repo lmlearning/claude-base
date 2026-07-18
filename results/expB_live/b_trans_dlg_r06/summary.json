@@ -1,0 +1,55 @@
+{
+  "config": {
+    "cell": "b_trans_dlg",
+    "run_index": 6,
+    "seed": 3954161671,
+    "phase": "transmission",
+    "dialogue": true,
+    "framing": "rounds",
+    "model": "claude-haiku-4-5",
+    "n_agents": 24,
+    "n_names": 10,
+    "memory_size": 5,
+    "pre_transmission": false,
+    "minority_fraction": 0.25,
+    "minority_budget": 600
+  },
+  "comprehension_passed": true,
+  "priors": {
+    "kuni": 0,
+    "bire": 0,
+    "putag": 0,
+    "nuvke": 0,
+    "nabre": 0,
+    "bepaz": 0,
+    "befal": 0,
+    "lanmi": 4,
+    "riti": 2,
+    "sona": 14
+  },
+  "priors_malformed": 0,
+  "genesis": {
+    "converged": true,
+    "winner": "kuni",
+    "consensus_time": 131
+  },
+  "transmission": {
+    "original": "kuni",
+    "final": "kuni",
+    "survived": true,
+    "n_replacements": 24
+  },
+  "final": {
+    "t": 523,
+    "fallback_choices": 0,
+    "unparseable_first_replies": 0,
+    "total_choices": 1046,
+    "malformed_rate": 0.0,
+    "consensus": "kuni",
+    "dominant": [
+      "kuni",
+      1.0
+    ],
+    "success_rate_window": 1.0
+  }
+}

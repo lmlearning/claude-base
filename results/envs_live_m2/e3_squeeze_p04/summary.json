@@ -1,0 +1,22 @@
+{
+  "config": {
+    "env": "e3",
+    "n_agents": 12,
+    "note_words": 3,
+    "hard_distractors": true,
+    "shared_items": true,
+    "recv_tokens": 24,
+    "formation_interactions": 360,
+    "interactions_per_replacement": 6,
+    "settle_interactions": 60,
+    "model": "openai/gpt-5-mini",
+    "cell": "e3_squeeze",
+    "pop_index": 4,
+    "seed": 12680794,
+    "framing": "picker"
+  },
+  "result": {
+    "done": true,
+    "t": 492
+  }
+}

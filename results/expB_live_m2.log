@@ -17,3 +17,17 @@ done b_genesis_dlg r7: {"converged": true, "winner": "latu", "consensus_time": 1
 done b_genesis_dlg r3: {"converged": true, "winner": "bobu", "consensus_time": 129}
 done b_genesis_dlg r5: {"converged": true, "winner": "bimna", "consensus_time": 134}
 done b_genesis_dlg r1: {"converged": true, "winner": "dagod", "consensus_time": 149}
+done b_trans_dlg r3: {"converged": true, "winner": "suddu", "consensus_time": 96}
+done b_trans_dlg r1: {"converged": true, "winner": "guma", "consensus_time": 96}
+done b_trans_dlg r4: {"converged": true, "winner": "ronsi", "consensus_time": 96}
+done b_trans_dlg r5: {"converged": true, "winner": "gismu", "consensus_time": 116}
+done b_trans_dlg r2: {"converged": true, "winner": "kepir", "consensus_time": 115}
+done b_trans_dlg r0: {"converged": true, "winner": "figo", "consensus_time": 173}
+judge labelled 345 messages -> results/expB_live_m2/judge_labels.jsonl
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!! MANUAL STEP REQUIRED: 93 messages exported to
+!!   results/expB_live_m2/validation_sample_TO_HAND_LABEL.csv
+!! Hand-label the last column, then run analysis; enforcement
+!! results are gated on Cohen's kappa >= 0.6.
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

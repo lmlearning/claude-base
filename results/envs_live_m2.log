@@ -22,3 +22,40 @@ no OPENROUTER_API_KEY or ANTHROPIC_API_KEY set
   "total_upper_bound_usd": 14.5
 }
 live backend ready; spend so far $0.00 of $20.00
+done e1_tight p5: {'done': True, 't': 692}
+done e1_tight p1: {'done': True, 't': 692}
+done e1_tight p4: {'done': True, 't': 692}
+done e1_tight p6: {'done': True, 't': 692}
+done e1_tight p3: {'done': True, 't': 692}
+done e1_tight p7: {'done': True, 't': 692}
+done e1_tight p0: {'done': True, 't': 692}
+done e1_tight p2: {'done': True, 't': 692}
+done e1_squeeze p1: {'done': True, 't': 492}
+done e1_squeeze p4: {'done': True, 't': 492}
+done e1_squeeze p0: {'done': True, 't': 492}
+done e1_squeeze p2: {'done': True, 't': 492}
+done e1_squeeze p6: {'done': True, 't': 492}
+done e1_squeeze p3: {'done': True, 't': 492}
+done e1_squeeze p5: {'done': True, 't': 492}
+done e1_squeeze p7: {'done': True, 't': 492}
+done e3_squeeze p0: {'done': True, 't': 492}
+done e3_squeeze p2: {'done': True, 't': 492}
+done e3_squeeze p1: {'done': True, 't': 492}
+done e3_squeeze p4: {'done': True, 't': 492}
+done e3_squeeze p6: {'done': True, 't': 492}
+done e3_squeeze p5: {'done': True, 't': 492}
+done e3_squeeze p3: {'done': True, 't': 492}
+done e3_squeeze p7: {'done': True, 't': 492}
+done e4_think p0: {'done': True, 't': 632}
+done e2_think p0: {'done': True, 'episodes': 72}
+done e2_think p1: {'done': True, 'episodes': 72}
+done e2_think p4: {'done': True, 'episodes': 72}
+done e2_think p2: {'done': True, 'episodes': 72}
+done e2_think p5: {'done': True, 'episodes': 72}
+done e2_think p3: {'done': True, 'episodes': 72}
+done e4_think p1: {'done': True, 't': 632}
+done e4_think p2: {'done': True, 't': 632}
+done e4_think p5: {'done': True, 't': 632}
+done e4_think p3: {'done': True, 't': 632}
+done e4_think p4: {'done': True, 't': 632}
+ALL ENV CELLS DONE

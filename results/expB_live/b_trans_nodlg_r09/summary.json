@@ -1,0 +1,55 @@
+{
+  "config": {
+    "cell": "b_trans_nodlg",
+    "run_index": 9,
+    "seed": 3349579212,
+    "phase": "transmission",
+    "dialogue": false,
+    "framing": "rounds",
+    "model": "claude-haiku-4-5",
+    "n_agents": 24,
+    "n_names": 10,
+    "memory_size": 5,
+    "pre_transmission": false,
+    "minority_fraction": 0.25,
+    "minority_budget": 600
+  },
+  "comprehension_passed": true,
+  "priors": {
+    "siso": 0,
+    "faku": 0,
+    "gebba": 4,
+    "bimak": 2,
+    "kilef": 9,
+    "pofpa": 0,
+    "zire": 1,
+    "bisa": 1,
+    "zosmi": 0,
+    "zibu": 3
+  },
+  "priors_malformed": 0,
+  "genesis": {
+    "converged": true,
+    "winner": "siso",
+    "consensus_time": 96
+  },
+  "transmission": {
+    "original": "siso",
+    "final": "siso",
+    "survived": true,
+    "n_replacements": 24
+  },
+  "final": {
+    "t": 488,
+    "fallback_choices": 0,
+    "unparseable_first_replies": 0,
+    "total_choices": 976,
+    "malformed_rate": 0.0,
+    "consensus": "siso",
+    "dominant": [
+      "siso",
+      1.0
+    ],
+    "success_rate_window": 1.0
+  }
+}
