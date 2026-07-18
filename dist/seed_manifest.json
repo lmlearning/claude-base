@@ -118,6 +118,62 @@
    "framing": "office"
   },
   {
+   "dir": "results/envs_live/e1_squeeze_p04",
+   "seed": 609607500,
+   "cell": "e1_squeeze",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_live/e1_squeeze_p05",
+   "seed": 291734603,
+   "cell": "e1_squeeze",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_live/e1_squeeze_p06",
+   "seed": 2477604693,
+   "cell": "e1_squeeze",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_live/e1_squeeze_p07",
+   "seed": 4270548895,
+   "cell": "e1_squeeze",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_live/e1_squeeze_p08",
+   "seed": 2693913656,
+   "cell": "e1_squeeze",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_live/e1_squeeze_p09",
+   "seed": 2888590605,
+   "cell": "e1_squeeze",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_live/e1_squeeze_p10",
+   "seed": 1605220737,
+   "cell": "e1_squeeze",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_live/e1_squeeze_p11",
+   "seed": 3241886762,
+   "cell": "e1_squeeze",
+   "model": null,
+   "framing": "office"
+  },
+  {
    "dir": "results/envs_live/e1_stranger_p00",
    "seed": 783850387,
    "cell": "e1_stranger",
@@ -160,6 +216,62 @@
    "framing": "office"
   },
   {
+   "dir": "results/envs_live/e1_tight_p04",
+   "seed": 836698155,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_live/e1_tight_p05",
+   "seed": 2302716212,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_live/e1_tight_p06",
+   "seed": 2546224933,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_live/e1_tight_p07",
+   "seed": 3161520981,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_live/e1_tight_p08",
+   "seed": 2630574848,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_live/e1_tight_p09",
+   "seed": 1223241961,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_live/e1_tight_p10",
+   "seed": 579539064,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_live/e1_tight_p11",
+   "seed": 3402010915,
+   "cell": "e1_tight",
+   "model": null,
+   "framing": "office"
+  },
+  {
    "dir": "results/envs_live/e2_dialogue_p00",
    "seed": 3684514777,
    "cell": "e2_dialogue",
@@ -183,6 +295,48 @@
   {
    "dir": "results/envs_live/e2_dialogue_p03",
    "seed": 3473274933,
+   "cell": "e2_dialogue",
+   "model": null,
+   "framing": "workshop"
+  },
+  {
+   "dir": "results/envs_live/e2_dialogue_p04",
+   "seed": 3284557529,
+   "cell": "e2_dialogue",
+   "model": null,
+   "framing": "site"
+  },
+  {
+   "dir": "results/envs_live/e2_dialogue_p05",
+   "seed": 1422295157,
+   "cell": "e2_dialogue",
+   "model": null,
+   "framing": "workshop"
+  },
+  {
+   "dir": "results/envs_live/e2_dialogue_p06",
+   "seed": 1833078625,
+   "cell": "e2_dialogue",
+   "model": null,
+   "framing": "site"
+  },
+  {
+   "dir": "results/envs_live/e2_dialogue_p07",
+   "seed": 1748185731,
+   "cell": "e2_dialogue",
+   "model": null,
+   "framing": "workshop"
+  },
+  {
+   "dir": "results/envs_live/e2_dialogue_p08",
+   "seed": 1099525774,
+   "cell": "e2_dialogue",
+   "model": null,
+   "framing": "site"
+  },
+  {
+   "dir": "results/envs_live/e2_dialogue_p09",
+   "seed": 3209640277,
    "cell": "e2_dialogue",
    "model": null,
    "framing": "workshop"
@@ -274,6 +428,48 @@
   {
    "dir": "results/envs_live/e2_think_p03",
    "seed": 2457540802,
+   "cell": "e2_think",
+   "model": null,
+   "framing": "workshop"
+  },
+  {
+   "dir": "results/envs_live/e2_think_p04",
+   "seed": 4124530325,
+   "cell": "e2_think",
+   "model": null,
+   "framing": "site"
+  },
+  {
+   "dir": "results/envs_live/e2_think_p05",
+   "seed": 3347351084,
+   "cell": "e2_think",
+   "model": null,
+   "framing": "workshop"
+  },
+  {
+   "dir": "results/envs_live/e2_think_p06",
+   "seed": 2515965284,
+   "cell": "e2_think",
+   "model": null,
+   "framing": "site"
+  },
+  {
+   "dir": "results/envs_live/e2_think_p07",
+   "seed": 2009164946,
+   "cell": "e2_think",
+   "model": null,
+   "framing": "workshop"
+  },
+  {
+   "dir": "results/envs_live/e2_think_p08",
+   "seed": 562350524,
+   "cell": "e2_think",
+   "model": null,
+   "framing": "site"
+  },
+  {
+   "dir": "results/envs_live/e2_think_p09",
+   "seed": 2265080616,
    "cell": "e2_think",
    "model": null,
    "framing": "workshop"
@@ -377,6 +573,62 @@
    "framing": "warehouse"
   },
   {
+   "dir": "results/envs_live/e3_squeeze_p04",
+   "seed": 12680794,
+   "cell": "e3_squeeze",
+   "model": null,
+   "framing": "picker"
+  },
+  {
+   "dir": "results/envs_live/e3_squeeze_p05",
+   "seed": 210823534,
+   "cell": "e3_squeeze",
+   "model": null,
+   "framing": "warehouse"
+  },
+  {
+   "dir": "results/envs_live/e3_squeeze_p06",
+   "seed": 1156478449,
+   "cell": "e3_squeeze",
+   "model": null,
+   "framing": "picker"
+  },
+  {
+   "dir": "results/envs_live/e3_squeeze_p07",
+   "seed": 1694962666,
+   "cell": "e3_squeeze",
+   "model": null,
+   "framing": "warehouse"
+  },
+  {
+   "dir": "results/envs_live/e3_squeeze_p08",
+   "seed": 1008176747,
+   "cell": "e3_squeeze",
+   "model": null,
+   "framing": "picker"
+  },
+  {
+   "dir": "results/envs_live/e3_squeeze_p09",
+   "seed": 1782553662,
+   "cell": "e3_squeeze",
+   "model": null,
+   "framing": "warehouse"
+  },
+  {
+   "dir": "results/envs_live/e3_squeeze_p10",
+   "seed": 1638342115,
+   "cell": "e3_squeeze",
+   "model": null,
+   "framing": "picker"
+  },
+  {
+   "dir": "results/envs_live/e3_squeeze_p11",
+   "seed": 284645550,
+   "cell": "e3_squeeze",
+   "model": null,
+   "framing": "warehouse"
+  },
+  {
    "dir": "results/envs_live/e4_p00",
    "seed": 739898328,
    "cell": "e4",
@@ -465,6 +717,314 @@
    "seed": 2897513003,
    "cell": "e4_think",
    "model": null,
+   "framing": "market"
+  },
+  {
+   "dir": "results/envs_live/e4_think_p04",
+   "seed": 960334394,
+   "cell": "e4_think",
+   "model": null,
+   "framing": "bonus"
+  },
+  {
+   "dir": "results/envs_live/e4_think_p05",
+   "seed": 3222458050,
+   "cell": "e4_think",
+   "model": null,
+   "framing": "market"
+  },
+  {
+   "dir": "results/envs_live/e4_think_p06",
+   "seed": 2002791880,
+   "cell": "e4_think",
+   "model": null,
+   "framing": "bonus"
+  },
+  {
+   "dir": "results/envs_live/e4_think_p07",
+   "seed": 382781974,
+   "cell": "e4_think",
+   "model": null,
+   "framing": "market"
+  },
+  {
+   "dir": "results/envs_live/e4_think_p08",
+   "seed": 3927653488,
+   "cell": "e4_think",
+   "model": null,
+   "framing": "bonus"
+  },
+  {
+   "dir": "results/envs_live/e4_think_p09",
+   "seed": 1130018500,
+   "cell": "e4_think",
+   "model": null,
+   "framing": "market"
+  },
+  {
+   "dir": "results/envs_live/e4_think_p10",
+   "seed": 4165775964,
+   "cell": "e4_think",
+   "model": null,
+   "framing": "bonus"
+  },
+  {
+   "dir": "results/envs_live/e4_think_p11",
+   "seed": 2799597527,
+   "cell": "e4_think",
+   "model": null,
+   "framing": "market"
+  },
+  {
+   "dir": "results/envs_live_m2/e1_squeeze_p00",
+   "seed": 81438895,
+   "cell": "e1_squeeze",
+   "model": "openai/gpt-5-mini",
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_live_m2/e1_squeeze_p01",
+   "seed": 3061026066,
+   "cell": "e1_squeeze",
+   "model": "openai/gpt-5-mini",
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_live_m2/e1_squeeze_p02",
+   "seed": 149178126,
+   "cell": "e1_squeeze",
+   "model": "openai/gpt-5-mini",
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_live_m2/e1_squeeze_p03",
+   "seed": 4025832704,
+   "cell": "e1_squeeze",
+   "model": "openai/gpt-5-mini",
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_live_m2/e1_squeeze_p04",
+   "seed": 609607500,
+   "cell": "e1_squeeze",
+   "model": "openai/gpt-5-mini",
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_live_m2/e1_squeeze_p05",
+   "seed": 291734603,
+   "cell": "e1_squeeze",
+   "model": "openai/gpt-5-mini",
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_live_m2/e1_squeeze_p06",
+   "seed": 2477604693,
+   "cell": "e1_squeeze",
+   "model": "openai/gpt-5-mini",
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_live_m2/e1_squeeze_p07",
+   "seed": 4270548895,
+   "cell": "e1_squeeze",
+   "model": "openai/gpt-5-mini",
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_live_m2/e1_tight_p00",
+   "seed": 2105856205,
+   "cell": "e1_tight",
+   "model": "openai/gpt-5-mini",
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_live_m2/e1_tight_p01",
+   "seed": 170452868,
+   "cell": "e1_tight",
+   "model": "openai/gpt-5-mini",
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_live_m2/e1_tight_p02",
+   "seed": 4288356756,
+   "cell": "e1_tight",
+   "model": "openai/gpt-5-mini",
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_live_m2/e1_tight_p03",
+   "seed": 1297269466,
+   "cell": "e1_tight",
+   "model": "openai/gpt-5-mini",
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_live_m2/e1_tight_p04",
+   "seed": 836698155,
+   "cell": "e1_tight",
+   "model": "openai/gpt-5-mini",
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_live_m2/e1_tight_p05",
+   "seed": 2302716212,
+   "cell": "e1_tight",
+   "model": "openai/gpt-5-mini",
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_live_m2/e1_tight_p06",
+   "seed": 2546224933,
+   "cell": "e1_tight",
+   "model": "openai/gpt-5-mini",
+   "framing": "activity"
+  },
+  {
+   "dir": "results/envs_live_m2/e1_tight_p07",
+   "seed": 3161520981,
+   "cell": "e1_tight",
+   "model": "openai/gpt-5-mini",
+   "framing": "office"
+  },
+  {
+   "dir": "results/envs_live_m2/e2_think_p00",
+   "seed": 2720035827,
+   "cell": "e2_think",
+   "model": "openai/gpt-5-mini",
+   "framing": "site"
+  },
+  {
+   "dir": "results/envs_live_m2/e2_think_p01",
+   "seed": 1666238924,
+   "cell": "e2_think",
+   "model": "openai/gpt-5-mini",
+   "framing": "workshop"
+  },
+  {
+   "dir": "results/envs_live_m2/e2_think_p02",
+   "seed": 1223583902,
+   "cell": "e2_think",
+   "model": "openai/gpt-5-mini",
+   "framing": "site"
+  },
+  {
+   "dir": "results/envs_live_m2/e2_think_p03",
+   "seed": 2457540802,
+   "cell": "e2_think",
+   "model": "openai/gpt-5-mini",
+   "framing": "workshop"
+  },
+  {
+   "dir": "results/envs_live_m2/e2_think_p04",
+   "seed": 4124530325,
+   "cell": "e2_think",
+   "model": "openai/gpt-5-mini",
+   "framing": "site"
+  },
+  {
+   "dir": "results/envs_live_m2/e2_think_p05",
+   "seed": 3347351084,
+   "cell": "e2_think",
+   "model": "openai/gpt-5-mini",
+   "framing": "workshop"
+  },
+  {
+   "dir": "results/envs_live_m2/e3_squeeze_p00",
+   "seed": 4277933404,
+   "cell": "e3_squeeze",
+   "model": "openai/gpt-5-mini",
+   "framing": "picker"
+  },
+  {
+   "dir": "results/envs_live_m2/e3_squeeze_p01",
+   "seed": 3506863326,
+   "cell": "e3_squeeze",
+   "model": "openai/gpt-5-mini",
+   "framing": "warehouse"
+  },
+  {
+   "dir": "results/envs_live_m2/e3_squeeze_p02",
+   "seed": 1722815458,
+   "cell": "e3_squeeze",
+   "model": "openai/gpt-5-mini",
+   "framing": "picker"
+  },
+  {
+   "dir": "results/envs_live_m2/e3_squeeze_p03",
+   "seed": 2812496590,
+   "cell": "e3_squeeze",
+   "model": "openai/gpt-5-mini",
+   "framing": "warehouse"
+  },
+  {
+   "dir": "results/envs_live_m2/e3_squeeze_p04",
+   "seed": 12680794,
+   "cell": "e3_squeeze",
+   "model": "openai/gpt-5-mini",
+   "framing": "picker"
+  },
+  {
+   "dir": "results/envs_live_m2/e3_squeeze_p05",
+   "seed": 210823534,
+   "cell": "e3_squeeze",
+   "model": "openai/gpt-5-mini",
+   "framing": "warehouse"
+  },
+  {
+   "dir": "results/envs_live_m2/e3_squeeze_p06",
+   "seed": 1156478449,
+   "cell": "e3_squeeze",
+   "model": "openai/gpt-5-mini",
+   "framing": "picker"
+  },
+  {
+   "dir": "results/envs_live_m2/e3_squeeze_p07",
+   "seed": 1694962666,
+   "cell": "e3_squeeze",
+   "model": "openai/gpt-5-mini",
+   "framing": "warehouse"
+  },
+  {
+   "dir": "results/envs_live_m2/e4_think_p00",
+   "seed": 2641863466,
+   "cell": "e4_think",
+   "model": "openai/gpt-5-mini",
+   "framing": "bonus"
+  },
+  {
+   "dir": "results/envs_live_m2/e4_think_p01",
+   "seed": 1578296109,
+   "cell": "e4_think",
+   "model": "openai/gpt-5-mini",
+   "framing": "market"
+  },
+  {
+   "dir": "results/envs_live_m2/e4_think_p02",
+   "seed": 4151544585,
+   "cell": "e4_think",
+   "model": "openai/gpt-5-mini",
+   "framing": "bonus"
+  },
+  {
+   "dir": "results/envs_live_m2/e4_think_p03",
+   "seed": 2897513003,
+   "cell": "e4_think",
+   "model": "openai/gpt-5-mini",
+   "framing": "market"
+  },
+  {
+   "dir": "results/envs_live_m2/e4_think_p04",
+   "seed": 960334394,
+   "cell": "e4_think",
+   "model": "openai/gpt-5-mini",
+   "framing": "bonus"
+  },
+  {
+   "dir": "results/envs_live_m2/e4_think_p05",
+   "seed": 3222458050,
+   "cell": "e4_think",
+   "model": "openai/gpt-5-mini",
    "framing": "market"
   },
   {
@@ -4213,6 +4773,174 @@
    "framing": "market"
   },
   {
+   "dir": "results/expB_live/b_minority_founder_f25_b2k_r00",
+   "seed": 374473607,
+   "cell": "b_minority_founder_f25_b2k",
+   "model": "claude-haiku-4-5",
+   "framing": "rounds"
+  },
+  {
+   "dir": "results/expB_live/b_minority_founder_f25_b2k_r01",
+   "seed": 3968722632,
+   "cell": "b_minority_founder_f25_b2k",
+   "model": "claude-haiku-4-5",
+   "framing": "study"
+  },
+  {
+   "dir": "results/expB_live/b_minority_founder_f25_b2k_r02",
+   "seed": 3360405796,
+   "cell": "b_minority_founder_f25_b2k",
+   "model": "claude-haiku-4-5",
+   "framing": "market"
+  },
+  {
+   "dir": "results/expB_live/b_minority_founder_f25_b2k_r03",
+   "seed": 2390514010,
+   "cell": "b_minority_founder_f25_b2k",
+   "model": "claude-haiku-4-5",
+   "framing": "rounds"
+  },
+  {
+   "dir": "results/expB_live/b_minority_founder_f25_b2k_r04",
+   "seed": 2851508229,
+   "cell": "b_minority_founder_f25_b2k",
+   "model": "claude-haiku-4-5",
+   "framing": "study"
+  },
+  {
+   "dir": "results/expB_live/b_minority_founder_f25_b2k_r05",
+   "seed": 2947280571,
+   "cell": "b_minority_founder_f25_b2k",
+   "model": "claude-haiku-4-5",
+   "framing": "market"
+  },
+  {
+   "dir": "results/expB_live/b_minority_founder_f25_b2k_r06",
+   "seed": 1865447144,
+   "cell": "b_minority_founder_f25_b2k",
+   "model": "claude-haiku-4-5",
+   "framing": "rounds"
+  },
+  {
+   "dir": "results/expB_live/b_minority_founder_f25_b2k_r07",
+   "seed": 2412118080,
+   "cell": "b_minority_founder_f25_b2k",
+   "model": "claude-haiku-4-5",
+   "framing": "study"
+  },
+  {
+   "dir": "results/expB_live/b_minority_founder_f33_b2k_r00",
+   "seed": 3226927773,
+   "cell": "b_minority_founder_f33_b2k",
+   "model": "claude-haiku-4-5",
+   "framing": "rounds"
+  },
+  {
+   "dir": "results/expB_live/b_minority_founder_f33_b2k_r01",
+   "seed": 2925836348,
+   "cell": "b_minority_founder_f33_b2k",
+   "model": "claude-haiku-4-5",
+   "framing": "study"
+  },
+  {
+   "dir": "results/expB_live/b_minority_founder_f33_b2k_r02",
+   "seed": 2012895003,
+   "cell": "b_minority_founder_f33_b2k",
+   "model": "claude-haiku-4-5",
+   "framing": "market"
+  },
+  {
+   "dir": "results/expB_live/b_minority_founder_f33_b2k_r03",
+   "seed": 3290247036,
+   "cell": "b_minority_founder_f33_b2k",
+   "model": "claude-haiku-4-5",
+   "framing": "rounds"
+  },
+  {
+   "dir": "results/expB_live/b_minority_founder_f33_b2k_r04",
+   "seed": 1463233429,
+   "cell": "b_minority_founder_f33_b2k",
+   "model": "claude-haiku-4-5",
+   "framing": "study"
+  },
+  {
+   "dir": "results/expB_live/b_minority_founder_f33_b2k_r05",
+   "seed": 531136775,
+   "cell": "b_minority_founder_f33_b2k",
+   "model": "claude-haiku-4-5",
+   "framing": "market"
+  },
+  {
+   "dir": "results/expB_live/b_minority_founder_f33_b2k_r06",
+   "seed": 3178644407,
+   "cell": "b_minority_founder_f33_b2k",
+   "model": "claude-haiku-4-5",
+   "framing": "rounds"
+  },
+  {
+   "dir": "results/expB_live/b_minority_founder_f33_b2k_r07",
+   "seed": 2528394070,
+   "cell": "b_minority_founder_f33_b2k",
+   "model": "claude-haiku-4-5",
+   "framing": "study"
+  },
+  {
+   "dir": "results/expB_live/b_minority_founder_f42_b2k_r00",
+   "seed": 2345231753,
+   "cell": "b_minority_founder_f42_b2k",
+   "model": "claude-haiku-4-5",
+   "framing": "rounds"
+  },
+  {
+   "dir": "results/expB_live/b_minority_founder_f42_b2k_r01",
+   "seed": 992320844,
+   "cell": "b_minority_founder_f42_b2k",
+   "model": "claude-haiku-4-5",
+   "framing": "study"
+  },
+  {
+   "dir": "results/expB_live/b_minority_founder_f42_b2k_r02",
+   "seed": 1363507984,
+   "cell": "b_minority_founder_f42_b2k",
+   "model": "claude-haiku-4-5",
+   "framing": "market"
+  },
+  {
+   "dir": "results/expB_live/b_minority_founder_f42_b2k_r03",
+   "seed": 4238155635,
+   "cell": "b_minority_founder_f42_b2k",
+   "model": "claude-haiku-4-5",
+   "framing": "rounds"
+  },
+  {
+   "dir": "results/expB_live/b_minority_founder_f42_b2k_r04",
+   "seed": 2221924160,
+   "cell": "b_minority_founder_f42_b2k",
+   "model": "claude-haiku-4-5",
+   "framing": "study"
+  },
+  {
+   "dir": "results/expB_live/b_minority_founder_f42_b2k_r05",
+   "seed": 1939754641,
+   "cell": "b_minority_founder_f42_b2k",
+   "model": "claude-haiku-4-5",
+   "framing": "market"
+  },
+  {
+   "dir": "results/expB_live/b_minority_founder_f42_b2k_r06",
+   "seed": 1639645630,
+   "cell": "b_minority_founder_f42_b2k",
+   "model": "claude-haiku-4-5",
+   "framing": "rounds"
+  },
+  {
+   "dir": "results/expB_live/b_minority_founder_f42_b2k_r07",
+   "seed": 2865814182,
+   "cell": "b_minority_founder_f42_b2k",
+   "model": "claude-haiku-4-5",
+   "framing": "study"
+  },
+  {
    "dir": "results/expB_live/b_minority_founder_r00",
    "seed": 3730159864,
    "cell": "b_minority_founder",
@@ -4253,6 +4981,174 @@
    "cell": "b_minority_founder",
    "model": "claude-haiku-4-5",
    "framing": "market"
+  },
+  {
+   "dir": "results/expB_live/b_minority_posttrans_f25_b2k_r00",
+   "seed": 2763359662,
+   "cell": "b_minority_posttrans_f25_b2k",
+   "model": "claude-haiku-4-5",
+   "framing": "rounds"
+  },
+  {
+   "dir": "results/expB_live/b_minority_posttrans_f25_b2k_r01",
+   "seed": 2871025962,
+   "cell": "b_minority_posttrans_f25_b2k",
+   "model": "claude-haiku-4-5",
+   "framing": "study"
+  },
+  {
+   "dir": "results/expB_live/b_minority_posttrans_f25_b2k_r02",
+   "seed": 3351522972,
+   "cell": "b_minority_posttrans_f25_b2k",
+   "model": "claude-haiku-4-5",
+   "framing": "market"
+  },
+  {
+   "dir": "results/expB_live/b_minority_posttrans_f25_b2k_r03",
+   "seed": 2202350811,
+   "cell": "b_minority_posttrans_f25_b2k",
+   "model": "claude-haiku-4-5",
+   "framing": "rounds"
+  },
+  {
+   "dir": "results/expB_live/b_minority_posttrans_f25_b2k_r04",
+   "seed": 2027778109,
+   "cell": "b_minority_posttrans_f25_b2k",
+   "model": "claude-haiku-4-5",
+   "framing": "study"
+  },
+  {
+   "dir": "results/expB_live/b_minority_posttrans_f25_b2k_r05",
+   "seed": 1442793425,
+   "cell": "b_minority_posttrans_f25_b2k",
+   "model": "claude-haiku-4-5",
+   "framing": "market"
+  },
+  {
+   "dir": "results/expB_live/b_minority_posttrans_f25_b2k_r06",
+   "seed": 2141638406,
+   "cell": "b_minority_posttrans_f25_b2k",
+   "model": "claude-haiku-4-5",
+   "framing": "rounds"
+  },
+  {
+   "dir": "results/expB_live/b_minority_posttrans_f25_b2k_r07",
+   "seed": 1122758734,
+   "cell": "b_minority_posttrans_f25_b2k",
+   "model": "claude-haiku-4-5",
+   "framing": "study"
+  },
+  {
+   "dir": "results/expB_live/b_minority_posttrans_f33_b2k_r00",
+   "seed": 20029790,
+   "cell": "b_minority_posttrans_f33_b2k",
+   "model": "claude-haiku-4-5",
+   "framing": "rounds"
+  },
+  {
+   "dir": "results/expB_live/b_minority_posttrans_f33_b2k_r01",
+   "seed": 1539069446,
+   "cell": "b_minority_posttrans_f33_b2k",
+   "model": "claude-haiku-4-5",
+   "framing": "study"
+  },
+  {
+   "dir": "results/expB_live/b_minority_posttrans_f33_b2k_r02",
+   "seed": 3329028876,
+   "cell": "b_minority_posttrans_f33_b2k",
+   "model": "claude-haiku-4-5",
+   "framing": "market"
+  },
+  {
+   "dir": "results/expB_live/b_minority_posttrans_f33_b2k_r03",
+   "seed": 2105621877,
+   "cell": "b_minority_posttrans_f33_b2k",
+   "model": "claude-haiku-4-5",
+   "framing": "rounds"
+  },
+  {
+   "dir": "results/expB_live/b_minority_posttrans_f33_b2k_r04",
+   "seed": 718257337,
+   "cell": "b_minority_posttrans_f33_b2k",
+   "model": "claude-haiku-4-5",
+   "framing": "study"
+  },
+  {
+   "dir": "results/expB_live/b_minority_posttrans_f33_b2k_r05",
+   "seed": 1268675598,
+   "cell": "b_minority_posttrans_f33_b2k",
+   "model": "claude-haiku-4-5",
+   "framing": "market"
+  },
+  {
+   "dir": "results/expB_live/b_minority_posttrans_f33_b2k_r06",
+   "seed": 2542685646,
+   "cell": "b_minority_posttrans_f33_b2k",
+   "model": "claude-haiku-4-5",
+   "framing": "rounds"
+  },
+  {
+   "dir": "results/expB_live/b_minority_posttrans_f33_b2k_r07",
+   "seed": 1763119478,
+   "cell": "b_minority_posttrans_f33_b2k",
+   "model": "claude-haiku-4-5",
+   "framing": "study"
+  },
+  {
+   "dir": "results/expB_live/b_minority_posttrans_f42_b2k_r00",
+   "seed": 1703983541,
+   "cell": "b_minority_posttrans_f42_b2k",
+   "model": "claude-haiku-4-5",
+   "framing": "rounds"
+  },
+  {
+   "dir": "results/expB_live/b_minority_posttrans_f42_b2k_r01",
+   "seed": 3945363925,
+   "cell": "b_minority_posttrans_f42_b2k",
+   "model": "claude-haiku-4-5",
+   "framing": "study"
+  },
+  {
+   "dir": "results/expB_live/b_minority_posttrans_f42_b2k_r02",
+   "seed": 544443862,
+   "cell": "b_minority_posttrans_f42_b2k",
+   "model": "claude-haiku-4-5",
+   "framing": "market"
+  },
+  {
+   "dir": "results/expB_live/b_minority_posttrans_f42_b2k_r03",
+   "seed": 2499592903,
+   "cell": "b_minority_posttrans_f42_b2k",
+   "model": "claude-haiku-4-5",
+   "framing": "rounds"
+  },
+  {
+   "dir": "results/expB_live/b_minority_posttrans_f42_b2k_r04",
+   "seed": 4253542694,
+   "cell": "b_minority_posttrans_f42_b2k",
+   "model": "claude-haiku-4-5",
+   "framing": "study"
+  },
+  {
+   "dir": "results/expB_live/b_minority_posttrans_f42_b2k_r05",
+   "seed": 782161354,
+   "cell": "b_minority_posttrans_f42_b2k",
+   "model": "claude-haiku-4-5",
+   "framing": "market"
+  },
+  {
+   "dir": "results/expB_live/b_minority_posttrans_f42_b2k_r06",
+   "seed": 388199587,
+   "cell": "b_minority_posttrans_f42_b2k",
+   "model": "claude-haiku-4-5",
+   "framing": "rounds"
+  },
+  {
+   "dir": "results/expB_live/b_minority_posttrans_f42_b2k_r07",
+   "seed": 3926446783,
+   "cell": "b_minority_posttrans_f42_b2k",
+   "model": "claude-haiku-4-5",
+   "framing": "study"
   },
   {
    "dir": "results/expB_live/b_minority_posttrans_r00",
@@ -4360,6 +5256,34 @@
    "framing": "market"
   },
   {
+   "dir": "results/expB_live/b_trans_dlg_r06",
+   "seed": 3954161671,
+   "cell": "b_trans_dlg",
+   "model": "claude-haiku-4-5",
+   "framing": "rounds"
+  },
+  {
+   "dir": "results/expB_live/b_trans_dlg_r07",
+   "seed": 2360409864,
+   "cell": "b_trans_dlg",
+   "model": "claude-haiku-4-5",
+   "framing": "study"
+  },
+  {
+   "dir": "results/expB_live/b_trans_dlg_r08",
+   "seed": 2662955622,
+   "cell": "b_trans_dlg",
+   "model": "claude-haiku-4-5",
+   "framing": "market"
+  },
+  {
+   "dir": "results/expB_live/b_trans_dlg_r09",
+   "seed": 597326239,
+   "cell": "b_trans_dlg",
+   "model": "claude-haiku-4-5",
+   "framing": "rounds"
+  },
+  {
    "dir": "results/expB_live/b_trans_nodlg_r00",
    "seed": 903813849,
    "cell": "b_trans_nodlg",
@@ -4402,11 +5326,46 @@
    "framing": "market"
   },
   {
+   "dir": "results/expB_live/b_trans_nodlg_r06",
+   "seed": 1692970275,
+   "cell": "b_trans_nodlg",
+   "model": "claude-haiku-4-5",
+   "framing": "rounds"
+  },
+  {
+   "dir": "results/expB_live/b_trans_nodlg_r07",
+   "seed": 1703908901,
+   "cell": "b_trans_nodlg",
+   "model": "claude-haiku-4-5",
+   "framing": "study"
+  },
+  {
+   "dir": "results/expB_live/b_trans_nodlg_r08",
+   "seed": 4203499693,
+   "cell": "b_trans_nodlg",
+   "model": "claude-haiku-4-5",
+   "framing": "market"
+  },
+  {
+   "dir": "results/expB_live/b_trans_nodlg_r09",
+   "seed": 3349579212,
+   "cell": "b_trans_nodlg",
+   "model": "claude-haiku-4-5",
+   "framing": "rounds"
+  },
+  {
    "dir": "results/expB_live_m2/b_genesis_dlg_r00",
    "seed": 2630193575,
    "cell": "b_genesis_dlg",
    "model": "openai/gpt-5-mini",
    "framing": "rounds"
+  },
+  {
+   "dir": "results/expB_live_m2/b_genesis_dlg_r01",
+   "seed": 1768516326,
+   "cell": "b_genesis_dlg",
+   "model": "openai/gpt-5-mini",
+   "framing": "study"
   },
   {
    "dir": "results/expB_live_m2/b_genesis_dlg_r02",
@@ -4449,6 +5408,48 @@
    "cell": "b_genesis_dlg",
    "model": "openai/gpt-5-mini",
    "framing": "study"
+  },
+  {
+   "dir": "results/expB_live_m2/b_trans_dlg_r00",
+   "seed": 2805948386,
+   "cell": "b_trans_dlg",
+   "model": "openai/gpt-5-mini",
+   "framing": "rounds"
+  },
+  {
+   "dir": "results/expB_live_m2/b_trans_dlg_r01",
+   "seed": 4174240088,
+   "cell": "b_trans_dlg",
+   "model": "openai/gpt-5-mini",
+   "framing": "study"
+  },
+  {
+   "dir": "results/expB_live_m2/b_trans_dlg_r02",
+   "seed": 2258290082,
+   "cell": "b_trans_dlg",
+   "model": "openai/gpt-5-mini",
+   "framing": "market"
+  },
+  {
+   "dir": "results/expB_live_m2/b_trans_dlg_r03",
+   "seed": 2627787388,
+   "cell": "b_trans_dlg",
+   "model": "openai/gpt-5-mini",
+   "framing": "rounds"
+  },
+  {
+   "dir": "results/expB_live_m2/b_trans_dlg_r04",
+   "seed": 3601483329,
+   "cell": "b_trans_dlg",
+   "model": "openai/gpt-5-mini",
+   "framing": "study"
+  },
+  {
+   "dir": "results/expB_live_m2/b_trans_dlg_r05",
+   "seed": 3226325838,
+   "cell": "b_trans_dlg",
+   "model": "openai/gpt-5-mini",
+   "framing": "market"
   },
   {
    "dir": "results/expB_mock/b_genesis_dlg_r00",
@@ -4745,5 +5746,5 @@
    "framing": "market"
   }
  ],
- "n_runs": 677
+ "n_runs": 820
 }

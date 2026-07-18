@@ -11,7 +11,7 @@ across conditions.)*
 |---|---|
 | Experiment A (minimal agents), full P0+P1 + phase-boundary extension | **Complete** (~21k runs, 66 cells) |
 | Experiment B pipeline, end-to-end in free mock mode | **Complete** (42 runs, all phases, judge, validation export) |
-| Experiment B live LLM runs (claude-haiku-4.5 via OpenRouter) | **Complete**: 42/42 runs (genesis, transmission ± dialogue, solitary, founder & post-transmission minority), 4,507 messages judged; total spend $15.56 of a $250 cap |
+| Experiment B live LLM runs (claude-haiku-4.5 via OpenRouter) | **Complete**: 88 runs (genesis n=15, transmission ± dialogue n=10/10, solitary n=3, minority pilot n=12 + threshold sweep n=48), 28,315 messages judged; total spend $70.97 of a $250 cap |
 | Judge validation | **FAILED** at the gate (second-annotator κ = 0.06 « 0.6) — enforcement classifications are not reportable; the author hand-label file remains open (`results/expB_live/validation_sample_TO_HAND_LABEL.csv`) |
 | E1–E4 side-product convention suite | **Complete**: 300 substrate + 28 live populations |
 | E1–E4 convention-inducing variants + integrity repair | **Complete**: 220 substrate + 38 live populations (compression / noise / memory / dialogue / scratch-line / sonnet); original live e2/e4 cells found VOID (reply-cap truncation → 98% fallback moves) and superseded by corrected cells |
@@ -19,7 +19,7 @@ across conditions.)*
 | Live committed-minority threshold sweep (§2) | **Complete**: 48 runs, f ∈ {0.25, 0.33, 0.42} × {founder, post-transmission}, 2,000-interaction budget; live f₅₀(founder) = 0.300 [0.266, 0.330], post-transmission f₅₀ ∈ (0.25, 0.33) |
 | Second model family (§3): openai/gpt-5-mini | **Complete**: 14 naming runs + 36 env populations, frozen prompts, malformed 0.0000 over 26.5k calls; key finding — genuine description conventions in e3_squeeze (7 distinct schemes / 8 populations, prior-match 0.19) |
 | Enforcement rebuild (§4) | **Complete**: κ(judge–strict) = 0.062 from CSVs (author sheet pending — three-way matrix auto-completes when supplied); frozen-lexicon detector validated then scanned: 2/27,502 haiku-population, 0/813 solitary, 2/345 gpt-5-mini messages with any deontic/correctness/group/sanction feature — all four hits recruitment-framed |
-| Final-run live spend | expB $63.61 + envs $107 + m2 $7.75 ≈ **$120 new** (caps 250/140/25/20; brief cap $400) |
+| Final-run live spend | expB $70.97 + envs $106.92 + m2 $7.75 → ≈ **$128 new** this run (caps 250/140/25/20; brief cap $400) |
 
 ## 1. Pre-registered criteria (fixed before any data collection)
 
