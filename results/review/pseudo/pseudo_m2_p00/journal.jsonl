@@ -356,3 +356,6 @@
 {"type": "interaction", "phase": "formation", "target": 5, "note": "blue striped small", "mentioned": []}
 {"type": "interaction", "phase": "formation", "target": 5, "note": "neszo feno", "mentioned": [1, 4]}
 {"type": "interaction", "phase": "formation", "target": 5, "note": "neszo feno zufra", "mentioned": [1, 4, 7]}
+{"type": "interaction", "phase": "formation", "target": 5, "note": "neszo feno zufra", "mentioned": [1, 4, 7]}
+{"type": "interaction", "phase": "formation", "target": 5, "note": "neszo feno", "mentioned": [1, 4]}
+{"type": "interaction", "phase": "formation", "target": 5, "note": "neszo feno", "mentioned": [1, 4]}
