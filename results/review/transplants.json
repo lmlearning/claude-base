@@ -1,0 +1,112 @@
+[
+ {
+  "adopted": false,
+  "latency_sends": null,
+  "n_mover_sends": 18,
+  "host_items_stable_of6": 3,
+  "match_share_last10": 0.4,
+  "pair": [
+   "e3_squeeze_p04",
+   "e3_squeeze_p03"
+  ]
+ },
+ {
+  "adopted": false,
+  "latency_sends": null,
+  "n_mover_sends": 23,
+  "host_items_stable_of6": 6,
+  "match_share_last10": 0.4,
+  "pair": [
+   "e3_squeeze_p03",
+   "e3_squeeze_p06"
+  ]
+ },
+ {
+  "adopted": false,
+  "latency_sends": null,
+  "n_mover_sends": 25,
+  "host_items_stable_of6": 4,
+  "match_share_last10": 0.7,
+  "pair": [
+   "e3_squeeze_p07",
+   "e3_squeeze_p02"
+  ]
+ },
+ {
+  "adopted": false,
+  "latency_sends": null,
+  "n_mover_sends": 27,
+  "host_items_stable_of6": 4,
+  "match_share_last10": 0.4,
+  "pair": [
+   "e3_squeeze_p06",
+   "e3_squeeze_p01"
+  ]
+ },
+ {
+  "adopted": false,
+  "latency_sends": null,
+  "n_mover_sends": 27,
+  "host_items_stable_of6": 4,
+  "match_share_last10": 0.4,
+  "pair": [
+   "e3_squeeze_p00",
+   "e3_squeeze_p01"
+  ]
+ },
+ {
+  "adopted": false,
+  "latency_sends": null,
+  "n_mover_sends": 27,
+  "host_items_stable_of6": 4,
+  "match_share_last10": 0.4,
+  "pair": [
+   "e3_squeeze_p02",
+   "e3_squeeze_p01"
+  ]
+ },
+ {
+  "adopted": false,
+  "latency_sends": null,
+  "n_mover_sends": 18,
+  "host_items_stable_of6": 2,
+  "match_share_last10": 0.1,
+  "pair": [
+   "e3_squeeze_p05",
+   "e3_squeeze_p03"
+  ]
+ },
+ {
+  "adopted": false,
+  "latency_sends": null,
+  "n_mover_sends": 20,
+  "host_items_stable_of6": 3,
+  "match_share_last10": 0.4,
+  "pair": [
+   "e3_squeeze_p02",
+   "e3_squeeze_p04"
+  ]
+ },
+ {
+  "adopted": false,
+  "latency_sends": null,
+  "n_mover_sends": 17,
+  "host_items_stable_of6": 4,
+  "match_share_last10": 0.3,
+  "pair": [
+   "e3_squeeze_p02",
+   "e3_squeeze_p07"
+  ]
+ },
+ {
+  "adopted": false,
+  "latency_sends": null,
+  "n_mover_sends": 25,
+  "host_items_stable_of6": 5,
+  "match_share_last10": 0.7,
+  "pair": [
+   "e3_squeeze_p06",
+   "e3_squeeze_p02"
+  ]
+ }
+]
