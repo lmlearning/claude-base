@@ -578,21 +578,27 @@ separately from occupied-cell picks. The substrate tier is unaffected
 
 ### Reading (final n; supersedes every pilot number above and below)
 
-**Two live results replace the pilot picture. (1) In the haiku family,
-with parsing repaired and every lever pulled, side-product conventions
-are rare: the 6-word squeeze produced one conventionalized population in
-12 (agreement 0.13 vs shuffle 0.08 — a weak, above-baseline signal, not
-the 1/4 the pilot suggested). (2) The second model family produced the
-suite's first unambiguous live side-product convention: on an identical
-shared item set, gpt-5-mini populations settled on 7 distinct
-description schemes across 8 populations with prior-match 0.19 —
-cross-population diversity on a shared world, the pre-registered
-signature separating convention from model bias. Convention formation is
-capability-gated: the model must be strong enough to exploit minimal
-discriminating descriptions (creating the arbitrary-choice space) while
-its prior leaves the choice open; haiku's exhaustive-description prior
-closes that space (1 scheme across 12 populations, prior-match 1.0),
-and no lever in the haiku family opens it.**
+**Superseded in turn by the review-response experiments (§10): the
+gpt-5-mini E3 diversity, initially read as the suite's first live
+side-product convention, failed all four causal tests — its 7/8
+distinct schemes are consistent with the no-interaction sampling null
+(P(≥7) = 0.14 under the model's independently measured flat prior,
+1.39 bits), transplanted agents never adopt the host scheme (0/10),
+schemes are fragile under turnover (2/8 survive), and cross-population
+pairings succeed at least as well as within-population ones (swap
+Δ = −0.08): the diversity is correlated stylistic drift, not a
+solution to a coordination problem. The corrected overall finding is
+that NO live environment produced a genuine side-product convention.
+In the haiku family the 6-word squeeze yields one weakly
+conventionalized population in 12 (agreement 0.13 vs shuffle 0.08);
+everything else is prior-driven. The independently measured axes (§10)
+explain the whole pattern: both families are fully competent to
+execute optimal codes when specified (reachability 0.97–1.00), so
+non-formation is never a competence ceiling — it is priors that either
+close the choice space (haiku, E3 modal probability 0.97) or fill it
+with payoff-irrelevant variation (gpt-5-mini), while flexible responder
+parsing removes the compatibility payoff that would make history
+matter.**
 
 - *E1 squeeze (final n=12):* 6 words cannot name all 5 label+entry
   pairs, so naming everything stops being free. Haiku triages — names
@@ -661,16 +667,17 @@ even explicit negotiation is supplied. When capacity pressure makes the
 prior strategy infeasible but the model cannot construct an
 alternative, it degrades instead of conventionalizing (haiku E1
 squeeze: rare weak conventions; gpt-5-mini E1 squeeze: pseudo-cipher
-collapse). When the model is competent enough to reach the
-reward-equivalent solution manifold and its prior does not single out a
-point on it — gpt-5-mini's minimal discriminating descriptions in E3 —
-population-specific conventions emerge and diverge across populations,
-the full Lewisian signature. The naming game (all families converge)
-and E3-m2 bracket the phenomenon: payoff-coupled alignment is
-sufficient, and prior-underdetermined competence is the side-product
-route. Limitations: 6–12 live populations per load-bearing cell,
-n=3–8 on secondary cells, short in-context histories, three models
-from two vendors.
+collapse). And when the prior does not single out a point on the
+solution manifold — gpt-5-mini's flat E3 prior — populations diverge,
+but the review-response tests (§10) show that divergence is sampling
+drift with no social glue: without a compatibility payoff (swap
+Δ ≈ 0 or negative) there is nothing for transmission to preserve
+(transplants 0/10, turnover survival 2/8). Payoff-coupled alignment
+(the naming game, all families) remains the one sufficient condition
+observed; prior-underdetermined competence produces variation but not,
+in these environments, convention. Limitations: 6–12 live populations
+per load-bearing cell, n=3–8 on secondary cells, short in-context
+histories, three models from two vendors.
 """
 
 
@@ -708,8 +715,8 @@ def render_claims():
 | Newcomer socialisation is dialogue-mediated | b_trans_dlg vs b_trans_nodlg | fig_socialisation; `\\pSocialisationMWU` |
 | Substrate committed-minority threshold f50 ≈ 0.126, history-independent | expA minority cells (n=500/point) | fig_minority; `\\fFiftySubstrateFounder/Posttrans` |
 | Live minority threshold: f50 or lower bound vs substrate | b_minority_{{founder,posttrans}}_{{f25,f33,f42}}_b2k (n=8 each) | fig_minority |
-| Compression produces the first live side-product convention (loose-vs-squeeze contrast) | e1_tight (n={n_of('live','e1_tight')}) vs e1_squeeze (n={n_of('live','e1_squeeze')}) live; substrate n=60/40 | fig_inversion, fig_esuite; `\\convEOneSqueezeLive` |
-| E3 concentration is shared model bias, not convention (diversity signature on a shared item set) | e3_squeeze (n={n_of('live','e3_squeeze')}) + zero-shot priors | fig_esuite; `\\schemesEThreeSqueezeLive`, `\\priorEThreeSqueezeLive` |
+| Compression produces at most one weak live side-product convention (loose-vs-squeeze contrast) | e1_tight (n={n_of('live','e1_tight')}) vs e1_squeeze (n={n_of('live','e1_squeeze')}) live; substrate n=60/40 | fig_inversion, fig_esuite; `\\convEOneSqueezeLive` |
+| E3 concentration (haiku) is shared model bias; E3 diversity (gpt-5-mini) is prior-sampling drift, not convention — no adoption, no turnover survival, no swap cost | e3_squeeze (n={n_of('live','e3_squeeze')} haiku, {n_of('m2','e3_squeeze') if True else 8} m2) + §10 null baseline, transplants, swaps, turnover | fig_esuite, fig_review_e3; `\\schemesEThreeSqueezeLive`, review JSONs |
 | The fairness prior absorbs the symmetry that produces Axtell–Epstein–Young classes in the substrate | e4_think (n={n_of('live','e4_think')}), e4_sonnet (n=3), substrate e4 (n=60) | fig_inversion; `\\classEFourThinkLive`, `\\egalEFourThinkLive` |
 | Capability sharpens priors: mirror-match coordination failure; negotiated pacts do not fossilize | e2_think (n={n_of('live','e2_think')}), e2_dialogue (n={n_of('live','e2_dialogue')}), e2_sonnet (n=3) | §7 E2 rows; `\\convETwoThinkLive`, `\\succETwoDialogueLive` |
 | Enforcement surface features are absent (annotation-invariant) in populations and solitary alike | detector scan over all live dialogue | `\\prevDeonticPop` etc.; enforcement_analysis.json |

@@ -342,6 +342,62 @@
    "framing": "workshop"
   },
   {
+   "dir": "results/envs_live/e2_hetero_p00",
+   "seed": 733924175,
+   "cell": "e2_hetero",
+   "model": null,
+   "framing": "site"
+  },
+  {
+   "dir": "results/envs_live/e2_hetero_p01",
+   "seed": 199026659,
+   "cell": "e2_hetero",
+   "model": null,
+   "framing": "workshop"
+  },
+  {
+   "dir": "results/envs_live/e2_hetero_p02",
+   "seed": 308369185,
+   "cell": "e2_hetero",
+   "model": null,
+   "framing": "site"
+  },
+  {
+   "dir": "results/envs_live/e2_hetero_p03",
+   "seed": 1494673808,
+   "cell": "e2_hetero",
+   "model": null,
+   "framing": "workshop"
+  },
+  {
+   "dir": "results/envs_live/e2_hetero_p04",
+   "seed": 1266189751,
+   "cell": "e2_hetero",
+   "model": null,
+   "framing": "site"
+  },
+  {
+   "dir": "results/envs_live/e2_hetero_p05",
+   "seed": 1060299951,
+   "cell": "e2_hetero",
+   "model": null,
+   "framing": "workshop"
+  },
+  {
+   "dir": "results/envs_live/e2_hetero_p06",
+   "seed": 3315968247,
+   "cell": "e2_hetero",
+   "model": null,
+   "framing": "site"
+  },
+  {
+   "dir": "results/envs_live/e2_hetero_p07",
+   "seed": 2274926158,
+   "cell": "e2_hetero",
+   "model": null,
+   "framing": "workshop"
+  },
+  {
    "dir": "results/envs_live/e2_p00",
    "seed": 3368412237,
    "cell": "e2",
@@ -380,6 +436,62 @@
    "dir": "results/envs_live/e2_p05",
    "seed": 2896451878,
    "cell": "e2",
+   "model": null,
+   "framing": "workshop"
+  },
+  {
+   "dir": "results/envs_live/e2_role_p00",
+   "seed": 215831966,
+   "cell": "e2_role",
+   "model": null,
+   "framing": "site"
+  },
+  {
+   "dir": "results/envs_live/e2_role_p01",
+   "seed": 2937293931,
+   "cell": "e2_role",
+   "model": null,
+   "framing": "workshop"
+  },
+  {
+   "dir": "results/envs_live/e2_role_p02",
+   "seed": 1805358411,
+   "cell": "e2_role",
+   "model": null,
+   "framing": "site"
+  },
+  {
+   "dir": "results/envs_live/e2_role_p03",
+   "seed": 1473175648,
+   "cell": "e2_role",
+   "model": null,
+   "framing": "workshop"
+  },
+  {
+   "dir": "results/envs_live/e2_role_p04",
+   "seed": 3522554125,
+   "cell": "e2_role",
+   "model": null,
+   "framing": "site"
+  },
+  {
+   "dir": "results/envs_live/e2_role_p05",
+   "seed": 63663320,
+   "cell": "e2_role",
+   "model": null,
+   "framing": "workshop"
+  },
+  {
+   "dir": "results/envs_live/e2_role_p06",
+   "seed": 2443846139,
+   "cell": "e2_role",
+   "model": null,
+   "framing": "site"
+  },
+  {
+   "dir": "results/envs_live/e2_role_p07",
+   "seed": 902093886,
+   "cell": "e2_role",
    "model": null,
    "framing": "workshop"
   },
@@ -5746,5 +5858,5 @@
    "framing": "market"
   }
  ],
- "n_runs": 820
+ "n_runs": 836
 }

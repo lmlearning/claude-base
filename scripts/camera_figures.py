@@ -326,6 +326,102 @@ def main():
     fig_minority(args.figdir)
     fig_esuite(args.figdir)
     fig_inversion(args.figdir)
+    fig_review(args.figdir)
+
+
+
+
+def fig_review(figdir):
+    """Review-response panel: null-diversity, swap matrix, adoption,
+    E2 mitigation."""
+    import json as _json
+
+    def jload(p):
+        try:
+            return _json.load(open(p))
+        except FileNotFoundError:
+            return None
+    nd = jload("results/review/null_diversity.json")
+    sw = jload("results/review/swap.json")
+    tr = jload("results/review/transplants.json")
+    to = jload("results/review_m2_turnover.json")
+    if not (nd and sw and tr):
+        return
+    fig, axes = plt.subplots(1, 4, figsize=(DBL_W, 2.2))
+    # (a) null distribution vs observed
+    ax = axes[0]
+    dist = nd["m2"]["ruleA"]["distribution"]
+    ks = sorted(int(k) for k in dist)
+    tot = sum(dist.values())
+    ax.bar(ks, [dist[str(k)] / tot for k in ks], color=BLUE, width=0.8,
+           label="no-interaction null")
+    ax.axvline(7, color=ORANGE, lw=1.6, ls="--")
+    ax.annotate("observed 7/8", xy=(7, ax.get_ylim()[1] * 0.9),
+                fontsize=6.5, ha="right", color=ORANGE, rotation=90)
+    ax.set_xlabel("distinct schemes among 8\n(gpt-5-mini, rule A)")
+    ax.set_ylabel("null probability")
+    ax.set_title(f"P(≥7) = {nd['m2']['ruleA']['p_ge_7']:.2f}", fontsize=8)
+    ax.grid(axis="x", visible=False)
+    # (b) swap
+    ax = axes[1]
+    fams = ["m2", "haiku"]
+    x = np.arange(2)
+    ax.bar(x - 0.17, [sw[f]["within_success"] for f in fams], width=0.32,
+           color=BLUE, label="within-population")
+    ax.bar(x + 0.17, [sw[f]["cross_success"] for f in fams], width=0.32,
+           color=ORANGE, label="cross-population")
+    ax.set_xticks(x)
+    ax.set_xticklabels(["gpt-5-mini", "haiku"])
+    ax.set_ylabel("eval success (memory frozen)")
+    ax.set_title("no compatibility payoff", fontsize=8)
+    ax.legend(fontsize=6)
+    ax.grid(axis="x", visible=False)
+    # (c) transplant + turnover adoption
+    ax = axes[2]
+    ad = sum(t["adopted"] for t in tr)
+    ms = [t["match_share_last10"] for t in tr]
+    vals = [ad / len(tr), float(np.mean(ms)),
+            (to["survived"] / to["n_pops"]) if to else 0,
+            to["newcomer_mean_match"] if to else 0]
+    labs = ["transplant\nadoption", "transplant\nmatch share",
+            "scheme survival\n(turnover)", "newcomer\nmatch share"]
+    ax.bar(range(4), vals, color=[BLUE, BLUE, GREEN, GREEN], width=0.6)
+    ax.axhline(0.8, color=GRAY, ls=":", lw=0.8)
+    ax.annotate("adoption criterion", xy=(3.4, 0.81), fontsize=5.5,
+                ha="right", color=GRAY)
+    ax.set_xticks(range(4))
+    ax.set_xticklabels(labs, fontsize=5.6, rotation=30,
+                       ha="right")
+    ax.set_ylim(0, 1.02)
+    ax.set_title("no social transmission", fontsize=8)
+    ax.grid(axis="x", visible=False)
+    # (d) E2 mitigation
+    ax = axes[3]
+    cells = [("e2_think", "baseline"), ("e2_role", "role line"),
+             ("e2_hetero", "hetero pairs")]
+    d = E.get("live", {})
+    for i, (cell, lab) in enumerate(cells):
+        c = d.get(cell, {})
+        s2 = c.get("success_last12", {})
+        if s2.get("estimate") is None:
+            continue
+        ax.bar([i], [s2["estimate"]], color=C[i] if False else
+               [BLUE, ORANGE, GREEN][i], width=0.6)
+        ax.errorbar([i], [s2["estimate"]],
+                    yerr=[[max(0, s2["estimate"] - s2["lo"])],
+                          [max(0, s2["hi"] - s2["estimate"])]],
+                    fmt="none", ecolor=GRAY, lw=0.8, capsize=2)
+    ax.set_xticks(range(3))
+    ax.set_xticklabels([l for _, l in cells], fontsize=6.2,
+                       rotation=20, ha="right")
+    ax.set_ylabel("episode success (last 12)")
+    ax.set_title("E2 mitigation", fontsize=8)
+    ax.grid(axis="x", visible=False)
+    fig.tight_layout(pad=0.4)
+    fig.savefig(os.path.join(figdir, "fig_review_e3.pdf"),
+                bbox_inches="tight")
+    plt.close(fig)
+    print("wrote fig_review_e3.pdf")
 
 
 if __name__ == "__main__":

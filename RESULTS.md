@@ -130,6 +130,78 @@ across conditions.)*
     e3_squeeze fixes E3's diversity-test flaw by sharing one fixed item
     set across populations; the per-population zero-shot prior probe
     still measures token-level bias on the shared traits.
+16. **Scheme coding rules (frozen before the §R1 baseline data).** A
+    population's per-item description is the modal extracted trait-set
+    over the last 15 formation-phase mentions of that item; a
+    population's *scheme* is the 6-tuple of per-item modal sets. Rule A
+    (headline, as used throughout): schemes are distinct iff their
+    normalised tuples differ exactly. Rule B (coarser): agglomerative
+    clustering with mean per-item Jaccard similarity, threshold 0.5 —
+    schemes in one cluster count once. Rule C (finer): distinct iff ANY
+    item's modal set differs (identical to A for full tuples; differs
+    only when items lack a modal set). All three are reported for every
+    headline count; no rule is chosen after seeing the null.
+17. **E3 no-interaction pseudo-population design.** Per family, 16
+    pseudo-populations; each consists of independent zero-shot
+    generations from the frozen SEND prompt with the empty-history
+    header, same shared items, same per-item event counts as the
+    matched real cell (drawn from its journals), run temperature.
+    Pushed through the identical extraction and all three coding rules.
+    The null probability reported is the fraction of 2,000 resamples of
+    8 pseudo-populations showing >= 7 distinct schemes (Rule A, with B
+    and C alongside).
+18. **Transplant adoption criterion (frozen before any transplant
+    run).** A transplanted agent counts as ADOPTED if, over its last 10
+    sends in the host, >= 80% of extracted trait-sets equal the host's
+    pre-transplant modal set for the sent item. Latency = number of
+    sends until the criterion window first holds. Host stability =
+    host's per-item modal sets unchanged in the final 15-mention
+    window. Protocol: one agent, journaled state replayed, replaces a
+    random host slot; 240 further interactions under normal random
+    pairing; >= 10 ordered pairs of distinct-scheme gpt-5-mini
+    populations.
+19. **Swap protocol (frozen).** Evaluation-only episodes with all
+    memories frozen at end-of-run state: describer sampled from
+    population A, responder from population B, 30 episodes per ordered
+    pair (all 56 m2 ordered pairs + 8 within-population baselines;
+    haiku control: 24 sampled ordered pairs + 12 baselines). Statistic:
+    success difference (within minus cross) with run-level bootstrap
+    CI. No agent state is updated by evaluation episodes.
+20. **E2 mitigation cells (prompts frozen after lint + tiny pilot).**
+    e2_role: e2_think plus one factual line in the episode state
+    assigning each badge a fixed grid half (wording lint-checked, no
+    coordination vocabulary). e2_hetero: e2_think with each pair
+    drawn one-from-each family (haiku-4.5 x gpt-5-mini), no role line;
+    pairing always cross-family (an environment-structure property of
+    the cell, not a prompt change). n = 8 populations each; success
+    measured against the e2_think baseline at matched n.
+21. **Independent axis probes (journaled separately; exempt from the
+    banned-vocabulary lint because naming the scheme is their
+    function; no probe wording enters any population prompt).** Prior
+    concentration: >= 50 zero-shot samples per E3 item per family and
+    per E1 budget at run temperature; entropy and modal probability
+    with bootstrap CIs. Reachability: >= 30 execution trials per
+    family per setting in which the target code/scheme is explicitly
+    specified; success = mechanical check of the emitted note. Both
+    probes fixed before any live axis data is collected.
+23. **E3-m2 turnover criteria (logged before the analysis ran; the
+    existing e3_squeeze journals already contain one full generation of
+    gradual replacement — interactions_per_replacement=6, the design
+    analogue of the naming game's k=8 — so this section is computed on
+    existing data, not new runs).** Scheme survival: the settle-phase
+    per-item modal sets equal the pre-turnover formation-tail modal
+    sets on >= 4 of 6 items. Newcomer adoption: a turnover-born agent
+    adopts if >= 80% of its last 10 sends match the pre-turnover modal
+    set of the sent item (same window and threshold as the transplant
+    criterion, entry 18); newcomers with fewer than 10 sends report
+    the raw match share instead.
+22. **Survival-figure units (correction).** The turnover sweep's k is
+    INTERACTIONS PER REPLACEMENT (TransmissionConfig; one slot replaced
+    every k interactions, r slots per event when k=1). A generation is
+    N*k interactions; an agent plays 2/N of interactions, so expected
+    agent lifetime is ~2k plays. The earlier axis label ("replacements
+    per 24 interactions") inverted this; axis, caption, and text are
+    now derived from the simulator structure above.
 
 ## 3. Experiment A results (minimal agents; the substrate control)
 
@@ -500,6 +572,8 @@ Axtell–Epstein–Young 'emergent classes' game).  Full definitions in
 - **E2 + scratch line (corrected turn protocol)**: 0.000 [0.000, 0.278] (0/10) of populations conventionalized a badge→region mapping (mapping share 0.01 [0.00, 0.03]); episode success first-12 0.03 [0.00, 0.05] → last-12 0.04 [0.02, 0.07]; 0 distinct modal mappings: []; malformed/call 0.44 [0.43, 0.46] (parse failures 0.06 [0.05, 0.08]); message-channel use 0.00 [0.00, 0.00].
 - **E2 + scratch line + pre-episode message channel**: 0.000 [0.000, 0.278] (0/10) of populations conventionalized a badge→region mapping (mapping share 0.05 [0.02, 0.08]); episode success first-12 0.12 [0.05, 0.22] → last-12 0.14 [0.10, 0.19]; 0 distinct modal mappings: []; malformed/call 0.42 [0.41, 0.44] (parse failures 0.03 [0.02, 0.03]); message-channel use 1.00 [1.00, 1.00].
 - **E2 + scratch line, claude-sonnet-4.5**: 0.000 [0.000, 0.561] (0/3) of populations conventionalized a badge→region mapping (mapping share 0.00 [0.00, 0.00]); episode success first-12 0.00 [0.00, 0.00] → last-12 0.00 [0.00, 0.00]; 0 distinct modal mappings: []; malformed/call 0.02 [0.01, 0.05] (parse failures 0.01 [0.00, 0.02]); message-channel use 0.00 [0.00, 0.00].
+- **E2 mitigation: exogenous role line (entry 20)**: 0.000 [0.000, 0.324] (0/8) of populations conventionalized a badge→region mapping (mapping share 0.11 [0.06, 0.17]); episode success first-12 0.25 [0.18, 0.33] → last-12 0.14 [0.07, 0.21]; 0 distinct modal mappings: []; malformed/call 0.46 [0.45, 0.47] (parse failures 0.04 [0.03, 0.04]); message-channel use 0.00 [0.00, 0.00].
+- **E2 mitigation: heterogeneous pairing (haiku × gpt-5-mini, entry 20)**: 0.000 [0.000, 0.324] (0/8) of populations conventionalized a badge→region mapping (mapping share 0.02 [0.00, 0.05]); episode success first-12 0.08 [0.03, 0.15] → last-12 0.06 [0.03, 0.10]; 0 distinct modal mappings: []; malformed/call 0.26 [0.24, 0.27] (parse failures 0.03 [0.02, 0.03]); message-channel use 0.00 [0.00, 0.00].
 - **E3 (open-lexicon reference)**: 6.0 [6.0, 6.0] of 6 items per population settled on one description (mean per-item modal share 0.99 [0.98, 1.00]); **6 distinct population-level description schemes** across 6 populations; note length 5.0 [4.5, 5.6] words (first third) → 4.7 [4.2, 5.3] (last third); modal description matches a zero-shot prior probe in 1.00 [1.00, 1.00] of items; coined non-word labels: 138.
 - **E3 redo (chooser reply-token repair)**: 6.0 [6.0, 6.0] of 6 items per population settled on one description (mean per-item modal share 0.99 [0.98, 1.00]); **4 distinct population-level description schemes** across 4 populations; note length 5.3 [5.0, 5.6] words (first third) → 5.2 [4.8, 5.7] (last third); modal description matches a zero-shot prior probe in 1.00 [1.00, 1.00] of items; coined non-word labels: 346.
 - **E3 squeeze (3-word notes, hard distractors, shared items)**: 6.0 [6.0, 6.0] of 6 items per population settled on one description (mean per-item modal share 0.99 [0.99, 1.00]); **1 distinct population-level description schemes** across 12 populations; note length 3.0 [3.0, 3.0] words (first third) → 3.0 [3.0, 3.0] (last third); modal description matches a zero-shot prior probe in 0.99 [0.96, 1.00] of items; coined non-word labels: 0.
@@ -534,21 +608,27 @@ separately from occupied-cell picks. The substrate tier is unaffected
 
 ### Reading (final n; supersedes every pilot number above and below)
 
-**Two live results replace the pilot picture. (1) In the haiku family,
-with parsing repaired and every lever pulled, side-product conventions
-are rare: the 6-word squeeze produced one conventionalized population in
-12 (agreement 0.13 vs shuffle 0.08 — a weak, above-baseline signal, not
-the 1/4 the pilot suggested). (2) The second model family produced the
-suite's first unambiguous live side-product convention: on an identical
-shared item set, gpt-5-mini populations settled on 7 distinct
-description schemes across 8 populations with prior-match 0.19 —
-cross-population diversity on a shared world, the pre-registered
-signature separating convention from model bias. Convention formation is
-capability-gated: the model must be strong enough to exploit minimal
-discriminating descriptions (creating the arbitrary-choice space) while
-its prior leaves the choice open; haiku's exhaustive-description prior
-closes that space (1 scheme across 12 populations, prior-match 1.0),
-and no lever in the haiku family opens it.**
+**Superseded in turn by the review-response experiments (§10): the
+gpt-5-mini E3 diversity, initially read as the suite's first live
+side-product convention, failed all four causal tests — its 7/8
+distinct schemes are consistent with the no-interaction sampling null
+(P(≥7) = 0.14 under the model's independently measured flat prior,
+1.39 bits), transplanted agents never adopt the host scheme (0/10),
+schemes are fragile under turnover (2/8 survive), and cross-population
+pairings succeed at least as well as within-population ones (swap
+Δ = −0.08): the diversity is correlated stylistic drift, not a
+solution to a coordination problem. The corrected overall finding is
+that NO live environment produced a genuine side-product convention.
+In the haiku family the 6-word squeeze yields one weakly
+conventionalized population in 12 (agreement 0.13 vs shuffle 0.08);
+everything else is prior-driven. The independently measured axes (§10)
+explain the whole pattern: both families are fully competent to
+execute optimal codes when specified (reachability 0.97–1.00), so
+non-formation is never a competence ceiling — it is priors that either
+close the choice space (haiku, E3 modal probability 0.97) or fill it
+with payoff-irrelevant variation (gpt-5-mini), while flexible responder
+parsing removes the compatibility payoff that would make history
+matter.**
 
 - *E1 squeeze (final n=12):* 6 words cannot name all 5 label+entry
   pairs, so naming everything stops being free. Haiku triages — names
@@ -617,16 +697,17 @@ even explicit negotiation is supplied. When capacity pressure makes the
 prior strategy infeasible but the model cannot construct an
 alternative, it degrades instead of conventionalizing (haiku E1
 squeeze: rare weak conventions; gpt-5-mini E1 squeeze: pseudo-cipher
-collapse). When the model is competent enough to reach the
-reward-equivalent solution manifold and its prior does not single out a
-point on it — gpt-5-mini's minimal discriminating descriptions in E3 —
-population-specific conventions emerge and diverge across populations,
-the full Lewisian signature. The naming game (all families converge)
-and E3-m2 bracket the phenomenon: payoff-coupled alignment is
-sufficient, and prior-underdetermined competence is the side-product
-route. Limitations: 6–12 live populations per load-bearing cell,
-n=3–8 on secondary cells, short in-context histories, three models
-from two vendors.
+collapse). And when the prior does not single out a point on the
+solution manifold — gpt-5-mini's flat E3 prior — populations diverge,
+but the review-response tests (§10) show that divergence is sampling
+drift with no social glue: without a compatibility payoff (swap
+Δ ≈ 0 or negative) there is nothing for transmission to preserve
+(transplants 0/10, turnover survival 2/8). Payoff-coupled alignment
+(the naming game, all families) remains the one sufficient condition
+observed; prior-underdetermined competence produces variation but not,
+in these environments, convention. Limitations: 6–12 live populations
+per load-bearing cell, n=3–8 on secondary cells, short in-context
+histories, three models from two vendors.
 
 
 ## 8. Honesty table (pre-registered vs exploratory)
@@ -653,10 +734,96 @@ from two vendors.
 | Newcomer socialisation is dialogue-mediated | b_trans_dlg vs b_trans_nodlg | fig_socialisation; `\pSocialisationMWU` |
 | Substrate committed-minority threshold f50 ≈ 0.126, history-independent | expA minority cells (n=500/point) | fig_minority; `\fFiftySubstrateFounder/Posttrans` |
 | Live minority threshold: f50 or lower bound vs substrate | b_minority_{founder,posttrans}_{f25,f33,f42}_b2k (n=8 each) | fig_minority |
-| Compression produces the first live side-product convention (loose-vs-squeeze contrast) | e1_tight (n=12) vs e1_squeeze (n=12) live; substrate n=60/40 | fig_inversion, fig_esuite; `\convEOneSqueezeLive` |
-| E3 concentration is shared model bias, not convention (diversity signature on a shared item set) | e3_squeeze (n=12) + zero-shot priors | fig_esuite; `\schemesEThreeSqueezeLive`, `\priorEThreeSqueezeLive` |
+| Compression produces at most one weak live side-product convention (loose-vs-squeeze contrast) | e1_tight (n=12) vs e1_squeeze (n=12) live; substrate n=60/40 | fig_inversion, fig_esuite; `\convEOneSqueezeLive` |
+| E3 concentration (haiku) is shared model bias; E3 diversity (gpt-5-mini) is prior-sampling drift, not convention — no adoption, no turnover survival, no swap cost | e3_squeeze (n=12 haiku, 8 m2) + §10 null baseline, transplants, swaps, turnover | fig_esuite, fig_review_e3; `\schemesEThreeSqueezeLive`, review JSONs |
 | The fairness prior absorbs the symmetry that produces Axtell–Epstein–Young classes in the substrate | e4_think (n=12), e4_sonnet (n=3), substrate e4 (n=60) | fig_inversion; `\classEFourThinkLive`, `\egalEFourThinkLive` |
 | Capability sharpens priors: mirror-match coordination failure; negotiated pacts do not fossilize | e2_think (n=10), e2_dialogue (n=10), e2_sonnet (n=3) | §7 E2 rows; `\convETwoThinkLive`, `\succETwoDialogueLive` |
 | Enforcement surface features are absent (annotation-invariant) in populations and solitary alike | detector scan over all live dialogue | `\prevDeonticPop` etc.; enforcement_analysis.json |
 | Findings hold across model families | m2 cells: naming genesis n=8, trans n=6; e1 (8/8), e3 (8), e4 (6), e2 (6) | §7 m2 tier rows; `\convEOneSqueezeMTwo` etc. |
 
+
+## 10. Review-response experiments
+
+All criteria below were frozen in decision-log entries 16–23 and committed before the corresponding data were collected.
+
+### Scheme-coding specification and grain-sensitivity (entries 16)
+A population's scheme is its 6-tuple of per-item modal trait-sets (last
+15 formation mentions per item). Distinct-scheme counts under all three
+frozen rules — A (exact tuple), B (mean per-item Jaccard ≥ 0.5
+clustering), C (any-item difference):
+| family | n | rule A | rule B | rule C |
+|---|---|---|---|---|
+| substrate | 40 | 40 | 1 | 40 |
+| haiku | 12 | 1 | 1 | 1 |
+| gpt-5-mini | 8 | 7 | 1 | 7 |
+
+The m2-vs-haiku contrast (7/8 vs 1/12) is grain-stable across rules A
+and C. Rule B collapses **every** family to one cluster — including the
+substrate positive control whose 40 distinct schemes are uncontested —
+so it cannot detect any convention diversity at that threshold; it
+bounds the taxonomy's coarse end rather than undermining the count.
+
+### No-interaction diversity baseline (entry 17)
+16 pseudo-populations per family of independent zero-shot generations
+(shared items, frozen prompt, empty history, matched per-item event
+counts, run temperature), identical extraction. Null distribution of
+distinct-scheme counts among resampled groups of 8 (rule A):
+gpt-5-mini mean 5.54,
+P(≥7 distinct) = 0.1445;
+haiku mean 1.00,
+P(≥7) = 0.0.
+
+### Transplant (entry 18)
+10 transplants across distinct-scheme ordered pairs: adopted
+0/10 (criterion: ≥80% of last 10 sends matching the host
+modal); mean last-10 match share 0.43; median latency
+n/a sends; host items stable
+4.0/6.
+
+### Cross-population swap (entry 19)
+- **gpt-5-mini**: within-population success 0.762 vs cross-population 0.842 (Δ = -0.080).
+- **haiku control**: within-population success 0.542 vs cross-population 0.547 (Δ = -0.006).
+The haiku prediction (single shared scheme → no swap cost) is tested and reported as such.
+
+### E3-m2 turnover (entry 23; computed on the existing generation of
+replacement contained in the e3_squeeze journals)
+Scheme survival 2/8 populations (≥4/6 items
+stable; mean 2.75/6); newcomer mean match share
+0.356. Unlike naming-game conventions (perfect
+survival at matched turnover), m2 description schemes are **fragile
+under full population replacement** — consistent with their weak
+within-population concentration (0.52): the convention is real
+(diversity + swap) but noisily transmitted.
+
+### Independent axis measurements (entry 21)
+- **haiku**: reachability — E1 values-only code 0.9666666666666667, E3 specified scheme 1.0 (n=30); prior concentration (E3, 50 samples/item) — mean entropy 0.15 bits, mean modal probability 0.97.
+- **gpt-5-mini**: reachability — E1 values-only code 1.0, E3 specified scheme 1.0 (n=30); prior concentration (E3, 50 samples/item) — mean entropy 1.39 bits, mean modal probability 0.67.
+These probes assign the quadrant axes from measurements independent of population outcomes.
+
+### Equivalence bounds for the null history effect (§6)
+No founder-vs-post-transmission difference detected in either tier;
+effects up to Δ remain compatible with the data — substrate: Δf₅₀ ∈
+[-0.0006, +0.0003]
+(bootstrap); live: Δf₅₀ ∈ [-0.080,
++0.064] (founder CI × separation
+interval).
+
+### Survival-figure units (entry 22)
+In the simulator, one slot is replaced every k interactions (r slots
+per event when k=1), so a generation is N·k interactions; an agent
+participates in 2/N of interactions, giving an expected lifetime of
+≈ 2k plays. k is therefore INTERACTIONS PER REPLACEMENT (larger k =
+slower turnover; k<1 encodes r=1/k replacements per interaction). The
+earlier axis label inverted this; figure, caption, and text now agree.
+At the measured boundaries, conventions survive one generation down to
+k₅₀ ≈ 0.25 (lifetime ≈ 0.5 plays) and two generations at k₅₀ ≈ 0.71.
+
+### Capability-claim scoping (§6)
+The E2 capability observation (stronger model → sharper mirror match)
+is a tested-model contrast — haiku-4.5 vs sonnet-4.5, direction
+replicated in gpt-5-mini — not a general capability law; no claim
+beyond the tested models is made.
+
+### E2 mitigation cells (entry 20)
+Exogenous role line: success first-12 0.25 [0.18, 0.33] → last-12 0.14 [0.07, 0.21] vs e2_think baseline last-12 0.04 [0.02, 0.07] (n=8).
+Heterogeneous pairing (haiku × gpt-5-mini): success first-12 0.08 [0.03, 0.15] → last-12 0.06 [0.03, 0.10] (n=8).

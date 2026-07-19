@@ -142,3 +142,8 @@ swap haiku 9->9: 16/30
 swap haiku 10->10: 17/30
 swap haiku 11->11: 16/30
 haiku {'e1_code_success': 0.9666666666666667, 'e3_scheme_success': 1.0, 'n_trials': 30}
+transplant 7 r['adopted']=False r['latency_sends']=None
+haiku {'e1_code_success': 0.9666666666666667, 'e3_scheme_success': 1.0, 'n_trials': 30}
+m2 {'e1_code_success': 1.0, 'e3_scheme_success': 1.0, 'n_trials': 30}
+review spend $4.05 of $30.00
+REVIEW STAGES DONE: ['transplant', 'probes']
